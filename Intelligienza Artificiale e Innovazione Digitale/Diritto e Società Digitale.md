@@ -1,0 +1,10 @@
+- # Introduzione
+	- Inserire qui ciò che comunica il docente per gestire il corso
+	- ## Materiale/libri
+	- ## Modalità D'esame
+		- L'esame dovrebbe consistere nella discussione di un libro letto
+- # Svolgimento
+	- ## Argomento 1
+	- ## Argomento 2
+	- ## ..
+	- ## Argomento n
