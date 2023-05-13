@@ -1,4 +1,11 @@
 {
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": ""
+  "attachmentFolderPath": "Assets/Multimedia",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "alwaysUpdateLinks": true
 }
