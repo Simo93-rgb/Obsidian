@@ -18,7 +18,8 @@ L'intenzione è di fare un grosso grafo della conoscenza per ogni corso in modo 
 	## Argomento n
 	
 In generale cercare di mantenere ordine, non essendo possibile mettere uno scheletro per tutti i corsi è anche possibile non seguire alla lettera questo elenco puntato ma è meglio fare in modo di seguirlo abbastanza seriamente.
-	Evitare di avere gli argomenti di un corso come pagina a se stante, siccome un grafo connesso, non direzionato e ciclico è un po' rognoso da tenere ordinato è bene inglobare i gli argomenti svolti in un percorso del grafo "semplice"
+Evitare di avere gli argomenti di un corso come pagina a se stante, siccome un grafo connesso, non direzionato e ciclico è un po' rognoso da tenere ordinato è bene inglobare i gli argomenti svolti in un percorso del grafo "semplice"
+	
 # Elenco dei corsi
 1. [[Intelligienza Artificiale e Supporto alle Decisioni]]
 2. [[Basi di Dati per Business Intelligence]]
