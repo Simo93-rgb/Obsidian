@@ -22,3 +22,5 @@ Il professionista si avvale di alcuni strumenti per poter lavorare:
 	Intelligienza Artificiale
 **Data Science** è la disciplina che rence i dati utili. I metodi e i criteri di valutazione dei dati sono definite **metriche**.
 I dati sono i tassello necessario per prendere decisioni.
+## Considerazioni Storiche
+Collezionare, preservare, analizzare dati sono operazioni vecchie come l'essere umano stesso. Bisogna considerare che ogni era ha le sue tecnologie e questo comporta una diversa gestione a seconda degli strumenti a disposizione; presumo sua ovvio che avere centinaia di migliaia di schede perforate sia molto diverso che avere una scheda SD. 
