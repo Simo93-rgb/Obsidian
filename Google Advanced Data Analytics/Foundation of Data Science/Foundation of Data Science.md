@@ -2,6 +2,7 @@ Questo corso tratta cosa sono i dati, le figure professionali del settore e le m
 
 ## [[Week 1]]
 ## [[Week 2]]
+## [[Week 3]]
 
 
 

@@ -134,7 +134,6 @@ Una delle responsabilità più importanti per chi lavora in carriere basate sui 
 Accenntato precedentemente, la gestione dei dati comporta una certa etica e professionalità soprattutto per le PII. 
 
 ## Privacy Matters
-
 La privacy dei dati significa preservare le informazioni e l'attività di una persona interessata ogni volta che si verifica una transazione di dati. È anche chiamata privacy delle informazioni o protezione dei dati. La privacy dei dati riguarda l'accesso, l'uso e la raccolta dei dati personali. Per le persone i cui dati vengono raccolti, ciò significa che hanno il diritto di:    
 * protezione dall'accesso non autorizzato ai propri dati personali    
 * Libertà dall'uso inappropriato dei loro dati    
@@ -152,10 +151,83 @@ L'anonimizzazione dei dati è il processo di protezione dei dati privati o sensi
 Anche il concetto di aggregazione, visto in Business Intelligence, comporta intrinsecamente uno strato di protezione del singolo perché i dati vengono sommati (aggregati) a quelli di altri utenti.
 
 ## key takeaways
-
 Per tutti i professionisti che lavorano con dati relativi a persone reali, è importante considerare la sicurezza e la privacy di queste persone. Ecco perché è importante capire l'importanza della privacy dei dati e come rendere sicuri i dati che contengono PII per l'analisi. Abbiamo la responsabilità di proteggere i dati delle persone e le informazioni personali che potrebbero contenere.
 
-# Data stewardship and ethics conversations
+# The practices and principles of good data stewardship
+Tutti i professionisti dei dati hanno la responsabilità di garantire la qualità, l'integrità, l'accessibilità e la sicurezza dei dati. La gestione dei dati è la pratica di garantire che i dati siano accessibili, utilizzabili e sicuri. La gestione dei dati è una parte normale delle abitudini lavorative di un professionista del settore, a beneficio di tutti coloro che si affidano alle analisi, sia all'interno che all'esterno dell'organizzazione. 
 
+## Rispetto della Privacy
+Come professionista dell'analisi dei dati, è importante essere attenti a qualsiasi dato personale e proteggerlo con cura. È responsabilità di tutti coloro che hanno accesso ai dati all'interno dell'organizzazione proteggere la privacy dei loro utenti.
 
+## Non causare danni involontari
+Molti dei risultati dell'analisi dei dati hanno il potenziale per influenzare le persone attraverso una vasta gamma di fattori sociali ed economici. È buona pratica produrre informazioni accurate rispettando le norme culturali e sociali.
 
+## Evitare di creare o rafforzare pregiudizi
+Identificare i pregiudizi non è sempre semplice. Quando lavori con i dati, tieni presente che la raccolta dei dati è un compito gestito da esseri umani, il che può essere influenzato da diversi background, esperienze, credenze e visioni del mondo.
+
+## Considerare l'inclusività
+Come professionista dell'analisi dei dati, dovrai considerare se i metodi di raccolta dei dati hanno escluso informazioni da particolari popolazioni. Gli approcci inclusivi possono ampliare il modo in cui qualsiasi organizzazione raccoglie e analizza i dati.
+
+## Mantenere elevati standard scientifici
+I processi e le tecnologie con cui interagirai come professionista dell'analisi dei dati sono profondamente radicati nel metodo scientifico. Invita il feedback e valuta il feedback. Ricorda, l'intelligenza artificiale dipende ancora fortemente dalle istruzioni fornite dai professionisti dei dati.
+
+## Conclusioni principali
+La gestione dei dati è la responsabilità di ogni professionista dei dati. Guida i tuoi sforzi attraverso principi scientifici ed etici e rimani consapevole dei possibili pregiudizi durante tutto il processo di analisi dei dati.
+
+## Key Takeaways
+La gestione dei dati è una responsabilità di ogni professionista dei dati. Questa responsabilità va oltre le interazioni con i dati. Conducendo il vostro lavoro in modo socialmente vantaggioso e inclusivo, aumenterete la vostra capacità di identificare i pregiudizi umani. Guidate i vostri sforzi attraverso principi scientifici ed etici e rimanete consapevoli dei possibili pregiudizi durante il processo di analisi dei dati.
+
+# Glossario
+Quello completo è sempre nel file [[Advanced Data Analytics Certificate glossary.pdf]]
+
+**Aggregate information**: Data from a significant number of users that has eliminated personal information
+
+**Artificial intelligence (AI):** Refers to computer systems able to perform tasks that normally require human intelligence
+
+**Data anonymization**: The process of protecting people's private or sensitive data by eliminating PII
+
+**Data stewardship**: The practices of an organization that ensure that data is accessible, usable, and safe
+
+**Edge computing**: A way of distributing computational tasks over a bunch of nearby processors (i.e., computers) that is good for speed and resiliency and does not depend on a single source of computational power
+
+**Hackathon:** An event where programmers and data professionals come together and work on a project
+
+**Nonprofit:** A group organized for purposes other than generating profit; often aims to further a social cause or provide a benefit to the public
+
+**Open data**: Data that is available to the public and free to use, with guidance on how to navigate the datasets and acknowledge the source
+
+**Personally identifiable information (PII)**: Information that permits the identity of an individual to be inferred by either direct or indirect means
+
+**Sample:** A segment of a population that is representative of the entire population
+
+## Terms and definitions from the previous week
+
+## D
+
+**Data professional**: Any individual who works with data and/or has data skills
+
+**Data science**: The discipline of making data useful
+
+**Data stewardship:** The practices of an organization that ensure that data is accessible, usable, and safe
+
+## E
+
+**Edge computing**: A way of distributing computational tasks over a bunch of nearby processors (i.e., computers) that is good for speed and resiliency and does not depend on a single source of computational power
+
+## J
+
+**Jupyter Notebook:** An open-source web application used to create and share documents that contain live code, equations, visualizations, and narrative text
+
+## M
+
+**Machine learning:** The use and development of algorithms and statistical models to teach computer systems to analyze patterns in data
+
+**Metrics**: Methods and criteria used to evaluate data
+
+## P
+
+**Python**: A general-purpose programming language
+
+## T
+
+**Tableau**: A business intelligence and analytics platform that helps people visualize, understand, and make decisions with data
