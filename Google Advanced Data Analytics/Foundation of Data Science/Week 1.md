@@ -1,8 +1,8 @@
 Il corso è diviso in 5 settimane
-### Data
+# Data
 I dati sono qualunque cosa prodotta da dispositivi elettronici. Questi sono una fonte inestimabile (si fa per dire, in realtà si stima molto bene) di informazione che può essere utilizzata per migliorare qualsiasi situazione esistente: processi industriali, modelli di business, profilazione dei clienti, risoluzione problemi... 
 **Data Science** è la disciplina che usa dati grezzi per creare nuovi modi di modellare e capire l'ignoto.
-### Data Professionals
+## Data Professionals
 Il professionista si avvale di alcuni strumenti per poter lavorare:
 	Statistica
 	Metodo scientifico
@@ -16,10 +16,10 @@ Collezionare, preservare, analizzare dati sono operazioni vecchie come l'essere 
 I linguaggi di programmazione sono i primi strumenti da tenere nel proprio set di tools, in particolare *R* e *Python*. 
 **Tableau** è un visual data tool importante che consente di condividere i dati attraverso un'interfaccia grafica. È importantissimo per avere la giusta comunicazione con gli stakeholders non tecnici. 
 Lo **storyteller** è la figura che comunica e fondamentalmente sei tu con le tue abilità linguistiche.
-### Handle Assessment
+## Handle Assessment
 * Guardare gli appunti
 * Rivedere i video
 * Controllare il glossario
 * Prendi il tuo tempo
-### Glossario
+## Glossario
 Il glossario va composto di volta in volta ma per fortuna Google ha fornito [[Advanced Data Analytics Certificate glossary.pdf]] 
