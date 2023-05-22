@@ -124,10 +124,23 @@ There will be some tasks that will require more senior stakeholder engagement. O
 -   Centralizes documentation for the roles and responsibilities within a project or organization
 
 ### Key takeaways
-
 In your work as a data professional, you might encounter the RACI matrix. It is a tool that many organizations use to structure their projects. It also helps to outline, communicate, and understand the responsibilities of data analytics professionals and other cross-functional team members.
 [RACI overview](https://www.cio.com/article/287088/project-management-how-to-design-a-successful-raci-project-plan.html)
-# Data professionals career resources
-## Build a professional online presence
 
 # Review
+## Wrap-up
+As you approach the end of this section, let's take a few moments to review some key concepts. Before moving ahead, we saw that the data career space has experienced amazing growth over the last decade. Future predictions indicate that this should continue. You discovered that all kinds of companies and organizations are looking to drive their future decisions with data, which is creating opportunities for data professionals. Additionally, we saw that innovation is the engine driving this continued growth. You also discovered that data skills and tools are becoming more universal. At the same time, experts foresee a continued specialization of roles within the different fields. We were introduced artificial intelligence and so how it has become an important tool for data professionals. We also took a brief look at some of the common roles and responsibilities in today's data professions. While we reflect on the information we've covered so far, please remember that you're not taking these steps of personal and professional growth alone. One of the most beneficial resources available to you is our discussion board, take advantage of the opportunity to interact with like minded learners and gain knowledge from their experience. Coming up, we'll take a closer look at the skills needed by data professionals and we'll investigate how larger organizations incorporate data analysis. I'm looking forward to joining you as we continue your journey. I'll see you in the next video
+
+# Glossary
+As always, [[Advanced Data Analytics Certificate glossary.pdf]] it's the complete one.
+**Active listening:** Refers to allowing team members, leadership, and other collaborative stakeholders to share their own points of view before offering responses
+**Analytics Team Manager**: A data professional who supervises analytical strategy for an organization, often managing multiple groups 
+**Business Intelligence Analyst**: (Refer to **Business Intelligence Engineer**)
+**Business Intelligence Engineer:** A data professional who uses their knowledge of business trends and databases to organize information and make it accessible; also referred to as a Business Intelligence Analyst
+**Chief Data Officer**: An executive-level data professional who is responsible for the consistency, accuracy, relevancy, interpretability, and reliability of the data a team provides
+**Data cleaning**: The process of formatting data and removing unwanted material
+**Data Engineer:** A data professional who makes data accessible, ensures data ecosystems offer reliable results, and manages infrastructure for data across enterprises
+**Data Scientist**: A data professional who works closely with analytics to provide meaningful insights that help improve current business operations
+**Interpersonal skills:** Traits that focus on communicating and building relationships
+**Mentor:** Someone who shares knowledge, skills, and experience to help another grow both professionally and personally
+**RACI chart**: A visual that helps to define roles and responsibilities for individuals or teams to ensure work gets done efficiently; lists who is responsible, accountable, consulted, and informed for project tasks
