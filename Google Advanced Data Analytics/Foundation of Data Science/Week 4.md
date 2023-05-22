@@ -129,4 +129,16 @@ When you consider the responsibilities and objectives of others, your communicat
 -   Cultivate positive interactions to strengthen working relationships and improve morale.
 
 **Pro tip**: When you are contacted by a stakeholder, be accessible and engaged in your communication.
-   
+
+## Activity - Communicate with stakeholders in different roles
+*You are a data analyst working for the National Parks Service*. One of the major concerns of this governmental agency is wildfires, which destroy an average of 7.4 million acres annually in the United States. The National Parks Service has created a data team to improve the predictability of wildfires. As a result, prevention efforts have been targeted more effectively and resources have been delegated to the appropriate areas.
+
+*The agency set an internal goal for the wildfire predictive model of at least 90% accuracy*. The team’s final model consistently met this goal when running data from past years. As a direct result of the wildfire project, the prior prediction system was improved by 35% and helped wildfire prevention efforts globally. The results of this study are now referenced in numerous courses used to train firefighters, park rangers, and national park employees.
+
+Your manager has asked you to email the following two new agency employees and give them an overview of the wildfire project:
+
+-   A data analytics professional who will be working within your team. This person will need to know details about the data team’s workflow and relevant information required to maintain the accuracy of the wildfire project’s machine learning model. 
+-   A writer for the agency’s public relations department. This person will need relevant information in order to create non-technical articles that promote the National Parks Service’s fire safety efforts.
+[[Activity Template_ Emails to different stakeholders.pdf]]
+
+# Communicate like data professional
