@@ -142,3 +142,30 @@ Your manager has asked you to email the following two new agency employees and g
 [[Activity Template_ Emails to different stakeholders.pdf]]
 
 # Communicate like data professional
+
+## Communicate objectives with project proposal
+
+### Elements of a project proposal
+Each project proposal contains important information that a team will need to consider before work begins. Below is a brief explanation of some common sections you will find in project proposals. Note that the format of project proposals will vary, so not every section described here will be included in every project proposal.
+
+**Project title:** The title of the project is prominent, usually placed near the top of a document. Effective titles are short and purposeful. Depending on the context and circumstance surrounding a project, the title on a project proposal can change over time.
+
+**Project objective:** The objective statement is a one to three sentence explanation of what the project is trying to achieve.
+
+**Milestones:** Milestones are groupings of tasks within a project, breaking the work needed into smaller, manageable goals. Milestones assist in the delegation and scheduling of work that needs to be completed within projects. 
+
+- The milestones in the provided example are representing the end-of-course projects in future courses.    
+
+**Tasks:** Tasks detail the work that needs to be completed within a milestone.
+
+- In the provided example, the tasks parallel some of the work you will complete in future end-of-course projects.    
+
+**Outcomes:** Outcomes are the completed actions or results that allow a project to continue.
+
+**Deliverables:** Deliverables are items that can be shared amongst team members or with stakeholders. These are the end products of work undertaken for a project.
+
+**Stakeholders:** The individuals or groups who are directly involved and have a vested interest in the success of a project. Input from stakeholders can serve as a basis for making decisions throughout a project.
+
+**Estimated time:** At the beginning of a project, the time needed to complete milestones is estimated. As a project develops, these estimates will often need to be updated to account for adjustments to timelines or changes in team members.
+
+
