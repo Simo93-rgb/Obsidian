@@ -177,3 +177,42 @@ Once the infrastructure was overhauled, Deloitte’s performance of EDA uncovere
 ## Conclusion
 
 Because of Deloitte’s focus on the client’s business problem in both their assessment of the client’s business practices and EDA of their data, they were able to uncover truths previously hidden in unstructured data. Deloitte built interactive, dynamic data dashboards designed to filter down to any sales region or product in the company so that the client could discover these truths on their own in the future. The greatest benefit of these solutions was the client’s leadership and marketing leads became a much more agile team. They were better able to make effective business decisions that directly improved revenue. The data infrastructure overhaul and data dashboard solutions also helped improve the work-life balance of their analysts. All of these outcomes were notable for not only the client but also Deloitte because the client was and is a key partner and account for the firm. Because of their focus on the data, Deloitte was able to offer a solution that exceeded the client’s expectations and, in turn, helped them better serve their customers around the world.
+
+# The EDA process
+For better understanding read the [[Reference guide_ The EDA process.pdf]].
+
+### The six practices of EDA are iterative and non-sequential
+![[Pasted image 20230606184244.png]]
+1. **Discovering**: You check out the overall shape, size, and content of the dataset. You find it is short on data. 
+    
+2. **Joining**: You add more data.
+    
+3. **Validating**: You perform a quick check that the new data doesn’t have mistakes or misspellings. 
+    
+4. **Structuring**: You structure the data in different time periods and segments to understand trends. 
+    
+5. **Validating:** You do another quick check to ensure the new columns you’ve made in structuring are correctly designed. 
+    
+6. **Cleaning**: You check for outliers, missing data, and needs for conversions or transformations. 
+    
+7. **Validating**: After cleaning, you double check the changes you made are correct and accurate. 
+    
+8. **Presenting**: You share your dataset with a peer.
+
+You will need to use your logic and experience throughout the EDA process to determine which of the six practices to utilize, how many times to apply them, and when in the process you should apply them.
+
+**Pro tip**: Data scientists expect to perform the practices of EDA multiple times on a dataset before they feel comfortable declaring it “clean” and ready for modeling or machine learning algorithms.
+
+## The importance of EDA in ethical machine learning
+
+As algorithms and machine learning networks begin to make more and more decisions on behalf of individuals, companies, and even governments, the discussion of ethics and regulation becomes more and more important. According to the [Institute for Ethical AI & Machine Learning](https://ethical.institute/principles.html), there are eight principles for developing machine learning systems in a responsible way. 
+The following two principles are inherently part of the EDA process:
+
+- **Human augmentation**: This principle ensures humans are inserted throughout the AI or machine learning algorithm systems for oversight. Thorough EDA, performed by data scientists, is perhaps one of the best ways to limit bias, imbalance, and inaccuracies being fed into an algorithm. 
+    
+- **Bias evaluation**: Without human interference, bias is too easily injected and reproduced in machine learning models. Performing methodical EDA processes will lead data scientists to be aware of and act on biases and imbalances in the data. 
+    
+
+**Pro tip**: The importance of assuring adherence to ethical standards cannot be overstated in the data career space. Data professionals need to continuously grow their capacities to recognize bias and discrimination by consistently applying an ethical mindset to their EDA work.  
+
+Beyond machine learning, EDA is applicable to nearly any important data-based decision. Moving forward, you will learn about many applications of EDA and the necessity of an iterative and non-sequential approach.
