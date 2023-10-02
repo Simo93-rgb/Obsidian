@@ -24,8 +24,14 @@ Possiamo distinguere due parti, un po' come già detto in precedenza, ossia una 
 # Basi di Dati e Sistemi informativi
 Una base di dati è un insieme organizzato di dati, non necessariamente in forma automatizzata. 
 Prima di parlare di sistemi informativi credo sia carino vedere una immagine che rappresenta la situazione
-![[Schermata 2023-10-02 alle 14.12.57.png]]Un sistema informativo è:
-+ Componente di una organizzazione che gestisce le informazioni di interesse (cioé utilizzate per il perseguimento degli scopi dell’organizzazione) 
+
+>[!todo] Sistema Azienda
+>>[!success] Sistema Organizzativo
+>>>[!failure] Sistema Informativo
+>>>>[!warning] Sistema Informatico
+
+Un sistema informativo è:
++ Componente di una organizzazione che gestisce le informazioni di interesse (cioè utilizzate per il perseguimento degli scopi dell’organizzazione) 
 + Ogni organizzazione ha un sistema informativo, eventualmente non esplicitato nella struttura 
 + Il sistema informativo è di supporto ad altri sottosistemi, e va quindi studiato nel contesto in cui è inserito
 + indipendente da qualsiasi automatizzazione
@@ -48,10 +54,10 @@ Qui è stata poi fatta una digressione parlando di tassonomie e ontologie in qua
 
 ## DBMS (DataBase Management System)
 Sistema che gestisce collezioni di dati, grandi persistenti e condivisi, garantendo:
-+ Privatezza: si possono definire meccanismi di autorizzazione
-+ Affidabilità: resistenza a malfunzionamenti hardware e software
-+ Efficienza: dare risposte alle query in tempo utile
-+ Efficacia
++ *Privatezza*: si possono definire meccanismi di autorizzazione
++ *Affidabilità*: resistenza a malfunzionamenti hardware e software
++ *Efficienza*: dare risposte alle query in tempo utile, utilizzare le risorse nel modo migliore possibile.
++ *Efficacia*: rendere produttive le attività dell'utilizzatore
 Ci sono tanti DBMS (PostgreSQL, Oracle) e la loro scelta dipende come sempre da prezzo, features, prestazioni generali...  
 Spesso gestiscono collezioni di dati enormi con l'unico limite dato dallo storage disponibile. 
 Ad esempio gli esperimenti di genetica o genomica producono centinai di gigabyte per volta con i mini-wafer e pensare di lasciare "ad un foglio excel" quei dati è impensabile.
@@ -60,6 +66,31 @@ Ad esempio gli esperimenti di genetica o genomica producono centinai di gigabyte
 Partiamo subito con introdurre due grossi problemi ossia ridondanza e incoerenza. Perché esistono? Perché senza controlli specifici da parte di un sistema formale e ben strutturato si può avere l'inserimento di record con errore umano.
 Con *ridondanza* si intende la ripetizione dei dati mentre con *incoerenza* s'intende che due versioni dello stesso dato non coincidono.
 Usare la stessa base di dati per servizi differenti è il modo con cui risolvere entrambi problemi, soprattutto quello dell'incoerenza.
+Per mantenere l'affidabilità del DBMS lato coerenza bisogna definire l'***operazione di transazione***ossia modificare i dati. La transazione è un insieme di operazioni atomiche ed è corretta anche in fase di concorrenza con effetti definitivi. Immaginando le operazioni su un conto corrente (cerotti vibes xD) risulta facile comprendere questi concetti. 
 
+**DBMS vs File System**
+Salvare le cose su un FS significa avere il classico albero di cartelle e file con scarsissime funzionalità. Oramai ogni software commerciale ha abbandonato l'idea di usare il FS e ricorrono ad altre soluzioni tecniche.
 
+## Modello dei dati 
+Insieme di costrutti utilizzati per organizzare i dati di interesse e descriverne la dinamica. Componente fondamentale: meccanismi di strutturazione (o costruttori di tipo).
+Come nei linguaggi di programmazione esistono meccanismi che permettono di definire nuovi tipi, così ogni modello dei dati prevede alcuni costruttori. Esempio: il modello relazionale prevede il costruttore relazione, che permette di definire insiemi di record omogenei
+
+#### Schema e Istanza
+Lo schema è sostanzialmente invariante nel tempo, descrive la struttura della tabella, mentre le istanze sono i valori, sono i record delle tabelle che popolano la base di dati. Ad esempio, lo schema è l'intestazione della tabella e l'istanza le sue righe. Spesso si parla di aspetti intensionali riferendosi allo schema delle cose mentre l'aspetto estensionale è un riferimento ai dati ossia al contenuto dello schema.
+
+**Insegmanenti**
+
+|**nome** | **insegnamenti** | **orario** | 
+|:-----:|:-------------:|:------:|
+| Giorgio Leonardi | BI | LUN 2-10| 
+| Pippo Rossi | SO | MAI 11-9 |
+
+### Modello Logico
+Adottati nei DBMS esistenti per l’organizzazione dei dati – utilizzati dai programmi – indipendenti dalle strutture fisiche 
+Esempi: relazionale, reticolare, gerarchico, a oggetti, basato su XML.
+![[Schermata 2023-10-02 alle 16.58.43.png]]
+### Modello Concettuale
+Usato in fase di progettazione è un modo di rappresentare le cose a livello umano. Il più diffuso è il modello entity-relationship.
+![[Schermata 2023-10-02 alle 17.15.37.png]]
+Quindi prendo una realtà e fisso le idee su uno schema ad alto livello con la quale poi potrò costruire la mia base di dati. Questo lo si riesce a tradurre facilmente in un modello logico.
 
