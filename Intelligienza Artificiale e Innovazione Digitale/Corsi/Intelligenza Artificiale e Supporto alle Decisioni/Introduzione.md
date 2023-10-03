@@ -8,6 +8,7 @@ IBM parla di Cognitive Computer, comunque l'idea fra questa idea di IBM e di IA 
 ![[Schermata 2023-10-03 alle 11.02.21.png]]
 Soprattutto in situazioni critiche dare ad un esperto di un dominio sensibile la potenza e la quantità di dati che un sistema di IA è qualcosa di potentissimo, si immagini di dare ad un oncologo l'abilità di consultare un grosso DB al posto che la sua sola esperienza. 
 
+
 ## Come nasce l'IA
 Il primo a pensare all'intelligenza artificiale è stato il padre dell'informatica, Alan Turing, anche se la nascita ufficiale è da ricondursi al 1956 in un seminaro con John McCarthy. Una vecchia definizione di IA presa da Wikipidia:
 
@@ -28,7 +29,7 @@ Weak AI ha vinto, in modalità diverse:
     
 - Approccio sub-simbolico: riproduzione di fenomeni naturali non necessariamente rappresentati con simboli comprensibili (es: reti neurali). Si usano numeri.
 
-![[Stagioni IA.png]]
+
 
 - Prima Stagione - Inverno: Moravec Paradox è la questione che non si riusciva ad emulare un bambino di 2 anni ma si poteva fare un programma che gioca a scacchi
 - Seconda Stagione - Primavera: stagione dei sistemi esperti e utilizzo linguaggi logici. Nascevano come funghi SW Houses che li facevano. 
@@ -60,6 +61,29 @@ Oggi siamo nell'epoca del DL grazie anche alla potenza enorme che le GPU offrono
 
 **Ragionare in modo umano** è difficilissimo anche perché le neuroscenze non sanno davvero come funziona il nostro cervello. 
 **Ragionare in modo razionale** è un qualcosa che già Aristotele aveva iniziato a trattare, un esempio è il sillogismo. 
-![[Schermata 2023-10-03 alle 11.55.29.png|200]]
+
+> La nocciola è un frutto, la nutella è una crema di nocciole, la frutta fa bene allora la nutella fa bene.
+
 Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 **Agire in modo razionale** significa massimizzare la probabilità di raggiungere un risultato in maniera sensata, con un dispendio di risorse ottimizzato. Il concetto di *minima spesa e massima resa*. 
+
+## Argomenti del Corso
+- Problem Solving e Ricerca nello Spazio degli Stati (3 CFU)
+	- Path-based search
+		- Blind search (Breadth-First, Depth-Fist, Iterative Deepening)
+		- Best-first and Heuristic search (Uniform Cost, Greedy, A*, IDA*)
+	- Iterative Improvement (Local) search
+		- Hill-climbing
+		- Simulated Annealing
+		- Genetic Algorithms (cenni)
+	- Giochi a due concorrenti
+- Rappresentazione della Conoscenza e Ragionamento (3 CFU)
+	- Knowledge-Based Systems
+	- Case-Based Reasoning
+	- Ragionamento Incerto
+	- Calcolo delle probabilita’ su variabili discrete (richiami, probabilita’ condizionata, Teorema di Bayes)
+	- Reti Bayesiane
+- Supporto alle decisioni (3 CFU)
+	- Teoria delle Decisioni e  Decision Analysis
+	- Influence Diagrams (Reti decisionali)
+	- Modelli Temporali e Markov decision processes
