@@ -21,7 +21,7 @@ In generale cercare di mantenere ordine, non essendo possibile mettere uno schel
 Evitare di avere gli argomenti di un corso come pagina a se stante, siccome un grafo connesso, non direzionato e ciclico è un po' rognoso da tenere ordinato è bene inglobare i gli argomenti svolti in un percorso del grafo "semplice"
 	
 # Elenco dei corsi
-1. [[Intelligienza Artificiale e Supporto alle Decisioni]]
+1. [[Introduzione]]
 2. [[Introduzione BI e DB]]
 3. [[Diritto e Società Digitale]]
 4. [[Sistema Impresa]]
