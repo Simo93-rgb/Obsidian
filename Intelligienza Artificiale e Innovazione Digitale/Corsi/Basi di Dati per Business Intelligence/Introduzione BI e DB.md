@@ -94,3 +94,77 @@ Usato in fase di progettazione è un modo di rappresentare le cose a livello uma
 ![[Schermata 2023-10-02 alle 17.15.37.png]]
 Quindi prendo una realtà e fisso le idee su uno schema ad alto livello con la quale poi potrò costruire la mia base di dati. Questo lo si riesce a tradurre facilmente in un modello logico.
 
+## Architetture Sistemi DBMS
+
+![[arch a 3 livelli.png]]
+<center>Arch. ANSI/SPARC standard a tre livelli</center>
+
+Lo **schema interno** (o fisico) è la rappresentazione dello schema logico per mezzo di strutture di memorizzazione (file; ad esempio, record con puntatori, ordinati in un certo modo)
+Lo **schema logico** è la descrizione della base di dati nel modello logico (ad esempio, la struttura della tabella). Questo può essere riorganizzato in sottoinsiemi chiamati **schemi esterni**
+che sono una rappresentazione parziale della base di dati in modo che gli utenti abbiano viste differenti. 
+
+## Indipendenza dei Dati
+Esistono in due forme, ossia indipendenza fisica ed indipendenza logica. 
+
+### Indipendenza Fisica
+il livello logico e quello esterno sono indipendenti da quello fisico. 
+Una relazione è utilizzata nello stesso modo qualunque sia la sua realizzazione fisica
+La realizzazione fisica può cambiare senza che debbano essere modificati i programmi
+
+### Indipendenza Logica
+Il livello esterno è indipendente da quello logico, quindi le viste sono indipendenti infatti modifiche o aggiunte alle viste non alterano lo schema logico. Alcune modifiche alloschema logico sono trasparenti allo schema esterno.
+
+## Linguaggi per Database
+
+Un altro contributo all’efficacia: disponibilità di vari linguaggi e interfacce
++ linguaggi testuali interattivi (SQL - Structured Query Lang.)  
++ comandi (SQL)  immersi in un linguaggio ospite (Python, Java, C ...)  
++ comandi (SQL) immersi in un linguaggio ad hoc, con anche altre funzionalità (p.es. per grafici o stampe strutturate) 
++ con interfacce amichevoli (senza linguaggio testuale)
+
+Breve esempio
+
+|Corso|Docente|Aula|
+|:----:|:----:|:----:|
+|Database|Rossi|DS3|
+|Sistemi|Neri|N3|
+
+|Nome|Edificio|Piano|
+|:----:|:----:|:----:|
+|DS1|OMI|Terra|
+|N3|OMI|Terra|
+|G|Pincherle|Primo|
+
+Trovare i corsi in aule al primo piano --> 
+<code>SELECT corso, aula, piano 
+FROM Aule, Corsi 
+WHERE Piano = "Terra" AND Aule.Nome = Corsi.Aula</code>
+
+### DDL vs DML
+Data Definition Lang. è la parte di linguaggio che definisce le strutture del database e delle tabelle. 
+Data Manipulation Lang. è la parte che gestisce i dati nel DB, quindi interrogazione e aggiornamento.
+
+## Attori
+Ci sono i **progettisti del DBMS** cre sviluppano tecnologie, i **progettisti del DB** che mettono in piedi la base di dati, ci sono i **progettisti e programmatori delle applicazioni** che sviluppano i SW che gli utenti utilizzeranno.  Gli **utenti** sono di due tipi:
++ Finali, ossia il normale utente per cui la applicazione è stata creata
++ Casuali, ossia un eventuale tecnico che utilizza l'applicazione in modo in usuale
+
+### Transazioni per l'utente (spoiler nameclash)
+Sono realizzate in linguaggio ospite e degli esempi sono i versamenti allo sportello ATM oppure l'emissione di un certificato anagrafico. Quindi:
++ Per l'utente: – programma a disposizione, da eseguire per realizzare una funzione di interesse
++ Per il sistema: – sequenza indivisibile di operazioni (cfr. affidabilità)
+
+
+## DBMS Server
+![[DBMS.png]]
+
+### PRO
++ dati come risorsa comune, base di dati come modello della realtà 
++ gestione centralizzata con possibilità di standardizzazione ed “economia di scala” 
++ disponibilità di servizi integrati 
++ riduzione di ridondanze e inconsistenze 
++ indipendenza dei dati (favorisce lo sviluppo e la manutenzione delle applicazioni)
+
+### Contro
++ costo dei prodotti e della transizione verso di essi 
++ non scorporabilità delle funzionalità (con riduzione di efficienza)
