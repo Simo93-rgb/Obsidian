@@ -8,8 +8,6 @@ Attenzione che non è sempre vero che un agente è un robot, comunque il focus �
 
 ### Problema dell'aspirapolvere robot
 
-^db0708
-
 ![[Schermata 2023-10-03 alle 14.16.37.png|300]]![[Schermata 2023-10-03 alle 14.18.41.png|400]] 
 Lo **Stato** è una configurazione del problema. Ad ogni stato è possibile avere una certa configurazione di ambiente e associare una azione, in questo caso riassunto nella tabella qui sopra.
 
@@ -21,10 +19,10 @@ La **Misura di Performance** è un criterio oggettivo per la misurazione del suc
 
 ### PEAS
 Acronimo di "Performance measure - Environment - Actuators - Sensors", è un gruppo di caratteristiche per caratterizzare un agente. Ad esempio per un taxi con guida autonoma:
-- P --> sicurezza, velocità, legalità, profitti massimizzati
-- E --> strade, traffico, pedoni
-- A --> acceleratore, volante, freni, clacson
-- S --> sonar, videocamere, GPS, sensori motore
+- P → sicurezza, velocità, legalità, profitti massimizzati
+- E → strade, traffico, pedoni
+- A → acceleratore, volante, freni, clacson
+- S → sonar, videocamere, GPS, sensori motore
 Gli agenti sono sempre descrivibili con PEAS anche in ambiti molto diversi fra loro, ad esempio un agente di diagnosi clinica oppure un agente per comprare online. 
 
 #### Tipi di Environment

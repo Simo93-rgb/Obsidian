@@ -68,7 +68,7 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 **Agire in modo razionale** significa massimizzare la probabilità di raggiungere un risultato in maniera sensata, con un dispendio di risorse ottimizzato. Il concetto di *minima spesa e massima resa*. 
 
 ## Argomenti del Corso
-- Problem Solving e Ricerca nello Spazio degli Stati (3 CFU)
+- Problem Solving e [[Ricerca nello Spazio degli Stati|Ricerca nello Spazio degli Stati]] (3 CFU)
 	- Path-based search
 		- Blind search (Breadth-First, Depth-Fist, Iterative Deepening)
 		- Best-first and Heuristic search (Uniform Cost, Greedy, A*, IDA*)
