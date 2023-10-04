@@ -22,7 +22,7 @@ Guardando l'immagine a stati singoli, ecco un esempio:
 4. costo operatori: 1 per action
 
 Atro esempio con il gioco 8-Puzzle
-![[8-Puzzle.png]]
+![[8-Puzzle.png]] ^f319dc
 1. stati: posizioni delle pedine
 2. azioni: muovere il buco Left, Right, Up and Down
 3. goal test: è rappresentato dal goal in immagine
@@ -91,7 +91,82 @@ Andando a livelli trovo la soluzione e trovo pure quella ottimale! D'altronde va
 2. Complessità temporale → $O(b^{d})$
 	1. $(d+1)b^{0} + db + (d-1)b^{2} + ... + b^{d}$
 3. Complessità spaziale → $O(b*m)$ Tiene tutti i nodi in memoria
-4. Ottimalità → **NO!**
+4. Ottimalità → **SI!** se il costo è 1
 
-## Ricerche Euristiche o Informate
+## Ricerche Euristiche o Informate (Best First Search)
+Si associa ad ogni nodo una valutazione di costo e si espande il nodo che costa meno.
 
+> $f: S \rightarrow \mathbb(R^+)$ 
+
+### Strategia Costo Uniforme
+La valutazione di un nodo corrisponde al costo corrispondente al cammino dal nodo iniziale al nodo stesso.
+
+>$g(x) = \begin{cases} 0 & \text{se } n=n_0 \\ g(n^{'})+c(n^{'},n) & \text{se } n^{'} \text{ padre di } n\end{cases}$ 
+
+**Esempio Romania**: qui sotto la mappa che collega alcune città rumene (ognuna ha una lettera iniziale differente) che può essere vista come un grafo ad archi pesati.
+![[Pasted image 20231004134852.png|500]]
+*Richiamo: lo [[Agenti Intelligenti#^e18694|stato]] qui è la configurazione del nodo raggiunto e del cammino percorso per arrivarci.*
+
+Navigando l'albero si scopre che somiglia ad una navigazione in ampiezza. I costi sono tutti positivi e più avanzo più aggiungo costo. Questo significa che andare in profondità tenderebbe ad aumentare la funzione *g* che non è ciò che voglio siccome vorrei trovare soluzioni con costo minimo. 
+![[Pasted image 20231004135824.png]]
+<center>Navigazione della mappa</center>
+**Caratteristiche**
+![[Pasted image 20231004140612.png]]
+
+### Funzione Euristica
+Funzione che ci permetta di capire quanto devo ancora spendere per arrivare alla soluzione (possibilmente ottimale). Questa genererà una stima che spesso è una sottostima.
+
+> $h(n) = \hat{c}(n,n_g)$ 
+> Dove $\hat{c}$ è la funzione di costo
+
+
+Torniamo a parlare del problema [[Ricerca nello Spazio degli Stati#^f319dc|8-Puzzle]] e proviamo a creare una euristica per avere una sottostima:
+![[Pasted image 20231004141254.png]]
+- **$h_1 = 7$** → Potrei muoverne una per volta senza avere movimenti delle tessere ma semplicemente spostandone una alla volta liberamente. Così ho almeno 7 movimenti da fare avendo rilassato il problema in modo totale.
+- **$h_2 = 18$** → Potrei rilassare il problema parzialmente decidendo di muovere le tessere in orizzontale o verticale ma anche sopra le altre tessere, fregandocene del foro. 
+  Questa è la ***Distanza di Manhattan*** 
+
+Se due euristiche sono due sottostime e una è maggiore allora dovrò sempre prendere quella perché è la più informata! 
+Attenzione che una euristica, come nel caso di $h_1$ potrebbe anche essere completamente sballata rispetto alla realtà. 
+
+### Strategia greedy
+Insegue sempre il costo minore durante la visita del grafo ma così facendo tende ad essere una visita in ampiezza e si porta con se il non essere ottimale.
+*Caratteristiche*:
+1. Completezza → **NO!** Fallisce negli spazi infiniti e potrebbe incappare in loop. 
+2. Complessità temporale → $O(b^{m})$
+3. Complessità spaziale → $O(b^{m})$ 
+4. Ottimalità → **NO!** 
+
+### $A^{*} Search$
+Evitare di espandere cammini già conosciuti. come costosi.
+ > $f(n) = g(n) + h(n)$
+ > Dove:
+ > 	$f(n) \text{costo totale per raggiungere il goal partendo da n}$
+ > 	$h(n) \text{costo stimato da n al goal}$
+ > 	$g(n) \text{costo per raggiungere n}$
+
+$A^*$ search usa una euristica ammissibile. Se la mia euristica fosse, per ipotesi la funzione oracolo, io avrei un percorso dritto verso il goal. Mentre se la mia euristica fosse di mettere il costo uniforme avrei una visita in ampiezza. Quindi, nei problemi di ricerca una buona euristica fa la differenza! 
+L'idea fondamentale è quella di esplorare prima i percorsi che sembrano promettenti in termini di costo totale stimato. Ciò viene realizzato mantenendo una coda di priorità (spesso implementata come una coda con priorità minima) in cui i nodi vengono estratti in base al valore di $f(n)$. In breve, $A^{*}$ è un potente algoritmo di ricerca che combina la completezza dell'algoritmo di Dijkstra con l'efficienza dell'euristica informata.
+
+#### Ottimalità di $A^{*}$
+![[Pasted image 20231004145426.png]]
+> $f(G_2) = g(G_2) \text{ finché } h(G_2)$
+> $f(G_2) > g(G_1) \text{ finché } G_2 \text{ non è ottimale}$
+> $f(G_2) >= f(n) \text{ finché } h \text{ è ammissibile}$ 
+
+#### Proof of Lemma: Consistency
+Premessa doverosa, una euristica è consistente se vale la disuguaglianza triangolare.
+![[Pasted image 20231004150108.png|200]]
+![[Pasted image 20231004150247.png|400]]
+Una euristica consistente è sempre ammissibile, ma non è vero il contrario.
+Per non perdere informazione $f$ deve essere non decrescente e sono sicuro che se l'euristica è consistente allora $f$ è sempre non decrescente. Per i casi dove l'euristica è ammissibile ma non è consistente allora serve il trucchetto dell'equazione **PATHMAX**. 
+> $f(n^{'}) = max(g(n^{'}) + h(n^{'}), f(n))$
+
+![[Pasted image 20231004151102.png]]
+Da notare come l'euristica può essere vista come un plug-in che attacco all'algoritmo $A^{*}$
+per cambiarne le caratteristiche. Una euristica più informata migliora molto le prestazioni. Per completezza, se una euristica è sempre migliore di un'altra si dice che la prima domina la seconda.
+
+![[Pasted image 20231004151301.png]]
+
+### $IDA^{*}$
+Itertive Deepening $A^{*}$ usa come cut-off la funzione di costo $f(n)$. Ad ogni passo setta il cut-off con la nuova funzione di costo di $A^{*}$ prendendo il minore per minimizzare o il maggiore per massimizzare. 

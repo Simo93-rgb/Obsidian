@@ -9,7 +9,7 @@ Attenzione che non è sempre vero che un agente è un robot, comunque il focus �
 ### Problema dell'aspirapolvere robot
 
 ![[Schermata 2023-10-03 alle 14.16.37.png|300]]![[Schermata 2023-10-03 alle 14.18.41.png|400]] 
-Lo **Stato** è una configurazione del problema. Ad ogni stato è possibile avere una certa configurazione di ambiente e associare una azione, in questo caso riassunto nella tabella qui sopra.
+Lo **Stato** è una configurazione del problema. Ad ogni stato è possibile avere una certa configurazione di ambiente e associare una azione, in questo caso riassunto nella tabella qui sopra. ^e18694
 
 ## Agenti Razionali
 Un agente deve perseguire il “fa la cosa giusta” sulla base di ciò che riceve come stimolo e delle azioni che può eseguire. L’azione giusta è quella che produce il miglior risultato per l’agente.
