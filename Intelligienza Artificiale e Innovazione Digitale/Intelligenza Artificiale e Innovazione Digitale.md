@@ -24,4 +24,4 @@ Evitare di avere gli argomenti di un corso come pagina a se stante, siccome un g
 1. [[Intelligenza Artificiale e Supporto alle Decisioni]]
 2. [[Basi di Dati per Business Intelligence]]
 3. [[Diritto e Società Digitale]]
-4. [[Sistema Impresa]]
+4. [[Statistica Computazionale]]
