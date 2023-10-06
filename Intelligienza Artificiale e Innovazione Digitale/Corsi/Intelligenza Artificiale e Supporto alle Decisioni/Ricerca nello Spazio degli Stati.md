@@ -94,11 +94,11 @@ Andando a livelli trovo la soluzione e trovo pure quella ottimale! D'altronde va
 4. Ottimalità → **SI!** se il costo è 1
 
 ## Ricerche Euristiche o Informate (Best First Search)
-Si associa ad ogni nodo una valutazione di costo e si espande il nodo che costa meno. $$f: S \rightarrow \mathbb(R^+)$$
+Si associa ad ogni nodo una valutazione di costo e si espande il nodo che costa meno.
+ $$f: S \rightarrow \mathbb(R^+)$$
 ### Strategia Costo Uniforme
 La valutazione di un nodo corrisponde al costo corrispondente al cammino dal nodo iniziale al nodo stesso.
-$$g(x) = \begin{cases} 0 & \text{se } n=n_0 \\ g(n^{'})+c(n^{'},n) & \text{se } n^{'} \text{ padre di } n\end{cases}$$ 
-
+$$g(x) = \begin{cases} 0 & \text{se } n=n_0 \\ g(n^{'})+c(n^{'},n) & \text{se } n^{'} \text{ padre di } n\end{cases}$$
 **Esempio Romania**: qui sotto la mappa che collega alcune città rumene (ognuna ha una lettera iniziale differente) che può essere vista come un grafo ad archi pesati.
 ![[Pasted image 20231004134852.png|500]]
 *Richiamo: lo [[Agenti Intelligenti#^e18694|stato]] qui è la configurazione del nodo raggiunto e del cammino percorso per arrivarci.*
@@ -112,10 +112,10 @@ Navigando l'albero si scopre che somiglia ad una navigazione in ampiezza. I cost
 ### Funzione Euristica
 Funzione che ci permetta di capire quanto devo ancora spendere per arrivare alla soluzione (possibilmente ottimale). Questa genererà una stima che spesso è una sottostima.
 
-$$
-h(n) = \hat{c}(n,n_g) $$
-$$\text{ Dove } \hat{c} \text{ è la funzione di costo }
-$$ 
+$$h(n) = \hat{c}(n,n_g)$$
+**Dove**: $\text{Dove } \hat{c} \text{ è la funzione di costo}$
+
+
 Torniamo a parlare del problema [[Ricerca nello Spazio degli Stati#^f319dc|8-Puzzle]] e proviamo a creare una euristica per avere una sottostima:
 ![[Pasted image 20231004141254.png]]
 - **$h_1 = 7$** → Potrei muoverne una per volta senza avere movimenti delle tessere ma semplicemente spostandone una alla volta liberamente. Così ho almeno 7 movimenti da fare avendo rilassato il problema in modo totale.
@@ -166,4 +166,3 @@ per cambiarne le caratteristiche. Una euristica più informata migliora molto le
 
 ### $IDA^{*}$
 Itertive Deepening $A^{*}$ usa come cut-off la funzione di costo $f(n)$. Ad ogni passo setta il cut-off con la nuova funzione di costo di $A^{*}$ prendendo il minore per minimizzare o il maggiore per massimizzare. 
-

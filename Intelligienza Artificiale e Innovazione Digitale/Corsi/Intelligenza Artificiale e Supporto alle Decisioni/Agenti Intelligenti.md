@@ -1,4 +1,4 @@
-Un *Agente* è un'entità che riceve stimoli e agisce e può essere visto come una funzione che prende stimoli (percept) e restituisce azioni (Action)
+Un *Agente* è un'entità che riceve stimoli e agisce e può essere visto come una funzione che prende stimoli (percept) e restituisce azioni (action)
 
 > $f: P^★ \rightarrow A$ 
 

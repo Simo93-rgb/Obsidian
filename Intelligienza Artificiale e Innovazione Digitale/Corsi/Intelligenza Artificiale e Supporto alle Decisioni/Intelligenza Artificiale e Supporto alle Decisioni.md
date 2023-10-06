@@ -1,4 +1,5 @@
 ## Materiale/libri
+[[Artificial Intelligence A Modern Approach (3rd_Edition).pdf#page=23&selection=61,0,61,74|Artificial Intelligence A Modern Approach (3rd_Edition), page 23]]
 Il libro è il solito ![[Artificial Intelligence A Modern Approach (3rd_Edition).pdf]]
 ma c'è anche ![[LopezCBRBook.pdf]]
 
