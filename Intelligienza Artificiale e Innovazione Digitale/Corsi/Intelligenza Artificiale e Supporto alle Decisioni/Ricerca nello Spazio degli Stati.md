@@ -135,20 +135,19 @@ Insegue sempre il costo minore durante la visita del grafo ma così facendo tend
 
 ### $A^{*} Search$
 Evitare di espandere cammini già conosciuti. come costosi.
- > $f(n) = g(n) + h(n)$
- > Dove:
- > 	$f(n) \text{costo totale per raggiungere il goal partendo da n}$
- > 	$h(n) \text{costo stimato da n al goal}$
- > 	$g(n) \text{costo per raggiungere n}$
+$$f(n) = g(n) + h(n)$$
+Dove:
++ $f(n) \text{costo totale per raggiungere il goal partendo da n}$
++ $h(n) \text{costo stimato da n al goal}$
++ $g(n) \text{costo per raggiungere n}$
 
 $A^*$ search usa una euristica ammissibile. Se la mia euristica fosse, per ipotesi la funzione oracolo, io avrei un percorso dritto verso il goal. Mentre se la mia euristica fosse di mettere il costo uniforme avrei una visita in ampiezza. Quindi, nei problemi di ricerca una buona euristica fa la differenza! 
 L'idea fondamentale è quella di esplorare prima i percorsi che sembrano promettenti in termini di costo totale stimato. Ciò viene realizzato mantenendo una coda di priorità (spesso implementata come una coda con priorità minima) in cui i nodi vengono estratti in base al valore di $f(n)$. In breve, $A^{*}$ è un potente algoritmo di ricerca che combina la completezza dell'algoritmo di Dijkstra con l'efficienza dell'euristica informata.
 
 #### Ottimalità di $A^{*}$
 ![[Pasted image 20231004145426.png]]
-> $f(G_2) = g(G_2) \text{ finché } h(G_2)$
-> $f(G_2) > g(G_1) \text{ finché } G_2 \text{ non è ottimale}$
-> $f(G_2) >= f(n) \text{ finché } h \text{ è ammissibile}$ 
+ $$f(G_2) = g(G_2) \text{ finché } h(G_2)$$$$f(G_2) > g(G_1) \text{ finché } G_2 \text{ non è ottimale}$$
+$$f(G_2) >= f(n) \text{ finché } h \text{ è ammissibile}$$ 
 
 #### Proof of Lemma: Consistency
 Premessa doverosa, una euristica è consistente se vale la disuguaglianza triangolare.
@@ -156,7 +155,7 @@ Premessa doverosa, una euristica è consistente se vale la disuguaglianza triang
 ![[Pasted image 20231004150247.png|400]]
 Una euristica consistente è sempre ammissibile, ma non è vero il contrario.
 Per non perdere informazione $f$ deve essere non decrescente e sono sicuro che se l'euristica è consistente allora $f$ è sempre non decrescente. Per i casi dove l'euristica è ammissibile ma non è consistente allora serve il trucchetto dell'equazione **PATHMAX**. 
-> $f(n^{'}) = max(g(n^{'}) + h(n^{'}), f(n))$
+$$f(n^{'}) = max(g(n^{'}) + h(n^{'}), f(n))$$
 
 ![[Pasted image 20231004151102.png]]
 Da notare come l'euristica può essere vista come un plug-in che attacco all'algoritmo $A^{*}$

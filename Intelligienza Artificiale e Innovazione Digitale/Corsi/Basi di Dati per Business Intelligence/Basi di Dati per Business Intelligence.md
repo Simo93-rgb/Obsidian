@@ -46,7 +46,7 @@ Attenzione che dato e informazione NON sono sinonimi e quindi val la pena dare u
 **Informazione**: notizia, dato o elemento che consente di avere conoscenza più o meno esatta di fatti, situazioni, modi di essere.
 ### Perché i dati?
 I dati costituiscono spesso una risorsa strategica, perché più stabili nel tempo di altre componenti (processi, tecnologie, ruoli umani); ad esempio i dati delle banche o delle anagrafi.
-Qui è stata poi fatta una digressione parlando di tassonomie e ontologie in quanto ci sta aver presente che i dati fra loro possono avere delle relazioni che vanno rappresentate. Copio e incollo dalla mia tesi triennale:
+Qui è stata poi fatta una digressione parlando di tassonomie e ontologie in quanto ci sta aver presente che i dati fra loro possono avere delle relazioni che vanno rappresentate. Copio e incollo dalla mia tesi della triennale:
 
 >*Prima di parlare di cosa sia una tassonomia, si vuole introdurre il concetto di ontologia: essa è un modello formale e concettuale che descrive le entità, le proprietà, le relazioni e le regole all’interno di un dominio di conoscenza. Le ontologie possono rappresentare una gamma ampia di relazioni tra le entità, come relazioni non gerarchiche, attributi e vincoli. Le ontologie sono ampiamente utilizzate nel campo dell’intelligenza artificiale, in particolare nell’ambito della rappresentazione della conoscenza e del web semantico, per modellare la conoscenza in modo esplicito e consentire il ragionamento automatico. 
 >
