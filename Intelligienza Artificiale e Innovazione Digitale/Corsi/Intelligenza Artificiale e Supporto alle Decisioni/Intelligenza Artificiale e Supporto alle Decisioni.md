@@ -71,13 +71,13 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 ## Argomenti del Corso
 - Problem Solving e [[Ricerca nello Spazio degli Stati|Ricerca nello Spazio degli Stati]] (3 CFU)
 	- Path-based search
-		- Blind search (Breadth-First, Depth-Fist, Iterative Deepening)
+	- Blind search ([[Ricerca nello Spazio degli Stati#Breath-first Search|Breadth-First]], [[Ricerca nello Spazio degli Stati#Depth-first Search|Depth-Fist]], [[Ricerca nello Spazio degli Stati#Iterative Deepening Search|Iterative Deepening]])
 		- Best-first and Heuristic search (Uniform Cost, Greedy, A*, IDA*)
-	- Iterative Improvement (Local) search
-		- Hill-climbing
-		- Simulated Annealing
-		- Genetic Algorithms (cenni)
-	- Giochi a due concorrenti
+	- [[Iterative Improvement (Local) search]]
+		- [[Iterative Improvement (Local) search#Hill-climbing|Hill-climbing]]
+		- [[Iterative Improvement (Local) search#Simulated Annealing - SA (Tempra Simulata)|Simulated Annealing]]
+		- [[Iterative Improvement (Local) search#Algoritmi Genetici|Genetic Algorithms (cenni)]]
+	- [[Giochi a due concorrenti]]
 - Rappresentazione della Conoscenza e Ragionamento (3 CFU)
 	- Knowledge-Based Systems
 	- Case-Based Reasoning
