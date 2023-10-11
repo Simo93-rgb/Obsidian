@@ -6,7 +6,7 @@ ma c'è anche ![[LopezCBRBook.pdf]]
 
 ## Computer e Intelligenza
 IBM parla di Cognitive Computer, comunque l'idea fra questa idea di IBM e di IA è quella di avere dei programmi che aumentino le abilità dell'essere umano. 
-![[Schermata 2023-10-03 alle 11.02.21.png]]
+![[AccordoIAUomo.png]]
 Soprattutto in situazioni critiche dare ad un esperto di un dominio sensibile la potenza e la quantità di dati che un sistema di IA è qualcosa di potentissimo, si immagini di dare ad un oncologo l'abilità di consultare un grosso DB al posto che la sua sola esperienza. 
 
 
@@ -72,7 +72,7 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 - Problem Solving e [[Ricerca nello Spazio degli Stati|Ricerca nello Spazio degli Stati]] (3 CFU)
 	- Path-based search
 	- Blind search ([[Ricerca nello Spazio degli Stati#Breath-first Search|Breadth-First]], [[Ricerca nello Spazio degli Stati#Depth-first Search|Depth-Fist]], [[Ricerca nello Spazio degli Stati#Iterative Deepening Search|Iterative Deepening]])
-		- Best-first and Heuristic search (Uniform Cost, Greedy, A*, IDA*)
+		- Best-first and Heuristic search ([[Ricerca nello Spazio degli Stati#Strategia Costo Uniforme|Uniform Cost]], [[Ricerca nello Spazio degli Stati#Strategia greedy|Greedy]], [[Ricerca nello Spazio degli Stati#$A {*} Search$|A*]], [[Ricerca nello Spazio degli Stati#$IDA {*}$|IDA*]])
 	- [[Iterative Improvement (Local) search]]
 		- [[Iterative Improvement (Local) search#Hill-climbing|Hill-climbing]]
 		- [[Iterative Improvement (Local) search#Simulated Annealing - SA (Tempra Simulata)|Simulated Annealing]]

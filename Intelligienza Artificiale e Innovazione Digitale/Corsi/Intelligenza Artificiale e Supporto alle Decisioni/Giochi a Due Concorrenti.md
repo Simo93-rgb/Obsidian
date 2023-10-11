@@ -41,10 +41,50 @@ Semplifichiamo l'albero e andiamo a vedere come applicare minimax.
 
 ## Algoritmo Minimax
 ![[Albero gioco minimax.png]]
-![[PseudoCodiceAlgoritmoMinimax.png]]
+*function* **Minimax**(s) *returns* un valore di utilità:
++ *if* s è uno stato terminale *then return* il payoff di Max in s
++ *else if* una mossa di Max in s *then*
+	+ *return* max$\{$**Minimax**(result(a,s)) : a è applicabile a s$\}$
++ *else return* min$\{$**Minimax**(result(a,s)) : a è applicabile a s$\}$ 
+
 Il ragionamento è che la mia mossa la devo fare tenendo conto che l'avversario giochi al suo meglio. Si parte dalle foglie e se il nodo padre è un *Min* allora porto su il minimo altrimenti se il nodo padre è un *Max* allora porto il valore massimo. 
 **OSSERVAZIONE**: il 3 portato su fino alla radice è il famoso $V_G$ 
 
-Pensandolo ricorsivo, le complessità sono:
-- temporale: $O(b^h)$
-- spaziale: $O(b*h)$
+Pensandolo ricorsivo, le proprietà sono:
+- complessità temporale: $O(b^h)$
+- complessità spaziale: $O(b*h)$
+- Completezza: **SI!** Ma se lo spazio è finito
+- Correttezza: è corretto e si può dimostrare, per induzione, che se risponde la risposta è corretta.
+
+Parlando di risorse disponibili spesso i nodi da espandere sono troppi come negli scacchi dove è facile avere $10^{135}$ circa nodi, quindi bisogna approcciare il problema senza espandere ogni nodo. Si possono pensare due approcci:
+- cutoff test
+- evaluation function
+
+### Evaluation Function
+![[evaluationFunctionChess.png]]
+Come facciamo a valutare quale giocatore è messo meglio? Rilassiamo il problema togliendo l'importanza della posizione delle pedine. Posso fare una combinazione lineare pesando le pedine in base alla loro importanza $$Eval(s) = \sum_{i=1}^{n}w_if_i(s)$$ **Dove**:
+- $w$ è il peso che do alla pedina
+- $f$ è la feature 
+	- posso definirla come la differenza fra il n° i pedine bianche e il n° di pedine nere, dello stesso tipo. 
+- Un esempio:
+	- $w = 9$ per le regine
+	- $f$ è appunto la differenza fra le regine
+
+**OSSERVAZIONE**:
+Avanzando col gioco potrei trovarmi in una configurazione vicina ad uno stato finale, ossia aver generato un albero che finalmente è vicino alle foglie, allora posso pensare di generarlo tutto fino alle foglie per avere finalmente un piano da seguire invece che proseguire con la strategia.
+### Cutting Off Search
+L'algoritmo Minimax con cutoff è come l'algoritmo Minimax col value ma cambia in due cose:
+1. i nodi terminali sono rimpiazzati dal cutoff
+2. l'utilità è rimpiazzata dalla funzione di valutazione
+Prendiamo sempre gli scacchi e diamogli un cutoff che corrisponde ad un lookahead decente, un numero compreso nell'intervallo $[4,12]$ dove 4 è un completo novizio e 12 è un master. 
+Posso ottimizzare la situazione potando l'albero (pruning) e investendo le risorse risparmiate per avere un lookahead maggiore. 
+
+#### $\alpha - \beta$ pruning 
+Questo approccio lavora solo in profondità. Notazione: il triangolo su è Max e quello giù è Min. 
+![[alphaBetaPruning.png]]
+Per vedere un approfondimento vedere il video qui sotto. ![](https://www.youtube.com/watch?v=l-hh51ncgDI)
+Proprietà:
+- il pruning non inficia il risultato
+- complessità temporale: $O(b^{m\over 2})$
+	- nel caso migliore mi raddoppia la profondità a cui posso arrivare
+	- in generala comunque funziona bene

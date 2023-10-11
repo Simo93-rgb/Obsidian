@@ -134,7 +134,7 @@ Insegue sempre il costo minore durante la visita del grafo ma così facendo tend
 4. Ottimalità → **NO!** 
 
 ### $A^{*} Search$
-Evitare di espandere cammini già conosciuti. come costosi.
+Evitare di espandere cammini già conosciuti come costosi.
 $$f(n) = g(n) + h(n)$$
 Dove:
 + $f(n) \text{costo totale per raggiungere il goal partendo da n}$
@@ -165,3 +165,4 @@ per cambiarne le caratteristiche. Una euristica più informata migliora molto le
 
 ### $IDA^{*}$
 Itertive Deepening $A^{*}$ usa come cut-off la funzione di costo $f(n)$. Ad ogni passo setta il cut-off con la nuova funzione di costo di $A^{*}$ prendendo il minore per minimizzare o il maggiore per massimizzare. 
+
