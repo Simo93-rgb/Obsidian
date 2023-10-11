@@ -1,4 +1,4 @@
-![[Pasted image 20230512185005.png]]
+![[CopertinaEsteticaSchemaBI.png]]
 # Introduzione Business Intelligence
 Alcune definizioni:
 + An umbrella term that encompasses tools, architectures, databases, data warehouses, performance management, methodologies, and so forth, all of which are integrated into a unified software suite.” (Turban et al. (2007).
@@ -18,7 +18,7 @@ Quindi i sistemi di BI hanno lo scopo di:
 + fornire strumenti di analisi potenti e dinamici per creare facilmente elaborazioni (filtri e formule) e di “navigare nei dati” seguendo il ragionamento analitico, senza prevedere un’elevata cultura informatica
 + automatizzare produzione e distribuzione di reportistica aziendale, ritagliata per i diversi destinatari
 ### Architettura super semplificata di un DW
-![[Schermata 2023-10-02 alle 14.01.55.png]]
+![[ArchSemplificataDataWarehouse.png]]
 Possiamo distinguere due parti, un po' come già detto in precedenza, ossia una parte tecnologica e una informativa. La prima è la parte della cattura dei dati e soprattutto la parte **ETL** (Extraction Transformation Load). 
 
 # Basi di Dati e Sistemi informativi
@@ -88,10 +88,10 @@ Lo schema è sostanzialmente invariante nel tempo, descrive la struttura della t
 ### Modello Logico
 Adottati nei DBMS esistenti per l’organizzazione dei dati – utilizzati dai programmi – indipendenti dalle strutture fisiche 
 Esempi: relazionale, reticolare, gerarchico, a oggetti, basato su XML.
-![[Schermata 2023-10-02 alle 16.58.43.png]]
+![[ModelloLogico.png]]
 ### Modello Concettuale
 Usato in fase di progettazione è un modo di rappresentare le cose a livello umano. Il più diffuso è il modello entity-relationship.
-![[Schermata 2023-10-02 alle 17.15.37.png]]
+![[ModelloConcettuale.png]]
 Quindi prendo una realtà e fisso le idee su uno schema ad alto livello con la quale poi potrò costruire la mia base di dati. Questo lo si riesce a tradurre facilmente in un modello logico.
 
 ## Architetture Sistemi DBMS

@@ -78,9 +78,9 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 		- [[Iterative Improvement (Local) search#Simulated Annealing - SA (Tempra Simulata)|Simulated Annealing]]
 		- [[Iterative Improvement (Local) search#Algoritmi Genetici|Genetic Algorithms (cenni)]]
 	- [[Giochi a due concorrenti]]
-- Rappresentazione della Conoscenza e Ragionamento (3 CFU)
-	- Knowledge-Based Systems
-	- Case-Based Reasoning
+- [[Knoledge Representation and Reasoning|Rappresentazione della Conoscenza e Ragionamento]] (3 CFU)
+	- [[Knoledge Representation and Reasoning#Knowledge Base Systems|Knowledge-Based Systems]]
+	- [[Case-Based Reasoning]]
 	- Ragionamento Incerto
 	- Calcolo delle probabilita’ su variabili discrete (richiami, probabilita’ condizionata, Teorema di Bayes)
 	- Reti Bayesiane
