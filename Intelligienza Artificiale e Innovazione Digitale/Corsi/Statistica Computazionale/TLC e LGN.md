@@ -8,6 +8,30 @@ Il TLC ci dice con quale distribuzione la nostra media campionaria converge alla
 |:------:|:----------:|
 |$Z = {\bar X_n - \mu \over \sigma \sqrt{n}} \sim N(0,1)$|$T = {\bar X_n - \mu \over S \sqrt{n}} \sim N(0,1)$|
 
-Attenzione che deve valere sempre che $n$ sia grande. Però fino ad ora non abbiamo definito cosa significa "grande" e con che considerazioni devo prendere questo $n$
+Attenzione che deve valere sempre che $n$ sia grande. Però fino ad ora non abbiamo definito cosa significa "grande" e con che considerazioni devo prendere questo $n$. 
 # Legge dei Grandi Numeri
+Cos'è? Se il TLC ci dice come converge la media campionaria la LGN ci dice *a cosa converge.* Ce ne sono due versioni dette LGN Debole e LGN Forte. 
 
+## LGN Debole
+Qui esprimo il concetto di **tolleranza sempre positiva**, che rappresento con $\varepsilon$. $$\lim_{n \rightarrow +\infty} \mathbb{P}(|\bar x_n - \mu| > \varepsilon) = 0$$
+**Dove**:
+- $|\bar x_n - \mu|$ rappresenta l'errore di misura della media campionaria rispetto al valore vero
+- $\varepsilon$ è la tolleranza
+
+## LGN Forte
+Questa è più semplice $$\mathbb{P}\bigg(\lim_{n \rightarrow +\infty}\bar x_n = \mu \bigg)=1$$
+*È tautologico che con n che tende a infinito la media campionaria sia esattamente il valore vero*. Attenzione che come affermazione è davvero forte. 
+
+## Considerazioni Importanti su TLC e LGN
+Finalmente possiamo dire che $n$ è grande se arrivo ad una taglia campionaria ci circa 40 elementi, anche se poi andando su R sarà facile vedere come sotto le centinaia l'errore commesso non è così piccolo. 
+TLC e LGN sono *distribution free* ossia che valgono in modo indipendente dal tipo di distribuzione. 
+
+|----------|$\sigma$ nota|$\sigma$ non nota|
+|:-:|:-------------------------------:|:--------------------------:|
+|$X \sim Gaussiana \land n \text{ qualsiasi}$|$Z \sim N(0,1)$|$T \sim t_{n-1}$|
+
+Se $X$ è una qualsiasi vc ed $n$ è grande $\Longleftrightarrow$ $T \sim Z \sim N(0,1)$. In altre parole, se $X$ è una vc di una distribuzione qualsiasi e la taglia campionaria è molto grande allora il mio stimatore $T$ lo posso approssimare come visto nel TLC. 
+
+# $t-student$
+Introduciamo questa distribuzione complicata ma utile poiché arriva da uno studio fatto alla Guinness e se c'è della birra di mezzo non si può non parlarne 😂🍻. È la generalizzazione della $N(0,1)$ con code pesanti. ![[t_student.png]]
+Sicuramente val la pena andare a vederla su [Wikipedia](https://it.wikipedia.org/wiki/Distribuzione_t_di_Student)
