@@ -1,8 +1,7 @@
 Un *Agente* è un'entità che riceve stimoli e agisce e può essere visto come una funzione che prende stimoli (percept) e restituisce azioni (action)
+$$f: P^★ \rightarrow A$$ 
 
-> $f: P^★ \rightarrow A$ 
-
-Per ogni *environment* in cui si trova l'agente e per i *tasks* che deve soddisfare si cerca di ottimizzare l'agente in modo specifico. Siccome complessità temporale e spaziale sono limiti concreti e non così lontani non è possibile raggiungere la perfezione. 
+Per ogni *environment* in cui si trova l'agente e per i *task* che deve soddisfare si cerca di ottimizzare l'agente in modo specifico. Siccome complessità temporale e spaziale sono limiti concreti e non così lontani non è possibile raggiungere la perfezione. 
 ![[Schermata 2023-10-03 alle 14.12.18 1.png]]
 Attenzione che non è sempre vero che un agente è un robot, comunque il focus è che a noi interessa il punto di domanda perché è la parte che dobbiamo sviluppare.
 

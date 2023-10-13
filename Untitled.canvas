@@ -1,9 +1,0 @@
-{
-	"nodes":[
-		{"id":"8b756a98b2538ba8","x":-345,"y":-217,"width":250,"height":60,"type":"text","text":""},
-		{"id":"c48b12c0b2416beb","x":20,"y":-217,"width":250,"height":60,"type":"text","text":"fnafbkh"},
-		{"id":"a94ae987cfdd2d1a","x":-295,"y":-80,"width":400,"height":400,"type":"file","file":"Intelligienza Artificiale e Innovazione Digitale/Nodo Padre.md"},
-		{"id":"5f429d031b22fc4b","x":20,"y":340,"width":400,"height":158,"type":"file","file":"Intelligienza Artificiale e Innovazione Digitale/Assets/Multimedia/Pasted image 20230512185005.png"}
-	],
-	"edges":[]
-}
