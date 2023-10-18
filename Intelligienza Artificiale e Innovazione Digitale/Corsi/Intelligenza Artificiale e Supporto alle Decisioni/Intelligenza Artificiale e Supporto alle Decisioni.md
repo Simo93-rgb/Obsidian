@@ -80,7 +80,7 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 - [[Knoledge Representation and Reasoning|Rappresentazione della Conoscenza e Ragionamento]] (3 CFU)
 	- [[Knoledge Representation and Reasoning#Knowledge Base Systems|Knowledge-Based Systems]]
 	- [[Case-Based Reasoning]]
-	- Ragionamento Incerto
+	- [[Ragionamento Incerto]]
 	- Calcolo delle probabilita’ su variabili discrete (richiami, probabilita’ condizionata, Teorema di Bayes)
 	- Reti Bayesiane
 - Supporto alle decisioni (3 CFU)
