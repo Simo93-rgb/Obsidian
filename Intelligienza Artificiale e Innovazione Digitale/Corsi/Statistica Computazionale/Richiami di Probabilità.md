@@ -4,7 +4,7 @@ Lo spazio di probabilità è una terna di elementi così composta:
 + $\Omega \rightarrow$  spazio campionario, ossia l'insieme dei possibili esiti detti anche *eventi elementari*
 + $\mathcal{A}\rightarrow$  famiglia opportuna di sottoinsiemi di $\Omega$, i suoi elementi sono quindi eventi
 + $\mathbb{P}\rightarrow$  misura di probabilità ossia una funzione che ad ogni evento di $\textrm{A}$ associa un numero nell'intervallo $[0,1]$ in accordo con gli assiomi di [Kolmogorov](https://it.wikipedia.org/wiki/Andrej_Nikolaevi%C4%8D_Kolmogorov) qui sotto:
-	1. $\mathbb{P} (\emptyset) = 0 \rightarrow$ probabilità dell'evento impossibile
+	1. $\mathbb{P}(A)= 0\le p\le1 \land p\in \mathbb{R}$
 	2. $\mathbb{P} (\Omega) = 1\rightarrow$  probabilità dell'evento certo
 	3. Se prendo una serie di $\mathcal{A}$ disgiunti a due a due fra loro allora $$\mathbb{P}\biggl(\bigcup_{i=1}^{+\infty}\mathcal{A}_i\biggl) = \sum_{i=1}^{+\infty}\mathbb{P}(\mathcal{A}_i)$$
 ## Spazio Equiprobabile
