@@ -6,5 +6,8 @@ Le lezioni svolte con relativi argomenti sono pubblicate su DIR man mano che si 
 	1. [[Variabili Casuali Notevoli]]
 	2. [[TLC e LGN]]
 	3. [[Formula di Bayes e Teorema Probabilità Totali]]
+3. Terza Lezione
+	1. [[Generazione Variabili Casuali]]
+	2. [[Metodo dell'inversione]]
 
 
