@@ -12,9 +12,19 @@ Procediamo:
 Partiamo disegnando la $X$ su un piano cartesiano e tracciando l'asintoto a $1$. Un valore $x\in \mathbb{R}$ preso a caso è sicuramente trasformabile tramite la vc in un valore $u \in [0,1]$ per come è fatta la vc, sappiamo anche che possiamo ottenere da $u$ il valore $x$ se conosco la funzione inversa e se non la conosco la posso calcolare purché la funzione sia invertibile.
 ![[distribuzione della vc X in verde.png|400]]
 Il punto $u$ è equivalente a $F_X(x)$ e da qui posso arrivare a dire che $x=F_X^{-1}(u)=inf\big\{ x\in \mathbb{R}| F_X(x) \geq u \big\}$
-L'idea è quella di interpretare una $u$ generata casualmente come se fosse un valore della cfd di $X$ e per farlo basta recuperare la funzione inversa. Attenzione che se $F(\bullet)$ non è invertibile questo ragionamento non si può fare. 
+L'idea è quella di interpretare una $u$ generata casualmente come se fosse un valore della cdf di $X$ e per farlo basta recuperare la funzione inversa. Attenzione che se $F(\bullet)$ non è invertibile questo ragionamento non si può fare. 
 **Algoritmo**:
 1. Genero $u$ da una variabile casuale $U\sim \mathcal{U}(0,1)$
 2. $x=F_X^{-1}(u)$
-Se applico questo algoritmo allora $x$ è realizzazione di $X$ che ha cfd $F_X(\bullet)$.
-Quindi! $U\sim \mathcal{U}(0,1) \Rightarrow F_X^{-1}(U) \sim X$. 
+Se applico questo algoritmo allora $x$ è realizzazione di $X$ che ha cdf $F_X(\bullet)$.
+Quindi! Nella forma $\text{Ipotesi} \Rightarrow \text{Tesi}$ abbiamo che vale $$U\sim \mathcal{U}(0,1) \Rightarrow F_X^{-1}(U) \sim X$$
+**DIMOSTRAZIONE**
+Chiamo $Y=F_X^-1{}(U)$ la mia tesi a cui arrivare. 
+$$\begin{align}
+1. &\quad F_Y(y) = \mathbb{P}(Y \leq y) = \mathbb{P}(F_X^{-1}(U) \leq y) \\
+2. &\quad F_Y(y) = \mathbb{P}(F_X(F_X^{-1}(U)) \leq F_X(y)) \\
+3. &\quad F_Y(y) = \mathbb{P}(U \leq F_X(y)) \\
+4. &\quad F_Y(y) = F_U(F_X(y))\\
+5. &\quad F_Y(y) = F_X(y)
+\end{align}
+$$Al Passaggio $1$ ho semplicemente scritto la cdf della $Y$ e sostituendo poi con l'identità della tesi, è poi al passaggio $2$ che viene fuori il primo importante commento ossia che funziona la moltiplicazione per $F_X(\bullet)$ poiché è monotona e invertibile. Immaginiamo di gestire una disequazione e di aver bisogno di moltiplicare ambo i lati per $-1$ o di volerlo fare con un $\log$, ecco, non posso farlo sempre a prescindere ma come minimo devo porre delle condizioni per non commettere illeciti. A questo punto si semplifica ottenendo il $3$ e posso poi al $4$ fare come fatto al $1$ ossia riscrivere in termini di cdf. Altro passaggio importante, io so che $F_X(y)\in [0,1]$ e so che $F_U(u) = u \text{ se } u\in[0,1]$ quindi posso dedurre la 5 che conclude la dimostrazione.   

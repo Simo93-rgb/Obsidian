@@ -37,3 +37,6 @@ Per definire le proprietà prima dobbiamo fare delle premesse:$$\begin{cases} X 
 2. $Z={X-\mu \over \sigma} \sim N(0,1)$
 	1. Questa proprietà è detta *standardizzazione*
 3. Siano $\{X_1, ..., X_n\}$ Gaussiane iid, posso combinarle linearmente ottenendo una vc $Y$ come segue: $Y = \sum_{i=1}^n a_i X_i \sim N(\mu = \sum_{i=1}^n a_i \mu_i, \sigma^2 = \sum_{i=1}^n a_i \sigma^2_i )$
+
+# Esponenziale
+Altra vc continua nel nostro portafoglio è la esponenziale $$X \sim exp(\lambda) \text{ con } \lambda >0$$Andiamo a definire le solite funzioni di densità e di probabilità. contd...
