@@ -6,14 +6,21 @@ Indicando con $S$ il successo e con $\bar S$ l'insuccesso possiamo scrivere:
 - $\mathbb{P}(S) = \mathbb{P}(X = 1) = \pi$
 - $\mathbb{P}(\bar S) = \mathbb{P}(X = 0) = 1-\pi$
 - $\mathbb{P}(X=x) = \pi^x(1-\pi)^{1-x}$
+**PDF**
+- $f_X(x)=\begin{cases} 1-\pi & x=0\\ \pi & x=1\\ 0 & \text{altrimenti}\end{cases}$
+- ![[pdf Bernoulli.png]]
+**CDF**
+- $F_X(x)=\begin{cases} 0 & x<0\\ 1-\pi & 0\le x \le1\\ 1 & x>0\end{cases}$
+- ![[cdf della bernoulli.png]]
 
 **Valore atteso**: $\mathbb{E}[X] = \sum_{i=0}^1{x \mathbb{P}(X=x)} = \pi^0(1-\pi)^{1-0} + \pi^1(1-\pi)^{1-1} = \pi$ 
 **Varianza**: $Var(X) = \mathbb{E}[X^2] - \big(\mathbb{E}[X] \big)^2 = \pi (1-\pi)$
 Le dimostrazioni sono lasciate al lettore 😜
 
+
 # Binomiale
 Stavi pensando che fosse scemo avere due Bernoulli per due lanci di moneta? Ecco la soluzione! $$X \sim Bin(n, \pi)$$
-Prendiamo $n$ esperimenti di Bernoulli indipendenti identicamente distribuiti, la nostra Binomiale serve a contemplare proprio tante Bernoulli in un unico esperimento, precisamente i suoi successi. Rappresentiamo con $Y$ una vc di Bernoulli, avrò che $$X = \sum_{i=1}^n Y_i$$ e la sua distribuzione di probabilità è $$\mathbb{P}(X=x) = {n \choose p}\pi^x(1-\pi)^{n-x}$$ **Piccolo cenno**: il coefficiente binomiale ${n \choose p}$ indica con $n$ il numero di elementi dell'insieme e con $p$ gli elementi di un sottoinsieme, il risultato del coefficiente binomiale è il numero di sottoinsiemi diversi fra loro con cardinalità $p$ che sono in grado di fare a partire da $n$. Se avessi ${4 \choose 2}$ il risultato sarebbe $6$ poiché posso fare quel numero di sottoinsiemi diversi fra loro partendo da uno con cardinalità $4$. Per maggiori dettagli vedere il capitolo su [YouMath](https://www.youmath.it/lezioni/probabilita/calcolo-combinatorio/1515-coefficiente-binomiale.html)
+Prendiamo $n$ esperimenti di Bernoulli indipendenti identicamente distribuiti, la nostra Binomiale serve a contemplare proprio tante Bernoulli in un unico esperimento, precisamente i suoi successi. Rappresentiamo con $Y$ una vc di Bernoulli, avrò che $$X = \sum_{i=1}^n Y_i$$ e la sua distribuzione di probabilità è $$\mathbb{P}(X=x) = {n \choose p}\pi^x(1-\pi)^{n-x}$$**Piccolo cenno**: il coefficiente binomiale ${n \choose p}$ indica con $n$ il numero di elementi dell'insieme e con $p$gli elementi di un sottoinsieme, il risultato del coefficiente binomiale è il numero di sottoinsiemi diversi fra loro con cardinalità $p$ che sono in grado di fare a partire da $n$. Se avessi ${4 \choose 2}$ il risultato sarebbe $6$ poiché posso fare quel numero di sottoinsiemi diversi fra loro partendo da uno con cardinalità $4$. Per maggiori dettagli vedere il capitolo su [YouMath](https://www.youmath.it/lezioni/probabilita/calcolo-combinatorio/1515-coefficiente-binomiale.html)
 
 **Valore atteso**: $\mathbb{E}[X] = \mathbb{E}\big[ \sum_{i=1}^n Y_i\big] = \sum_{i=1}^n\mathbb{E}[Y_i] = \sum_{i=1}^n \pi = n\pi$ 
 **Varianza**: $Var(X) = Var\big( \sum_{i=1}^n Y_i\big) = \sum_{i=1}^nVar(Y_i) = \sum_{i=1}^n \pi(1-\pi) = n\pi(1-\pi)$
@@ -37,6 +44,27 @@ Per definire le proprietà prima dobbiamo fare delle premesse:$$\begin{cases} X 
 2. $Z={X-\mu \over \sigma} \sim N(0,1)$
 	1. Questa proprietà è detta *standardizzazione*
 3. Siano $\{X_1, ..., X_n\}$ Gaussiane iid, posso combinarle linearmente ottenendo una vc $Y$ come segue: $Y = \sum_{i=1}^n a_i X_i \sim N(\mu = \sum_{i=1}^n a_i \mu_i, \sigma^2 = \sum_{i=1}^n a_i \sigma^2_i )$
-
+# Uniforme
+Sia $U \sim \mathcal{U}(0,1)$
+- **PDF** 
+	- $f_U(u)=\begin{cases}1 & 0\le 1 \\ 0 & \text{altrove}\end{cases}$
+	+ ![[pdf di una U(0,1).png]]
++ **CDF** 
+	+ $F_U(u)=\begin{cases}0 & x < 0 \\ u & 0\le x \le 1 \\ 1 & x > 1 \end{cases}=\mathbb{P}(U \le u)=\int_{-\infty}^u f_U(t)dt$  
+	+ ![[cdf di una U(0,1).png]]
+	+ $\mathbb{E}[U]={1\over 2}$
+	+ $Var(U)={1\over 12}$
 # Esponenziale
-Altra vc continua nel nostro portafoglio è la esponenziale $$X \sim exp(\lambda) \text{ con } \lambda >0$$Andiamo a definire le solite funzioni di densità e di probabilità. contd...
+Altra vc continua da inserire nel nostro portafoglio è la esponenziale $$X \sim exp(\lambda) \text{ con } \lambda >0$$Andiamo a definire le solite funzioni di densità e di probabilità
+
+- **PDF** 
+	- $f_X(x)=\begin{cases}0 & x\le 0 \\ \lambda e^{-\lambda x}& x>0\end{cases}$ 
+	- ![[pdf esponenziale.png|250]]
+	- I possibili esiti sono definiti da $supp\big\{(0,+\infty)\big\}$
+- **CDF**
+	- $F_X(x)=\begin{cases}0 & x\le 0 \\ 1- e^{-\lambda x}& x>0\end{cases}$
+	- ![[cdf della esponenziale.png|250]]
+La vc esponenziale è stata inventata in ambito militare per misurare il tempo di rottura delle semiali dei velivoli. In generale infatti si usa per misurare i tempi di attesa, ad esempio l'intervallo di tempo fra un intervallo e l'altro in un call center. È legata alla [[Variabili Casuali Notevoli#Poisson|Poisson]]e infatti se dovessi contare quante chiamate arrivano al call center uso la Poisson e fra queste ci sono tanti tempi di attesa che si modellano con la esponenziale. Quindi se conto quante vc esponenziali ho un valore distribuito come una Poisson. Ai fini dell'esame questa è solo da ritenersi una curiosità. 
+
+
+
