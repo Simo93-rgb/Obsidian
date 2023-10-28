@@ -1,4 +1,4 @@
-![[CopertinaEsteticaSchemaBI.png]]
+![[Intro DB e BI - CopertinaEsteticaSchemaBI.png]]
 # Introduzione Business Intelligence
 Alcune definizioni:
 + An umbrella term that encompasses tools, architectures, databases, data warehouses, performance management, methodologies, and so forth, all of which are integrated into a unified software suite.” (Turban et al. (2007).
@@ -18,7 +18,7 @@ Quindi i sistemi di BI hanno lo scopo di:
 + fornire strumenti di analisi potenti e dinamici per creare facilmente elaborazioni (filtri e formule) e di “navigare nei dati” seguendo il ragionamento analitico, senza prevedere un’elevata cultura informatica
 + automatizzare produzione e distribuzione di reportistica aziendale, ritagliata per i diversi destinatari
 ### Architettura super semplificata di un DW
-![[ArchSemplificataDataWarehouse.png]]
+![[Intro DB e BI - ArchSemplificataDataWarehouse.png]]
 Possiamo distinguere due parti, un po' come già detto in precedenza, ossia una parte tecnologica e una informativa. La prima è la parte della cattura dei dati e soprattutto la parte **ETL** (Extraction Transformation Load). 
 
 # Basi di Dati e Sistemi informativi
@@ -88,15 +88,15 @@ Lo schema è sostanzialmente invariante nel tempo, descrive la struttura della t
 ### Modello Logico
 Adottati nei DBMS esistenti per l’organizzazione dei dati – utilizzati dai programmi – indipendenti dalle strutture fisiche 
 Esempi: relazionale, reticolare, gerarchico, a oggetti, basato su XML.
-![[ModelloLogico.png]]
+![[Intro DB e BI - ModelloLogico.png]]
 ### Modello Concettuale
 Usato in fase di progettazione è un modo di rappresentare le cose a livello umano. Il più diffuso è il modello entity-relationship.
-![[ModelloConcettuale.png]]
+![[Intro DB e BI - ModelloConcettuale.png]]
 Quindi prendo una realtà e fisso le idee su uno schema ad alto livello con la quale poi potrò costruire la mia base di dati. Questo lo si riesce a tradurre facilmente in un modello logico.
 
 ## Architetture Sistemi DBMS
 
-![[arch a 3 livelli.png]]
+![[Intro DB e BI - arch a 3 livelli.png]]
 <center>Arch. ANSI/SPARC standard a tre livelli</center>
 
 Lo **schema interno** (o fisico) è la rappresentazione dello schema logico per mezzo di strutture di memorizzazione (file; ad esempio, record con puntatori, ordinati in un certo modo)
@@ -156,7 +156,7 @@ Sono realizzate in linguaggio ospite e degli esempi sono i versamenti allo sport
 
 
 ## DBMS Server
-![[DBMS.png]]
+![[Intro DB e BI - DBMS.png]]
 
 ### PRO
 + dati come risorsa comune, base di dati come modello della realtà 

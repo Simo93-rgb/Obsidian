@@ -36,7 +36,7 @@ Ne vediamo tre:
 
 #### Notazione: $F_X(\bullet)$ Discreta
 Se $F_X(\bullet)$ è discontinua allora per forza $X$ è discreta. I possibili esiti di $X$ numerabili e sono i punti nei quali $F_X(\bullet)$ è discontinua. I salti della discontinuità sono la probabilità associata.
-![[Funzione di Ripartizione Discreta.png]]
+![[Richiami di Probabilità - Funzione di Ripartizione Discreta.png]]
 <p style="text-align:center">Funzione di Ripartizione Discreta. Qui i lanci di un dado non truccato a 6 facce.</p>
 #### Notazione: $F_X(\bullet)$ Continua
 In questo caso abbiamo che $X$ è una *vc* continua di conseguenza. Se $F_X(\bullet)$ è continua e derivabile allora posso definire una funzione di densità di probabilità *pdf* (probability density function) ossia la derivata della funzione di ripartizione: $$f_X(x) = {\partial F_X(x) \over \partial x} \text{ } \forall x \in X$$
@@ -49,9 +49,9 @@ Proprietà *pdf*:
 
 ### Esempio con Normale Standard
 Sia $X \sim \mathcal{N}(0,1)$, quindi $X$ che si distribuisce come una normale standard, anche detta normale con parametri $\mu = 0$ e $\sigma = 1$. $$f_X(x) = {1 \over \sqrt{2\pi}}e^{-{x^2/ 2}}$$
-![[Grafico Normale Standard.png]]
+![[Richiami di Probabilità - Grafico Normale Standard.png]]
 Andando a definire poi la funzione di ripartizione continua con l'integrale (come già visto) abbiamo: $$F_X(x) = \int_{-\infty}^{x}{f_X(t)\partial t}$$
-![[Funzione di Ripartizione Normale Standard.png]]
+![[Richiami di Probabilità - Funzione di Ripartizione Normale Standard.png]]
 **Osservazine**: Siccome $f_X(\bullet)$ non è integrabile per calcolare la funzione di ripartizione si usa una tabella oppure si può approssimare con la funzione ${1 \over 2}\biggl(1 + erf{{x - \mu}\over{\sigma \sqrt{2}}}\biggl)$ 
 # Quantile di ordine alpha
 Definisco quantile di ordine $\alpha$ la quantità $$X_\alpha = inf\{x\in \mathbb{R} \land \alpha \in (0,1) : F_X(x)\ge \alpha\}$$
@@ -59,7 +59,7 @@ Questa funzione è detta inversa generalizzata di $F_X(\bullet)$ e coincide con 
 Supponiamo di avere $\alpha = 0.1$, con quel valore sto costruendo un quantile conosciuto come ***primo decile*** ed è quel valore della distribuzione per cui la probabilità cumulata fino a qual valore, incluso, sia maggiore o uguale a $0.1$, e la probabilità cumulata da quel valore, incluso, in poi sia maggiore o uguale a $0.9$. Quindi se voglio il primo decile di una distribuzione significa che prenderò tutti quei valori uguali o inferiori al $10\%$. Ad esempio il primo decile dell'intervallo numerico $[0,100] \in \mathbb{N}$ sono i numeri nell'intervallo $[0,10]\in \mathbb{N}$ ossia $\{0,1,2,3,4,5,6,7,8,9,10\}$. Il novantesimo percentile dell'insieme $\{18, 20, 22, 25, 30, 32, 35, 40, 45, 50\}$ è $48$ perché al di sotto di quel valore c'è il $90\%$ dei dati.
 ## Caso Bivariato
 Si parla di **statistiche bivariate** quando su ogni unità statistica, appartenente ad una determinata popolazione, si vogliono studiare contemporaneamente due caratteri $A$ e $B$. Ad esempio se ho 20 studenti e voglio studiare i voti di Matematica e i voti di Storia.
-![[Caso Bivariato Discreto.png]]
+![[Richiami di Probabilità - Caso Bivariato Discreto.png]]
 L'esempio è un caso discreto ma rende l'idea, ora trattiamo il caso continuo con due vc $X$ e $Y$. Indichiamo la funzione di densità di probabilità (pdf) congiunta delle due vc con $F_{X,Y}(x,y)$. $$F_{X,Y}(x,y) =\mathbb{P}(X\le x, Y\le y) =\int_{-\infty}^{x}\int_{-\infty}^{y}{f_{X,Y}(t,s)\partial t \partial s}$$
 ### Le pdf Marginali
 Le pdf marginali nel caso continuio sono:
@@ -121,7 +121,7 @@ Come poco sopra nel caso di fattorizzazione, anche qui se $X$ e $Y$ sono indipen
 	2. $\mathbb{E}[X1 + · · · + Xn] = nμX$ 
 	3. $Var(X1 + · · · + Xn) = nσ2 X$
 Ho riportato quelle del libro, il prof. ne ha accorpate alcune ma alla fine è la stessa roba. 
-![[Proprieta' Media e Varianza.png]]
+![[Richiami di Probabilità - Proprieta' Media e Varianza.png]]
 
 **ESEMPIO**
 Sia $\{X_1, X_2, ..., X_n\}$ iid come $X$ vc con media $\mu_X = \mathbb{E}[X]$ e con $\sigma^2 = Var(X)$. Siccome molti esperimenti devono essere fatti su un campione rappresentativo di una popolazione, indicherò la media dell'esperimento sul campione con $$\bar X_n = {1\over n} \sum_{i=1}^{n}X_i $$ Dove $\bar X_n$ è la **media campionaria** (empirica). Ora, qual è la media della media campionaria? Calcolo: $$\mathbb{E}[\bar X_n] = {1\over n}\sum_{i=1}^{n}\mathbb{E}[X_i] = {1\over n}\sum_{i=1}^{n}\mu x = {1\over n} * n\mu x = \mu x$$al passaggio del secondo uguale bisogna aggiungere una precisazione ossia che la fattorializzazione è possibile perché le vc sono iid. Segue poi che che se sommo $n$ volte lo stesso oggetto allora posso risolvere la sommatoria con l'oggetto moltiplicato per $n$ ed ecco perché ottengo $(n*\mu *x)$. Ad esempio, se voglio calcolare la media della statura italiana io misuro il campione e cerco di ottenere una media campionaria il più uguale possibile alla media vera. Questa cosa la misuro con la variabilità e se quel valore è basso allora ho quel che volevo. Ovviamente con variabilità bisogna intendere che, uffa, si lavora con la varianza. Qui non metto dimostrazione ma solo la formula finita: $$Var(\bar X_n) = {\sigma^2 \over n}$$

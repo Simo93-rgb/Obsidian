@@ -5,7 +5,7 @@ L'idea è di avere un sistema molto specializzato, ossia un sistema esperto, nel
 Per anni l'utilizzo della logica si è pensato essere il modo migliore di rappresentare la conoscenza ma, spoiler, NO! Si sono pure inventati le logiche non monotone per ammettere eccezioni e rappresentare meglio il mondo ma alla fine era impossibile star dietro alla complessità di questa logica e comunque la statistica era migliore sotto tutti i punti di vista.  
 
 # Knowledge Base Systems
-![[KnowledgeBaseSystem.png]]
+![[Knoledge Representation and Reasoning - KnowledgeBaseSystem.png]]
 Componenti:
 - KB: ossia la base di conoscenza
 - Motore Inferenziale: usa la KB per fare ragionamenti per rispondere alle query

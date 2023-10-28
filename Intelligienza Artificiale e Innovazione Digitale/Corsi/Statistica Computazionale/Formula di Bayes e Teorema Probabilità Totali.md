@@ -8,7 +8,7 @@ Quindi Bayes mi dice come cambia la *probabilità a priori* sapendo che si verif
 # Teorema delle Probabilità Totali
 Faccio immediatamente uno spoiler sul perché lo si usa e la risposta è molto semplice, ossia che nel 90% dei casi lo si usa per trovare il denominatore della [[Formula di Bayes e Teorema Probabilità Totali#Bayes|Formula di Bayes]]. Andiamo ora ad enunciarlo.
 Abbiamo la solita terna che definisce lo [[Richiami di Probabilità#Spazio di Probabilità|spazio di probabilità]], poi abbiamo $B, \{A_1, ..., A_n\} \in \mathcal{A} \land \{A_1, ..., A_n\} = \Omega$, dove gli $A_i$ sono disgiunti a due a due. Vale quindi la seguente identità: $$\mathbb{P}(B) = \sum_{i=1}^n \mathbb{P}(B|A_i)\mathbb{P}(A_i)= \sum_{i=1}^n \mathbb{P}(B \cup A_i)$$Quindi così ho modo di trovare il denominatore del fattore correttivo. 
-Graficamente è facile da digerire ![[Teorema Probabilità Totali.png]]
+Graficamente è facile da digerire ![[Formula di Bayes e Teorema delle Probabilità Totali - Teorema Probabilità Totali.png]]
 ### Esempio
 In una fabbrica di lampadine ho due macchinari che chiamerò, con fantasia, $A$ e $B$ dove $A$ produce il 40% delle lampadine dell'azienda mentre $B$ produce il 60$ delle lampadine dell'azienda. Vado poi a definire delle probabilità condizionate di errore:
 - $\mathbb{P}(G|A)$ è la probabilità che una lampadina sia guasta se prodotta da A

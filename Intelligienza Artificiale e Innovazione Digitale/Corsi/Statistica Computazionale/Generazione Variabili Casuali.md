@@ -4,7 +4,7 @@ Procediamo:
 + sia $X$ una vc con cdf $F_X(x)=\mathbb{P}(X\le x)$ 
 + sia $U \sim \mathcal{U}(0,1)$ ossia una [[Variabili Casuali Notevoli#Uniforme|Uniforme]]
 Partiamo disegnando la $X$ su un piano cartesiano e tracciando l'asintoto a $1$. Un valore $x\in \mathbb{R}$ preso a caso è sicuramente trasformabile tramite la vc in un valore $u \in [0,1]$ per come è fatta la vc, sappiamo anche che possiamo ottenere da $u$ il valore $x$ se conosco la funzione inversa e se non la conosco la posso calcolare purché la funzione sia invertibile.
-![[distribuzione della vc X in verde.png|400]]
+![[Generazione Variabili Casuali - distribuzione della vc X in verde.png|400]]
 Il punto $u$ è equivalente a $F_X(x)$ e da qui posso arrivare a dire che $x=F_X^{-1}(u)=inf\big\{ x\in \mathbb{R}| F_X(x) \geq u \big\}$
 L'idea è quella di interpretare una $u$ generata casualmente come se fosse un valore della cdf di $X$ e per farlo basta recuperare la funzione inversa. Attenzione che se $F(\bullet)$ non è invertibile questo ragionamento non si può fare. 
 **Algoritmo**:

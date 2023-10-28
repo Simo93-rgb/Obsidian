@@ -2,12 +2,12 @@ Un *Agente* è un'entità che riceve stimoli e agisce e può essere visto come u
 $$f: P^★ \rightarrow A$$ 
 
 Per ogni *environment* in cui si trova l'agente e per i *task* che deve soddisfare si cerca di ottimizzare l'agente in modo specifico. Siccome complessità temporale e spaziale sono limiti concreti e non così lontani non è possibile raggiungere la perfezione. 
-![[Schermata 2023-10-03 alle 14.12.18 1.png]]
+![[Agenti Intelligenti - agenti e ambiente.png]]
 Attenzione che non è sempre vero che un agente è un robot, comunque il focus è che a noi interessa il punto di domanda perché è la parte che dobbiamo sviluppare.
 
 ### Problema dell'aspirapolvere robot
 
-![[Schermata 2023-10-03 alle 14.16.37.png|300]]![[Schermata 2023-10-03 alle 14.18.41.png|400]] 
+![[Agenti Intelligenti - ambiente robottino per pulire.png|300]]![[Agenti Intelligenti - schema possibilità robottino.png|400]] 
 Lo **Stato** è una configurazione del problema. Ad ogni stato è possibile avere una certa configurazione di ambiente e associare una azione, in questo caso riassunto nella tabella qui sopra. ^e18694
 
 ## Agenti Razionali

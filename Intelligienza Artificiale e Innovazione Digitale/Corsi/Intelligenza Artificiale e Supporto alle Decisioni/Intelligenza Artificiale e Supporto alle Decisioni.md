@@ -5,7 +5,7 @@ ma c'è anche ![[LopezCBRBook.pdf]]
 
 ## Computer e Intelligenza
 IBM parla di Cognitive Computer, comunque l'idea fra questa idea di IBM e di IA è quella di avere dei programmi che aumentino le abilità dell'essere umano. 
-![[AccordoIAUomo.png]]
+![[Intelligenza Artificiale e Supporto alle Decisioni - AccordoIAUomo.png]]
 Soprattutto in situazioni critiche dare ad un esperto di un dominio sensibile la potenza e la quantità di dati che un sistema di IA è qualcosa di potentissimo, si immagini di dare ad un oncologo l'abilità di consultare un grosso DB al posto che la sua sola esperienza. 
 
 
@@ -56,7 +56,7 @@ Oggi siamo nell'epoca del DL grazie anche alla potenza enorme che le GPU offrono
 - Tener conto degli errori passati
 
 ## Cosa deve fare l'IA?
-![[Schermata 2023-10-03 alle 11.46.24.png]]
+![[Intelligenza Artificiale e Supporto alle Decisioni - tabella modi di ragionare.png]]
 <center>Agire in modo razionale è la scelta del libro</center>
 
 **Ragionare in modo umano** è difficilissimo anche perché le neuroscenze non sanno davvero come funziona il nostro cervello. 

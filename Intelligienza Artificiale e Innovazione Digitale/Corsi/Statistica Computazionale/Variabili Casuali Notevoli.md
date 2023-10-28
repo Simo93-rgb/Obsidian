@@ -1,4 +1,9 @@
-Per definire le vc notevoli si esprimerà a parole cosa rappresentano e perché sono utili, verranno esplicitati $\mathbb{E}[\bullet]$ e $Var(\bullet)$.
+Per definire le vc notevoli si esprimerà a parole cosa rappresentano e perché sono utili, verranno esplicitati $\mathbb{E}[\bullet]$ e $Var(\bullet)$. Per chiarezza, si parlerà di:
+- *funzione di densità di probabilità* per le variabili casuali continue, d'ora in avanti abbreviato con *pdf - probability density function*
+- *funzione di massa di probabilità* per le variabili casuali discrete, d'ora in avanti abbreviato con *pmf - probability mass function*
+- *funzione di ripartizione* per entrambe le variabili, d'ora in avanti abbreviato con *cdf - cumulative density function*
+	- È una funzione che definisce la probabilità che la variabile abbia un valore minore o uguale  a qualcosa
+	- $\begin{cases}F_X(x)=\mathbb{P}(X\le x)\\ \mathbb{P}(a\le X \le b)=F_X(b)-F_X(a)\end{cases}$
 # Bernoulli
 La distribuzione di Bernoulli serve a modellare un solo esperimento che potrà avere un solo esito binario. Ad esempio il lancio di una moneta, ma attenzione che se lancio due monete mi servono due Bernoulli. Usando la solita $X$ per indicare una vc: $$X \sim Ber(\pi)$$ Dove $\pi \in [0,1] \subset \mathbb{N}$ 
 $$X =\biggl\{ {0 \text{ se ho insuccesso} \atop 1 \text{ se ho successo}} \biggl\} $$
@@ -8,10 +13,10 @@ Indicando con $S$ il successo e con $\bar S$ l'insuccesso possiamo scrivere:
 - $\mathbb{P}(X=x) = \pi^x(1-\pi)^{1-x}$
 **PDF**
 - $f_X(x)=\begin{cases} 1-\pi & x=0\\ \pi & x=1\\ 0 & \text{altrimenti}\end{cases}$
-- ![[pdf Bernoulli.png]]
+- ![[Variabili Casuali Notevoli - pdf Bernoulli.png]]
 **CDF**
 - $F_X(x)=\begin{cases} 0 & x<0\\ 1-\pi & 0\le x \le1\\ 1 & x>0\end{cases}$
-- ![[cdf della bernoulli.png]]
+- ![[Variabili Casuali Notevoli - cdf della bernoulli.png]]
 
 **Valore atteso**: $\mathbb{E}[X] = \sum_{i=0}^1{x \mathbb{P}(X=x)} = \pi^0(1-\pi)^{1-0} + \pi^1(1-\pi)^{1-1} = \pi$ 
 **Varianza**: $Var(X) = \mathbb{E}[X^2] - \big(\mathbb{E}[X] \big)^2 = \pi (1-\pi)$
@@ -48,10 +53,10 @@ Per definire le proprietà prima dobbiamo fare delle premesse:$$\begin{cases} X 
 Sia $U \sim \mathcal{U}(0,1)$
 - **PDF** 
 	- $f_U(u)=\begin{cases}1 & 0\le 1 \\ 0 & \text{altrove}\end{cases}$
-	+ ![[pdf di una U(0,1).png]]
+	+ ![[Variabili Casuali Notevoli - pdf di una U(0,1).png]]
 + **CDF** 
 	+ $F_U(u)=\begin{cases}0 & x < 0 \\ u & 0\le x \le 1 \\ 1 & x > 1 \end{cases}=\mathbb{P}(U \le u)=\int_{-\infty}^u f_U(t)dt$  
-	+ ![[cdf di una U(0,1).png]]
+	+ ![[Variabili Casuali Notevoli - cdf di una U(0,1).png]]
 	+ $\mathbb{E}[U]={1\over 2}$
 	+ $Var(U)={1\over 12}$
 # Esponenziale
@@ -59,12 +64,18 @@ Altra vc continua da inserire nel nostro portafoglio è la esponenziale $$X \sim
 
 - **PDF** 
 	- $f_X(x)=\begin{cases}0 & x\le 0 \\ \lambda e^{-\lambda x}& x>0\end{cases}$ 
-	- ![[pdf esponenziale.png|250]]
+	- ![[Variabili Casuali Notevoli - pdf esponenziale.png|250]]
 	- I possibili esiti sono definiti da $supp\big\{(0,+\infty)\big\}$
 - **CDF**
 	- $F_X(x)=\begin{cases}0 & x\le 0 \\ 1- e^{-\lambda x}& x>0\end{cases}$
-	- ![[cdf della esponenziale.png|250]]
+	- ![[Variabili Casuali Notevoli - cdf della esponenziale.png|250]]
 La vc esponenziale è stata inventata in ambito militare per misurare il tempo di rottura delle semiali dei velivoli. In generale infatti si usa per misurare i tempi di attesa, ad esempio l'intervallo di tempo fra un intervallo e l'altro in un call center. È legata alla [[Variabili Casuali Notevoli#Poisson|Poisson]]e infatti se dovessi contare quante chiamate arrivano al call center uso la Poisson e fra queste ci sono tanti tempi di attesa che si modellano con la esponenziale. Quindi se conto quante vc esponenziali ho un valore distribuito come una Poisson. Ai fini dell'esame questa è solo da ritenersi una curiosità. 
 
+# Beta(2,2)
+- **PDF**
+	- ![[Variabili Casuali Notevoli - beta 2 2 pdf.png]]
+	- $f_X(x)=\begin{cases} 6x(1-x)&0<x<1\\0&\text{altrove}\end{cases}$
+- **CDF**
+	- $F_X(X)=\int_{-\infty}^x f_X(t)dt=3x^2-2x^3$
 
 

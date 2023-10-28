@@ -1,5 +1,5 @@
 Il **CBR** è una metodologia per risolvere problemi nuovi adattando le soluzioni di problemi simili precedenti. 
-![[CBRSchema.png]]
+![[Case-Base Reasoning - CBRSchema.png]]
 Ci sono vari esempi di CBR e vediamone alcuni.
 
 #### Esempi di CBR
@@ -10,7 +10,7 @@ Ci sono vari esempi di CBR e vediamone alcuni.
 - **Valutazione delle Opzioni** ossia valutare le possibili conseguenze in base a cosa è successo nei casi simili. "*Se attaccassimo Cuba/Russia otterremo una situazione come Pearl Harbor*"
 
 ## Architettura R4
-![[ArchR4CBR2.png]]
+![[Case-Base Reasoning - ArchR4CBR2.png]]
 1. **Problem**: descrivo il problema da risolvere con una *tupla* di attributi. Il problema è il punto di partenza dello schema
 2. **Retrieve**: passo di recupero dai *previous cases* per recuperare i casi più simili che sono presenti in memoria. 
 	1. **Retrieved Case**: ho recuperato un caso simile
@@ -26,24 +26,24 @@ Curiosità, il primo schema è del 1993!
 # Similarità e Distanza
 Cosa significa che due casi sono simili fra di loro? Possiamo impostare un parallelismo fra distanza e similarità per poi misurare quest'ultima in termini di distanza. 
 Una metrica o distanza rispetta questi requisiti: $$d(x,y)=0\Leftrightarrow x=y$$ $$d(x,y)\le d(z,x)+d(z,y)$$
-![[Pasted image 20231024110636.png]]
+![[Case-Base Reasoning - Distanza.png]]
 
 # k-NN
 
 ## Pesatura Attributi
-![[Pasted image 20231024110814.png]]
+![[Case-Base Reasoning - pesatura attributi.png]]
 ### Tipologia Attributi (features)
 Possono essere nominali (categorici) o lineari. Nel caso dei nominali abbiamo colori, simboli... Mentre i lineari possono essere discreti o continui e nel caso discreto c'è un caso che può confondere: attributi lineari discreti simbolici. Succede quando mappo con dei numeri dei concetti, ad esempio una temperatura alta è simbolico ma posso mapparla con 39°C. 
 
 ### Metriche su Features
-![[Pasted image 20231024111459.png]]
+![[Case-Base Reasoning - metriche e features.png]]
 dove $range_f = val_{max} - val_{min}$ 
-Funziona male su features nominali però. In alternativa si può usare una tabella di similarità ![[Tabella Similarità features nominali.png]]
+Funziona male su features nominali però. In alternativa si può usare una tabella di similarità ![[Case-Base Reasoning - Tabella Similarità features nominali.png]]
 
 ### Heterogeneus Value Distance Metric
-![[Pasted image 20231024121233.png]]
+![[Case-Base Reasoning - HVDM.png]]
 #### Esempio
-![[Pasted image 20231024121539.png]]
+![[Case-Base Reasoning - esempio HVDM.png]]
 $d_f(chiaro,scuro)=0.225=$
 $=\sqrt{|\mathbb{P}(M|chiaro)-\mathbb{P}(M|scuro)|^2+|\mathbb{P}(F|chiaro)-\mathbb{P}(F|scuro)|^2}$
 
@@ -63,7 +63,7 @@ Tengo traccia non solo delle soluzioni ai casi ma anche di come ci sono arrivato
 
 # Retain 
 Qui si decide quando si deve apprendere ma anche quando si deve dimenticare un caso. Lo scopo è tenere in memoria solo i casi utili altrimenti va in tilt il sistema. Nel Machine Learning e in particolare nel CBR si sente spesso parlare di utilità, di come definirla e di quali siano i suoi limiti. Non sempre vale il concetto che più si sa e meglio è, ingurgitare qualunque caso, anche se buono, porta a problemi. Prende il nome di *swamping problem* nel CBR e in generale nel ML si chiama *utility problem*.
-![[CBR grafico per swamping problem.png]]
+![[Case-Base Reasoning - CBR grafico per swamping problem.png]]
 La performance dipende da: 
 - Tempo di esecuzione
 - Qualità della risposta

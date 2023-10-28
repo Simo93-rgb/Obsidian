@@ -33,5 +33,5 @@ TLC e LGN sono *distribution free* ossia che valgono in modo indipendente dal ti
 Se $X$ è una qualsiasi vc ed $n$ è grande $\Longleftrightarrow$ $T \sim Z \sim N(0,1)$. In altre parole, se $X$ è una vc di una distribuzione qualsiasi e la taglia campionaria è molto grande allora il mio stimatore $T$ lo posso approssimare come visto nel TLC. 
 
 # $t-student$
-Introduciamo questa distribuzione complicata ma utile poiché arriva da uno studio fatto alla Guinness e se c'è della birra di mezzo non si può non parlarne 😂🍻. È la generalizzazione della $N(0,1)$ con code pesanti. ![[t_student.png]]
+Introduciamo questa distribuzione complicata ma utile poiché arriva da uno studio fatto alla Guinness e se c'è della birra di mezzo non si può non parlarne 😂🍻. È la generalizzazione della $N(0,1)$ con code pesanti. ![[TLC e LGN - t_student.png]]
 Sicuramente val la pena andare a vederla su [Wikipedia](https://it.wikipedia.org/wiki/Distribuzione_t_di_Student)

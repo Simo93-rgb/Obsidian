@@ -8,9 +8,9 @@ Insieme di configurazioni complete. Trova la soluzione **ottima** come nel caso 
 
 ## Hill-climbing 
 C'è un detto: "*è come scalare l'Everest in mezzo ad una fitta nebbia e soffrendo di amnesia*".
-![[LocalMax_VS_GlobalMax.png]]
+![[Iterative Improvement (Local) search - LocalMax_VS_GlobalMax.png]]
 Subito bisogna menzionare che questo algoritmo può rimanere bloccato in un massimo locale (come da immagine). Una volta sul cucuzzolo della collina tutte le mosse peggiorano e quindi non scendo più. Attenzione che massimo locale e massimo globale sono esattamente quelli visti in analisi matematica.
-![[PseudoCodice_HillClimbing.png]]
+![[Iterative Improvement (Local) search - PseudoCodice_HillClimbing.png]]
 <center style="font-style:italic">Pseudo codice del'algoritmo Hill-Climbing</center>
 Siccome rimango bloccato, potrei pensare di fare delle ripartenze dell'algoritmo in stati iniziali differenti per evitare il fenomeno di *get stuck* nel massimo locale. Questo concetto si chiama **random start**.
 ### [[https://en.wikipedia.org/wiki/Hill_climbing#Ridges_and_alleys|Ridges and alleys]]
@@ -54,10 +54,10 @@ Sia $\Delta \mathbb{E} = Value(S') - Value(S)$:
 + Se la mossa è cattiva allora $\Delta \mathbb{E} < 0$
 + $p = e^{\Delta\mathbb{E}}$
 	+ Questa $p$ mi consente di avere una una probabilità tanto più piccola quanto più grande è il valore di $|\Delta \mathbb{E}|$ 
-![[probabilità simulated annealing.png]]
+![[Iterative Improvement (Local) search - probabilità simulated annealing.png]]
 Se $\Delta \mathbb{E} > 0$ faccio la mossa, altrimenti passo ad $S'$ con una probabilità $p$. Per fare questo introduco un parametro $T$ che rappresenta la temperatura ed esattamente come la tempra la faccio partire da valori elevati che poi decresce. la nuova funzione di prob è: $$p = e^{{\Delta \mathbb{E} \over T}}$$
 Quando $T = 0$ allora SA diventa hill-climbing. 
-![[PseudoCodice_SA.png]]
+![[Iterative Improvement (Local) search - PseudoCodice_SA.png]]
 
 ### Local Beam Search
 Si tengono ad ogni passo i $k$ stati migliori, il cosiddetto **beam**. 
@@ -71,7 +71,7 @@ Lo scopo è far evolvere una popolazione iniziale tramite operazioni in modo da 
 Lo stato soluzione del problema è quello che prende, tramite fitness function, l'individuo migliore nella nuova popolazione generata.
 Nonostante non siano ottimali sono comunque molto utili in molti ambiti.
 ## Esempio 
-![[Esempio_algoritmo_genetico.png]]
+![[Iterative Improvement (Local) search - Esempio_algoritmo_genetico.png]]
 La fitness function (numero intero) viene trasformata in una prob. di selezione (le percentuali) grazie ad una semplice normalizzazione a 1. Si decide si selezionare per 4 volte (punto c) gli individui (dal punto a). Il punto c rappresenta i selezionati di conseguenza che sono i primi tre individui e posizionati come indicano le frecce a sinistra e il quarto individuo, con prob. bassa, è stato escluso. Le coppie generate le facciamo evolvere secondo l'operazione di crossover definendo casualmente un punto di taglio, accoppiando poi si prende una "fetta" di geni di un individuo della copia e la "fetta complementare" dall'altro individuo (punto d). Finalmente al punto e abbiamo la nuova generazione. Sempre nel punto è considero che ci possa essere della mutazione e in modo randomico cambio un gene. Attenzine, la prob. che un gene muti è bassissima, qualcosa tipo $10^{-6}$.
 I numeri dell'immagine rappresentano le regine del problema delle 8 regine.
-![[8_Regine_algoGenetico.png]]
+![[Iterative Improvement (Local) search - 8_Regine_algoGenetico.png]]

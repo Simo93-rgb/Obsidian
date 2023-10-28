@@ -32,7 +32,7 @@ Se un gioco è a somma zero esistono due strategie $s^*$ e $t^*$ e un numero $V_
 **COROLLARIO 1**: $U(s^*, t^*) = V_G$
 **COROLLARIO 2**: se $G$ è un gioco a informazione perfetta allora ci sono strategie pure $s^*$e $t^*$ che soddisfano il teorema.
 Posso fare un albero di gioco e nei nodi terminali dare un valore di utilità e il valore del payoff dipende dal gioco. 
-![[AlberoTris_giochiDueConcorrenti.png]]
+![[Giochi a due concorrenti - AlberoTris_giochiDueConcorrenti.png]]
 Attenzione che ogni livello dell'albero ha un concorrente che non sa cosa farà l'altro e questo comporta che la strategia per *Max* è fatta:
 + considerando un solo nodo per quando muove lui
 + considerando tutti i nodi delle possibilità del concorrente *Min*
@@ -40,7 +40,7 @@ Ovviamente per *Min* la situazione è speculare. Piccola osservazione è che $h$
 Semplifichiamo l'albero e andiamo a vedere come applicare minimax.
 
 ## Algoritmo Minimax
-![[Albero gioco minimax.png]]
+![[Giochi a due concorrenti - Albero gioco minimax.png]]
 *function* **Minimax**(s) *returns* un valore di utilità:
 + *if* s è uno stato terminale *then return* il payoff di Max in s
 + *else if* una mossa di Max in s *then*
@@ -61,7 +61,7 @@ Parlando di risorse disponibili spesso i nodi da espandere sono troppi come negl
 - evaluation function
 
 ### Evaluation Function
-![[evaluationFunctionChess.png]]
+![[Giochi a due concorrenti - evaluationFunctionChess.png]]
 Come facciamo a valutare quale giocatore è messo meglio? Rilassiamo il problema togliendo l'importanza della posizione delle pedine. Posso fare una combinazione lineare pesando le pedine in base alla loro importanza $$Eval(s) = \sum_{i=1}^{n}w_if_i(s)$$ **Dove**:
 - $w$ è il peso che do alla pedina
 - $f$ è la feature 
@@ -81,7 +81,7 @@ Posso ottimizzare la situazione potando l'albero (pruning) e investendo le risor
 
 #### $\alpha - \beta$ pruning 
 Questo approccio lavora solo in profondità. Notazione: il triangolo su è Max e quello giù è Min. 
-![[alphaBetaPruning.png]]
+![[Giochi a due concorrenti - alphaBetaPruning.png]]
 Per vedere un approfondimento vedere il video qui sotto. ![](https://www.youtube.com/watch?v=l-hh51ncgDI)
 Proprietà:
 - il pruning non inficia il risultato
