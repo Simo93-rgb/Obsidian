@@ -1,0 +1,42 @@
+Le somme e le misture di variabili casuali sono concetti fondamentali in statistica e teoria delle probabilità utilizzati per analizzare e modellare fenomeni complessi. 
+
+### Somma di Variabili Casuali
+La somma di variabili casuali è il risultato di combinare due o più variabili casuali. Questo può essere fatto in diversi contesti:
+
+1. **Somma di variabili indipendenti**: Se hai due o più variabili casuali indipendenti, puoi sommarle per ottenere una nuova variabile casuale. Ad esempio, se hai due dadi equi-dimensionali, puoi sommare i risultati dei due dadi per ottenere la distribuzione delle somme.
+    
+2. **Legge dei grandi numeri**: La somma di un gran numero di variabili casuali indipendenti e identicamente distribuite (i.i.d.) tende a convergere a una variabile casuale detta "variabile casuale della media campionaria" o "media campionaria," secondo la legge dei grandi numeri. Questo principio è alla base della statistica inferenziale.
+
+### Mistura di Variabili Casuali
+La mistura di variabili casuali è un processo che combina più distribuzioni di probabilità diverse per modellare situazioni in cui un'osservazione può provenire da diverse "componenti" o "regimi" con diverse distribuzioni. Questo viene utilizzato per modellare situazioni complesse in cui le condizioni possono variare o le osservazioni possono provenire da popolazioni diverse.
+
+Ad esempio, considera un modello statistico in cui stai cercando di modellare i redditi delle persone in una città. Potresti avere diverse "componenti" o "gruppi" di persone con diverse distribuzioni di reddito (ad esempio, studenti, lavoratori a tempo parziale, lavoratori a tempo pieno). In questo caso, puoi usare un modello di mistura per combinarli in un'unica distribuzione complessiva che tiene conto di tutte le componenti.
+
+#### Perché fare somme e misture?
+Sommare e mescolare variabili casuali è fondamentale in statistica e teoria delle probabilità per diverse ragioni:
+
+1. **Modellizzazione di fenomeni complessi**: Spesso, i fenomeni reali sono complessi e possono essere meglio descritti tramite la somma o la mistura di diverse variabili casuali.
+    
+2. **Applicazioni pratiche**: Molte applicazioni reali richiedono la combinazione di variabili casuali per modellare situazioni reali. Ad esempio, nella finanza, la somma di variabili casuali è utilizzata per modellare i rendimenti degli investimenti.
+    
+3. **Statistica inferenziale**: La legge dei grandi numeri e il teorema del limite centrale sono esempi di somma di variabili casuali, ed essi sono fondamentali nella statistica inferenziale per fare previsioni e trarre conclusioni.
+    
+4. **Modellazione di popolazioni eterogenee**: La mistura di variabili casuali è utilizzata per modellare situazioni in cui le osservazioni provengono da diverse popolazioni o gruppi con distribuzioni diverse.
+    
+
+In generale, sommare e mescolare variabili casuali sono strumenti potenti per la modellazione e l'analisi di una vasta gamma di fenomeni complessi nelle scienze e nell'analisi dei dati.
+
+## Simulare Somme e Misture
+**SOMME**
+Siano $X_1,...,X_n$ iid come $X$ e supponiamo di voler simulare la somma $S_n=\sum_{i=1}^n X_i$. Esempi:
+   1. ${S_n\over n} = \bar X_n$
+   2. $X\sim Bin(n, \pi) \rightarrow X=\sum_{i=1}^n Y_i$ dove le $(Y_i)_{i=1}^n$ sono iid $Ber(\pi)$
+**MISTURE** 
+Siano $X$ e $Y$ due vc con pdf $f_X(\bullet)$ e $f_Y(\bullet)$ e supponiamo di voler simulare $Z$ co pdf $f_Z(\bullet)={1\over3}f_X(\bullet)+{2\over 3}f_Y(\bullet)$. 
+**Esempio**: 
+siano $X\sim \mathcal{N}(0,1)$ e $YX\sim \mathcal{N}(3,2)$. Per generare $Z$:
+1. fisso la taglia campionaria $n$
+2. ${1\over 3}n$ sono individui presi dalla distribuzione $X$
+3. ${2\over 3}n$ sono individui presi dalla distribuzione $Y$
+
+   
