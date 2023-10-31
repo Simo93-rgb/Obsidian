@@ -9,5 +9,11 @@ Le lezioni svolte con relativi argomenti sono pubblicate su DIR man mano che si 
 3. Terza Lezione
 	1. [[Generazione Variabili Casuali]]
 	2. [[Metodo dell'inversione]]
+	3. [[Metodo del Rigetto]]
+	4. [[Somme e Misture di Variabili Casuali]]
+4. Quarta Lezione
+	1. [[Richiami Stimatori e loro Proprietà]]
+	2. [[Metodi Montecarlo: Semplice e Hit-or-Miss]]
+	3. 
 
 
