@@ -1,4 +1,4 @@
-Abbiamo già visto un esempio di stimatore e dimostrato la sua correttezza quando abbiamo parlato di media campionaria e infatti abbiamo detto che è stimatore corretto per la media reale. 
+Abbiamo già visto un esempio di stimatore quando abbiamo parlato di media campionaria e infatti abbiamo detto che è stimatore corretto per la media reale. 
 
 #### DEFINIZIONE
 Uno stimatore $\hat \Theta$ è *corretto* o *non distorto* per un parametro $\Theta$ se vale l'identità:$$\mathbb{E}[\hat \Theta]=\Theta$$La distorsione è indicata con $$\mathbb{B}[\hat \Theta]=bias(\hat \Theta)=\mathbb{E}[\hat \Theta]-\Theta$$
@@ -28,5 +28,5 @@ $$X=id_S=\begin{cases}
 1 & \text{successo}=S\\
 0 & \text{insuccesso}=\bar S
 \end{cases}$$
-La funzione identità di $S$ il prof la indica con $\mathbb{1}_S$ ma per questioni grafiche ho preferito prendere la nomenclatura standard e usare $id$. Nel libro probabilmente si usa $I_S$ quindi nel caso mi scappasse d'ora in avanti sei "uomo avvisato mezzo salvato". 
-Comunque, tornando a noi, qui al posto di $\hat \Theta$ uso $\hat \pi$ giusto perché siamo con una Bernoulli. Per ottenere
+La funzione identità di $S$ il prof la indica con $\mathbb{1}_S$ ma per questioni grafiche ho preferito prendere la nomenclatura standard e usare $id$. Nel libro probabilmente si usa $I_S$ poiché la chiama *funzione indicatrice* quindi nel caso mi scappasse d'ora in avanti sei "uomo avvisato mezzo salvato". 
+Comunque, tornando a noi, qui al posto di $\hat \Theta$ uso $\hat \pi$ perché siamo con una Bernoulli ed è giusto usare il cappello perché è stimatore corretto per $\pi$. $$\bar X_n=\sum_{i=1}^nid_s(x_i)=\hat \pi$$Questa quantità oltre che media campionaria posso chiamarla *proporzione campionaria*. Quindi posso dire che $\mathbb{E}[\hat \pi]= \pi$ e anche che $Var(\pi)={Var(X)\over n}={\pi(1-\pi)\over n}$. A questo punto posso definire lo standard error come visto sopra e aggiungiamo che possiamo approssimarlo a $$se(\hat \pi)=\sqrt{{\hat \pi(1-\hat \pi)\over n}}$$Attenzione che la parabola disegnata da $\pi(1-\pi)$ ha massimo in $1/2$ e vale $1/4$ quindi posso definire una stima per eccesso dello standard error definita così:$$se(\hat \pi)\le \sqrt{{1\over 4n }}={1\over 2\sqrt{n}}$$

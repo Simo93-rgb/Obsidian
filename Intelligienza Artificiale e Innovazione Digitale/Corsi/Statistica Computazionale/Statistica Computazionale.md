@@ -13,7 +13,7 @@ Le lezioni svolte con relativi argomenti sono pubblicate su DIR man mano che si 
 	4. [[Somme e Misture di Variabili Casuali]]
 4. Quarta Lezione
 	1. [[Richiami Stimatori e loro Proprietà]]
-	2. [[Metodi Montecarlo: Semplice e Hit-or-Miss]]
+	2. [[Metodi Montecarlo]]
 	3. 
 
 
