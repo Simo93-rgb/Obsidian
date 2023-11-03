@@ -42,6 +42,10 @@ Supponiamo che ora il mio $I$ abbia estremi di integrazione differenti $$I = \in
 y = {x-a\over b-a}&\quad a=2,\,b=4\\
 x = a+y(b-a)&\quad dx=(b-a)dy\\
 \end{align}$$Sostituendo nell'integrale $I$ ottengo $$I = \int_0^1e^{(2+y(4-2))}\,(4-2)dy = \int_0^1e^{(-2+2y)}\,2dy$$ $$I = \mathbb{E}[2e^{(-2+2U)}]$$Per trovare $\Theta$ devo risolvere l'integrale e ottengo come risultato $\theta = -e^{-(2+2y)}\bigg|_0^1 = e^{-2}-e^{-4}$. Visto che conosco il mio pollo (IO), $\int _{\:}^{\:}e^{-\left(2+2x\right)}\:dx=-{1\over 2}e^{-(2+2x)}$, ma se ho una costante moltiplicativa $2$ al $dx$ che posso portare fuori va poi a semplificarsi con $1\over2$. 
+**ALGORITMO**
+1. Genero $U_1,...,U_n$ iid come $\mathcal{U}(0,1)$
+2. $\hat \Theta={1\over m}\sum_{i=1}^me^{-(a+(b-a)U_i)}$
+	1. Ossia l'argomento della sommatoria va corretto in base al cambio di variabili fatto.
 ```R
 #### Metodo montecarlo con estremi integrazione differenti
 
@@ -65,6 +69,9 @@ abline(h=theta, col="RED", lwd=2)
 
 ### Esempio con U(2,4)
 Posso anche pensare di non manipolare l'integrale e di cambiare la mia uniforme in una $U\sim \mathcal{U}(2,4)$. Attenzione ad una cosa, l'area di una uniforme è di fatto un rettangolo quindi deve sempre valere che $b*h=1$. Nella $\mathcal{0,1}$ ho un rettangolo con lato di base che vale 1, quindi anche l'altezza lo è per forza. Con una $\mathcal{U}(2,4)$ invece la base vale $2$ e di conseguenza l'altezza deve per forza valere $1\over2$. Questa precisazione forse ovvia è importante perché nel Metodo Montecarlo io utilizzo l'idea che ho una pdf di una $\mathcal{U}(0,1)$ che vale $1$ inserita come membro nell'integrale. D'altronde se moltiplico e divido per $1$ l'integrale non varia. Qui devo usare $1\over2$ che andrà quindi corretto esternamente con un $2$.$$I = 2\int_2^4{1\over2}e^{-x}dx = 2\mathbb{E}[e^{-U}] \text{ dove } U\sim \mathcal{U}(2,4)$$
+**ALGORITMO**
+1. Genero $U_1,...,U_n$ iid come $\mathcal{U}(a,b)$
+2. $\hat \Theta={1\over m}\sum_{i=1}^me^{-U_i}$
 ```R
 ## Secondo Metodo: Utilizzo uniforme U(2,4)
 # 1. Genero un insieme di uniformi iid come U(2,4)
@@ -80,3 +87,126 @@ theta.hat.mean <- 2*cumsum(exp(-(uniformi)))/(1:taglia.campionaria)
 plot(theta.hat.mean)
 abline(h=theta, col="RED", lwd=2)
 ```
+
+## Esempi con Estremi Integrazione Infiniti
+Voglio approssimare $\Phi(x)=\int_{-\infty}^x{1\over \sqrt{2\pi}}\exp\{-({t^2\over 2})\}dt$, ossia la cdf di una $\mathcal{N}(0,1)$. Abbiamo già visto che quell'integrale non ha soluzione analitica e quindi non ho un confronto col valore vero. Per approcciare il problema, prima di usare un Metodo Montecarlo, possiamo analizzare il problema da un punto di vista matematico e non numerico. 
+
+### Approccio Analitico
+![[Metodi Montecarlo - cdf gaussiana.png]]
+Guardando il grafico risulta intuitivo, sapendo che la gaussiana ha area finita e uguale a $1$, dire che l'area in nero ha valore $0.5$. Tradotto significa spezzare l'integrale e la metà con estremi di integrazione $[-\infty;0]$ sappiamo aver quel valore. $$\begin{align}
+1. &\quad \Phi(x)=\int_{-\infty}^x{1\over \sqrt{2\pi}}\exp\{-({t^2\over 2})\}dt \\
+2. &\quad \Phi(x) = 0.5 + \int_{0}^x{1\over \sqrt{2\pi}}\exp\{-({t^2\over 2})\}dt\\
+3. &\quad \Phi(x) = 0.5 + x\int_{0}^x{1\over \sqrt{2\pi}}\exp\{-({t^2\over 2})\}{1\over x}dt\\
+4. &\quad \Phi(x) = 0.5 + x\mathbb{E}\bigg[{1\over \sqrt{2\pi}}\exp\{-({U^2\over 2})\}\bigg]
+\end{align}$$Al passaggio $3$ ho fatto la stessa cosa che abbiamo visto nell'esempio con la $\mathcal{U}(2,4)$ solo che siccome l'estremo è x il gioco va fatto come se avessimo una $\mathcal{U}(0,x)$. 
+**ALGORITMO**
+1. Fisso la taglia campionaria
+2. Fisso x
+3. Genero $U_1,...,U_n$ iid come:
+	1.  $\mathcal{U}(0,x) \rightarrow x\ge0$
+	2.  $-\mathcal{U}(0,|x|) \rightarrow x<0$
+4. $\hat \Theta=0.5 + {x\over m}\sum_{i=1}^m {1\over \sqrt{2\pi}}\exp\{-({U^2\over 2})\}$
+```R
+#### Metodo analitico per l'approssimazione della phi della normale
+# 1. fisso x ma lo faccio con una sequenza di numeri che scelgo casuali
+x.seq <-  runif(25) #seq(.1, 2.5, .1)
+# 2. Fisso la taglia campionaria
+taglia.campionaria <- 1000
+# 3. Genero le m uniformi iid come U(0,x)
+# 4. Calcolo theta.hat 
+theta.hat <- NULL
+for (i in 1:length(x.seq)) {
+  uniformi <- runif(taglia.campionaria, min = 0, max = x.seq[i]) # 3
+  theta.hat[i] <- 0.5 + mean((x.seq[i] / sqrt(2 * pi)) * exp(-(uniformi^2 / 2)))
+}
+cdf.teo <- pnorm(x.seq)
+# calcolo lo standard error
+se.theta.hat <- sqrt(theta.hat * (1-theta.hat) / taglia.campionaria)
+cbind(x.seq, cdf.teo, theta.hat, se.theta.hat)
+```
+Attenzione che siccome utilizziamo la funzione ``mean()`` la $x$ deve essere riportata dentro, tanto essendo costante è matematicamente corretto e usare la funzione della media è più snello e leggibile che quella per la sommatoria. 
+
+### Metodo Montecarlo hit-or-miss
+L'obbiettivo è sempre stimare $\Phi(x)$ ma questa volta definendo la funzione identità per l'insieme dei successi considerando successo quando una vc $Z\le x$. Formalmente abbiamo:
+1. $\Phi(x) = \mathbb{P}(Z\le x)$
+2. L'evento $S = \{\mathbb{P}(Z\le x)\}$
+3. Una vc $X\sim Ber(\Phi(x))$
+	1. $X=\begin{cases}1&S=Z\le x\\0&\hat S=Z\ge x\end{cases}$
+	2. Per generare $X$ devo conoscere $Z$ e $x$
+4. $\mathbb{E}[x]=\mathbb{P}(S)$
+
+**ALGORITMO**
+1. Fisso $x$
+2. Fisso la taglia campionaria $m$
+3. Genero $Z_1,...,Z_n$ iid come $\mathcal{N}(0,1)$
+4. $X_i = id_{Z_i\le x}$
+5. $\Phi(n)=\hat\Theta={1\over m}\sum_{i=1}^m X_i$
+
+```R
+#### Metodo Montecarlo hit-or-miss
+# 1. fisso x ma lo faccio con una sequenza di numeri che scelgo casuali
+x.seq <- seq(.1, 2.5, .1)
+# 2. Fisso la taglia campionaria
+taglia.campionaria <- 1000
+# 3. Genero le m normali iid come N(0,1)
+# 4. Calcolo theta.hat
+theta.hat <- NULL
+for (i in 1:length(x.seq)) {
+  normali <- rnorm(taglia.campionaria)
+  theta.hat[i] <- mean(normali <= x.seq[i])
+}
+```
+
+#### Confronto Metodo Analitico e Metodo Hit-ot-Miss
+```R
+# Inizializzo parametri comuni
+x.seq <-  seq(.1, 2.5, .1)
+taglia.campionaria <- 1000
+theta.hat.analitico <- NULL
+theta.hat.H.o.M <- NULL
+
+#eseguo un solo ciclo per entrambi i casi
+for (i in 1:length(x.seq)) {
+  uniformi <- runif(taglia.campionaria, min = 0, max = x.seq[i]) 
+  theta.hat.analitico[i] <- 0.5 + mean((x.seq[i] / sqrt(2 * pi)) * exp(-(uniformi^2 / 2)))
+  
+  normali <- rnorm(taglia.campionaria)
+  theta.hat.H.o.M[i] <- mean(normali <= x.seq[i])
+}
+# definisco gli standard error dei due casi
+cdf.teo <- pnorm(x.seq)
+se.theta.hat.analitico <- sqrt(theta.hat.analitico * (1-theta.hat.analitico) / taglia.campionaria)
+se.theta.hat.H.o.M <- sqrt(theta.hat.H.o.M * (1-theta.hat.H.o.M) / taglia.campionaria)
+
+# bindo insieme per un confronto
+cbind(x.seq, cdf.teo, theta.hat.analitico, se.theta.hat.analitico, theta.hat.H.o.M, se.theta.hat.H.o.M)
+```
+Ecco l'output del ``cbind()`` 
+
+| $x$ | cdf teorica | $\hat\Theta$ Analitico | $se(\hat\Theta)$ Analitico | $\hat\Theta$ Hit-or-Miss | $se(\hat\Theta)$ Hit-or-Miss |
+|-------|---------|---------------------|------------------------|-----------------|--------------------|
+| 0.1   | 0.5398278 | 0.5398287 | 0.015761144 | 0.537 | 0.015768037 |
+| 0.2   | 0.5792597 | 0.5792763 | 0.015611383 | 0.568 | 0.015664482 |
+| 0.3   | 0.6179114 | 0.6178935 | 0.015365582 | 0.620 | 0.015349267 |
+| 0.4   | 0.6554217 | 0.6553530 | 0.015028821 | 0.642 | 0.015160343 |
+| 0.5   | 0.6914625 | 0.6914571 | 0.014606307 | 0.679 | 0.014763435 |
+| 0.6   | 0.7257469 | 0.7258789 | 0.014105981 | 0.719 | 0.014214042 |
+| 0.7   | 0.7580363 | 0.7573824 | 0.013555601 | 0.748 | 0.013729385 |
+| 0.8   | 0.7881446 | 0.7882333 | 0.012919813 | 0.784 | 0.013013224 |
+| 0.9   | 0.8159399 | 0.8164234 | 0.012242396 | 0.815 | 0.012279047 |
+| 1.0   | 0.8413447 | 0.8423689 | 0.011523175 | 0.839 | 0.011622349 |
+| 1.1   | 0.8643339 | 0.8626054 | 0.010886568 | 0.858 | 0.011037935 |
+| 1.2   | 0.8849303 | 0.8833366 | 0.010151506 | 0.876 | 0.010422284 |
+| 1.3   | 0.9031995 | 0.9093276 | 0.009080249 | 0.900 | 0.009486833 |
+| 1.4   | 0.9192433 | 0.9165244 | 0.008746853 | 0.922 | 0.008480330 |
+| 1.5   | 0.9331928 | 0.9309183 | 0.008019316 | 0.938 | 0.007626008 |
+| 1.6   | 0.9452007 | 0.9455256 | 0.007176831 | 0.933 | 0.007906390 |
+| 1.7   | 0.9554345 | 0.9585896 | 0.006300445 | 0.959 | 0.006270486 |
+| 1.8   | 0.9640697 | 0.9575926 | 0.006372521 | 0.954 | 0.006624500 |
+| 1.9   | 0.9712834 | 0.9768133 | 0.004759102 | 0.972 | 0.005216896 |
+| 2.0   | 0.9772499 | 0.9718431 | 0.005231066 | 0.972 | 0.005216896 |
+| 2.1   | 0.9821356 | 0.9832627 | 0.004056745 | 0.981 | 0.004317291 |
+| 2.2   | 0.9860966 | 0.9865922 | 0.003637029 | 0.987 | 0.003582039 |
+| 2.3   | 0.9892759 | 0.9916027 | 0.002885611 | 0.988 | 0.003443254 |
+| 2.4   | 0.9918025 | 0.9817689 | 0.004230688 | 0.987 | 0.003582039 |
+| 2.5   | 0.9937903 | 0.9911201 | 0.002966657 | 0.997 | 0.001729451 |
