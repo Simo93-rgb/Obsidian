@@ -1,4 +1,5 @@
 ![[Intro DB e BI - CopertinaEsteticaSchemaBI.png]]
+
 # Introduzione Business Intelligence
 Alcune definizioni:
 + An umbrella term that encompasses tools, architectures, databases, data warehouses, performance management, methodologies, and so forth, all of which are integrated into a unified software suite.” (Turban et al. (2007).

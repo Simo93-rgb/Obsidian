@@ -3,7 +3,7 @@ Abbiamo visto come per il [[Metodo dell'inversione]] serva avere la funzione inv
 1. Sia $X \sim \mathcal{N}(0,1)$, andiamo a definire la cdf $$F_Z(z)=\int_{-\infty}^z {1\over \sqrt{2\pi}}exp\bigg(-{t^2\over2}\bigg)$$Questo integrale è sicuramente ben definito ma non esiste soluzione analitica quindi è impossibile andare a definire una $F_Z^{-1}(\bullet)$. 
 2. Sia $X\sim Beta(2,2)$ vista nelle [[Variabili Casuali Notevoli#Beta(2,2)|Beta(2,2)]].  Anche se $\exists F_X^{-1}(\bullet)$ non ho espressione analitica.
 
-Abbiamo visto come non sia sempre possibile usare il metodo dell'inversione e quindi ecco perché introduciamo il metodo del rigetto. Quindi voglio sempre partire da una $\mathcal{U}(0,1)$ e generare una vc di mio interesse.
+Abbiamo visto come non sia sempre possibile usare il metodo dell'inversione e quindi ecco perché introduciamo il metodo del rigetto. Quindi voglio sempre partire da una $\mathcal{U}(0,1)$ e generare una vc di mio interesse. 
 Andiamo subito a precisare che vale sia per le continue che per le discrete. Quindi, sia $X$ una vc con pdf o pmf nota e di cui non ho una espressione analitica di $F_X^{-1}(\bullet)$. Suppongo di saper generare una $Y$ tale che abbia una pdf nota indicata con $g_Y(y)$ tale che:
 
 - il suo insieme supporto sia uguale all'insieme supporto della $X$. 

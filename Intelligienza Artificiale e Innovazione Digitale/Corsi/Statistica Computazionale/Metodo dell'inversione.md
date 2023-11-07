@@ -1,4 +1,6 @@
-È un metodo che ci consente di ottenere una vc di nostro desiderio partendo da un'altra vc che abbiamo a disposizione.
+È un metodo che ci consente di ottenere una vc di nostro desiderio partendo da un'altra vc che abbiamo a disposizione. 
+**Osservazione preliminare**: 
+negli algoritmi posso usare sia la vc che la sua realizzazione ma attenzione che è sottile la differenza. Con la vc posso esprimere poi la $\mathbb{P}(\bullet)$ per le dimostrazioni.
 
 ## Metodo dell'Inversione con Esponenziale
 Per lavorare con il metodo dell'inversione prima dobbiamo richiamare a noi la vc [[Variabili Casuali Notevoli#Esponenziale|Esponenziale]].  

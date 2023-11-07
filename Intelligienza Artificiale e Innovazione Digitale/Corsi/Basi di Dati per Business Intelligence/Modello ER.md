@@ -1,1 +1,0 @@
-Il modello **Entity Relationship** è un approccio concettuale per modellare la basi si dati. Al contrario della progettazione logica che descrive il "come" si rappresentano i dati, a livello concettuale si cerca di generare uno schema che rappresenti le relazioni della base di dati, che rappresenti l'idea.  
