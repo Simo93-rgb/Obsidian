@@ -47,5 +47,68 @@ Formalmente, una relazione $R$ è in BCNF se, per ogni dipendenza funzionale non
 La Terza Forma Normale si basa sulla nozione di *transitive dependency*. Una relazione è in 3NF se, per ogni dipendenza transitiva $X\rightarrow Z$ dove $X$ è una super chiave e $Z$ non è parte di alcuna chiave candidata, allora $X\rightarrow Y$ dove $Y$ è un attributo in $R$, deve essere una chiave candidata.
 In altre parole, la 3NF elimina le dipendenze transitive non dirette da una chiave. Ciò significa che se abbiamo un'attributo non chiave che dipende funzionalmente da un'altra chiave non primaria, dobbiamo separare questi attributi in una nuova tabella.
 
+# Linguaggi
+Esistono due famiglie di linguaggi pr basi di dati dove una opera sullo schema, ossia i **DDL - Data Definition Language**, e l'altra aggiorna e interroga e la chiamiamo **DML - Data Manipulation Language**. 
+Nell'ambito delle interrogazioni alla base di dati abbiamo:
+- Algebra relazionale
+- Calcolo relazionale
+- SQL - Structured Query Language
+- QBE - Query By Example
 
+## Algebra Relazionale
+Diciamocelo: "It's a pain in the ass", ma viene chiesto all'esame...
+### Operatori Monadici
+Nel caso di operatori monadici le operazioni le indichiamo sempre nella forma $$OPERATORE_{operazione}(Relazione)$$
+#### RENAME
+Ad esempio il RENAME per cambiare nome ad una colonna $$REN_{Genitore\leftarrow Padre}(Paternità)$$
+#### SELECT
+Così facendo la relazione Paternità subirà un cambio di nome all'attributo Padre che diverrà Genitore. Oppure l'operatore di selezione $$SEL_{condizione\,booleana}(Relazione)$$che darà come risultato un sottoinsieme della relazione che rispetterà la condizione booleana. $$SEL_{stipendio>50\,\land\, filiale=Milano}(Impiegati)$$
+#### PROJECTION
+Se la SELECT produce un sottoinsieme che ha tutte le colonne dell'insieme di partenza, la proiezione produce un sottoinsieme con tutte le righe dell'insieme di partenza ma con una selezione di colonne. $$PROJ_(listaAttributi)(Relazione)$$![[Basi di Dati - Confronto PROJ vs SEL.png]]
+#### PROJ + SEL
+Supponiamo di avere una relazione fatta così
 
+|matricola|cognome|filiale|stipendio|
+|----------|----------|--------|---------|
+|0008|Baggins|Middle-earth|12|
+|5998|Wayne|Gotham|7350|
+|9553|Link|Hyrule|50|
+|0151|Ketchum|Kanto|23|
+
+Posso unire proiezione e selezione per andare a recuperare un sottoinsieme con informazioni interessanti a partire dalla relazione nella base di dati. $$PROJ_{matricola,cognome}(SEL_{stipendio\ge50}(Impiegati))$$Ottenendo come risultato
+
+|matricola|cognome|
+|---------|-----------|
+|5998|Wayne|
+|9553|Link|
+
+### JOIN Naturale o Interno
+È un operatore binario che produce come risultato il prodotto cartesiano delle due relazioni coinvolte. C'è da precisare che non sempre le tuple della relazione contribuiscono poiché è anche possibile che non ci sia corrispondenza fra i valori dello stesso attributo. 
+![[Basi di Dati - Join Naturale con mancata corrispondenza.png]]
+
+### Join Esterno
+Questo tipo di JOIN estende con valori nulli le tuple che verrebbero tagliate furi da un JOIN interno. Esistono tre tipi di JOIN esterno e si chiamano: destro, sinistro, completo
+
+#### JOIN Sinistro
+Mantiene tutte le tuple della prima relazione estendendole con valori nulli se necessario. ![[Basi di Dati - LEFT JOIN.png]]
+
+#### JOIN Destro
+Mantiene tutte le tuple della seconda relazione estendendole con valori nulli se necessario. 
+![[Basi di Dati - RIGHT JOIN.png]]
+
+#### JOIN Completo
+Mantiene tutte le tuple di tutte le relazioni coinvolte estendendole con valori nulli se necessario.
+![[Basi di Dati - Full JOIN.png]]
+
+#### Esempi
+![[Basi di Dati - Tabelle per esempi con Impiegati e Supervisione.png]]
+Trovare i capi degli impiegati che guadagnano più di 40.
+$PROJ_{Capo}\bigg(Supervisore \, JOIN_{Impiegato=Matricola}\big(SEL_{Stipendio>40}(Impiegati)\big)\bigg)$
+Trovare nome e stipendio dei capi degli impiegati che guadagnano più di 40.
+$$\begin{align}
+PROJ_{Nome,Stipendio}\bigg(Impiegati JOIN_{Matricola=Capo}\\
+PROJ_{Capo}\big(Supervisione JOIN_{Impiegato=Matricola}\\
+SEL_{Stipendio>40}(Impiegati)\big)\bigg)\end{align}$$ 
+Ste robe sono lunghe e incasinate, consiglio di andare a capo un po' come quando si indentano le query SQL. 
+
+## Viste
