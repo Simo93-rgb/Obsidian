@@ -126,7 +126,7 @@ cbind(x.seq, cdf.teo, theta.hat, se.theta.hat)
 ```
 Attenzione che siccome utilizziamo la funzione ``mean()`` la $x$ deve essere riportata dentro, tanto essendo costante è matematicamente corretto e usare la funzione della media è più snello e leggibile che quella per la sommatoria. 
 
-### Metodo Montecarlo hit-or-miss
+# Metodo Montecarlo hit-or-miss
 L'obbiettivo è sempre stimare $\Phi(x)$ ma questa volta definendo la funzione identità per l'insieme dei successi considerando successo quando una vc $Z\le x$. Formalmente abbiamo:
 1. $\Phi(x) = \mathbb{P}(Z\le x)$
 2. L'evento $S = \{\mathbb{P}(Z\le x)\}$
@@ -210,3 +210,12 @@ Ecco l'output del ``cbind()``
 | 2.3   | 0.9892759 | 0.9916027 | 0.002885611 | 0.988 | 0.003443254 |
 | 2.4   | 0.9918025 | 0.9817689 | 0.004230688 | 0.987 | 0.003582039 |
 | 2.5   | 0.9937903 | 0.9911201 | 0.002966657 | 0.997 | 0.001729451 |
+
+
+# Metodo Montecarlo con Variabili Antitetiche
+
+Prima di introdurre questo metodo e le sue caratteristiche è necessario parlare del concetto di efficienza. 
+### Efficienza
+Supponiamo di mettere a confronto due stimatori $\hat\Theta_1$ e  $\hat\Theta_2$ per $\Theta$. Diciamo che $\hat\Theta_1$ è più efficiente di $\hat\Theta_2$ se vale che $$Var(\hat\Theta_1) < Var(\hat\Theta_2)$$Per gli MC vale che aumentando la taglia campionaria ottengo un aumento di efficienza ma siccome i costi computazionali non sono trascurabili non è una cosa che posso fare "a piacere". Considerando $m$ la taglia campionaria, se volessimo fissare una tolleranza massima per la varianza del MC $${Var(g(x))\over m}=Var(\hat\Theta) < e \Rightarrow m \ge \bigg\lceil {{Var(g(x))\over e}} \bigg\rceil $$È lecito desiderare quindi che a parità di taglia campionaria io voglia trovare un MC più efficiente del MS semplice. 
+
+
