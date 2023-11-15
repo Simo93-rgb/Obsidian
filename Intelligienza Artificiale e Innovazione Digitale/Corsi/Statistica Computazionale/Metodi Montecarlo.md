@@ -214,8 +214,49 @@ Ecco l'output del ``cbind()``
 
 # Metodo Montecarlo con Variabili Antitetiche
 
-Prima di introdurre questo metodo e le sue caratteristiche è necessario parlare del concetto di efficienza. 
-### Efficienza
+Prima di introdurre questo metodo e le sue caratteristiche è necessario parlare del concetto di **efficienza**:
 Supponiamo di mettere a confronto due stimatori $\hat\Theta_1$ e  $\hat\Theta_2$ per $\Theta$. Diciamo che $\hat\Theta_1$ è più efficiente di $\hat\Theta_2$ se vale che $$Var(\hat\Theta_1) < Var(\hat\Theta_2)$$Per gli MC vale che aumentando la taglia campionaria ottengo un aumento di efficienza ma siccome i costi computazionali non sono trascurabili non è una cosa che posso fare "a piacere". Considerando $m$ la taglia campionaria, se volessimo fissare una tolleranza massima per la varianza del MC $${Var(g(x))\over m}=Var(\hat\Theta) < e \Rightarrow m \ge \bigg\lceil {{Var(g(x))\over e}} \bigg\rceil $$È lecito desiderare quindi che a parità di taglia campionaria io voglia trovare un MC più efficiente del MS semplice. 
 
+**NOTAZIONE**
+Finora $g(\bullet)$ è stata usata per trasformare una singola vc, come qui sopra, ma in realtà in generale $g(\bullet)$ rappresenta una statistica ossia una trasformazione di un campione. Quindi posso indicare con $g(\bullet)$ sia una funzione uni-variata sia una funzione n-variata. 
 
+## Il Metodo
+Lo scopo generale è di ridurre la varianza di $\hat\Theta$, spesso coincide col ridurre quella di una media campionaria. Questa volta spoilero subito l'algoritmo e poi andiamo a vedere dimostrazioni e perché funziona.
+
+**ALGORITMO**
+1. Fisso la taglia campionaria $m$ come numero pari
+2. Genero un numero $m\over2$ di vc iid come $\mathcal{U}(0,1)$
+3. Calcolo $$Y=\begin{cases}Y_j=g\bigg(\sum_{i=1}^{m\over2}F_X^{-1}(U_i)\bigg) & j=1,...,{m\over 2}\\Y_j^{'}=g\bigg(\sum_{i=1}^{m\over2}F_X^{-1}(1-U_i)\bigg) & j=1,...,{m\over 2}\end{cases}$$
+4. $\hat\Theta = \hat\Theta_{ANT} = {1\over m}(\sum_{j=1}^{m\over2}Y_j + \sum_{j=1}^{m\over2} T_j^{'} ) = {1\over m}\sum_{j=1}^{m\over2} (Y_j + Y_j^{'})$
+
+Con questo algoritmo otteniamo che la varianza del Metodo Montecarlo semplice è maggiore di questo metodo. Ma perché?
+
+### Dimostrazione MC con Variabili Antitetiche
+Consideriamo per una volta delle vc identicamente distribuite ma non indipendenti, quindi $U_1$ e $U_2$ come delle $\mathcal{U}(0,1)$. Entrambe con varianza definita. $$\begin{align}&\quad Var\bigg({U_1+U_2 \over 2}\bigg)={1\over 4}Var(U_1+U_2)=\\
+&\quad=\begin{cases}{1\over 4}(Var(U_1)+Var(U_2))&indipendenti\\{1\over 4}(Var(U_1)+Var(U_2)+2Cov(U_1,U_2))&dipendenti\end{cases}\end{align}$$Quindi se sono dipendenti devono avere covarianza e useremo proprio quel fattore per ridurre la varianza. Ma viene spontaneo pensare che siccome la covarianza è aggiunta positiva e per giunta con fattore moltiplicativo in realtà questa idea non può funzionare, ma ecco che possiamo strutturare le due vc in modo da essere correlate negativamente. Si dimostra che la vc $W = 1-U$ sia correlata negativamente rispetto ad $U$ e si dimostra anche che sono identicamente distribuite. Grazie a questo escamotage possiamo costruire un sistema di vc dipendenti con varianza più bassa rispetto al solito MC semplice con vc iid. 
+![[Metodi Montecarlo - Dimostrazione correlazione negativa variabile antitetiche.png]]
+
+![[Metodi Montecarlo - Esempio numero 3.png]]
+
+
+```R
+# Esercizio 1
+#####
+m <- 1000  # taglia campione
+theta.hat <- theta.hat.ant <- NULL
+for (i in 1:m){
+  u <- runif(m)
+  # MC diretto
+  theta.hat[i] <- mean(exp(-u)/(1+u^2))
+  # MC metodo antitetica
+  u[(m/2+1):m] <- 1-u[1:(m/2)]
+  theta.hat.ant[i] <- mean(exp(-u)/(1+u^2))
+}
+
+c( sd(theta.hat), sd(theta.hat.ant) )
+(var(theta.hat)-var(theta.hat.ant))/var(theta.hat)
+```
+
+# Metodo Montecarlo con Variabile di Controllo
+
+È un metodo che serve per abbassare la varianza per gli stimatori MC. 
