@@ -34,3 +34,12 @@ I costrutti di base sono:
 ![[Business Intelligence - DFM esempio Vendita.png]]
 La traduzione diretta come modello ER è intuitiva e fa diventare così il modello DFM
 ![[Business Intelligence - traduzione DFM to ER.png]]
+
+# Integrare mancanze
+cose tipo le operazioni rolap etc...
+
+## Misure Derivate
+Sono quelle che ottengo quando combino delle dimensioni. In alcuni casi si combinano molte dimensioni e il percorso per arrivarci non prevede scambi di posizioni, si consideri che il prodotto delle somme non è uguale alla somma dei prodotti. Quindi, passando attraverso vari livelli di aggregazione ha senso creare delle viste intermedie. Questi passaggi intermedi creano delle *misure di supporto*. 
+
+# Progettazione Logica del DW
+![[Business Intelligence - confronto DB vs DW con progettazione concettuale e logica.png]]

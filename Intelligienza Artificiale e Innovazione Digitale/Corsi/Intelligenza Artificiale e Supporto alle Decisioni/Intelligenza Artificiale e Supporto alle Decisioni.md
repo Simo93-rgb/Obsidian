@@ -84,6 +84,6 @@ Il limite del ragionamento razionale è che non viene contemplata l'incertezza.
 	- [[Calcolo delle probabilità su variabili discrete]] (richiami, probabilità condizionata, Teorema di Bayes)
 	- [[Reti Bayesiane]]
 - Supporto alle decisioni (3 CFU)
-	- Teoria delle Decisioni e  Decision Analysis
+	- [[Teoria delle Decisioni e Decision Analysis]]
 	- Influence Diagrams (Reti decisionali)
 	- Modelli Temporali e Markov decision processes
