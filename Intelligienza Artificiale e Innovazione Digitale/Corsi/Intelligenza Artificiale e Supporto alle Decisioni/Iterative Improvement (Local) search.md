@@ -14,7 +14,7 @@ Subito bisogna menzionare che questo algoritmo può rimanere bloccato in un mass
 <center style="font-style:italic">Pseudo codice del'algoritmo Hill-Climbing</center>
 Siccome rimango bloccato, potrei pensare di fare delle ripartenze dell'algoritmo in stati iniziali differenti per evitare il fenomeno di *get stuck* nel massimo locale. Questo concetto si chiama **random start**.
 ### [[https://en.wikipedia.org/wiki/Hill_climbing#Ridges_and_alleys|Ridges and alleys]]
-![[RidgeProblem.png]]
+![[Iterative Improvement (Local) search - RidgeProblem.png]]
 
 ### Esempio: MMMS
 **Minimal Makespan Machine Scheduling** ossia l'ordinamento l'ordinamento di job su macchine minimizzando il tempo di esecuzione:
