@@ -44,7 +44,7 @@ id2 --> id3.1[(Jhon)] & id3.2[(Mary)]
 
 Ogni variabile aleatoria ha la sua distribuzione di probabilità che però potrebbe essere indipendente da tutto come nel caso di ``Rapina`` e di ``Terremoto`` e quindi posso dare una distribuzione a priori, oppure potrebbe essere dipendente come nel caso della variabile ``Allarme`` che dipende fortemente dai genitori. Si crea una CPT (Conditional Probability table) che è la combinazione di tutte le possibilità dei genitori. 
 
-| B | E | $\mathbb{P}(A\|B,E)$|
+| $Rapina$ | $Terremoto$ | $\mathbb{P}(A\textbar B,E)$|
 |-|-|--------------------|
 |T|T|.95|
 |T|F|.94|
@@ -54,8 +54,24 @@ Ogni variabile aleatoria ha la sua distribuzione di probabilità che però potre
 
 In questo caso si mostra solo il caso in cui l'allarme suona che tanto quella dell'allarme che non suona è complementare a uno: $\mathbb{P}(\bar A|B,E)=1-\mathbb{P}(A|B,E)$. Da notare che non ho mai né il 100% né lo 0% poiché ho bisogno di rappresentare l'incertezza data dal fatto che possono esserci degli eventi che potrei non saper rappresentare o nemmeno conoscere.  Stesso ragionamento per la chiamata di Jhon e di Mary che è dipendente dal fatto che l'allarme suoni o meno. 
 
-|A|$\mathbb{P}(J|A)$|
-|-|----------|
-|T|.90|
-|F|.05|
+|$Allarme$|$\mathbb{P}(J\textbar A)$|$\mathbb{P}(M\textbar A)$|
+|-|---------|-----|
+|T|.90|.70|
+|F|.05|.01|
 
+Considerando $k$ genitori di $n$ variabili della rete, $d$ come possibili stati di una variabile della rete allora abbiamo che:
+1. $O(d^kn)$ specificando le probabilità condizionate.
+2. $O(d^n)$ se specificassimo direttamente tutte le probabilità congiunte.
+
+Va sottolineato che il numero di nodi di una rete bayesiana reale è spesso abbastanza grande rispetto ai modelli "giocattolo" visti qui. 
+![[Reti Bayesiane - esempio rete diagnosi auto.png]]
+Tornando alla formula del prodotto qui sopra possiamo fare l'esempio con la rete dell'allarme:
+$$\begin{align} &\quad \mathbb{P}(x_1,...,x_n)=\prod_{i=1}^n \mathbb{P}\big(x_i|parents(X_i)\big)=\\ &\quad \mathbb{P}(j,m,a,\lnot r,\lnot  t)=\mathbb{P}(j|a)\mathbb{P}(m|a)\mathbb{P}(a|\lnot b,\lnot e)\mathbb{P}(\lnot r)\mathbb{P}(\lnot t)=\\ &\quad = 0.9*0.7*0.001*0.999*0.998\approx 0.00063 \end{align}$$
+## Semantica Locale
+Ogni nodo è condizionatamente indipendente da suoi non discendenti, dati i suoi genitori. ![[Reti Bayesiane - semantica locale.png]]
+Sostanzialmente se conosco $X$ e conosco i suoi genitori è come se avessi una sorta di fascia di indipendenza dove solo i figli di $X$ possono avere ancora qualche relazione di dipendenza. Quindi, qualunque variazione dei nodi $Z$ non influenza $X$. 
+*Corrisponde anche a dire che il prodotto delle CPT è proprio la probabilità congiunta*.
+
+### Coperta di Markov
+Data la coperta di Markov, tutti i nodi della coperta sono indipendenti dal nodo centrale. In altre parole, ogni nodo è condizionatamente indipendente da ogni altro nodo data la sua coperta di Markov: genitori + figli + genitori dei figli (mate o compagni)
+![[Reti Bayesiane - Coperta di Markov.png]]
