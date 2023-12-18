@@ -151,3 +151,96 @@ Remote Directory Server, nato per il real time. Secondo solo a MongoDB è un DB 
 - consente di creare sistemi di produttori e consumatori di eventi
 - la coda asincrona è come una coda standard, tranne per il fatto che quando si rimuove dalla coda un elemento da una coda vuota, il calcolo si blocca invece di fallire.
 
+Per non perdere dati i dati prima o poi devono finire su disco ma ovviamente in modo asincrono altrimenti perderei completamente il vantaggio di stare in ram. Ci sono due approcci principali:
+1. *Periodic Dump*: scrivo l'intero DB su disco
+2. *Append On File*: ad ogni write appendo il cambio al file di log. 
+
+La *gestione delle chiavi* è un po' quella per la buona programmazione quando usiamo i dizionari in python quindi è preferibile una chiave leggibile piuttosto che una criptica. Come tipo di *dato primitivo* ha solo le stringhe ma ha tre container:
+- hashes list
+- set
+- sorted set
+
+Ci sono anche:
+- Bitmaps: operazioni a livello di bit
+- Bitfields: gestire contatori in modo efficente
+- HyperlogLog: struttura ottimizzata per calcolare (in modo probabilistico) la 
+- ardinalità degli insiemi (errore standard 0.81%)
+- Geospatial Indexes: coordinate geospaziali 
+- Streams: funzionano come append-only log.
+
+Anche REDIS non ha un linguaggio standard e come tanti bisogna studiare come funziona e come si interroga.
+![[Database NoSQL - REDIS vs SQL.png]]
+
+## REDIS Cluster
+Siccome nei confronti del teorema CAP la base di dati si posiziona come CA è nato ben presto il problema della gestione dei Big Data che pretende un sistema distriuito. Nasce quindi la versione clusterizzata di REDIS, ecco alcune caratteristiche:
+1. **Partizionamento orizzontale:** Redis Cluster divide i dati in modo orizzontale tra i nodi, consentendo una distribuzione uniforme dei dati e una migliore scalabilità.
+    
+2. **Sharding e Replicazione:** Redis Cluster supporta sharding automatico dei dati su più nodi, consentendo di gestire grandi quantità di dati. Inoltre, offre la possibilità di replicare i dati su nodi secondari per garantire la disponibilità in caso di guasto di un nodo.
+    
+3. **Ruoli dei nodi:** Ogni nodo in Redis Cluster può assumere uno dei tre ruoli principali: master, slave o nodo inattivo. Questi ruoli contribuiscono a garantire la coerenza e la disponibilità, permettendo ai nodi di agire come copie di backup e garantendo che ci siano sempre repliche disponibili.
+    
+4. **Rilevamento automatico dei partizionamenti:** Redis Cluster è progettato per rilevare automaticamente le partizioni di rete e gestire il failover, garantendo che il sistema possa continuare a funzionare anche in presenza di partizionamenti.
+REDIS Cluster è considerato *CP*
+
+## REDIS Sentinel
+Redis Sentinel può essere utilizzato per implementare un sistema Redis altamente disponibile e tollerante ai guasti.
+
+Ecco alcune caratteristiche principali di Redis Sentinel:
+
+1. **Monitoraggio:** Redis Sentinel monitora costantemente lo stato dei nodi Redis nel sistema. Può rilevare guasti, ritiri e altre condizioni anomale.
+    
+2. **Failover automatico:** In caso di guasto di un nodo master, Redis Sentinel può attivare automaticamente il failover, promuovendo un nodo slave a nuovo master. Questo aiuta a mantenere la disponibilità del sistema anche in presenza di fallimenti.
+    
+3. **Configurazione dinamica:** Redis Sentinel supporta la configurazione dinamica, consentendo l'aggiunta o la rimozione di nodi senza la necessità di riavviare l'intero sistema.
+    
+4. **Notifiche agli amministratori:** Redis Sentinel può inviare notifiche agli amministratori del sistema quando si verificano eventi significativi, come un failover.
+    
+5. **Rilevamento di partizionamenti di rete:** Redis Sentinel è in grado di rilevare partizionamenti di rete e prendere decisioni di failover in modo coerente per mantenere l'operatività del sistema.
+    
+
+Redis Sentinel non è destinato a garantire la coerenza del database in tutte le condizioni, ma piuttosto a garantire che il sistema rimanga operativo anche in presenza di guasti. Quando un failover è attivato, potrebbe esserci un breve periodo di indisponibilità, e la coerenza potrebbe essere temporaneamente compromessa. Quindi Redis Sentinel è *AP*.
+
+# DynamoDB
+È il DB sviluppato interamente da Amazon ed è in hosting al 100%, non si può installare localmente. 
+È progettato per offrire prestazioni ad alta velocità, scalabilità automatica e affidabilità elevata. Ecco alcune caratteristiche chiave di DynamoDB:
+
+1. **Modello di Dati:** DynamoDB è basato su un modello di dati NoSQL chiave-valore e può essere utilizzato sia come database di chiave-valore che come database di documenti. Ciò significa che puoi archiviare e recuperare dati utilizzando una chiave primaria.
+    
+2. **Scalabilità Automatica:** DynamoDB offre una scalabilità automatica, il che significa che può gestire aumenti o diminuzioni di traffico senza richiedere interventi manuali. Puoi iniziare con piccole quantità di dati e aumentare le risorse di calcolo o la capacità di archiviazione in modo dinamico al crescere delle esigenze dell'applicazione.
+    
+3. **Archiviazione a Basso Livello:** DynamoDB fornisce un'archiviazione a basso livello distribuita su più server. Questo contribuisce a garantire prestazioni elevate e ridondanza dei dati.
+    
+4. **Tolleranza ai Guasti:** DynamoDB è progettato per essere altamente disponibile e tollerante ai guasti. I dati sono replicati su più zone di disponibilità all'interno di una regione AWS, garantendo la resilienza del sistema in caso di guasto di un'intera zona.
+    
+5. **Modelli di Consistenza:** DynamoDB offre diverse opzioni di modelli di consistenza per adattarsi alle esigenze dell'applicazione. Puoi scegliere tra consistenza forte o consistenza eventualmente coerente a seconda dei requisiti di lettura e scrittura.
+    
+6. **Gestione del Traffico:** DynamoDB offre funzionalità per la gestione del traffico, come il controllo della velocità delle richieste tramite provisioned throughput o il nuovo sistema di pagamento basato sulle richieste, che addebita solo le richieste effettive eseguite.
+    
+7. **Monitoraggio e Logging:** DynamoDB fornisce strumenti di monitoraggio, logging e integrazione con AWS CloudWatch per consentire una gestione efficiente delle risorse e delle prestazioni.
+    
+
+DynamoDB è ampiamente utilizzato per applicazioni che richiedono accesso rapido e scalabile ai dati, come app Web, app mobili, giochi, Internet delle cose (IoT) e molto altro ancora. La sua flessibilità e le caratteristiche di gestione automatica lo rendono una scelta popolare per le applicazioni che richiedono prestazioni elevate e scalabilità senza la necessità di gestire manualmente l'infrastruttura del database.
+
+# Neo4j
+Neo4j è un sistema di gestione di database di grafi (Graph Database Management System o GDBMS) basato su un modello di dati a grafo, che rappresenta le entità e le relazioni tra di esse come nodi e archi di un grafo. La sua architettura è orientata alla gestione efficiente di dati altamente connessi, rendendolo particolarmente adatto per rappresentare e interrogare reti complesse.
+
+Ecco alcuni concetti e caratteristiche chiave di Neo4j in termini accademici:
+
+1. **Modello di Dati a Grafo:** Neo4j adotta un modello di dati a grafo, dove l'unità fondamentale è il nodo, che rappresenta un'entità, e l'arco, che rappresenta una relazione tra le entità. Questo modello offre una rappresentazione intuitiva e efficiente per dati fortemente connessi.
+    
+2. **Linguaggio di Query Cypher:** Neo4j utilizza il linguaggio di query Cypher, appositamente progettato per esprimere interrogazioni in grafi. Cypher semplifica la rappresentazione di pattern di grafo, rendendo le query più leggibili e intuitive.
+    
+3. **Transazioni ACID:** Neo4j supporta transazioni ACID (Atomicità, Consistenza, Isolamento, Durabilità), garantendo che le operazioni di scrittura siano atomiche e mantenendo la coerenza dei dati.
+    
+4. **Indicizzazione e Ottimizzazione delle Query:** Neo4j utilizza indici per accelerare la ricerca di nodi in base a determinate proprietà. Le query vengono ottimizzate per sfruttare al massimo le strutture a grafo e garantire prestazioni efficienti.
+    
+5. **API e Driver:** Neo4j fornisce API e driver per una varietà di linguaggi di programmazione, facilitando l'integrazione con applicazioni esterne. Queste interfacce consentono agli sviluppatori di interagire con il database utilizzando il linguaggio di programmazione di loro scelta.
+    
+6. **Neo4j Browser:** Neo4j offre un'applicazione web chiamata Neo4j Browser che consente agli utenti di esplorare e interrogare il database in modo interattivo, offrendo una visualizzazione grafica dei dati.
+    
+7. **Community e Supporto:** Neo4j è supportato da una vibrante comunità di utenti e sviluppatori. Inoltre, ci sono opzioni per ottenere supporto commerciale da Neo4j, che include consulenza, formazione e assistenza tecnica.
+    
+8. **Sicurezza:** Neo4j implementa meccanismi di sicurezza per garantire l'accesso autorizzato ai dati, consentendo la definizione di ruoli e permessi.
+    
+
+Neo4j è ampiamente utilizzato in scenari in cui le relazioni tra i dati sono centrali, come reti sociali, analisi delle reti, gestione della conoscenza e applicazioni che richiedono una comprensione approfondita delle connessioni tra entità. La sua struttura di grafo offre un modo potente e intuitivo per modellare e interrogare dati complessi e altamente relazionati.
