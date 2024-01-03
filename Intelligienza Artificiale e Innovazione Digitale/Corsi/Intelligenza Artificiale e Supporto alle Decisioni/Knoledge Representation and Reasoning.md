@@ -7,6 +7,22 @@ Per anni l'utilizzo della logica si è pensato essere il modo migliore di rappre
 # Knowledge Base Systems
 ![[Knoledge Representation and Reasoning - KnowledgeBaseSystem.png]]
 Componenti:
-- KB: ossia la base di conoscenza
-- Motore Inferenziale: usa la KB per fare ragionamenti per rispondere alle query
-- Learner: modulo di apprendimento che se presente modifica la KB aggiungendo roba utile e modificando o eliminando quella inutile o errata.
+- *KB*: base di conoscenza
+- *Motore Inferenziale*: usa la KB per fare ragionamenti per rispondere alle query
+- *Learner*: modulo di apprendimento che se presente modifica la KB aggiungendo roba utile e modificando o eliminando quella inutile o errata.
+
+## Esempio
+Ecco un esempio con la logica dove il motore è il *modus ponens*.
+- KB $\rightarrow$ insieme di predicati e formule
+	- $uomo(Socrate)$
+	- $\forall x:\ uomo(x) \rightarrow uomo(mortale)$  
+- Motore Inferenziale (modus ponens)
+	- $\frac{p(a);\ \forall x:\  p(x) \rightarrow q(x)}{q(a)}$
+	- $uomo(Socrate) \models mortale(Socrate)$ 
+- Learner (Induzione)
+	- $corvo(A) \land nero(A)$
+	- $corvo(B) \land nero(B)$
+	- $corvo(C) \land nero(C)$
+	- $\Rightarrow \forall x:\ corvo(x) \rightarrow nero(x)$ 
+
+Nel corso verranno proposti i [[Case-Based Reasoning|CBR]] e i Modelli Grafico-Probabilistici
