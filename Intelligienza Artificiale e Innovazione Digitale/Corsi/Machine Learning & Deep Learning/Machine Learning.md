@@ -64,32 +64,32 @@ Questo è l'obbiettivo di tutti i modelli di ML:
 $$min[J(\Theta_0,\Theta_1)]$$
 Tradotto, minimizzare la *square loss*. Ovviamente ci sono dei metodi come la discesa del gradiente che vedremo più avanti.
 La funzione di costo ha una forma parabolica centrata sul coefficiente angolare della retta migliore. La funzione di costo qui nella regressione lineare è convessa e per definizione ha un solo minimo. 
-![[Machine Learning - grafico funzione di costo.png|500]]
+![[Assets/Multimedia/Machine Learning - grafico funzione di costo.png|500]]
 In sintesi:
 * Ipotesi $\rightarrow$ è $h_\Theta(x)$
 * Parametri $\rightarrow$ $\Theta_0$ e $\Theta_1$
 * Funzione di costo $\rightarrow$ $J(\Theta_0,\Theta_1)$
 * Goal $\rightarrow$ minimizzare la funzione di costo
 
-![[Machine Learning - funzione di costo della retta.png]]
+![[Assets/Multimedia/Machine Learning - funzione di costo della retta.png]]
 
 guardando l'immagine sopra, le coordinate del punto sono $\Theta_0,\Theta_1$ e il punto sta dentro ad un'area che rappresenta l'insieme dei "lenzuoli" come quello sotto. 
-![[Machine Learning - lenzuolo.png]]
+![[Assets/Multimedia/Machine Learning - lenzuolo.png]]
 
 ## Discesa del Gradiente
 
 Il gradiente è il vettore delle derivate parziali e la dimensione del vettore corrisponde al numero di variabili della funzione. Permette di simulare la discesa lungo la curva della funzione di costo fino a raggiungere il minimo; ricordiamo che il minimo non è locale ma globale siccome è una funzione convessa. 
 È come l'algoritmo di [[../Intelligenza Artificiale e Supporto alle Decisioni/Iterative Improvement (Local) search#Hill-climbing|Hill Climing]]. 
 L'algoritmo è fatto così:
-![[Pasted image 20240115144658.png]]
+![[Machine Learning - Algoritmo discesa del gradiente.png]]
 Da notare che $\alpha$ è un *iperparametro* che conosciamo come **learning rate**. 
-![[Machine Learning - learning rate grafico.png|400]]
+![[Assets/Multimedia/Machine Learning - learning rate grafico.png|400]]
 Ecco come avanza il learning rate. Questo iperparametro non va modificato durante l'avanzamento dell'algoritmo poiché si riduce da solo il passo in quanto cambia la pendenza man mano che ci si avvicina al valore centrato nella curva. Si osserva che un valore bassissimo porta sicuramente al valore ma costa mentre troppo grande potrebbe non portare mai al minimo. 
 Questo algoritmo si trova anche col nome di batch gradient descend poiché il concetto è che bisogna "ripassare" tutto il training set ad ogni operazione. 
 
 # Regressione Lineare a più Variabili
 
-Adesso la faccia di $h_\Theta$ è così ![[Machine Learning - h0 multivariabile.png]]
+Adesso la faccia di $h_\Theta$ è così ![[Assets/Multimedia/Machine Learning - h0 multivariabile.png]]
 Adesso la variabile $x$ e i parametri $\Theta$ sono vettori di egual dimensione
 $$x =\begin{equation}
 \begin{bmatrix}
@@ -109,13 +109,13 @@ x_n
 $$
  Da notare che devo fare la trasposta per poter moltiplicare i vettori, quindi $$h_\Theta(x) = \Theta^T(x)$$
  Questa è la faccia del nuovo algoritmo
- ![[Machine Learning - discesa gradiente multiariato.png]]
+ ![[Assets/Multimedia/Machine Learning - discesa gradiente multiariato.png]]
  Lo si fa fino ad $n$.
 ## Discesa del gradiente: feature scaling
-Se la scala di dimensione fra le features schiaccia la funzione c'è il rischio che l'algoritmo sia lento ![[Machine Learning - feature scaling non scalato.png|400]]
-Quindi conviene riscalare per ottenere una funzione non schiacciata. ![[Machine Learning - riscalatura delle features.png|400]]
+Se la scala di dimensione fra le features schiaccia la funzione c'è il rischio che l'algoritmo sia lento ![[Assets/Multimedia/Machine Learning - feature scaling non scalato.png|400]]
+Quindi conviene riscalare per ottenere una funzione non schiacciata. ![[Assets/Multimedia/Machine Learning - riscalatura delle features.png|400]]
 ### Mean Normalisation
-![[Pasted image 20240115152734.png]]
+![[Machine Learning - riscalare.png]]
 Lavorando così funziona bene per riscalare. 
 
 ### Learning Rate
@@ -123,6 +123,6 @@ Non esiste una regola standard per sceglierla ma in sostanza devo comunque avere
 
 ### Regressione Polinomiale
 Alcune features potrebbero essere quadratiche, cubiche e quindi in generale polinomiali; ad esempio un'area o un volume. 
-![[Pasted image 20240115153620.png]]
+![[Machine Learning - Regressione Polinomiale.png]]
 Ma comunque $h_\Theta$ lo calcolo nello stesso modo! 
-Un esempio può essere questo ![[Machine Learning - housing price.png]]
+Un esempio può essere questo ![[Assets/Multimedia/Machine Learning - housing price.png]]
