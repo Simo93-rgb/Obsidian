@@ -82,7 +82,7 @@ Il gradiente è il vettore delle derivate parziali e la dimensione del vettore c
 È come l'algoritmo di [[../Intelligenza Artificiale e Supporto alle Decisioni/Iterative Improvement (Local) search#Hill-climbing|Hill Climing]]. 
 L'algoritmo è fatto così:
 ![[Assets/Multimedia/Machine Learning - Algoritmo discesa del gradiente.png]]
-Da notare che $\alpha$ è un *iperparametro* che conosciamo come **learning rate**. 
+Da notare che $\alpha$ è un *iperparametro* che conosciamo come **learning rate**. In generale, se è un iperparametro significa che definisce l'algoritmo, mentre se è parametro allora definisce il modello. 
 ![[Assets/Multimedia/Machine Learning - learning rate grafico.png|400]]
 Ecco come avanza il learning rate. Questo iperparametro non va modificato durante l'avanzamento dell'algoritmo poiché si riduce da solo il passo in quanto cambia la pendenza man mano che ci si avvicina al valore centrato nella curva. Si osserva che un valore bassissimo porta sicuramente al valore ma costa mentre troppo grande potrebbe non portare mai al minimo. 
 Questo algoritmo si trova anche col nome di batch gradient descend poiché il concetto è che bisogna "ripassare" tutto il training set ad ogni operazione. 
@@ -175,4 +175,58 @@ Qui si restituisce il valore massimo ottenuto dal classificatore binario. Il num
 
 ### Multi-class Classification: One-vc-One
 Gioco tutti contro tutti singolarmente. $a,b,c \rightarrow a\;vs\;b;a\;vs\;c;b\;vs\;c$. Il numero di classi qui è: $$\#class = \frac {k(k-1)}{2}$$
+
+# Regolarizzazione: il problema dell'overfitting
+Quando si lavora con il machine learning ci sono due aspetti fondamentali:
+1. **BIAS**: sono delle assunzioni eterogenee che vincolano il modello, anche sbagliate. Ad esempio se voglio che il modello sia lineare allora assumo che il mio modello lo sia e la situazione è vincolata così. Bias significa pregiudizio. Se il mio modello fitta poco i dai allora si parla di *underfitting*. Quindi il mio modello ha un alto bias ossia che i vincoli sono troppo stringenti e non si adatta al training set. Può anche voler dire che il modello sia troppo semplice. 
+2. **Varianza del Modello**: il modello cambia significativamente anche con piccole fluttuazioni di dati del training set. È un modello che fitta troppo i dati che ha visto e quindi è paragonabile al ripetere "a pappagallo" ma questo è un problema poiché non generalizza. Attenzione, non c'è correlazione con varianza statistica. 
+
+![[Machine Learning - Regularization.png]]
+<p align="center"><em>Caso regressione</em></p>
+
+![[Machine Learning - Regularization classificazione.png]]
+<p align="center"><em>Caso logic regression</em></p>
+
+### Gestione overfitting
+1. Posso ridurre il numero di features e posso farlo manualmente oppure posso farlo con un algoritmo
+2. Regolarizzazione
+
+## Regolarizzazione: funzione di costo
+È un meccanismo matematico che funziona sulla funzione di costo, sostanzialmente tiene tutte le features ma riduce il valore dei parametri $\Theta_j$. 
+![[Pasted image 20240122145127.png]]
+Intuitivamente si potrebbe pensare di ridurre le features più grandi per ottimizzare la funzione di costo
+$$min_\Theta J(\Theta)= \frac{1}{2m} {\sum_{i=1}^m (h_\Theta(x^i)-y^i)^2 +\alpha\Theta_3+\beta\Theta_4}$$
+Il passo successivo è lasciar decidere all'algoritmo quale penalizzare senza dare precedenza alle più grandi. Attenzione che $\Theta_0$ è l'unico che non si regolarizza mai. In generale: $$min_\Theta J(\Theta)= \frac{1}{2m} {\sum_{i=1}^m (h_\Theta(x^i)-y^i)^2 \lambda \sum_{i=1}^n\Theta_j^2}$$
+*Attenzione che $\lambda$ è il parametro di regolarizzazione*. Si noti come una semplificazione eccessiva, ossia una scelta erronea di $\lambda$, porta ad una semplificazione eccessiva del modello rischiando di avere underfitting. 
+Osservazione: $\sum_{i=1}^n\Theta_j^2$ è la norma del vettore $\Theta$, indicato con $\|\Theta\|_2$. Più la norma è grande più le features dentro al vettore contano. 
+![[Machine Learning - andamento regolarizzazione.png]]
+<p align="center"><em>da notare che al crescere di alpha io ho comunque un buon fit ma mi allontano dall'avere overfitting, fino al degenerare</em></p>
+Da notare che $\alpha$ viene anche chiamato **parametro di ridge**. 
+
+### Regolarizzazione: regolarizzare la regressione lineare
+Aggiungendo alla discesa del gradiente il fattore di correzione $-\frac{\lambda}{m}\Theta_j$.
+![[Pasted image 20240122152258.png]]
+### Regolarizzazione: regolarizzare la logic regression
+La funzione di costo, ossia la cross entropy, si vede aggiungere il fattore $+\frac{\lambda}{2m}\sum_{i=1}^n\Theta_j^2$. Grazie a questo posso applicare la stessa logica vista qui sopra. 
+
+# Reti Neurali: ipotesi non lineare
+Attenzione che qui è una introduzione molto di base. Quando non posso fare regressione lineare intervengono loro, soprattutto nel caso dove ho molte features e fare una regressione tradizionale diventa impossibile. Una fotografia ha una quantità enorme di pixel, avere ogni pixel rappresentato come una feature diventerebbe impossibile. 
+
+## Reti Neurali: neuroni e cervello
+Le prime rappresentazioni di un modello matematico di come si comporta il nostro cervello risale agli anni '40 con la cibernetica. Grazie all'algoritmo *back propagation* si è riusciti ad utilizzare quelle rappresentazioni. Molti furono i problemi fra cui la potenza di calcolo insufficiente. Solo nel 2010 circa si è riusciti a combinare qualcosa di tangibile. 
+
+## Reti Neurali: prima rappresentazione
+![[Pasted image 20240122154205.png|500]]
+L'idea è di scopiazzare il nostro cervello, quindi avere un neurone che comunica insieme ad altri neuroni scambiando segnali elettrici. Una connessione neuronale si chiama *sinapsi*. 
+![[Pasted image 20240122154324.png]]
+Lo scopo del neurone artificiale è combinare i segnali che gli arrivano coi loro pesi e dare in output un nuovo segnale. In matematichese significa fare una *combinazione lineare*. Ogni neurone ha una *activation function* che è la $f$ qui sopra rappresentata. Quindi la activation function è quella che produce l'output quando riceve in pasto la combinazione lineare $x_i$. 
+In modo convenzionale lo rappresentiamo come sotto.
+![[Pasted image 20240122154730.png]]
+Alleghiamo una funzione $y = \Phi\big(\sum_i\Theta_i x_i\big)$. 
+#### Perceptron
+È un neurone che funziona con una soglia di attivazione mediante una funzione di attivazione $$H(x)=\begin{cases}1  \text{ se } x\geq 0 \\ 0 \text{ se }x<0\end{cases}$$
+![[Pasted image 20240122155635.png]]
+
+#### neuron Model: linear unit
+#### Neuron Model: logistic unit
 
