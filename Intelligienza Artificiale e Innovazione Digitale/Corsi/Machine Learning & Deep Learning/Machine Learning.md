@@ -8,7 +8,7 @@ Ad oggi una definizione più moderna si basa su tre punti:
 3. Apprende con una certa prestazione *P*
 Questa arriva da Tom Mitchel nel 1998. 
 
-Ci sono più tipi di ML ma i principali sono due e sono il ML Supervisionato e il Non Supervisionato. Reinforcement e Raccomended sono altri due tipi che non vedremo però.
+Ci sono più tipi di ML ma i principali sono due e sono il ML Supervisionato e il Non Supervisionato. Reinforcement e Reccomended sono altri due tipi che non vedremo però.
 
 ![[Assets/Multimedia/Machine Learning - schema ML Supervisionato.png]]
 
@@ -193,7 +193,7 @@ Quando si lavora con il machine learning ci sono due aspetti fondamentali:
 
 ## Regolarizzazione: funzione di costo
 È un meccanismo matematico che funziona sulla funzione di costo, sostanzialmente tiene tutte le features ma riduce il valore dei parametri $\Theta_j$. 
-![[Pasted image 20240122145127.png]]
+![[Machine Learning - regolarizzazione funzione di costo.png]]
 Intuitivamente si potrebbe pensare di ridurre le features più grandi per ottimizzare la funzione di costo
 $$min_\Theta J(\Theta)= \frac{1}{2m} {\sum_{i=1}^m (h_\Theta(x^i)-y^i)^2 +\alpha\Theta_3+\beta\Theta_4}$$
 Il passo successivo è lasciar decidere all'algoritmo quale penalizzare senza dare precedenza alle più grandi. Attenzione che $\Theta_0$ è l'unico che non si regolarizza mai. In generale: $$min_\Theta J(\Theta)= \frac{1}{2m} {\sum_{i=1}^m (h_\Theta(x^i)-y^i)^2 \lambda \sum_{i=1}^n\Theta_j^2}$$
@@ -205,7 +205,7 @@ Da notare che $\alpha$ viene anche chiamato **parametro di ridge**.
 
 ### Regolarizzazione: regolarizzare la regressione lineare
 Aggiungendo alla discesa del gradiente il fattore di correzione $-\frac{\lambda}{m}\Theta_j$.
-![[Pasted image 20240122152258.png]]
+![[Machine Learning - algo regolarizzazione lineare.png]]
 ### Regolarizzazione: regolarizzare la logic regression
 La funzione di costo, ossia la cross entropy, si vede aggiungere il fattore $+\frac{\lambda}{2m}\sum_{i=1}^n\Theta_j^2$. Grazie a questo posso applicare la stessa logica vista qui sopra. 
 
@@ -216,17 +216,16 @@ Attenzione che qui è una introduzione molto di base. Quando non posso fare regr
 Le prime rappresentazioni di un modello matematico di come si comporta il nostro cervello risale agli anni '40 con la cibernetica. Grazie all'algoritmo *back propagation* si è riusciti ad utilizzare quelle rappresentazioni. Molti furono i problemi fra cui la potenza di calcolo insufficiente. Solo nel 2010 circa si è riusciti a combinare qualcosa di tangibile. 
 
 ## Reti Neurali: prima rappresentazione
-![[Pasted image 20240122154205.png|500]]
+![[Machine Learning - rappresentazione neurone.png|500]]
 L'idea è di scopiazzare il nostro cervello, quindi avere un neurone che comunica insieme ad altri neuroni scambiando segnali elettrici. Una connessione neuronale si chiama *sinapsi*. 
-![[Pasted image 20240122154324.png]]
+![[Machine learning - schema neurone sintetizzato.png]]
 Lo scopo del neurone artificiale è combinare i segnali che gli arrivano coi loro pesi e dare in output un nuovo segnale. In matematichese significa fare una *combinazione lineare*. Ogni neurone ha una *activation function* che è la $f$ qui sopra rappresentata. Quindi la activation function è quella che produce l'output quando riceve in pasto la combinazione lineare $x_i$. 
 In modo convenzionale lo rappresentiamo come sotto.
-![[Pasted image 20240122154730.png]]
+![[Machine Learning - schema neurone con bias.png]]
 Alleghiamo una funzione $y = \Phi\big(\sum_i\Theta_i x_i\big)$. 
 #### Perceptron
 È un neurone che funziona con una soglia di attivazione mediante una funzione di attivazione $$H(x)=\begin{cases}1  \text{ se } x\geq 0 \\ 0 \text{ se }x<0\end{cases}$$
-![[Pasted image 20240122155635.png]]
-
-#### neuron Model: linear unit
+Possiamo vedere il valore $\Theta_0$ come un valore di threshold. $$\Theta_0 + \sum_{i=1}^n \Theta_ix_i \geq 0 \leftrightarrow \sum_{i=1}^n \Theta_ix_i \geq -\Theta_0$$
+#### Neuron Model: linear unit
 #### Neuron Model: logistic unit
 

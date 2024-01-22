@@ -4,4 +4,4 @@
 3. [[Diritto e Società Digitale]]
 4. [[Statistica Computazionale]]
 5. Apprendimento Automatico e Profondo
-	1. [[Corsi/Machine Learning & Deep Learning/Machine Learning]]
+	1. [[Machine Learning]]
