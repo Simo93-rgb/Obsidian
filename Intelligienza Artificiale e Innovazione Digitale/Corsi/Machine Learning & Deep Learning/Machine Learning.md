@@ -81,7 +81,7 @@ guardando l'immagine sopra, le coordinate del punto sono $\Theta_0,\Theta_1$ e i
 Il gradiente è il vettore delle derivate parziali e la dimensione del vettore corrisponde al numero di variabili della funzione. Permette di simulare la discesa lungo la curva della funzione di costo fino a raggiungere il minimo; ricordiamo che il minimo non è locale ma globale siccome è una funzione convessa. 
 È come l'algoritmo di [[../Intelligenza Artificiale e Supporto alle Decisioni/Iterative Improvement (Local) search#Hill-climbing|Hill Climing]]. 
 L'algoritmo è fatto così:
-![[Machine Learning - Algoritmo discesa del gradiente.png]]
+![[Assets/Multimedia/Machine Learning - Algoritmo discesa del gradiente.png]]
 Da notare che $\alpha$ è un *iperparametro* che conosciamo come **learning rate**. 
 ![[Assets/Multimedia/Machine Learning - learning rate grafico.png|400]]
 Ecco come avanza il learning rate. Questo iperparametro non va modificato durante l'avanzamento dell'algoritmo poiché si riduce da solo il passo in quanto cambia la pendenza man mano che ci si avvicina al valore centrato nella curva. Si osserva che un valore bassissimo porta sicuramente al valore ma costa mentre troppo grande potrebbe non portare mai al minimo. 
@@ -115,7 +115,7 @@ $$
 Se la scala di dimensione fra le features schiaccia la funzione c'è il rischio che l'algoritmo sia lento ![[Assets/Multimedia/Machine Learning - feature scaling non scalato.png|400]]
 Quindi conviene riscalare per ottenere una funzione non schiacciata. ![[Assets/Multimedia/Machine Learning - riscalatura delle features.png|400]]
 ### Mean Normalisation
-![[Machine Learning - riscalare.png]]
+![[Assets/Multimedia/Machine Learning - riscalare.png]]
 Lavorando così funziona bene per riscalare. 
 
 ### Learning Rate
@@ -123,6 +123,56 @@ Non esiste una regola standard per sceglierla ma in sostanza devo comunque avere
 
 ### Regressione Polinomiale
 Alcune features potrebbero essere quadratiche, cubiche e quindi in generale polinomiali; ad esempio un'area o un volume. 
-![[Machine Learning - Regressione Polinomiale.png]]
+![[Assets/Multimedia/Machine Learning - Regressione Polinomiale.png]]
 Ma comunque $h_\Theta$ lo calcolo nello stesso modo! 
 Un esempio può essere questo ![[Assets/Multimedia/Machine Learning - housing price.png]]
+# Logic Regression: Classification
+
+Anche se c'è la parola regressione non è davvero un modello di regressione ma è un modello di classificazione. Il nome fuorviante arriva dal fatto che eredita delle caratteristiche dalla regressione lineare "vera". 
+Classificare significa dividere in gruppi ognuno con delle caratteristiche sue (classi). 
+Non va bene interpolare con una retta e fare regressione lineare, altrimenti l'aggiunta di valori come la ❌ in estrema destra porterebbe a ottenere una retta che non funziona più bene.
+![[Machine Learning - logic regression.png]]
+
+Logic Regression: $0 \leq h_\Theta(x) \leq 1$ dove però ora l'ipotesi è fatta così: $$h_\Theta(x) = g(\Theta^Tx)$$dove la $g$ viene detta funzione logistica. $$g(z) = {{1}\over 1+e^{-z}}$$
+![[Machine Learning - Funzione sigmoide (logistica).png]]
+
+Quindi, esplicitando io la funzione di ipotesi in questo modello l'ho fatta così:$$h_\Theta(x) = g(z) = {{1}\over 1+e^{-\Theta^Tx}}$$
+ed è la probabilità che il mio esempio sia positivo. 
+$h_\Theta(x) = \mathbb{P}(y=1|x;\Theta)$ si legge come la probabilità che $y$ sia $1$ dato $x$ parametrizzato da $\Theta$. 
+
+## Logic Regression: Decision Boundary
+Osservando la funzione sigmoide possiamo intuire che per avere valori positivi devo avere che $\Theta^T x \geq 0$. 
+Se posso separare le classi con una retta allora si dice che le classi sono linearmente separabili. ![[Machine Learning - classi linearmente separabili.png]]
+Avendo $\Theta_0=-3; \Theta_1 = 1; \Theta_2=1$ e avendo $h_\Theta(x)=g(\Theta_0+\Theta_1x_1+\Theta_2x_2)$ avrei che la retta in verde è data da $\Theta^Tx=-3+x_1+x_2$.
+Quindi: $$\text{positive region}(❌):= \;\;\;\; x_1+x_2\geq3$$
+$$\text{negative region}(🔵):= \;\;\;\; x_1+x_2\leq3$$
+Posso anche fare modelli che disegnano aree anche molto contorte ma non vanno bene questi modelli perché si genera *overfitting*.
+![[Machine Learning - modello eccessivo.png|305]]
+
+## Logic Regression: Funzione di Costo
+Nella regressione lineare la funzione di costo abbiamo visto essere convessa e quindi per definizione ha un solo minimo. Qui invece purtroppo non lo è e quindi posso rimanere incagliato in un minimo locale.$$Cost(h_\theta(x),y)={1\over2}(h_\Theta(x)-y)^2$$
+Esiste una funzione alternativa di costo che è convessa e quindi posso tornare ad avere garantito il minimo globale. $$Cost(h_\theta(x),y)=\begin{cases}-log(h_\Theta(x)) \;\;\text{se }y=1\\-log(1-h_\Theta(x)) \;\;\text{se }y=0 \end{cases}$$
+![[Machine Learning - costo y=1.png|400]]
+![[Machine Learning - costo y=0 classificazione logica.png|400]]
+Questa funzione si chiama *cross entropy loss*. 
+Lo scopo è sempre trovare $\Theta$ che minimizzi la situazione. $$J(\Theta)={1\over m}\sum_{i=1}^m Cost(h_\Theta(x^i),y)$$
+Per poter minimizzare la funzione applico la [[Machine Learning#Discesa del Gradiente|discesa del gradiente]] tenendo in considerazione le stesse cose viste precedentemente. 
+Per ottenere il minimo: $$min_\Theta J(\Theta) = repeat\{\Theta_j = \Theta_j -\alpha \frac{\partial}{\partial \Theta_j}J(\Theta) \}$$
+$$min_\Theta J(\Theta) = repeat\{\Theta_j = \Theta_j -\alpha \sum_{i=1}^m (h_\Theta(x^i)-y^i)x^i\}$$
+![[Machine Learning - Logic vs Linear regression.png]]
+Questi algoritmi vanno sempre presi dalle API offerte da tensorflow e compagnia. 
+
+## Multi-class Classification
+E se non mi accontento più di classificazione binaria? Qui si intende con multi un numero di classe maggiore di 2. Con tante classi possiamo mappare le classi in numeri naturali senza problemi. 
+![[Machine Learning - 2 classi vs Multi-Class.png]]
+
+Non si può applicare direttamente la classificazione vista prima, dove la metto la retta? Ovviamente perde di senso. Posso usare una tecnica speciale però. 
+
+### Multi-class Classification: One-vs-All
+![[Machine Learning - One VS All.png]]
+
+Qui si restituisce il valore massimo ottenuto dal classificatore binario. Il numero di classificatori corrisponde al numero di classe. Siccome ho "uno contro tutti" si finisce per avere ogni modello che si addestra su classi sbilanciate. 
+
+### Multi-class Classification: One-vc-One
+Gioco tutti contro tutti singolarmente. $a,b,c \rightarrow a\;vs\;b;a\;vs\;c;b\;vs\;c$. Il numero di classi qui è: $$\#class = \frac {k(k-1)}{2}$$
+
