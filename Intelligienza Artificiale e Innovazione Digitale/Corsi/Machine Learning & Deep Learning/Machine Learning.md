@@ -227,5 +227,54 @@ Alleghiamo una funzione $y = \Phi\big(\sum_i\Theta_i x_i\big)$.
 È un neurone che funziona con una soglia di attivazione mediante una funzione di attivazione $$H(x)=\begin{cases}1  \text{ se } x\geq 0 \\ 0 \text{ se }x<0\end{cases}$$
 Possiamo vedere il valore $\Theta_0$ come un valore di threshold. $$\Theta_0 + \sum_{i=1}^n \Theta_ix_i \geq 0 \leftrightarrow \sum_{i=1}^n \Theta_ix_i \geq -\Theta_0$$
 #### Neuron Model: linear unit
+La sua funzione è la funzione identità $$h_\Theta(x)=x$$
+![[Machine Learning - neurone lineare.png]]
 #### Neuron Model: logistic unit
+La sua funzione è $$h_\Theta(x)={{1}\over 1+e^{-\Theta^Tx}}$$
+### Multi-Layer Perceptron
+Posso combinare più perceptron per ottenere una rete con funzione di attivazione non lineare. Una *Artificial Neural Network (ANN)* deve avere almeno 3 *layer*. ![[Machine Learning - ANN con bias.png|450]]
+Da notare che tutti i nodi di un livello $k$ sono connessi col livello $k+1$ e queste connessioni sono quelle che modellano il concetto di sinapsi. Attenzione che c'è sempre un neurone di bias ad ogni livello ed è sempre fissato a 1 e come gli altri si connette a tutti i nodi del livello successivo. Attenzione, scontato ma i bias non sono connessi fra loro. 
+- **Input layer**: sono valori fissi
+- **hidden layer**: hanno tutti la stessa funzione di attivazione
+- **output layer**: possono esserci più neuroni e il tipo di neurone dipende da cosa deve fare il modello, classificazione o regressione.
+Per convenzione utilizziamo:
+- $a_n^{(k)} \rightarrow$ per indicare il valore di attivazione del neurone numero $n$, al livello $k$
+- $x_n \rightarrow$ per indicare il solo input layer
+- $\Theta_{in}^{(k)} \rightarrow$ per indicare che il parametro $\Theta$ del livello $k$ parte dal neurone $n$ del livello $k$ e arriva al neurone numero $i$ del livello $k+1$.
+	- Ad esempio $\Theta_{10}^1$ indica il parametro del livello di input che parte dal neurone zero del livello input e arriva al neurone 1 del layer 2.
+	- ![[Machine Learning - matrice dei parametri della rete.png]]
+	- Con questo sistema posso costruire una matrice dove ogni riga rappresenta il collegamento con tutti i neuroni del livello successivo.
+
+Ma come si calcolano i valori dei nodi $a$? ![[Machine Learning - calcolo valore nodi.png|550]]Allo stesso modo calcolo il livello output. ![[Machine Learning - calolo output layer.png|550]]Per evitare di portarsi dietro grandi equazioni si può sintetizzare la sola combinazione lineare prima di applicare la punzione $g$ ottenendo quindi una scrittura equivalente $$a_n^{(k)} = g(z_n^{(k)})=g(\Theta_n^{(k-1)}a_n^{(k-1)})$$Graficamente si rende ancora più cristallino. ![[Machine Learning - sintetizzazione parametri theta in z.png|550]]
+Attenzione, va sempre tutto rappresentato in vettori e matrici quando si programma, altrimenti utilizzando altre strutture dati e navigazioni con cicli degenererebbe in un codice inutilizzabile. 
+Questa implementazione si chiama **forward propagation** ossia propagazione in avanti. 
+
+## Reti Neurali: prime intuizioni
+Utilizzando una funzione sigmoide posso rappresentare gli operatori logici AND, OR, NOT... utilizzando un neurone. Basta approssimare il valore ottenuto dalla funzione di attivazione. Per fare cose sofisticate è necessario introdurre dei livelli intermedi![[Machine Learning - costruzione espressione logica con una ANN.png]]<p align="center"><em>costruzione rete per modellare espressione logica</em></p>
+## Reti Neurali: classificazione multiclasse
+Il layer di output ha tanti neuroni quanti sono le classi che voglio classificare ![[Machine Learning - classificazione multiclasse.png]]
+Lo scopo è avere un vettore che mi da una distribuzione di probabilità sulle classi e la rete dirà quale classe è la più probabile. Si utilizzano vettori chiamati *one-hot* e la *one-hot encoding* è la tecnica con il quale do alla rete gli esempi su cui imparare. Ad esempio, seguendo l'ordine nell'immagine sopra, su un vettore $[P,C,M,T]$ se voglio dare un esempio in cui voglio che la $C$ di car sia la classificazione dell'esempio il vettore sarà $[0,1,0,0]$. La dimensione del vettore corrisponde sempre al numero di classi. 
+Attenzione che nessuno garantisce che la distribuzione dello strato di output sia normalizzata a 1 e che ogni nodo ha valori compresi fra zero e uno. Quindi, come normalizzo a 1? Si usa una normalizzazione chiamata *soft-max*$$\mathbb{P}(y=j)=\sigma_j(Z)=\frac{e^{Z_j}}{\sum_{i=1}^Ke^{Z_i}}$$dove $K$ è il numero di classi e $z$ è il vettore di output. Questa normalizzazione viene fatta aggiungendo un layer che prende il nome di *soft-max layer*. 
+Osservazione: se voglio dire qual è la classe più probabile non serve questo layer ma basta cercare il valore più alto in $Z$, mentre se voglio anche dire qual è la probabilità associata alla previsione devo per forza farlo. 
+
+# Reti Neurali: Apprendimento
+
+## Funzione di Costo
+
+### Classificazione Binaria e Multi-Classe
+
+La funzione di costo è un elemento cruciale nelle reti neurali, che misura la differenza tra le uscite previste e quelle reali. Nella classificazione binaria, spesso si utilizza la funzione di costo logistica o cross-entropy, che calcola il costo associato a una previsione errata. In contesti di classificazione multi-classe, la cross-entropy viene generalizzata per gestire più classi. Questa funzione è fondamentale per guidare l'ottimizzazione dei pesi della rete durante l'addestramento.
+
+### Backpropagation
+Dopo aver avanzato con la forwardpropagation ho una previsione $a$ con la quale posso misurare l'errore commesso rispetto a $y$, il valore vero. A questo punto posso indicare questo errore con $\delta_i^{(l)}$, ogni layer $l$ ha un nodo $i$ che ha commesso un errore. 
+![[Machine Learning - backpropagation intro.png]]
+È una propagazione concettualmente al contrario rispetto alla farwordpropagation. 
+Per ogni $l<L$$$\delta_i^{(l)}=\bigg(\sum_{k=i}^{s_{l+1}}\delta_k^{(l+1)}\Theta_{ki}^{(l)}\bigg)a_i^{(l)}(1-a_i^{(l)})$$
+Per ogni output unit $$\delta_i^L=a_i^L-y_i$$
+Si può scrivere anche che la derivata della funzione di costo rispetto a $\Theta$ è il risultato della backpropagazione.  $$\frac{\partial}{\partial \Theta_{ij}^{(l)}}J(\Theta)=a_j^{(l)}\delta_i^{(l+1)}$$
+### Random Initialization
+Non fare mai la inizializzazione a zero perché si rendono identici i nodi del layer rendendo di fatto il layer come fosse a singolo nodo. In realtà è così anche con altri valori purché identici. Bisogna inizializzare nel modo più random possibile. 
+
+# Practical Machine Learning
+
 
