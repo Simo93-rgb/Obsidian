@@ -16,7 +16,7 @@ All'algoritmo non do in pasto il dato grezzo ma estraggo delle *features* che ra
 
 ![[Assets/Multimedia/Machine Learning - ML Unsupervised.png]]
 
-In questo caso abbiamo un modello unsupervised che quindi non ha la label data da un esperto del dominio. Un esempio è la Principal Composed Analysis (PCA) che riduce il numero di attributi necessari a descrivere il problema, quindi riduce la lunghezza del vettore di label. Utilissimo con dei sistemi [[../Intelligenza Artificiale e Supporto alle Decisioni/Case-Based Reasoning#k-NN|k-NN]] nel CBR.  
+In questo caso abbiamo un modello unsupervised che quindi non ha la label data da un esperto del dominio. Un esempio è la Principal Composed Analysis (PCA) che riduce il numero di attributi necessari a descrivere il problema, quindi riduce la lunghezza del vettore di label. Utilissimo con dei sistemi [[2.2 Case-Based Reasoning#k-NN|k-NN]] nel CBR.  
 
 ## ML Supervisioned
 ![[Assets/Multimedia/Machine Learning - Predizione prezzo aitazioni.png]]
@@ -79,7 +79,7 @@ guardando l'immagine sopra, le coordinate del punto sono $\Theta_0,\Theta_1$ e i
 ## Discesa del Gradiente
 
 Il gradiente è il vettore delle derivate parziali e la dimensione del vettore corrisponde al numero di variabili della funzione. Permette di simulare la discesa lungo la curva della funzione di costo fino a raggiungere il minimo; ricordiamo che il minimo non è locale ma globale siccome è una funzione convessa. 
-È come l'algoritmo di [[../Intelligenza Artificiale e Supporto alle Decisioni/Iterative Improvement (Local) search#Hill-climbing|Hill Climing]]. 
+È come l'algoritmo di [[1.4 Iterative Improvement (Local) search#Hill-climbing|Hill Climing]]. 
 L'algoritmo è fatto così:
 ![[Assets/Multimedia/Machine Learning - Algoritmo discesa del gradiente.png]]
 Da notare che $\alpha$ è un *iperparametro* che conosciamo come **learning rate**. In generale, se è un iperparametro significa che definisce l'algoritmo, mentre se è parametro allora definisce il modello. 
