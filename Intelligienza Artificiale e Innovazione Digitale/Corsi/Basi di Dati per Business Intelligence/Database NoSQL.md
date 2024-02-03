@@ -1,51 +1,50 @@
 # Introduzione NoSQL
 *Not Only SQL* non significa che tutti i DBMS che non usano SQL sono NoSQL perché questi ultimi devono avere determinate caratteristiche. Ad esempio i DBMS ad oggetti non sono considerabili dei database NoSQL.
-![[Database NoSQL - meme del CV NoSQL.png|400]]
+
 I DBMS relazionali (RDBMS) hanno il problema di non saper gestire bene grandi complessità fino al punto di non perdere solo prestazioni ma proprio di rendere quasi impossibile strutturare un database. 
-![[Assets/Multimedia/Database NoSQL - RDBMS vs complex.png]]
+![[Assets/Multimedia/Database NoSQL - RDBMS vs complex.png|450]]
 La scalabilità dei DBMS è assolutamente accettabile nelle operazioni di lettura ma quando si parla di operazioni in scrittura ci sono grandi problemi. 
 Quando si parla di *Big Data* gli RDBMS sono completamente inutili; ricordando che grossolanamente con big data intendiamo dati che non stanno su un solo dispositivo fisico poiché intrinseco il concetto di dati distribuiti. 
 Fra le varie caratteristiche dei database NoSQL diventa importante notare che nascono per essere scalabili orizzontalmente. 
-![[Assets/Multimedia/Database NoSQL - scalability vert vd horiz.png]]
-
-In questi DB non sono applicabili le proprietà acide:
-- **A**tomicità $\rightarrow$ salvo tutto il dato o niente
-- **C**oerenza $\rightarrow$ salvo solo i dati validi
-- **I**solamento $\rightarrow$ le transazioni non valide non sono salvate
-- **D**urabilità $\rightarrow$ i dati sono al sicuro
-
+![[Assets/Multimedia/Database NoSQL - scalability vert vd horiz.png|450]]
 ### Caratteristiche comuni ai DBMS  NoSQL
 Sono molto diversi uno dall'altro ma alcune cose sono comuni:
 - Schema dei dati non fisso
 - Le proprietà acide non sono garantite
 - Fortemente orientato alla scalabilità orizzontale e ai Big Data
 - Le API sono semplici
-
+## Transazioni ACID
+- **A**tomicità $\rightarrow$ salvo tutto il dato o niente
+- **C**oerenza $\rightarrow$ salvo solo i dati validi
+- **I**solamento $\rightarrow$ le transazioni non valide non sono salvate
+- **D**urabilità $\rightarrow$ i dati sono al sicuro
 ## Transazioni BASE
 All'opposto delle transazioni acide ho le transazioni basiche:
 - **B**asically **A**vailable $\rightarrow$ garantisce la disponibilità dei dati anche in presenza di fallimenti multipli.
 - **S**oft state $\rightarrow$ la coerenza dei dati viene garantita dallo sviluppatore e non dal database. 
 - **E**ventually Consistent $\rightarrow$ alla fine in un certo punto del futuro i dati convergono ad uno stato coerente. 
-![[Assets/Multimedia/Database NoSQL - ACID vs BASE.png]]
 
-## Teorema CAP
-Applicabile ai soli sistemi distribuiti, ci dice che fra tre grosse caratteristiche volute se ne possono avere solo due:
-1. **C**onsistency $\rightarrow$ tutti i nodi vedono lo stesso dato allo stesso momento
-2. **A**vailaility $\rightarrow$ ogni operazione deve sempre avere una risposta
-3. **P**artition Tolerance $\rightarrow$ tollerante alla eliminazione di un nodo del sistema distribuito, di una aggiunta di un dato o alla non disponibilità di un componente.
+| ACID | BASE |
+|---|---|
+| Strong consistency | Weak consistency – stale data OK |
+| Isolation | Availability first |
+| Focus on “commit” | Best effort |
+| Nested transactions | Approximate answers OK |
+| Availability? | Aggressive (optimistic) |
+| Conservative (pessimistic) | Simpler! |
+| Difficult evolution (e.g. schema) | Faster |
+|  | Easier evolution |
 
-![[Assets/Multimedia/Database NoSQL - coppie del CAP.png]]
 
 ## Principali DBMS
-Esistono 4 tipi di database nel mondo NoSQL e ognuno ha pregi e difetti ovviamente. 
+Esistono 4 tipi di database nel mondo NoSQL 
 
 ### Key-Value
-Basati su array associativi conosciuti ai più come dizionari o tabella hash. Recupero i dati con la chiave e questa è stata la scelta di Twitter.
-![[Assets/Multimedia/Database NoSQL - chiave valore.png|400]]
-
+Basati su array associativi conosciuti ai più come dizionari o tabella hash. Recupero i dati con la chiave.
 La gestione della struttura è sempre compito dello sviluppatore quindi la scelta delle chiavi è un aspetto cruciale. Posso anche avere una tupla di chiavi per identificare i dati ma questo comunque non garantisce di risolvere i problemi. 
-Qui le query non sono affatto semplici e dipendono dagli strumenti messi a disposizione dal DBMS e spesso siccome alcune cose non le fa proprio tocca poi farle a livello di programmazione. 
-![[Assets/Multimedia/Database NoSQL - esempio dato KEY-VALUE.png|400]]
+Qui le query non sono affatto semplici e dipendono dagli strumenti messi a disposizione dal DBMS e spesso siccome alcune cose non le fa proprio tocca poi farle a livello di programmazione.
+
+![[Assets/Multimedia/Database NoSQL - esempio dato KEY-VALUE.png|300]]
 <p align="center">
 
 Esempio di dato nel DB Key-Value
@@ -56,7 +55,15 @@ Le operazioni base sono *GET(key)* e *PUT(key, value)*.
 ### Database A Colonna
 Nonostante usino tabelle i nomi delle colonne possono cambiare da riga a riga. Lo si può vedere come una struttura chiave-valore a due dimensioni. Spotify utilizza Cassandra ad esempio. 
 ![[Assets/Multimedia/Database NoSQL - esempio A Colonna.png]]
-![[Assets/Multimedia/Database NoSQL - pro e contro A Colonna.png]]
+
+
+| PRO | CONTRO |
+|---|---|
+| Aggiunta/eliminazione di colonna | aggiornamento dati lento (insert, delete) |
+| molto efficienti nella compressione e/o nel partizionamento dei dati. | lento su query che lavorano su più attributi (join in particolare) |
+| efficienza nelle query di aggregazione. |  |
+| scalabilità, perché adatti per l'elaborazione parallela. |  |
+| operazioni di caricamento molto veloci. |  |
 
 ### Database a Grafo
 La cosa figa è che rappresentare le relazioni fra nodi è una cosa intrinseca nella struttura del grafo ed esistono un sacco di algoritmi noti in letteratura per navigare e modificare i grafi. 
@@ -69,10 +76,15 @@ Si può immaginare come un DB fatto di JSON. Qui i problemi sono le query, tutta
 
 ![[Database NoSQL - riepilogo  famiglie di DB.png]]
 
-# Teorema CAP: approfondimento
+# Teorema CAP
 
-Valgono le stesse cose dette in [[Database NoSQL#Teorema CAP|Teorema CAP]] 
-![[Dataase NoSQL - the 8 facilities of dist computing.png]]
+![[Database NoSQL - intersezioni CAP.png|450]]
+Applicabile ai soli sistemi distribuiti, ci dice che fra tre grosse caratteristiche volute se ne possono avere solo due:
+1. **C**onsistency $\rightarrow$ tutti i nodi vedono lo stesso dato allo stesso momento
+2. **A**vailaility $\rightarrow$ ogni operazione deve sempre avere una risposta
+3. **P**artition Tolerance $\rightarrow$ tollerante alla eliminazione di un nodo del sistema distribuito, di una aggiunta di un dato o alla non disponibilità di un componente.
+
+![[Dataase NoSQL - the 8 facilities of dist computing.png|400]]
 I sistemi che garantiscono *P* e *A* non possono garantire *C* in lettura poiché quando aggiorno un dato può essere effettuato su entrambi i lati della partizione. Si basano sulle [[Database NoSQL#Transazioni BASE|Proprietà Basiche]] per garantire prestazioni
 Siccome posso avere due caratteristiche su tre, andiamo a vedere le caratteristiche che ci sono con le varie coppie possibili.
 
@@ -100,9 +112,9 @@ Ci sono principalmente due tipi di partizionamento:
 
 Per esempi concreti, possiamo guardare alle strategie adottate da alcune big tech:
 
-1. **Google (Bigtable e Cloud Spanner):** Google Cloud Spanner cerca di affrontare il problema del partizionamento offrendo coerenza e disponibilità in presenza di partizionamenti di rete. Utilizza orologi atomici per sincronizzare i dati tra i nodi e garantire una forma di coerenza anche durante i partizionamenti.
+1. **Google (Bigtable e Cloud Spanner):** Google Cloud Spanner cerca di affrontare il problema del partizionamento offrendo coerenza e disponibilità in presenza di partizionamenti di rete. Utilizza orologi atomici (TrueTime Clock) per sincronizzare i dati tra i nodi e garantire una forma di coerenza anche durante i partizionamenti.
     
-2. **Amazon (DynamoDB):** DynamoDB di Amazon è progettato per essere altamente disponibile e tollerante ai partizionamenti. Durante un partizionamento di rete, alcuni nodi possono continuare a rispondere alle richieste, anche se ciò potrebbe portare a eventuali inconsistenze nei dati.
+2. **Amazon (DynamoDB):** DynamoDB di Amazon è progettato per essere altamente disponibile e tollerante ai partizionamenti. Durante un partizionamento di rete, alcuni nodi possono continuare a rispondere alle richieste, anche se ciò potrebbe portare a eventuali incoerenze nei dati.
     
 3. **Microsoft (Azure Cosmos DB):** Anche Azure Cosmos DB cerca di affrontare il problema del partizionamento consentendo ai clienti di scegliere tra livelli di coerenza in base alle proprie esigenze. Offre opzioni che coprono da forte coerenza a disponibilità elevata in caso di partizionamento.
 
@@ -121,126 +133,159 @@ In questo caso, l'obiettivo è suddividere gli utenti del sistema tra diverse pa
 
 #### Hierarchical Partitioning (Partizionamento gerarchico)
 Questo tipo di partizionamento implica una suddivisione in modo gerarchico. Ad esempio, un sistema distribuito potrebbe avere partizioni principali, ognuna delle quali contiene partizioni secondarie, e così via. Ciò può contribuire a una migliore organizzazione e gestione delle risorse.
-   
+
+### Sharding
+Differenti motivi, molti di questi hanno a che fare con gli ambienti aziendali e le dimensioni dei dati. Possiamo guardare alcuni elencati qui:
+- Per motivi legali o di privacy, è necessario archiviare alcuni dati in database isolati per proteggere o limitare l'accesso (ad es. leggi GDPR).
+- I dati sono già raggruppati in istanze separate per le attività quotidiane, ma potrebbe essere necessario intrecciarli in un grafo unificato (es. knowledge graph)
+- Per ridurre al minimo la latenza delle query in varie regioni, i segmenti rilevanti del grafo possono essere archiviati in regioni vicine alle origini delle richieste di query.
+- I dati archiviati potrebbero essere separati per data,  ma report ad hoc o altre esigenze potrebbero richiedere query su questi grafi.
+- La dimensione del grafico sta diventando grande (decine di miliardi di nodi)  da rendere necessario dividere i dati in grafi più piccoli da eseguire su hardware di dimensioni inferiori e accessibili alle parti necessarie.
+
+![[Database NoSQL - sharding.png|350]]
 
 ## PACELC
 Il concetto di PACELC è un'estensione del teorema CAP. PACELC aggiunge ulteriori considerazioni alle scelte di progettazione nei sistemi distribuiti, introducendo i seguenti aspetti:
+Il teorema PACELC si può riassumere così:
 
-1. **PACELC:**
-    - **P: Partition Tolerance (Tolleranza ai partizionamenti):** Questo è il componente principale ereditato dal teorema CAP. Indica la capacità del sistema di continuare a funzionare anche in presenza di partizionamenti di rete.
-        
-    - **A: Availability (Disponibilità):** Questo è simile al componente "Availability" del teorema CAP. Rappresenta la capacità del sistema di rispondere alle richieste, anche in presenza di partizionamenti.
-        
-    - **C: Consistency (Coerenza):** Questo è simile al componente "Consistency" del teorema CAP. Indica la coerenza dei dati nel sistema.
-        
-    - **E: Latency (Latency):** Aggiunge un nuovo aspetto al confronto. Rappresenta il tempo di risposta del sistema alle richieste degli utenti.
-        
-    - **L: Consistency Trade-off (Trade-off di coerenza):** Questo aspetto riflette la possibilità di compromessi nella coerenza dei dati per migliorare la latenza o la disponibilità.
-        
-    - **C: Consistency Trade-off (Trade-off di coerenza):** Analogamente al componente "Consistency Trade-off," sottolinea la possibilità di negoziare la coerenza dei dati in cambio di altri benefici.
-        
-
+- **P (Partition Tolerance)**: In presenza di partizioni, il sistema deve scegliere tra coerenza e disponibilità.
+- **A (Availability)**: Se non ci sono partizioni, il sistema deve decidere tra fornire alta disponibilità...
+- **C (Consistency)**: ...o mantenere la coerenza dei dati tra tutti i nodi.
+- **E (Else)**: Indica che, anche senza partizioni, esiste un trade-off...
+- **L (Latency)**: ...tra latenza minore e...
+- **C (Consistency)**: ...migliore coerenza o tra latenza e disponibilità.
+![[Database NoSQL - PACELC.png|450]]
 In breve, PACELC fornisce una visione più dettagliata delle scelte di progettazione in un sistema distribuito, considerando non solo la triade di coerenza, disponibilità e tolleranza ai partizionamenti, ma anche la latenza e i trade-off associati a coerenza e disponibilità. I progettisti di sistemi distribuiti possono utilizzare PACELC per guidare le decisioni in modo più mirato in base alle esigenze specifiche del loro sistema.
 
-# REDIS
-Remote Directory Server, nato per il real time. Secondo solo a MongoDB è un DB chiave-valore che sta in-memory:
-- Un server adatto a memeorizzare strutture dati
-- Che gestiste esplicitamente repliche 
-- Con memorizzazione persistete (durable)
-- Gestire in modo atomico transazioni
-- consente di creare sistemi di produttori e consumatori di eventi
-- la coda asincrona è come una coda standard, tranne per il fatto che quando si rimuove dalla coda un elemento da una coda vuota, il calcolo si blocca invece di fallire.
+# Database NoSQL: Confrontone
+| Database | CAP | Architettura | Caratteristiche Principali | Aziende Famose |
+| ---- | ---- | ---- | ---- | ---- |
+| Redis | CP con configurazioni che possono favorire A | key-value | Database in memoria, supporta varie strutture dati | Twitter, GitHub, Snapchat |
+| DynamoDB | AP ma privilegia A e la scalabilità. | key-value | Servizio NoSQL gestito, prestazioni a bassa latenza | Amazon, Samsung, Netflix |
+| Neo4j | CA | Graph | Ottimizzato per dati con relazioni complesse | LinkedIn, eBay, Adobe |
+| Cassandra | AP con C configurabile |  | Scalabile, prestazioni elevate, senza SPOF | Facebook, Netflix, Twitter |
+| HBase | CP con A configurabile |  | Database colonnare, scalabile su molti server | Facebook, Twitter, Yahoo |
+| MongoDB | CP con A migliorabile |  | Orientato ai documenti, supporta varie tipologie di dati | Adobe, SAP, eBay |
+| InfluxDB | AP (velocissimo) |  | Database di serie temporali, ottimizzato per la velocità | IBM, PayPal, Tesla |
+| NEWSQL | CA |  | Combina SQL tradizionale con scalabilità NoSQL | Varia per prodotto specifico |
+### Redis
+Redis è stato sviluppato principalmente per superare le limitazioni dei database tradizionali in termini di velocità di accesso ai dati. L'esigenza iniziale derivava dalla necessità di gestire dati in tempo reale per un'applicazione web chiamata "lloogg", che necessitava di un database capace di scrivere e recuperare dati molto rapidamente. Redis è stato quindi progettato come un sistema di memorizzazione chiave-valore in memoria, per garantire tempi di accesso brevi, ideale per applicazioni che richiedono prestazioni elevate, come caching, sessioni di utenti e code di messaggi.
 
-Per non perdere dati i dati prima o poi devono finire su disco ma ovviamente in modo asincrono altrimenti perderei completamente il vantaggio di stare in ram. Ci sono due approcci principali:
-1. *Periodic Dump*: scrivo l'intero DB su disco
-2. *Append On File*: ad ogni write appendo il cambio al file di log. 
+- **Caratteristiche Principali**: Database in memoria, supporta strutture dati come stringhe, hash, liste, set, e set ordinati con query di range.
+- **Teorema CAP**: CP (Coerenza e Tolleranza alla Partizione), con configurazioni che possono favorire la disponibilità.
+	- È nato come CA per singola macchina
+	- *Redis Sentinel* (AP): Sentinel gestisce il failover. Aiuta a configurarlo per l'alta disponibilità.
+	- *Redis Cluster* (CP): È una soluzione di scrittura multipla/più grande della RAM. Fondamentalmente una soluzione di sharding. Non fornisce una perfetta disponibilità o coerenza.
+		- Lo *sharding* somiglia al RAID nei computer, faccio dei frammenti logici (shard) distribuiti su vari computer.
+- **Aziende Famose**: X, GitHub, Snapchat.
 
-La *gestione delle chiavi* è un po' quella per la buona programmazione quando usiamo i dizionari in python quindi è preferibile una chiave leggibile piuttosto che una criptica. Come tipo di *dato primitivo* ha solo le stringhe ma ha tre container:
-- hashes list
-- set
-- sorted set
+### Amazon DynamoDB
+La creazione di Amazon DynamoDB è stata motivata dalla necessità di un database NoSQL che potesse offrire prestazioni affidabili e scalabilità gestita, riducendo al contempo la complessità operativa. È stato sviluppato per ridurre la dipendenza dai RDBMS con licenza e per gestire la crescente base di clienti di Amazon, soprattutto durante i picchi di traffico come quelli sperimentati durante le festività natalizie del 2004. DynamoDB è stato progettato per fornire un'esperienza utente ottimale con *capacità di indicizzazione* dei dati efficienti e *bassa latenza* nelle operazioni, il tutto anche oltre i 100TB!
 
-Ci sono anche:
-- Bitmaps: operazioni a livello di bit
-- Bitfields: gestire contatori in modo efficente
-- HyperlogLog: struttura ottimizzata per calcolare (in modo probabilistico) la 
-- ardinalità degli insiemi (errore standard 0.81%)
-- Geospatial Indexes: coordinate geospaziali 
-- Streams: funzionano come append-only log.
+- **Caratteristiche Principali**: Servizio di database NoSQL completamente gestito, offre prestazioni a latenza bassa a qualsiasi scala.
+	- La conformità ACID è garantita solo nelle transazioni eseguite all'interno della stessa regione, che sono attualmente 30. Non è disponibile per le tabelle globali.
+	- La best practice: organizzare i dati in modo da ottimizzare le sole performance.
+- **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), privilegia la disponibilità e la scalabilità.
+- **Aziende Famose**: Amazon, Samsung, Netflix.
 
-Anche REDIS non ha un linguaggio standard e come tanti bisogna studiare come funziona e come si interroga.
-![[Database NoSQL - REDIS vs SQL.png]]
+Non utilizzarlo quando:
+- sono richieste transazioni multi-item o cross-table
+- sono richieste query e join complessi
+- è richiesta l'analisi in tempo reale sui dati storici
+### Neo4j
+Il focus principale nella creazione di Neo4j è stato di fornire un sistema ottimizzato per interrogazioni complesse e trasversali nelle relazioni tra i dati, superando le limitazioni dei database relazionali tradizionali in scenari dove le connessioni tra i dati sono fondamentali. Le ragioni di creazione includono la necessità di un modello di dati agile e flessibile, la rappresentazione esplicita delle relazioni e la capacità di eseguire query in tempo reale con focus sulle relazioni anziché solo sui dati isolati. È quindi un database che sfrutta la natura intrinsecamente connessa dei dati.
 
-## REDIS Cluster
-Siccome nei confronti del teorema CAP la base di dati si posiziona come CA è nato ben presto il problema della gestione dei Big Data che pretende un sistema distriuito. Nasce quindi la versione clusterizzata di REDIS, ecco alcune caratteristiche:
-1. **Partizionamento orizzontale:** Redis Cluster divide i dati in modo orizzontale tra i nodi, consentendo una distribuzione uniforme dei dati e una migliore scalabilità.
-    
-2. **Sharding e Replicazione:** Redis Cluster supporta sharding automatico dei dati su più nodi, consentendo di gestire grandi quantità di dati. Inoltre, offre la possibilità di replicare i dati su nodi secondari per garantire la disponibilità in caso di guasto di un nodo.
-    
-3. **Ruoli dei nodi:** Ogni nodo in Redis Cluster può assumere uno dei tre ruoli principali: master, slave o nodo inattivo. Questi ruoli contribuiscono a garantire la coerenza e la disponibilità, permettendo ai nodi di agire come copie di backup e garantendo che ci siano sempre repliche disponibili.
-    
-4. **Rilevamento automatico dei partizionamenti:** Redis Cluster è progettato per rilevare automaticamente le partizioni di rete e gestire il failover, garantendo che il sistema possa continuare a funzionare anche in presenza di partizionamenti.
-REDIS Cluster è considerato *CP*
+- **Caratteristiche Principali**: Database a grafi, ottimizzato per memorizzare e interrogare dati con relazioni complesse.
+	- Supporta a pieno le proprietà ACID
+	- I nodi contengono coppie chiave-valore
+	- Gli archi sono sempre direzionati
+	- Si interroga il DB con il linguaggio dichiarativo *Cypher*
+	- Sfruttando una dimensione fissa di 9 byte per i record si sfrutta l'aritmetica dei puntatori garantendo attraversamenti del grafo in complessità $O(n)$
+- **Teorema CAP**: CA (Coerenza e disponibilità), per garantire relazioni coerenti.
+- **Aziende Famose**: LinkedIn, eBay, Adobe.
 
-## REDIS Sentinel
-Redis Sentinel può essere utilizzato per implementare un sistema Redis altamente disponibile e tollerante ai guasti.
+#### Neo4j Fabric: Singolo DBMS
+![[Database NoSQL - neo4j fabric singolo.png|400]]
 
-Ecco alcune caratteristiche principali di Redis Sentinel:
+#### Neo4j Fabric: Multi DBMS
+![[Database NoSQL - neo4j fabric multi.png|400]]
 
-1. **Monitoraggio:** Redis Sentinel monitora costantemente lo stato dei nodi Redis nel sistema. Può rilevare guasti, ritiri e altre condizioni anomale.
-    
-2. **Failover automatico:** In caso di guasto di un nodo master, Redis Sentinel può attivare automaticamente il failover, promuovendo un nodo slave a nuovo master. Questo aiuta a mantenere la disponibilità del sistema anche in presenza di fallimenti.
-    
-3. **Configurazione dinamica:** Redis Sentinel supporta la configurazione dinamica, consentendo l'aggiunta o la rimozione di nodi senza la necessità di riavviare l'intero sistema.
-    
-4. **Notifiche agli amministratori:** Redis Sentinel può inviare notifiche agli amministratori del sistema quando si verificano eventi significativi, come un failover.
-    
-5. **Rilevamento di partizionamenti di rete:** Redis Sentinel è in grado di rilevare partizionamenti di rete e prendere decisioni di failover in modo coerente per mantenere l'operatività del sistema.
-    
+#### Sharding: dove dividere i dati
+- Si dovrà prendere decisioni sulla separazione dei dati e rifattorizzare manualmente i dati in frammenti che dovranno essere gestiti da Fabric.
+- Determinare i punti migliori per dividere i dati del grafo in grafi separati per Fabric può essere complicato se i dati sono strettamente collegati o se crescono nel tempo.
+- L’idea è cercare di pensare/trovare nei dati dei  sottografi naturali o strutture disconnesse dove c'è la divisione più netta.
+- Nell’esempio, ci sono divisioni naturali e nette nei dati per continente. Possiamo suddividere i nostri dati in persone che condividono tutte lo stesso continente.
+- L'unica eccezione a questo è se il nostro continente è basato sulla cittadinanza/residenza, in quanto è possibile (anche se improbabile) che molte persone abbiano la cittadinanza in più continenti. In tal caso, potremmo aver bisogno di una duplicazione minima. Se i nostri dati sul continente si basano sulla nascita, nessuna duplicazione, poiché una persona non può nascere in più di un continente.
+- Comprendere il contesto e le definizioni (dominio) dei dati può essere importante per prendere la decisione migliore su dove suddividere i dati.
+- Un'altra prospettiva è il modo in cui i dati vengono modellati, in quanto ciò può influire sulla presenza naturale di sottografi chiari nei dati in base al modello.
+### Cassandra
+Cassandra è stato creato per affrontare specifiche esigenze di scalabilità e disponibilità dei dati, nello specifico per gestire grandi volumi di dati distribuiti su più server senza un singolo punto di fallimento. Questo è stato particolarmente cruciale per Facebook, dove Cassandra è stato originariamente sviluppato, per supportare la ricerca nell'Inbox di Facebook con un grande volume di dati e con la necessità di una scalabilità orizzontale efficiente e di una gestione flessibile della consistenza dei dati.
 
-Redis Sentinel non è destinato a garantire la coerenza del database in tutte le condizioni, ma piuttosto a garantire che il sistema rimanga operativo anche in presenza di guasti. Quando un failover è attivato, potrebbe esserci un breve periodo di indisponibilità, e la coerenza potrebbe essere temporaneamente compromessa. Quindi Redis Sentinel è *AP*.
+- **Caratteristiche Principali**: Database distribuito, offre scalabilità lineare e prestazioni elevate con architettura senza singoli punti di fallimento.
+- **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), con coerenza configurabile.
+- **Aziende Famose**: Facebook, Netflix, Twitter.
 
-# DynamoDB
-È il DB sviluppato interamente da Amazon ed è in hosting al 100%, non si può installare localmente. 
-È progettato per offrire prestazioni ad alta velocità, scalabilità automatica e affidabilità elevata. Ecco alcune caratteristiche chiave di DynamoDB:
+### HBase
+HBase è stato creato per soddisfare il bisogno di un sistema di storage efficiente e scalabile per grandi quantità di dati, in particolare per supportare le funzionalità di ricerca in linguaggio naturale all'interno di progetti come Hadoop. È stato progettato per superare le limitazioni dell'elaborazione in batch di HDFS, fornendo ricerca rapida di record, supporto per inserimenti e aggiornamenti a livello di record e conservazione efficiente delle versioni dei dati. Questo obiettivo è stato raggiunto creando un database che potesse lavorare con i dati in modo più granulare e che fosse ottimizzato per le operazioni casuali di lettura e scrittura, essenziali per l'analisi online e altre operazioni analitiche su set di dati di grandi dimensioni.
 
-1. **Modello di Dati:** DynamoDB è basato su un modello di dati NoSQL chiave-valore e può essere utilizzato sia come database di chiave-valore che come database di documenti. Ciò significa che puoi archiviare e recuperare dati utilizzando una chiave primaria.
-    
-2. **Scalabilità Automatica:** DynamoDB offre una scalabilità automatica, il che significa che può gestire aumenti o diminuzioni di traffico senza richiedere interventi manuali. Puoi iniziare con piccole quantità di dati e aumentare le risorse di calcolo o la capacità di archiviazione in modo dinamico al crescere delle esigenze dell'applicazione.
-    
-3. **Archiviazione a Basso Livello:** DynamoDB fornisce un'archiviazione a basso livello distribuita su più server. Questo contribuisce a garantire prestazioni elevate e ridondanza dei dati.
-    
-4. **Tolleranza ai Guasti:** DynamoDB è progettato per essere altamente disponibile e tollerante ai guasti. I dati sono replicati su più zone di disponibilità all'interno di una regione AWS, garantendo la resilienza del sistema in caso di guasto di un'intera zona.
-    
-5. **Modelli di Consistenza:** DynamoDB offre diverse opzioni di modelli di consistenza per adattarsi alle esigenze dell'applicazione. Puoi scegliere tra consistenza forte o consistenza eventualmente coerente a seconda dei requisiti di lettura e scrittura.
-    
-6. **Gestione del Traffico:** DynamoDB offre funzionalità per la gestione del traffico, come il controllo della velocità delle richieste tramite provisioned throughput o il nuovo sistema di pagamento basato sulle richieste, che addebita solo le richieste effettive eseguite.
-    
-7. **Monitoraggio e Logging:** DynamoDB fornisce strumenti di monitoraggio, logging e integrazione con AWS CloudWatch per consentire una gestione efficiente delle risorse e delle prestazioni.
-    
+- **Caratteristiche Principali**: Database colonnare, progettato per scalare su un grande numero di server.
+- **Teorema CAP**: CP (Coerenza e Tolleranza alla Partizione), ma può essere configurato per migliorare la disponibilità.
+- **Aziende Famose**: Facebook, Twitter, Yahoo.
 
-DynamoDB è ampiamente utilizzato per applicazioni che richiedono accesso rapido e scalabile ai dati, come app Web, app mobili, giochi, Internet delle cose (IoT) e molto altro ancora. La sua flessibilità e le caratteristiche di gestione automatica lo rendono una scelta popolare per le applicazioni che richiedono prestazioni elevate e scalabilità senza la necessità di gestire manualmente l'infrastruttura del database.
+### MongoDB
+  
+MongoDB è stato creato per rispondere alla necessità di un database che potesse gestire grandi volumi di dati con schemi flessibili, fornendo un'alta velocità di sviluppo e facilitando la scalabilità. È progettato pensando sia alla scalabilità sia all'agilità degli sviluppatori, consentendo di memorizzare documenti in un formato simile a JSON con schemi dinamici. Questo approccio permette di superare i limiti dei database relazionali tradizionali, specialmente quando si tratta di scalabilità orizzontale e di gestione di dati non strutturati o semi-strutturati.
 
-# Neo4j
-Neo4j è un sistema di gestione di database di grafi (Graph Database Management System o GDBMS) basato su un modello di dati a grafo, che rappresenta le entità e le relazioni tra di esse come nodi e archi di un grafo. La sua architettura è orientata alla gestione efficiente di dati altamente connessi, rendendolo particolarmente adatto per rappresentare e interrogare reti complesse.
+- **Caratteristiche Principali**: Database orientato ai documenti, supporta varie tipologie di dati.
+- **Teorema CAP**: CP (Coerenza e Tolleranza alla Partizione), con opzioni per aumentare la disponibilità.
+- **Aziende Famose**: Adobe, SAP, eBay.
 
-Ecco alcuni concetti e caratteristiche chiave di Neo4j in termini accademici:
+### InfluxDB
+  
+InfluxDB è stato sviluppato per rispondere alla crescente necessità di analizzare e memorizzare grandi quantità di dati di serie temporali generati da sensori, applicazioni in tempo reale e infrastrutture IT. È progettato per gestire carichi di lavoro ad alta velocità di scrittura e per eseguire query complesse su dati temporali. L'obiettivo era creare un database che potesse non solo memorizzare in modo efficiente grandi volumi di dati temporali, ma anche fornire una piattaforma per l'analisi e il monitoraggio in tempo reale di questi dati.
 
-1. **Modello di Dati a Grafo:** Neo4j adotta un modello di dati a grafo, dove l'unità fondamentale è il nodo, che rappresenta un'entità, e l'arco, che rappresenta una relazione tra le entità. Questo modello offre una rappresentazione intuitiva e efficiente per dati fortemente connessi.
-    
-2. **Linguaggio di Query Cypher:** Neo4j utilizza il linguaggio di query Cypher, appositamente progettato per esprimere interrogazioni in grafi. Cypher semplifica la rappresentazione di pattern di grafo, rendendo le query più leggibili e intuitive.
-    
-3. **Transazioni ACID:** Neo4j supporta transazioni ACID (Atomicità, Consistenza, Isolamento, Durabilità), garantendo che le operazioni di scrittura siano atomiche e mantenendo la coerenza dei dati.
-    
-4. **Indicizzazione e Ottimizzazione delle Query:** Neo4j utilizza indici per accelerare la ricerca di nodi in base a determinate proprietà. Le query vengono ottimizzate per sfruttare al massimo le strutture a grafo e garantire prestazioni efficienti.
-    
-5. **API e Driver:** Neo4j fornisce API e driver per una varietà di linguaggi di programmazione, facilitando l'integrazione con applicazioni esterne. Queste interfacce consentono agli sviluppatori di interagire con il database utilizzando il linguaggio di programmazione di loro scelta.
-    
-6. **Neo4j Browser:** Neo4j offre un'applicazione web chiamata Neo4j Browser che consente agli utenti di esplorare e interrogare il database in modo interattivo, offrendo una visualizzazione grafica dei dati.
-    
-7. **Community e Supporto:** Neo4j è supportato da una vibrante comunità di utenti e sviluppatori. Inoltre, ci sono opzioni per ottenere supporto commerciale da Neo4j, che include consulenza, formazione e assistenza tecnica.
-    
-8. **Sicurezza:** Neo4j implementa meccanismi di sicurezza per garantire l'accesso autorizzato ai dati, consentendo la definizione di ruoli e permessi.
-    
+- **Caratteristiche Principali**: Database di serie temporali per eventi ad alta velocità di scrittura.
+- **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), ottimizzato per la velocità.
+- **Aziende Famose**: IBM, PayPal, Tesla.
 
-Neo4j è ampiamente utilizzato in scenari in cui le relazioni tra i dati sono centrali, come reti sociali, analisi delle reti, gestione della conoscenza e applicazioni che richiedono una comprensione approfondita delle connessioni tra entità. La sua struttura di grafo offre un modo potente e intuitivo per modellare e interrogare dati complessi e altamente relazionati.
+### NEWSQL (Generalmente riferito a database come Google Spanner)
+Questi sistemi sono stati sviluppati per colmare il divario tra le prestazioni e la scalabilità dei sistemi NoSQL e le garanzie ACID dei database relazionali tradizionali. L'obiettivo era fornire la scalabilità necessaria per l'elaborazione delle transazioni online (OLTP), mantenendo le proprietà ACID di un sistema di database tradizionale. Questa esigenza è nata in risposta alle limitazioni di scalabilità dei sistemi SQL tradizionali e alla mancanza di supporto transazionale nei primi sistemi NoSQL. NEWSQL mira a offrire un'architettura distribuita che supporti transazioni distribuite con coerenza ACID, scalabilità attraverso sharding e replica automatica, e prestazioni elevate mantenendo i dati in RAM.
+
+- **Caratteristiche Principali**: Combina elementi dei database SQL tradizionali con la scalabilità dei sistemi NoSQL.
+- **Teorema CAP**: CA (Coerenza e Disponibilità), grazie a innovazioni come gli orologi TrueTime di Google.
+- **Aziende Famose**: Google (per Spanner), per NEWSQL varia in base al prodotto specifico.
+
+# Conclusione
+### Supporto per Multipli Modelli di Dati
+
+I database NoSQL sono estremamente flessibili nella gestione di dati strutturati, semi-strutturati e non strutturati, a differenza dei database relazionali che sono più rigidi.
+
+### Facilmente Scalabile tramite Architettura Peer-to-Peer
+
+I database NoSQL utilizzano un'architettura peer-to-peer per una scalabilità facile ed economica, superando le limitazioni dell'architettura master-slave dei database relazionali.
+
+### Flessibilità: Gestione Versatile dei Dati
+
+La gestione dei dati nei database NoSQL è altamente flessibile, permettendo di elaborare dati strutturati, semi-strutturati e non strutturati con facilità.
+
+### Capacità di Distribuzione
+
+I database NoSQL sono progettati per distribuire dati su scala globale, supportando operazioni di lettura e scrittura in più data center e/o regioni cloud.
+
+### Zero Downtime
+
+L'architettura senza master dei database NoSQL consente di mantenere più copie dei dati su nodi diversi, garantendo un accesso facile e veloce ai dati e minimizzando i tempi di inattività.
+
+### Decisioni tra NoSQL e SQL
+
+La scelta tra NoSQL e database relazionali dipende dalle esigenze specifiche dell'azienda, con la possibilità di utilizzare entrambi per complementarsi.
+
+### Valutazione delle Funzionalità e Capacità dei Database NoSQL per la Gestione di Data Lake di Smart City
+
+MongoDB e Redis mostrano alte prestazioni, mentre Neo4j e Cassandra hanno valori più modesti. I database NoSQL compromettono la coerenza per fornire alte prestazioni e scalabilità.
+
+### Limitazioni dei Database NoSQL
+
+La mancanza di standard definiti, la variabilità dei linguaggi di progettazione e di query, la curva di apprendimento più ripida, e la sfida nel mantenere le proprietà ACID sono alcune delle limitazioni.
+
+Questi punti offrono una visione conclusiva delle caratteristiche distintive e delle considerazioni da tenere a mente quando si valutano i database NoSQL per applicazioni specifiche.
