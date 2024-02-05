@@ -163,11 +163,11 @@ In breve, PACELC fornisce una visione più dettagliata delle scelte di progettaz
 | Redis | CP con configurazioni che possono favorire A | key-value | Database in memoria, supporta varie strutture dati | Twitter, GitHub, Snapchat |
 | DynamoDB | AP ma privilegia A e la scalabilità. | key-value | Servizio NoSQL gestito, prestazioni a bassa latenza | Amazon, Samsung, Netflix |
 | Neo4j | CA | Graph | Ottimizzato per dati con relazioni complesse | LinkedIn, eBay, Adobe |
-| Cassandra | AP con C configurabile |  | Scalabile, prestazioni elevate, senza SPOF | Facebook, Netflix, Twitter |
-| HBase | CP con A configurabile |  | Database colonnare, scalabile su molti server | Facebook, Twitter, Yahoo |
-| MongoDB | CP con A migliorabile |  | Orientato ai documenti, supporta varie tipologie di dati | Adobe, SAP, eBay |
-| InfluxDB | AP (velocissimo) |  | Database di serie temporali, ottimizzato per la velocità | IBM, PayPal, Tesla |
-| NEWSQL | CA |  | Combina SQL tradizionale con scalabilità NoSQL | Varia per prodotto specifico |
+| Cassandra | AP con C configurabile | wide-column | Scalabile, prestazioni elevate, senza SPOF | Facebook, Netflix, Twitter |
+| HBase | CP con A configurabile | wide-column | Database colonnare, scalabile su molti server | Facebook, Twitter, Yahoo |
+| MongoDB | CP con A migliorabile | Documento | Orientato ai documenti, supporta varie tipologie di dati | Adobe, SAP, eBay |
+| InfluxDB | AP (velocissimo) | Serie Temporali | Database di serie temporali, ottimizzato per la velocità | IBM, PayPal, Tesla |
+| NEWSQL | CP |  | Combina SQL tradizionale con scalabilità NoSQL | Varia per prodotto specifico |
 ### Redis
 Redis è stato sviluppato principalmente per superare le limitazioni dei database tradizionali in termini di velocità di accesso ai dati. L'esigenza iniziale derivava dalla necessità di gestire dati in tempo reale per un'applicazione web chiamata "lloogg", che necessitava di un database capace di scrivere e recuperare dati molto rapidamente. Redis è stato quindi progettato come un sistema di memorizzazione chiave-valore in memoria, per garantire tempi di accesso brevi, ideale per applicazioni che richiedono prestazioni elevate, come caching, sessioni di utenti e code di messaggi.
 
@@ -222,8 +222,29 @@ Il focus principale nella creazione di Neo4j è stato di fornire un sistema otti
 Cassandra è stato creato per affrontare specifiche esigenze di scalabilità e disponibilità dei dati, nello specifico per gestire grandi volumi di dati distribuiti su più server senza un singolo punto di fallimento. Questo è stato particolarmente cruciale per Facebook, dove Cassandra è stato originariamente sviluppato, per supportare la ricerca nell'Inbox di Facebook con un grande volume di dati e con la necessità di una scalabilità orizzontale efficiente e di una gestione flessibile della consistenza dei dati.
 
 - **Caratteristiche Principali**: Database distribuito, offre scalabilità lineare e prestazioni elevate con architettura senza singoli punti di fallimento.
-- **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), con coerenza configurabile.
-- **Aziende Famose**: Facebook, Netflix, Twitter.
+	- ha una struttura ad anello di nodi che comunicano col *gossip protocol*
+	- ![[Database NoSQL - struttura cassandra.png|300]]
+- **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), con coerenza configurabile che può renderlo anche CP.
+- **Aziende Famose**: Facebook, Netflix, X.
+
+#### Quando usare (e non) Cassandra by ChatGPT
+**Quando usare Cassandra**:
+
+- **Gestione di grandi dataset**: Cassandra gestisce efficacemente grandi quantità di dati, come dimostrato dall'uso in aziende che operano su larga scala come Netflix, eBay e Apple.
+- **Ambienti omogenei**: Con un'architettura peer-to-peer, Cassandra offre un ambiente omogeneo senza la necessità di configurazioni complesse di master-slave o sharding.
+- **Alta tolleranza ai guasti**: Essendo masterless, Cassandra non ha un unico punto di fallimento e supporta la perdita temporanea di nodi con impatto minimo sulle prestazioni.
+- **Elevata disponibilità e replica**: Supporta la replica dei dati in più data center e zone di disponibilità cloud, utile per la continuità operativa e il recupero di emergenza.
+- **Amministrazione semplificata**: Cassandra è relativamente semplice da amministrare grazie alla sua architettura omogenea.
+- **Tuning personalizzabile**: Offre molte opzioni di configurazione per ottimizzare le prestazioni in base ai carichi di lavoro specifici.
+- **Integrazione con applicazioni core**: Può essere integrata con una varietà di strumenti e piattaforme, come Apache Solr e Apache Spark, per aumentare le sue capacità e ottenere approfondimenti dai dati.
+- **Comunità attiva**: Una grande comunità di sviluppatori e un ampio ecosistema di strumenti e supporto.
+
+**Quando non usare Cassandra**:
+
+- **Se è necessaria una forte coerenza dei dati in tempo reale**: Cassandra offre coerenza finale, che potrebbe non essere adatta per soluzioni che richiedono precisione assoluta e coerenza dei dati in tempo reale.
+- **Se il modello di dati si adatta meglio a un RDBMS tradizionale**: Per esempio, se le tue applicazioni richiedono operazioni complesse di join, transazioni multi-operazione con coerenza immediata o se il modello di dati è altamente relazionale.
+- **Se la complessità del modello di dati non si adatta bene a Cassandra**: Cassandra funziona meglio con modelli di dati che possono essere denormalizzati e non richiedono l'uso di join o subquery, tipici dei database relazionali.
+- **Se il carico di lavoro non richiede le caratteristiche di scalabilità e disponibilità fornite da Cassandra**: Per applicazioni con carichi di lavoro più piccoli o che possono essere gestiti efficacemente da un singolo server o un database meno complesso.
 
 ### HBase
 HBase è stato creato per soddisfare il bisogno di un sistema di storage efficiente e scalabile per grandi quantità di dati, in particolare per supportare le funzionalità di ricerca in linguaggio naturale all'interno di progetti come Hadoop. È stato progettato per superare le limitazioni dell'elaborazione in batch di HDFS, fornendo ricerca rapida di record, supporto per inserimenti e aggiornamenti a livello di record e conservazione efficiente delle versioni dei dati. Questo obiettivo è stato raggiunto creando un database che potesse lavorare con i dati in modo più granulare e che fosse ottimizzato per le operazioni casuali di lettura e scrittura, essenziali per l'analisi online e altre operazioni analitiche su set di dati di grandi dimensioni.
@@ -237,6 +258,7 @@ HBase è stato creato per soddisfare il bisogno di un sistema di storage efficie
 MongoDB è stato creato per rispondere alla necessità di un database che potesse gestire grandi volumi di dati con schemi flessibili, fornendo un'alta velocità di sviluppo e facilitando la scalabilità. È progettato pensando sia alla scalabilità sia all'agilità degli sviluppatori, consentendo di memorizzare documenti in un formato simile a JSON con schemi dinamici. Questo approccio permette di superare i limiti dei database relazionali tradizionali, specialmente quando si tratta di scalabilità orizzontale e di gestione di dati non strutturati o semi-strutturati.
 
 - **Caratteristiche Principali**: Database orientato ai documenti, supporta varie tipologie di dati.
+	- ![[Databse NoSQL - struttura mongoDB.png|300]]
 - **Teorema CAP**: CP (Coerenza e Tolleranza alla Partizione), con opzioni per aumentare la disponibilità.
 - **Aziende Famose**: Adobe, SAP, eBay.
 
@@ -245,6 +267,7 @@ MongoDB è stato creato per rispondere alla necessità di un database che potess
 InfluxDB è stato sviluppato per rispondere alla crescente necessità di analizzare e memorizzare grandi quantità di dati di serie temporali generati da sensori, applicazioni in tempo reale e infrastrutture IT. È progettato per gestire carichi di lavoro ad alta velocità di scrittura e per eseguire query complesse su dati temporali. L'obiettivo era creare un database che potesse non solo memorizzare in modo efficiente grandi volumi di dati temporali, ma anche fornire una piattaforma per l'analisi e il monitoraggio in tempo reale di questi dati.
 
 - **Caratteristiche Principali**: Database di serie temporali per eventi ad alta velocità di scrittura.
+	- Anche se organizzato in colonne internamente non è un wide-column e non rientra nemmeno in nessun tipo visto fino ad ora. È un modello a *serie temporali*.
 - **Teorema CAP**: AP (Disponibilità e Tolleranza alla Partizione), ottimizzato per la velocità.
 - **Aziende Famose**: IBM, PayPal, Tesla.
 
@@ -252,40 +275,32 @@ InfluxDB è stato sviluppato per rispondere alla crescente necessità di analizz
 Questi sistemi sono stati sviluppati per colmare il divario tra le prestazioni e la scalabilità dei sistemi NoSQL e le garanzie ACID dei database relazionali tradizionali. L'obiettivo era fornire la scalabilità necessaria per l'elaborazione delle transazioni online (OLTP), mantenendo le proprietà ACID di un sistema di database tradizionale. Questa esigenza è nata in risposta alle limitazioni di scalabilità dei sistemi SQL tradizionali e alla mancanza di supporto transazionale nei primi sistemi NoSQL. NEWSQL mira a offrire un'architettura distribuita che supporti transazioni distribuite con coerenza ACID, scalabilità attraverso sharding e replica automatica, e prestazioni elevate mantenendo i dati in RAM.
 
 - **Caratteristiche Principali**: Combina elementi dei database SQL tradizionali con la scalabilità dei sistemi NoSQL.
-- **Teorema CAP**: CA (Coerenza e Disponibilità), grazie a innovazioni come gli orologi TrueTime di Google.
+- **Teorema CAP**: CP (Coerenza e Partizionamento)
 - **Aziende Famose**: Google (per Spanner), per NEWSQL varia in base al prodotto specifico.
 
 # Conclusione
 ### Supporto per Multipli Modelli di Dati
-
 I database NoSQL sono estremamente flessibili nella gestione di dati strutturati, semi-strutturati e non strutturati, a differenza dei database relazionali che sono più rigidi.
 
 ### Facilmente Scalabile tramite Architettura Peer-to-Peer
-
 I database NoSQL utilizzano un'architettura peer-to-peer per una scalabilità facile ed economica, superando le limitazioni dell'architettura master-slave dei database relazionali.
 
 ### Flessibilità: Gestione Versatile dei Dati
-
 La gestione dei dati nei database NoSQL è altamente flessibile, permettendo di elaborare dati strutturati, semi-strutturati e non strutturati con facilità.
 
 ### Capacità di Distribuzione
-
 I database NoSQL sono progettati per distribuire dati su scala globale, supportando operazioni di lettura e scrittura in più data center e/o regioni cloud.
 
 ### Zero Downtime
-
 L'architettura senza master dei database NoSQL consente di mantenere più copie dei dati su nodi diversi, garantendo un accesso facile e veloce ai dati e minimizzando i tempi di inattività.
 
 ### Decisioni tra NoSQL e SQL
-
 La scelta tra NoSQL e database relazionali dipende dalle esigenze specifiche dell'azienda, con la possibilità di utilizzare entrambi per complementarsi.
 
 ### Valutazione delle Funzionalità e Capacità dei Database NoSQL per la Gestione di Data Lake di Smart City
-
 MongoDB e Redis mostrano alte prestazioni, mentre Neo4j e Cassandra hanno valori più modesti. I database NoSQL compromettono la coerenza per fornire alte prestazioni e scalabilità.
 
 ### Limitazioni dei Database NoSQL
-
 La mancanza di standard definiti, la variabilità dei linguaggi di progettazione e di query, la curva di apprendimento più ripida, e la sfida nel mantenere le proprietà ACID sono alcune delle limitazioni.
 
 Questi punti offrono una visione conclusiva delle caratteristiche distintive e delle considerazioni da tenere a mente quando si valutano i database NoSQL per applicazioni specifiche.
