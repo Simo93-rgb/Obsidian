@@ -5,3 +5,5 @@
 4. [[0. Statistica Computazionale]]
 5. Apprendimento Automatico e Profondo
 	1. [[Machine Learning]]
+6. Sistemi Distribuiti e Big Data
+	1. [[Corsi/Sistemi Distribuiti e Big Data/Rust]]
