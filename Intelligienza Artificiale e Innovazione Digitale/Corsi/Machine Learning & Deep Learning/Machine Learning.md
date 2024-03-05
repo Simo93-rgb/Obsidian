@@ -290,9 +290,9 @@ Ottima per dataset piccoli, attenzione che su dataset grandi sono un mare di cal
 
 ## Bias vs Varianza
 Il bias del modello corrisponde ad *underfitting* mentre la varianza a *overfitting*. 
-![[Machine Learning - bias vs variance.png|450]]
+![[Assets/Multimedia/Machine Learning - bias vs variance.png|450]]
 
-Plottando cosa succede in training e in test aumentando il grado del modello ottengo questo ![[Machine Learning - plot test e training aumentando grado modello.png|450]]
+Plottando cosa succede in training e in test aumentando il grado del modello ottengo questo ![[Assets/Multimedia/Machine Learning - plot test e training aumentando grado modello.png|450]]
 Bisogna stare molto attenti perché un modello troppo complicato "disimpara" a generalizzare e in test commette più errori.
 Il caso di underfitting lo si può vedere quando l'errore di test e l'errore di training sono grandi e magari anche una bassa distanza fra loro, mentre il caso di overfitting lo si vede quando la distanza fra gli errori è alta e in particolare l'errore di training è basso. 
 
@@ -300,7 +300,7 @@ Il caso di underfitting lo si può vedere quando l'errore di test e l'errore di 
 Adatto $\lambda$ nel $J(\Theta)$ 
 
 ## Learning Curves
-Aumentare il numero di esempi aumenta l'errore di training ma diminuirà l'errore in fase di test. ![[Machine Learning - curva errore test e training.png]]
+Aumentare il numero di esempi aumenta l'errore di training ma diminuirà l'errore in fase di test. ![[Assets/Multimedia/Machine Learning - curva errore test e training.png]]
 Attenzione che se c'è un alto bias aumentare la dimensione non aiuta da sola, poiché l'errore di training rimane troppo alto. Se invece ho un alta varianza conviene aumentare la dimensione del dataset. Quindi:
 - underfitting $\rightarrow$ non serve aumentare la dimensione del dataset
 - overfitting $\rightarrow$ serve aumentare la dimensione del dataset
@@ -318,10 +318,10 @@ Suppose you have implemented regularized linear regression to predict housing p
 Nelle reti neurali ho una architettura a priori (layer, neuroni...) che se è piccolina avrà un alto bias mentre una rete molto grande invece avrà un'alta varianza. È intuitivo, infatti una rete molto articolata sarà molto brava a fittare perfettamente i dati ma abbiamo già visto che significa, appunto, alta probabilità di overfitting. 
 
 ### Confusion Matrix
-![[Machine Learning - confusion matri.png]]
-La matrice di confusione rappresenta la mia classe e come io l'ho classificata, lo abbiamo visto a statistica nel montecarlo per inferenza. ![[Machine Learning - confusion matrix MC inferenza.png]]
+![[Assets/Multimedia/Machine Learning - confusion matri.png]]
+La matrice di confusione rappresenta la mia classe e come io l'ho classificata, lo abbiamo visto a statistica nel montecarlo per inferenza. ![[Assets/Multimedia/Machine Learning - confusion matrix MC inferenza.png]]
 
-![[Pasted image 20240304114109.png]]
+![[Assets/Multimedia/Pasted image 20240304114109.png]]
 Dove:
 - TPR $\rightarrow$ True Positive Rate o *Recall* (*Sensitivity* o Sensibilità)
 - TNR $\rightarrow$ True Negatove Rate o Specificità (*Specifity*)
@@ -335,25 +335,25 @@ $$\begin{align}
 &\quad p_-= {{TN+FN\over m}*{TN+FN\over m}}
 \end{align}$$
 ### Esempio
-![[Machine Learning - esempio cohen kappa coeff..png]]
+![[Assets/Multimedia/Machine Learning - esempio cohen kappa coeff..png]]
 Se la matrice è asimmetrica si dice che le classi sono **sbilanciate** e sicuramente l'accuratezza non sarà significativa. Esistono tecniche artificiali di ribilanciamento delle classi ma non lo vedremo.
 
 ## ROC Curve
-Receiver Operating Characteristic è una curva plottata su un quadrante con ascisse che è FPR e sulle ascisse TPR. ![[Machine Learning - ROC curve.png]]
+Receiver Operating Characteristic è una curva plottata su un quadrante con ascisse che è FPR e sulle ascisse TPR. ![[Assets/Multimedia/Machine Learning - ROC curve.png]]
 - $(0,1)$ perfect classification​    
 - $(0,0)$ always class –​    
 - $(1,1)$ always class +     
 - $(1,0)$ + classified as – and viceversa​
 La distanza dal punto $(1,0)$ è la discriminante per dire che un classificatore $C$ sia meglio di un classificatore $A$. 
-Se cambio gli iperparametri e plotto il punto del clasificatore $A$ con parametri differenti avrò una curva. Posso quindi mettere a paragone curve diverse per classificatori diversi a iperparametri differenti. ![[Machine Learning - ROC Curve comparazione.png]]
+Se cambio gli iperparametri e plotto il punto del clasificatore $A$ con parametri differenti avrò una curva. Posso quindi mettere a paragone curve diverse per classificatori diversi a iperparametri differenti. ![[Assets/Multimedia/Machine Learning - ROC Curve comparazione.png]]
 L'area sotto la curva ROC, ossia il parametro AUC (Area Under the Curve), può valere massimo 1, più alto il valore migliore il classificatore. C'è una digressione matematica vista alla lezione di statistica parlando di inferenza con Montecarlo. 
 
 ## Error Metric for Skewed Classes
-Definiamo la precisione $$prec = {TP\over TP+FP}$$ ed è l'intersezione in figura, ossia quanti positivi sul totale dei classificati positivi. ![[Machine Learning -  precision.png|300]]
+Definiamo la precisione $$prec = {TP\over TP+FP}$$ ed è l'intersezione in figura, ossia quanti positivi sul totale dei classificati positivi. ![[Assets/Multimedia/Machine Learning -  precision.png|300]]
 Richiamiamo il concetto di recall visto prima nella [[Machine Learning#Confusion Matrix|Matrice di Confusione]], a parole è il caso dei casi misurati positivi sul totale dei casi positivi. 
-![[Machine Learning - comparazione falsi positivi e falsi negativi.png|450]]
+![[Assets/Multimedia/Machine Learning - comparazione falsi positivi e falsi negativi.png|450]]
 Se alzo le predizioni dei falsi positivi abbasso i falsi negativi, ad esempio nel caso di una diagnosi di tumore mi conviene farlo così non rischio di non dare le cure ai malati perché falso negativo al prezzo di far prendere un coccolone al falso positivo. Quindi se aumento precision ho meno recall e vice versa. 
-Posso fare una curva fra precision e recall e calcolare l' area sotto la curva.![[Machine Learning - curva PR.png]] Attenzione che punto iniziale e finale non si riescono sempre ad avere perché precision e recall che valgono esattamente 1 o molto vicini ma si usa un trucco, si proietta linearmente dal punto più vicino fino all'asse.
+Posso fare una curva fra precision e recall e calcolare l' area sotto la curva.![[Assets/Multimedia/Machine Learning - curva PR.png]] Attenzione che punto iniziale e finale non si riescono sempre ad avere perché precision e recall che valgono esattamente 1 o molto vicini ma si usa un trucco, si proietta linearmente dal punto più vicino fino all'asse.
 #### Confronto
-![[Machine Learning - f1 score.png]]
+![[Assets/Multimedia/Machine Learning - f1 score.png]]
 $F_1 \,Score$ è anche chiamato media armonica. Esiste anche $F_\beta \,Score$: $$F_\beta=(1+\beta)^2{prec*rec\over \beta^2*prec+rec}$$ dove $\beta$ è il peso dell'importanza relativa di rev e prec dove con valori maggiori di 1 do importanza a rec, minore do importanza a prec. Se $\beta = 1$ allora è esattamente $F_1\,Score$.
