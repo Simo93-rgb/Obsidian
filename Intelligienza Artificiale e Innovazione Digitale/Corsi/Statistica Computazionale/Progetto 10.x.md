@@ -22,6 +22,22 @@ Valori elevati di $W^2$ sono significativi.
 La statistica di cmv restituisce un valore che misura la distanza fra due cdf ma questo valore da solo non dice niente e deve essere utilizzato insieme ad altro per poter essere significativo di qualcosa. In casi specifici è possibile definire un *valore critico* e di solito accade quando si ha esperienza sul campo di utilizzo, altrimenti serve un p-value; $W^2$ sappiamo che più è grande più le cdf sono lontane ma l'importanza della distanza è appunto data dalla presenza di un p-value. 
 
 ## Implementazione 
+#### Premessa implementativa
+Il sorting (ordinamento) dei dati è una pratica comune e talvolta necessaria in molte analisi statistiche, tra cui i test di permutazione e il test statistico di Cramér-von Mises. Vediamo perché:
+
+1. **Test di Permutazione**: I test di permutazione vengono utilizzati per valutare la significatività statistica senza fare affidamento su assunzioni distributive specifiche. In questi test, le etichette dei dati vengono ripetutamente riassortite per generare una distribuzione di permutazione di una statistica test. L'ordinamento dei dati può essere utile per preparare i dati prima di applicare le permutazioni, specialmente per semplificare il calcolo della statistica test sotto diverse permutazioni.
+    
+2. **Test di Cramér-von Mises**: Questo test è un test di bontà di adattamento che confronta la distribuzione cumulativa empirica di un set di dati con una distribuzione teorica. L'ordinamento dei dati è fondamentale per il calcolo della statistica di test in questo contesto perché la statistica di Cramér-von Mises si basa sulla differenza cumulativa tra la distribuzione empirica (i dati osservati ordinati) e la distribuzione teorica. Senza ordinare i dati, non saremmo in grado di calcolare correttamente le differenze cumulative necessarie per il test.
+    
+
+L'ordinamento dei dati aiuta quindi a:
+
+- Facilitare il calcolo delle differenze cumulate nel test di Cramér-von Mises.
+- Preparare i dati per le permutazioni in modo che le simulazioni e i calcoli successivi possano essere eseguiti più efficacemente.
+
+In conclusione, l'ordinamento dei dati non è solo una convenzione ma una necessità pratica che facilita l'analisi e aiuta a garantire che i calcoli siano eseguiti correttamente.
+
+#### Codice
 ```R
 cramer_von_mises <- function(sample_x, sample_y) {  
   # Lunghezza del campione X  
@@ -108,7 +124,7 @@ cvm_permutation_test <- function(sample_x, sample_y, n_permutations = 999) {
     
 - **Ipotesi Alternativa ($H_1$)**: Esiste una differenza tra le due distribuzioni campionarie. Questo indica che le differenze osservate tra i campioni non sono dovute al caso, ma riflettono piuttosto una differenza reale nelle popolazioni da cui i campioni sono stati estratti.
 
-Applicando il test su due distribuzioni identiche si ottiene distanza zero e questo conferma l'esattezza della funzione dell'esercizio 10.2. Si ottiene anche un $\text{p-value}=1$ il che ci dice che abbiamo il $100\%$ di probabilità di non rifiutare l'ipotesi nulla poiché non ci sono differenze statisticamente rilevanti e mi sembra coerente col fatto che le distribuzioni siano identiche.   
+Applicando il test su due distribuzioni identiche si ottiene distanza zero e questo conferma l'esattezza della funzione dell'esercizio 10.2. Si ottiene anche un $\text{p-value}=1$ il che ci dice che abbiamo il $100\%$ di probabilità di non rifiutare l'ipotesi nulla poiché non ci sono differenze statisticamente rilevanti e mi sembra coerente col fatto che le distribuzioni siano identiche. 
 
 ##### Applicazione a chickvts
 Sono stati presi in esame come richiesto *linseed* e *soybean*:
@@ -154,5 +170,5 @@ result <- cvm_permutation_test(trt1_group, trt2_group, 999)
 
 Qui ottengo dei risultati meno marcati:
 + ``cvm_permutation_test(trt1_group, trt2_group, 999)``
-	- $W^2 = 0.1574 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
-	- $\text{p-value} = 1 \rightarrow$ altissimo, quindi non posso rifiutare $H_0$
+	- $W^2 = 0.875 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
+	- $\text{p-value} = 0.972 \rightarrow$ altissimo, quindi non posso rifiutare $H_0$
