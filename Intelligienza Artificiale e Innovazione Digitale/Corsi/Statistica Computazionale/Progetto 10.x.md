@@ -10,56 +10,110 @@ Large values of $W^2$ are significant.
 
 ## Tradotto
 Scrivere una funzione per calcolare la statistica di Cramér-von Mises a due campioni.
-La distanza di Cramér-von Mises tra distribuzioni è $$\omega^2 = \int\int\big(F(x)-G(y)\big)^2dH(x,y)$$dove $H(x,y)$ è la CDF congiunta di X e Y . Per un test di uguaglianza delle distribuzioni,
-la statistica del test corrispondente si basa sulle distribuzioni empiriche
-distribuzioni empiriche congiunte, quindi è una funzione dei ranghi dei dati. Per prima cosa,
-calcolare i ranghi $r_i$ del campione $X$, $i = 1,...,n$ e i ranghi $s_j$ del campione $Y$ $j=1,...,m$ (vedi funzione rank). calcolare $$U=n\sum_{i=1}^n(r_i-i)^2 + m\sum{j=1}^m(s_j-j)^2$$
+La distanza di Cramér-von Mises tra distribuzioni è $$\omega^2 = \int\int\big(F(x)-G(y)\big)^2dH(x,y)$$dove $H(x,y)$ è la CDF congiunta di X e Y. Per un test di uguaglianza delle distribuzioni, la statistica corrispondente si basa sulle distribuzioni empiriche congiunte, quindi è una funzione dei ranghi dei dati. Per prima cosa, calcolare i ranghi $r_i$ del campione $X$, $i = 1,...,n$ e i ranghi $s_j$ del campione $Y$ $j=1,...,m$ (vedi funzione rank). calcolare $$U=n\sum_{i=1}^n(r_i-i)^2 + m\sum{j=1}^m(s_j-j)^2$$
 Si noti che $U$ può essere vettorializzato e valutato in una sola riga di codice R. Allora
 la statistica a due campioni di Cramér-von Mises è $$W^2 = {U \over nm(n+m)}-{{4nm-1}\over6(m+n)}$$
 Valori elevati di $W^2$ sono significativi.
 
 ## Cramér-Von Mises
-La statistica di cmv restituisce un valore che misura la distanza fra due cdf ma questo valore da solo non dice niente e deve essere utilizzato insieme ad altro per poter essere significativo di qualcosa. In casi specifici è possibile definire un *valore critico* e di solito accade quando si ha esperienza sul campo di utilizzo, altrimenti serve un p-value; $W^2$ sappiamo che più è grande più le cdf sono lontane ma l'importanza della distanza è appunto data dalla presenza di un p-value. 
+La statistica di cmv restituisce un valore che misura la distanza fra due cdf. Siccome è una distanza ben definita sappiamo che: $$\begin{align}
+1. &\quad d(F_X(x),F_X(x))=0 \quad\quad\quad\quad\quad\,\,\,\,\text{dove }d\text{ è la distanza e }X\text{ la vc}\\
+2. &\quad d(F_X(x),F_Y(y))= \omega\in [0,+\infty) \quad \text{dove }d\text{ è la distanza e }X,Y\text{ le vc}\end{align}$$
+Questo test non parametrico torna utilissimo nel confronto di due vc ma così come è scritto non è direttamente utilizzabile con due campioni empirici. Siccome è un test non parametrico significa che io non posso fare assunzioni sulle distribuzioni dei miei campioni. L'adattamento proposto dal libro consente di poter utilizzare questa statistica anche con campioni empirici poiché si utilizzano i *ranghi* nel calcolo della $U$. 
+
+#### Ranghi
+In statistica, il "rango" di un'osservazione in un insieme di dati è la sua posizione nella sequenza ordinata di dati. I ranghi sono assegnati ai dati ordinati dal più piccolo al più grande, assegnando il rango 1 al dato più piccolo, il rango 2 al secondo dato più piccolo, e così via. Quando ci sono dei pareggi (valori identici) o *ties*, si assegna a ogni valore pareggiato la media dei ranghi che avrebbero avuto se fossero stati leggermente diversi. Ad esempio, se due valori sono i terzi più piccoli, entrambi ricevono un rango di 3.5, che è la media dei ranghi 3 e 4. La gestione dei ties non è affidata solo alla media ma se serve anche a ``max(), min(), first(), last(), random()``.
+
+##### Esempio 
+Prendiamo linseed e soybean dal dataset chickwts. Si precisa che hanno rispettivamente lunghezze 12 e 14.
+
+|     | Linseed | Soybean |
+| --- | ------- | ------- |
+| 1   | 309     | 243     |
+| 2   | 229     | 230     |
+| 3   | 181     | 248     |
+| 4   | 141     | 327     |
+| 5   | 260     | 329     |
+| 6   | 203     | 250     |
+| 7   | 148     | 193     |
+| 8   | 169     | 271     |
+| 9   | 213     | 316     |
+| 10  | 257     | 267     |
+| 11  | 244     | 199     |
+| 12  | 271     | 171     |
+| 13  | /       | 158     |
+| 14  | /       | 248     |
+
+Eseguendo il seguente codice 
+```R
+ranghi <- rank(c(sort(linseed), sort(soybean)))  
+rango_linseed<- ranghi[seq_along(linseed)]  
+rango_soybean<-ranghi[(length(linseed)+1):
+					  length(linseed)+length(soybean))]  
+print(cbind(rango_linseed= rango_linseed, rango_soybean=rango_soybean))
+```
+otteniamo la seguente tabella. che rappresenta appunto la posizione di ogni valore del campione che avrebbe in un ipotetico vettore congiunto ordinato.
+
+|     | Rango Linseed | Rango Soybean |
+| --- | ------------- | ------------- |
+| 1   | 1.0           | 3.0           |
+| 2   | 2.0           | 5.0           |
+| 3   | 4.0           | 7.0           |
+| 4   | 6.0           | 8.0           |
+| 5   | 9.0           | 12.0          |
+| 6   | 10.0          | 13.0          |
+| 7   | 11.0          | 15.5          |
+| 8   | 14.0          | 15.5          |
+| 9   | 18.0          | 17.0          |
+| 10  | 19.0          | 20.0          |
+| 11  | 21.5          | 21.5          |
+| 12  | 23.0          | 24.0          |
+| 13  | /             | 25.0          |
+| 14  | /             | 26.0          |
+
+### Considerazioni
+Viene spesso usato come test di esplorazione prima di procedere ad analisi più precise, se la misura di distanza è piccola ha senso procedere a considerare i campioni come appartenenti alla stessa distribuzione, altrimenti no. 
+Siccome faccio dei calcoli suoi ranghi mi aspetto che campioni molto grandi in dimensione possano avere grandi differenze indicate dal test anche se in realtà questo potrebbe non essere vero. I test è potente nel misurare piccole variazioni e con campioni molto grandi è facile incombere in variazioni numeriche grandi che non sono direttamente correlate a differenze grandi fra le distribuzioni dei campioni.
 
 ## Implementazione 
 #### Premessa implementativa
-Il sorting (ordinamento) dei dati è una pratica comune e talvolta necessaria in molte analisi statistiche, tra cui i test di permutazione e il test statistico di Cramér-von Mises. Vediamo perché:
-
-1. **Test di Permutazione**: I test di permutazione vengono utilizzati per valutare la significatività statistica senza fare affidamento su assunzioni distributive specifiche. In questi test, le etichette dei dati vengono ripetutamente riassortite per generare una distribuzione di permutazione di una statistica test. L'ordinamento dei dati può essere utile per preparare i dati prima di applicare le permutazioni, specialmente per semplificare il calcolo della statistica test sotto diverse permutazioni.
-    
-2. **Test di Cramér-von Mises**: Questo test è un test di bontà di adattamento che confronta la distribuzione cumulativa empirica di un set di dati con una distribuzione teorica. L'ordinamento dei dati è fondamentale per il calcolo della statistica di test in questo contesto perché la statistica di Cramér-von Mises si basa sulla differenza cumulativa tra la distribuzione empirica (i dati osservati ordinati) e la distribuzione teorica. Senza ordinare i dati, non saremmo in grado di calcolare correttamente le differenze cumulative necessarie per il test.
-    
-
-L'ordinamento dei dati aiuta quindi a:
-
-- Facilitare il calcolo delle differenze cumulate nel test di Cramér-von Mises.
-- Preparare i dati per le permutazioni in modo che le simulazioni e i calcoli successivi possano essere eseguiti più efficacemente.
-
-In conclusione, l'ordinamento dei dati non è solo una convenzione ma una necessità pratica che facilita l'analisi e aiuta a garantire che i calcoli siano eseguiti correttamente.
+ L'ordinamento dei dati è fondamentale per il calcolo della statistica di test in questo contesto perché la statistica di Cramér-von Mises si basa sulla differenza cumulativa tra le distribuzioni. Senza ordinare i dati, non saremmo in grado di calcolare correttamente le differenze cumulative necessarie per il test.
 
 #### Codice
 ```R
-cramer_von_mises <- function(sample_x, sample_y) {  
+
+cramer_von_mises <- function(sample_x, sample_y, plotting = FALSE, save_plot = F, name_plot = "") {  
+  # Siccome non ho garanzia che i campini siano ordinati la prima cosa  
+  # che faccio è un sort  
+  sample_x <- sort(as.vector(sample_x))  
+  sample_y <- sort(as.vector(sample_y))  
+  
   # Lunghezza del campione X  
   n <- length(sample_x)  
   # Lunghezza del campione Y  
   m <- length(sample_y)  
   
-  # Creazione del rango di X e di Y  
-  # Per fare i ranghi si guarda la posizione dei valori di un vettore ordinato   # ma questo è temporaneo, non va a cambiare la posizione originale degli  
-  # elementi. Quindi, io so che i primi n elementi sono tutti i ranghi di X e    # gli ultimi m elementi sono tutti elementi di Y  
-  ranked_sample <- rank(c(sample_x, sample_y))  
+  # unisco i campioni  
+  combinati <- c(sample_x, sample_y)  
+  # faccio un rango congiunto  
+  ranked_sample <- rank(combinati, ties.method = "average")  
+  # separo i ranghi  
   rank_x <- ranked_sample[1:n]  
-  rank_y <- ranked_sample[(n+1):(n+m)]  
+  rank_y <- ranked_sample[(n + 1):(n + m)]  
   
-
+  # Scommentare se serve parlare dei ranghi  
+  # print(cbind(sample_x, rank_x,sample_y, rank_y))  
   # Rappresenta la differenza fra i ranghi osservati e quelli teorici  
-  U <- n * sum( (rank_x-(1:n))^2 ) + m * sum( (rank_y-(1:m))^2 )  
+  U <- n * sum((rank_x - (1:n))^2) + m * sum((rank_y - (1:m))^2)  
   
   # Distanza delle distribuzioni  
-  W_squared <- U / ( n*m*(n+m) ) - ( (4*n*m) -1 ) / ( 6*(n+m) )  
+  W_squared <- U / (n * m * (n + m)) - ((4 * n * m) - 1) / (6 * (n + m))  
   
-  return (W_squared)  
+  if (plotting == T) {  
+	    plotting_data_cvm(sample_x, sample_y, name_plot = name_plot,
+	     save_plot = save_plot)  
+  }  
+  return(W_squared)  
 }
 ```
 
@@ -71,7 +125,7 @@ Andando a lavorare col test di permutazioni posso ottenere un p-value che mi dar
 Quindi se io pongo un livello di significatività $\alpha=0.05$ e ottengo $\text{p-value}>\alpha$ significa che ho probabilità con significatività alpha di non dover rifiutare l'ipotesi nulla. Quindi:
 1. dico che $H_0: CDF(X)=CDF(Y)$ 
 2. Misuro $W^2$ 
-3. Costruisco un test con permutazioni dove misuro tanti $(W^*)^2$ 
+3. Costruisco un test con permutazioni dove misuro tanti $(W^2)^*$ 
 4. Calcolo il $\text{p-value}$
 Confrontando il $\text{p-value}$ con $\alpha$ ho due possibilità:
 1. $\text{p-value}>\alpha\rightarrow\text{accetto }H_0$
@@ -147,7 +201,7 @@ cat("p-value:", result$p_value, "\n")
 
 Gli output ottenuti sono:
 - ``cvm_permutation_test(linseed, linseed)``
-	- $W^2 = 0 \rightarrow$ come detto sopra è atteso siccome sono distribuzioni identiche
+	- $W^2 = 0 \rightarrow$ come detto sopra è atteso siccome sono distribuzioni identiche e sappiamo che la distanza è ben definita
 	- $\text{p-value} = 1 \rightarrow$ che conferma l'accettazione dell'ipotesi nulla
 - ``cvm_permutation_test(linseed, soybean)``
 	- $W^2 = 0.1574 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
@@ -171,4 +225,4 @@ result <- cvm_permutation_test(trt1_group, trt2_group, 999)
 Qui ottengo dei risultati meno marcati:
 + ``cvm_permutation_test(trt1_group, trt2_group, 999)``
 	- $W^2 = 0.875 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
-	- $\text{p-value} = 0.972 \rightarrow$ altissimo, quindi non posso rifiutare $H_0$
+	- $\text{p-value} = 0.004 \leq \alpha = 0.05 \rightarrow$ rifiuto l'ipotesi nulla e accetto $H_1$.
