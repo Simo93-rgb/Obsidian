@@ -1,4 +1,12 @@
-# Testo 10.2
+# Impostazione Progetto
+Siccome la mia scelta di implementare l'esercizio 10.3 comporta inevitabilmente di implementare il 10.2 ho deciso di dividere i lavori in modo da differenziare sia i paragrafi della relazione sia il progetto in R. 
+Il progetto ha le sue parti divise in modo che con il comando ```source()``` si possano importare i sorgenti presenti nel progetto. Utile ad esempio per richiamare l'implementazione del 10.2 nella funzione del 10.3.
+## Struttura Progetto
+Il progetto è diviso come segue ![[Pasted image 20240403142856.png|400]]Nella cartella *10.2* si trova il file ```10.2.R``` che contiene il codice main per far andare l'esercizio mentre nel file ```cvm.R``` c'è la vera e propria implementazione della statistica Cramér-Von Mises. La cartella *plots* contiene i file immagine dei grafici plottati ed eventualmente salvati dei vari esperimenti.
+Nella cartella *10.3* si rispetta lo stesso schema.
+Nella cartella *Datasets* si trovano gli import dei dataset usati per gli esperimenti. 
+
+# 10.2
 Write a function to compute the two-sample Cramér–von Mises statistic.
 The Cramér–von Mises distance between distributions is $$\omega^2 = \int\int\big(F(x)-G(y)\big)^2dH(x,y)$$where $H(x,y)$ is the joint CDF of X and Y . For a test of equal distributions,
 the corresponding test statistic is based on the joint empirical
@@ -16,13 +24,10 @@ la statistica a due campioni di Cramér-von Mises è $$W^2 = {U \over nm(n+m)}-{
 Valori elevati di $W^2$ sono significativi.
 
 ## Cramér-Von Mises
-La statistica di cmv restituisce un valore che misura la distanza fra due cdf. Siccome è una distanza ben definita sappiamo che: $$\begin{align}
-1. &\quad d(F_X(x),F_X(x))=0 \quad\quad\quad\quad\quad\,\,\,\,\text{dove }d\text{ è la distanza e }X\text{ la vc}\\
-2. &\quad d(F_X(x),F_Y(y))= \omega\in [0,+\infty) \quad \text{dove }d\text{ è la distanza e }X,Y\text{ le vc}\end{align}$$
-Questo test non parametrico torna utilissimo nel confronto di due vc ma così come è scritto non è direttamente utilizzabile con due campioni empirici. Siccome è un test non parametrico significa che io non posso fare assunzioni sulle distribuzioni dei miei campioni. L'adattamento proposto dal libro consente di poter utilizzare questa statistica anche con campioni empirici poiché si utilizzano i *ranghi* nel calcolo della $U$. 
-
+La statistica di cmv restituisce un valore che misura la distanza fra due cdf. Siccome è una distanza ben definita sappiamo che: $$\begin{align}1. &\quad d(F_X(x),F_X(x))=0 \quad\quad\quad\quad\quad\,\,\,\,\text{dove }d\text{ è la distanza e }X\text{ la vc}\\2. &\quad d(F_X(x),F_Y(y))= \omega\in [0,+\infty) \quad \text{dove }d\text{ è la distanza e }X,Y\text{ le vc}\end{align}$$
+Questo test non parametrico torna utilissimo nel confronto di due vc. *Siccome è un test non parametrico significa che io non posso fare assunzioni sulle distribuzioni dei miei campioni e questo ci permette di usarlo in esperimenti di cui non conosco a priori la distribuzione dei dati*. L'adattamento proposto dal libro consente di poter utilizzare questa statistica anche con campioni empirici poiché si utilizzano i *ranghi* nel calcolo della $U$. 
 #### Ranghi
-In statistica, il "rango" di un'osservazione in un insieme di dati è la sua posizione nella sequenza ordinata di dati. I ranghi sono assegnati ai dati ordinati dal più piccolo al più grande, assegnando il rango 1 al dato più piccolo, il rango 2 al secondo dato più piccolo, e così via. Quando ci sono dei pareggi (valori identici) o *ties*, si assegna a ogni valore pareggiato la media dei ranghi che avrebbero avuto se fossero stati leggermente diversi. Ad esempio, se due valori sono i terzi più piccoli, entrambi ricevono un rango di 3.5, che è la media dei ranghi 3 e 4. La gestione dei ties non è affidata solo alla media ma se serve anche a ``max(), min(), first(), last(), random()``.
+In statistica, il "rango" di un'osservazione in un insieme di dati è la sua posizione nella sequenza ordinata di dati. I ranghi sono assegnati ai dati ordinati dal più piccolo al più grande, assegnando il rango 1 al dato più piccolo, il rango 2 al secondo dato più piccolo, e così via. Quando ci sono dei pareggi (valori identici) o *ties*, si assegna a ogni valore pareggiato la media dei ranghi. Ad esempio, se due valori sono i terzi più piccoli, entrambi ricevono un rango di 3.5, che è la media dei ranghi 3 e 4. La gestione dei ties non è affidata solo alla media ma se serve anche a ``max(), min(), first(), last(), random()``.
 
 ##### Esempio 
 Prendiamo linseed e soybean dal dataset chickwts. Si precisa che hanno rispettivamente lunghezze 12 e 14.
@@ -44,7 +49,7 @@ Prendiamo linseed e soybean dal dataset chickwts. Si precisa che hanno rispettiv
 | 13  | /       | 158     |
 | 14  | /       | 248     |
 
-Eseguendo il seguente codice 
+Eseguendo il seguente codice e dando per scontato l'import del dataset
 ```R
 ranghi <- rank(c(sort(linseed), sort(soybean)))  
 rango_linseed<- ranghi[seq_along(linseed)]  
@@ -52,7 +57,7 @@ rango_soybean<-ranghi[(length(linseed)+1):
 					  length(linseed)+length(soybean))]  
 print(cbind(rango_linseed= rango_linseed, rango_soybean=rango_soybean))
 ```
-otteniamo la seguente tabella. che rappresenta appunto la posizione di ogni valore del campione che avrebbe in un ipotetico vettore congiunto ordinato.
+otteniamo la seguente tabella che rappresenta appunto la posizione di ogni valore del campione che avrebbe in un ipotetico vettore congiunto ordinato.
 
 |     | Rango Linseed | Rango Soybean |
 | --- | ------------- | ------------- |
@@ -71,15 +76,17 @@ otteniamo la seguente tabella. che rappresenta appunto la posizione di ogni valo
 | 13  | /             | 25.0          |
 | 14  | /             | 26.0          |
 
-### Considerazioni
-Viene spesso usato come test di esplorazione prima di procedere ad analisi più precise, se la misura di distanza è piccola ha senso procedere a considerare i campioni come appartenenti alla stessa distribuzione, altrimenti no. 
-Siccome faccio dei calcoli suoi ranghi mi aspetto che campioni molto grandi in dimensione possano avere grandi differenze indicate dal test anche se in realtà questo potrebbe non essere vero. I test è potente nel misurare piccole variazioni e con campioni molto grandi è facile incombere in variazioni numeriche grandi che non sono direttamente correlate a differenze grandi fra le distribuzioni dei campioni.
+### Osservazioni su CVM
+Cramér-Von Mises viene spesso usato come test di esplorazione prima di procedere ad analisi più precise, se la misura di distanza è piccola ha senso procedere a considerare i campioni come appartenenti alla stessa distribuzione, altrimenti no. 
+Siccome faccio dei calcoli sui ranghi mi aspetto che campioni molto grandi in dimensione possano avere grandi differenze indicate dal test anche se in realtà questo potrebbe non essere vero. I test è potente nel misurare piccole variazioni e con campioni molto grandi è facile incombere in variazioni numeriche grandi che non sono direttamente correlate a differenze grandi fra le distribuzioni dei campioni.
 
-## Implementazione 
+## Implementazione CVM
 #### Premessa implementativa
- L'ordinamento dei dati è fondamentale per il calcolo della statistica di test in questo contesto perché la statistica di Cramér-von Mises si basa sulla differenza cumulativa tra le distribuzioni. Senza ordinare i dati, non saremmo in grado di calcolare correttamente le differenze cumulative necessarie per il test.
-
+ L'ordinamento dei dati è fondamentale per il calcolo perché la statistica di Cramér-von Mises si basa sulla differenza cumulativa tra le distribuzioni. Senza ordinare i dati, non saremmo in grado di calcolare correttamente le differenze cumulative necessarie per il test.
+ Togliendo l'ordinamento dei dati si perde la proprietà di identità $d(x,y)=0 \Leftrightarrow x=y$.
+  
 #### Codice
+Questo codice si trova al percorso ``10.2/cvm.R``
 ```R
 
 cramer_von_mises <- function(sample_x, sample_y, plotting = FALSE, save_plot = F, name_plot = "") {  
@@ -103,7 +110,7 @@ cramer_von_mises <- function(sample_x, sample_y, plotting = FALSE, save_plot = F
   
   # Scommentare se serve parlare dei ranghi  
   # print(cbind(sample_x, rank_x,sample_y, rank_y))  
-  # Rappresenta la differenza fra i ranghi osservati e quelli teorici  
+  
   U <- n * sum((rank_x - (1:n))^2) + m * sum((rank_y - (1:m))^2)  
   
   # Distanza delle distribuzioni  
@@ -117,21 +124,48 @@ cramer_von_mises <- function(sample_x, sample_y, plotting = FALSE, save_plot = F
 }
 ```
 
-# Testo 10.3
+## Risultati
+###### Risultati Chickwts
+- ``cramer_von_mises(linseed, linseed)``
+	- $W^2 = 0 \rightarrow$ come detto sopra è atteso siccome sono distribuzioni identiche e sappiamo che la distanza è ben definita
+
+- ``cramer_von_mises(linseed, soybean)``
+	- $W^2 = 0.1574 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene essendo molto vicino allo zero.
+##### Applicazione a PlantGrowth
+Ho scelto per pura curiosità di tentare con un dataset differente che contiene i risultati di un esperimento di confronto delle rese (misurate in base al peso essiccato delle piante) ottenute in condizioni di controllo e in due diverse condizioni di trattamento.
+###### Risultati PlantGrowth
++ ``cramer_von_mises(ctrl_group, trt1_group)``
+	- $W^2 = 0.2425 \rightarrow$ sembra un risultato promettente
+
++ ``cramer_von_mises(ctrl_group, trt2_group)``
+	- $W^2 = 0.395 \rightarrow$ sembra un risultato poco promettente
+
++ ``cramer_von_mises(trt1_group, trt2_group)``
+	- $W^2 = 0.875 \rightarrow$ sembra un risultato pessimo
+
+# 10.3
 Implementare il test di Cramér-von Mises a due campioni per distribuzioni uguali
 come test di permutazione utilizzando $$W^2 = {U \over nm(n+m)}-{{4nm-1}\over6(m+n)}$$Applicare la statistica a soybean e linseed del dataset chickwts.
 ## Commento
+Vediamo le ipotesi che ho a disposizione:
+- **Ipotesi Nulla ($H_0$)**: Le due distribuzioni campionarie sono identiche. Questo significa che qualsiasi differenza osservata tra i campioni può essere attribuita al caso.
+    
+- **Ipotesi Alternativa ($H_1$)**: Esiste una differenza tra le due distribuzioni campionarie. Questo indica che le differenze osservate tra i campioni non sono dovute al caso, ma riflettono piuttosto una differenza reale nelle popolazioni da cui i campioni sono stati estratti.
+
+Si considera un valore standard $\alpha = 0.05$ di significatività.
 Andando a lavorare col test di permutazioni posso ottenere un p-value che mi darà la probabilità che la mia ipotesi nulla non sia falsa. Breve cenno: $$\text{p-value}=\mathbb{P}(|T|>\text{t.oss}|H_0)$$
-Quindi se io pongo un livello di significatività $\alpha=0.05$ e ottengo $\text{p-value}>\alpha$ significa che ho probabilità con significatività alpha di non dover rifiutare l'ipotesi nulla. Quindi:
+Quindi se io pongo un livello di significatività $\alpha=0.05$ e ottengo $\text{p-value}>\alpha$ significa che ho probabilità con significatività alpha di non dover rifiutare l'ipotesi nulla. 
+#### Algoritmo
 1. dico che $H_0: CDF(X)=CDF(Y)$ 
 2. Misuro $W^2$ 
 3. Costruisco un test con permutazioni dove misuro tanti $(W^2)^*$ 
 4. Calcolo il $\text{p-value}$
-Confrontando il $\text{p-value}$ con $\alpha$ ho due possibilità:
-1. $\text{p-value}>\alpha\rightarrow\text{accetto }H_0$
-2. $\text{p-value}\leq\alpha\rightarrow\text{rifiuto }H_0$
+5. Confronto il $\text{p-value}$ con $\alpha$ ho due possibilità:
+	1. $\text{p-value}>\alpha\rightarrow\text{accetto }H_0$
+	2. $\text{p-value}\leq\alpha\rightarrow\text{rifiuto }H_0$
 
 ## Implementazione
+Nel progetto ci sarà un sorgente nel percorso ``10.3/cvm_permutation_test.R`` leggermente differente che avrà la sola aggiunta di codice per il plotting che qui non ho ritenuto necessario ma anzi confusionario.
 ```R
 # Definizione della funzione Cramér-von Mises con simulazione di permutazione  
 cvm_permutation_test <- function(sample_x, sample_y, n_permutations = 999) {  
@@ -156,32 +190,19 @@ cvm_permutation_test <- function(sample_x, sample_y, n_permutations = 999) {
   # Calcolo del p-value  
   
   W_squared_tot <- c(W_squared_observed, W_squared_permutations)  
-  # non ho usato mean perché mi piace vedere una rappresentazione simile a quella  
-  # matematica vista a lezione  p_value <- sum(W_squared_tot >= W_squared_observed) / (n_permutations + 1)  
-  
-  # Visualizzazione dei risultati  
-  hist(W_squared_permutations, freq=FALSE, main = "Distribuzione di W^2 permutato",  
-       xlab = "W^2",  col = "skyblue", xlim = c(0, 10), ylim = c(0,1))  
-  abline(v = W_squared_observed, col = "red", lwd = 2)  
-  legend("topright", legend = c(paste("W^2 osservato =", round(W_squared_observed, 4)),  
-                                paste("p-value =", round(p_value, 4))),  
-         col = c("red", "black"), lwd = 2)  
+  # non ho usato mean perché mi piace vedere 
+  # una rappresentazione simile a quella  
+  # matematica vista a lezione  
+  p_value <- sum(W_squared_tot >= W_squared_observed)/(n_permutations+1)  
   
   # Output dei risultati  
   list(W_squared_observed = W_squared_observed, p_value = p_value)  
 }
 ```
 
-### Risultato
-##### Premessa
-- **Ipotesi Nulla ($H_0$)**: Le due distribuzioni campionarie sono identiche. Questo significa che qualsiasi differenza osservata tra i campioni può essere attribuita al caso.
-    
-- **Ipotesi Alternativa ($H_1$)**: Esiste una differenza tra le due distribuzioni campionarie. Questo indica che le differenze osservate tra i campioni non sono dovute al caso, ma riflettono piuttosto una differenza reale nelle popolazioni da cui i campioni sono stati estratti.
-
-Applicando il test su due distribuzioni identiche si ottiene distanza zero e questo conferma l'esattezza della funzione dell'esercizio 10.2. Si ottiene anche un $\text{p-value}=1$ il che ci dice che abbiamo il $100\%$ di probabilità di non rifiutare l'ipotesi nulla poiché non ci sono differenze statisticamente rilevanti e mi sembra coerente col fatto che le distribuzioni siano identiche. 
-
-##### Applicazione a chickvts
-Sono stati presi in esame come richiesto *linseed* e *soybean*:
+## Risultati
+#### Applicazione a chickvts
+Sono stati presi in esame come richiesto *linseed* e *soybean*. 
 ```R
 # Caricamento dataset dei pulcini  
 attach(chickwts)  
@@ -199,30 +220,28 @@ cat("W^2 osservato:", result$W_squared_observed, "\n")
 cat("p-value:", result$p_value, "\n")
 ```
 
-Gli output ottenuti sono:
+##### Risultati Chickwts
 - ``cvm_permutation_test(linseed, linseed)``
 	- $W^2 = 0 \rightarrow$ come detto sopra è atteso siccome sono distribuzioni identiche e sappiamo che la distanza è ben definita
-	- $\text{p-value} = 1 \rightarrow$ che conferma l'accettazione dell'ipotesi nulla
+	- $\text{p-value} = 1 > \alpha \rightarrow$ che conferma l'accettazione dell'ipotesi nulla con un valore schiacciante
 - ``cvm_permutation_test(linseed, soybean)``
-	- $W^2 = 0.1574 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
-	- $\text{p-value} = 1 \rightarrow$ altissimo, quindi non posso rifiutare $H_0$
+	- $W^2 = 0.1574 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene essendo molto vicino allo zero.
+	- $\text{p-value} = 0.398 > \alpha \rightarrow$ altissimo, quindi non posso rifiutare $H_0$.
+###### Commento Chickwts
+La distanza fra la crescita dei pulcini con semi di lino e con fagioli di soia non è significativa quindi il criterio per scegliere uno rispetto all'altro dovrà arrivare da ulteriori analisi: costi mangimi, facilità di reperibilità, conservazione, benessere pulcini, etc.
+Questa ipotesi è rafforzata dai risultati visti a lezione e riportati sul libro dove altre statistiche hanno confermato l'impossibilità di non accettare l'ipotesi nulla nel confronto fra i campioni ```linseed``` e ```soybean```. 
 
-##### Applicazione a PlantGrowth
-```R
-# Caricamento del dataset PlantGrowth  
-attach(PlantGrowth)  
-boxplot(formula(PlantGrowth))  
-  
-# Suddivisione del dataset in base ai gruppi di trattamento  
-ctrl_group <- weight[group == 'ctrl']  
-trt1_group <- weight[group == 'trt1']  
-trt2_group <- weight[group == 'trt2']  
-  
-detach(PlantGrowth)
-result <- cvm_permutation_test(trt1_group, trt2_group, 999)
-```
-
-Qui ottengo dei risultati meno marcati:
+#### Risultati PlantGrowth
++ ``cvm_permutation_test(ctrl_group, trt1_group, 999)``
+	- $W^2 = 0.2425 \rightarrow$ sembra un risultato poco promettente
+	- $\text{p-value} = 0.211 > \alpha \rightarrow$ accetto l'ipotesi nulla 
++ ``cvm_permutation_test(ctrl_group, trt2_group, 999)``
+	- $W^2 = 0.395 \rightarrow$ sembra un risultato poco promettente
+	- $\text{p-value} = 0.095 > \alpha \rightarrow$ accetto l'ipotesi nulla
 + ``cvm_permutation_test(trt1_group, trt2_group, 999)``
-	- $W^2 = 0.875 \rightarrow$ non è detto sia un buon risultato come sembra ma promette bene
-	- $\text{p-value} = 0.004 \leq \alpha = 0.05 \rightarrow$ rifiuto l'ipotesi nulla e accetto $H_1$.
+	- $W^2 = 0.875 \rightarrow$ sembra un risultato poco promettente
+	- $\text{p-value} = 0.004 \leq \alpha \rightarrow$ rifiuto l'ipotesi nulla e accetto $H_1$.
+
+###### Commento
+La crescita delle piante in situazione di controllo risulta simile a quella ottenuta con il trattamento 1 e col trattamento 2 anche se con evidente maggiore distanza da parte del secondo trattamento. Essendo il trattamento di controllo il riferimento per una buona crescita delle piante io mi sentirei di dire che il primo trattamento è quello che conviene indagare meglio perché più promettente avendo una distanza minore. I risultati di ```trt2_group``` però non sono da buttare e non sarebbe sciocco pensare di indagare anche quel trattamento ma va sottolineata la vicinanza al rifiutare l'ipotesi nulla. 
+La misura della distanza fra i due trattamenti suggerisce che il modo in cui deviano rispetto al campione di controllo è differente. 
