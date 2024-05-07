@@ -18,9 +18,8 @@ Large values of $W^2$ are significant.
 
 ## Tradotto
 Scrivere una funzione per calcolare la statistica di Cramér-von Mises a due campioni.
-La distanza di Cramér-von Mises tra distribuzioni è $$\omega^2 = \int\int\big(F(x)-G(y)\big)^2dH(x,y)$$dove $H(x,y)$ è la CDF congiunta di X e Y. Per un test di uguaglianza delle distribuzioni, la statistica corrispondente si basa sulle distribuzioni empiriche congiunte, quindi è una funzione dei ranghi dei dati. Per prima cosa, calcolare i ranghi $r_i$ del campione $X$, $i = 1,...,n$ e i ranghi $s_j$ del campione $Y$ $j=1,...,m$ (vedi funzione rank). calcolare $$U=n\sum_{i=1}^n(r_i-i)^2 + m\sum{j=1}^m(s_j-j)^2$$
-Si noti che $U$ può essere vettorializzato e valutato in una sola riga di codice R. Allora
-la statistica a due campioni di Cramér-von Mises è $$W^2 = {U \over nm(n+m)}-{{4nm-1}\over6(m+n)}$$
+La distanza di Cramér-von Mises tra distribuzioni è $$\omega^2 = \int\int\big(F(x)-G(y)\big)^2dH(x,y)$$dove $H(x,y)$ è la CDF congiunta di X e Y. Per un test di uguaglianza delle distribuzioni, la statistica corrispondente si basa sulle distribuzioni empiriche congiunte, quindi è una funzione dei ranghi dei dati. Per prima cosa, calcolare i ranghi $r_i$ del campione $X$, $i = 1,...,n$ e i ranghi $s_j$ del campione $Y$ $j=1,...,m$ (vedi funzione rank). calcolare $$U=n\sum_{i=1}^n(r_i-i)^2 + m\sum_{j=1}^m(s_j-j)^2$$
+Si noti che $U$ può essere vettorializzato e valutato in una sola riga di codice R. Allora la statistica a due campioni di Cramér-von Mises è $$W^2 = {U \over nm(n+m)}-{{4nm-1}\over6(m+n)}$$
 Valori elevati di $W^2$ sono significativi.
 
 ## Cramér-Von Mises
@@ -137,7 +136,7 @@ Ho scelto per pura curiosità di tentare con un dataset differente che contiene 
 + ``cramer_von_mises(ctrl_group, trt1_group)``
 	- $W^2 = 0.2425 \rightarrow$ sembra un risultato promettente
 
-+ ``cramer_von_mises(ctrl_group, trt2_group)``
++ ``cramer_von_mises(ctrl_group, trt1_group)``
 	- $W^2 = 0.395 \rightarrow$ sembra un risultato poco promettente
 
 + ``cramer_von_mises(trt1_group, trt2_group)``
