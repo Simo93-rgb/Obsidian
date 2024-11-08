@@ -12,7 +12,7 @@ L'**R² score** (o coefficiente di determinazione) misura quanto bene il modello
 
 $$R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2}$$​
 
-Dove yˉ\bar{y}yˉ​ è la media dei valori reali.
+Dove $\bar{y}$​ è la media dei valori reali.
 
 - **Interpretazione**: Un $R^2$ prossimo a 1 indica un buon fit del modello, mentre un valore vicino a 0 indica che il modello non spiega meglio dei valori medi. Un valore negativo significa che il modello sta performando peggio rispetto a una semplice predizione con la media dei valori.
 - **Quando usarlo**: L'R² score è utile per capire quanto il modello riesce a spiegare la varianza dei dati target. Va usato sempre come complemento alle altre metriche.
@@ -74,3 +74,58 @@ Oltre alle metriche numeriche, è fondamentale eseguire un'**analisi dei residui
 - **R²**: Più è vicino a 1, meglio è.
 - **MAPE**: Valori più bassi indicano un errore percentuale medio più piccolo (valori prossimi a 0% sono i migliori).
 - **Explained Variance**: Più vicino a 1, meglio è (come $R^2$).
+
+# Relazione sul Modello K-Nearest Neighbors per Regressione
+
+## Introduzione
+Il modello di regressione implementato in questo progetto utilizza l'algoritmo *K-Nearest Neighbors* (KNN), impostato con un numero di vicini \( k = 22 \), con standardizzazione delle feature di input. Abbiamo valutato le prestazioni del modello su un dataset standardizzato salvato in `CCPP_standardized.csv`, utilizzando una suddivisione del 20% per il test set e una validazione incrociata *k-fold* con \( k = 10 \). Le performance del modello KNN sono state confrontate con l'implementazione standard di `sklearn`.
+
+## Metriche di Performance
+
+### Modello Implementato
+Per il modello KNN parallelo implementato, le metriche di performance calcolate su *cross-validation* e test set sono le seguenti:
+
+- **Cross-Validation (k-fold)**
+  - **MSE**: 14.23
+  - **RMSE**: 3.77
+  - **MAE**: 2.71
+  - **R²**: 0.9483
+  - **ExVar**: 0.9483
+  - **MAPE**: 0.597
+
+- **Test Set**
+  - **MSE**: 12.73
+  - **RMSE**: 3.57
+  - **MAE**: 2.68
+  - **R²**: 0.9544
+  - **ExVar**: 0.9544
+  - **MAPE**: 0.590
+
+### Modello di `sklearn`
+Il modello KNN di `sklearn` ha ottenuto i seguenti risultati:
+
+- **Cross-Validation (k-fold)**
+  - **MSE**: 17.26
+  - **RMSE**: 4.15
+  - **MAE**: 3.13
+  - **R²**: 0.9373
+  - **ExVar**: 0.9374
+  - **MAPE**: 0.690
+
+- **Test Set**
+  - **MSE**: 15.91
+  - **RMSE**: 3.99
+  - **MAE**: 3.11
+  - **R²**: 0.9430
+  - **ExVar**: 0.9431
+  - **MAPE**: 0.685
+
+## Analisi Comparativa
+
+I risultati dimostrano che il modello KNN personalizzato offre una leggera superiorità rispetto al modello di `sklearn` in termini di precisione su tutte le metriche. Il nostro modello mostra una riduzione sia dell’**MSE** (circa il 17% in meno) sia dell’**RMSE** (circa il 10% in meno), indicando una miglior aderenza ai valori reali nel test set. Il miglioramento si osserva anche nelle metriche **R²** ed **ExVar**, con valori rispettivamente pari a 0.9544 e 0.9544, rispetto ai 0.9430 e 0.9431 del modello di `sklearn`. Infine, il **MAPE** più basso ottenuto dal nostro modello (0.590 contro 0.685) conferma una maggiore affidabilità predittiva.
+
+### Efficienza Computazionale
+Sebbene il modello `sklearn` abbia impiegato solo 0.03 secondi, rispetto agli 0.84 secondi del modello implementato, si ritiene essere irrilevante visti i due ordini di grandezza che in senso assoluto sono entrambi bassi. Si sottolinea però che `sklearn` è nettamente più prestante impiegando 28 volte di meno il tempo del modello implementato.
+
+## Conclusioni
+L'implementazione personalizzata del KNN ha dimostrato di superare il modello `sklearn` in termini di accuratezza predittiva. L'ottimizzazione dei parametri e la standardizzazione del dataset hanno contribuito a ottenere risultati più accurati, sebbene con un costo computazionale maggiore. Questo studio evidenzia l'importanza di ottimizzare e testare modelli personalizzati per garantire prestazioni elevate in applicazioni reali.
