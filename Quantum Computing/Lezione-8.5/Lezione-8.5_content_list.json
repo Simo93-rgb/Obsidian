@@ -1,0 +1,364 @@
+[
+    {
+        "type": "text",
+        "text": "22 Lecture 22: Order finding",
+        "text_level": 2,
+        "bbox": [
+            139,
+            121,
+            581,
+            146
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "This is an application of the phase estimation algorithm, important for the factorization algorithm. Consider two integers, x and N , with $x < N$ and no common factors.",
+        "bbox": [
+            137,
+            157,
+            857,
+            207
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Definition: the order of x modulo N is the smallest positive integer r such that $x ^ { r } \\equiv 1 { \\pmod { N } }$ .",
+        "bbox": [
+            137,
+            220,
+            855,
+            258
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The problem of finding the order is a di\u0000cult problem for a classical computer: no classical polynomial algorithm is known. By this we mean an algorithm polynomial in the number L of bits necessary to specify the problem, for example the number of bits necessary for the binary expression of N . Thus L satisfies $N \\leq 2 ^ { L }$ .",
+        "bbox": [
+            137,
+            269,
+            858,
+            339
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Exercise: find the order of 5 modulo 21",
+        "bbox": [
+            169,
+            352,
+            527,
+            369
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Theorem: r always exists (provided x and N are coprime) and $r \\leq N$ . For the proof, see the Appendix.",
+        "bbox": [
+            137,
+            382,
+            858,
+            416
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "22.1 The algorithm",
+        "text_level": 2,
+        "bbox": [
+            139,
+            438,
+            393,
+            459
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The quantum algorithm for order finding is simply the algorithm for phase estimation applied to a unitary operator $U _ { x , N }$ defined by",
+        "bbox": [
+            137,
+            467,
+            857,
+            502
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {x, N} | y \\rangle \\equiv | x y \\bmod N \\rangle \\tag {22.1}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            401,
+            516,
+            853,
+            534
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "where y is a L-bit integer, thus $0 \\leq y \\leq 2 ^ { L } - 1$ , and $U _ { x , N }$ acts on a vector space of dimension $2 ^ { L }$ .",
+        "bbox": [
+            137,
+            546,
+            858,
+            581
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Technical note: when $y \\geq N$ , the application $U _ { x , N }$ is defined to act on $| y \\rangle$ as the identity. Thus $U _ { x , N }$ acts nontrivially on $| y \\rangle$ only for $0 \\leq y \\leq N - 1$ .",
+        "bbox": [
+            137,
+            593,
+            858,
+            631
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Theorem: the states defined by",
+        "bbox": [
+            169,
+            642,
+            458,
+            659
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left| u _ {s} \\right\\rangle \\equiv \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] \\left| x ^ {k} \\bmod N \\right\\rangle \\tag {22.2}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            322,
+            674,
+            855,
+            719
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "with integer s satisfying $0 ~ \\leq ~ s ~ \\leq ~ r - 1$ (and r = order of x modulo $N )$ , are eigenstates of $U _ { x , N }$ :",
+        "bbox": [
+            137,
+            730,
+            857,
+            764
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {x, N} | u _ {s} \\rangle = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] | u _ {s} \\rangle \\tag {22.3}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            383,
+            764,
+            853,
+            801
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Applying now the phase estimation algorithm gives an estimation the phase $s / r$ of the eigenvalue $\\exp [ 2 \\pi i s / r ]$ , and from $s / r$ we can deduce r (via the continued fraction algorithm, see later), i.e. the order of x modulo N .",
+        "bbox": [
+            137,
+            806,
+            857,
+            858
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "108",
+        "bbox": [
+            482,
+            906,
+            515,
+            919
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Proof:",
+        "text_level": 2,
+        "bbox": [
+            169,
+            125,
+            236,
+            140
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} U _ {x, N} | u _ {s} \\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] | x ^ {k + 1} \\bmod N \\rangle \\\\ = \\frac {1}{\\sqrt {r}} \\sum_ {k = 1} ^ {r} \\exp \\left[ \\frac {- 2 \\pi i s (k - 1)}{r} \\right] | x ^ {k} \\bmod {\\mathrm{N}} \\rangle \\\\ = \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s (k - 1)}{r} \\right] | x ^ {k} \\bmod \\mathrm{N} \\rangle \\\\ = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] | x ^ {k} \\bmod N \\rangle \\\\ = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] | u _ {s} \\rangle \\tag {22.4} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            268,
+            148,
+            855,
+            376
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "We redefined $k  k - 1$ in the sum in the second line, and in the third line we wrote the sum from $k = 1$ to $k = r$ as a sum from $k = 0$ to $k = r - 1$ since both the exponent and the vector $\\vert x ^ { k } \\mathrm { m o d ~ N } \\rangle$ do not change if $k  k + r ,$ so that the term with $k = 0$ is equal to the term with $k = r$ . Indeed the exponent remains the same since $\\exp [ 2 \\pi i \\times i n t e g e r ] = 1$ , and $| x ^ { k }$ mod $\\mathrm { N } \\rangle = | x ^ { k + r }$ mod N<sub>i</sub> because $x ^ { r } \\equiv 1$ mod N.",
+        "bbox": [
+            137,
+            381,
+            855,
+            482
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Exercise: prove that $U _ { x , N }$ is unitary.",
+        "bbox": [
+            169,
+            498,
+            499,
+            515
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "For the phase estimation algorithm, we need to know the eigenstate $| u _ { s } \\rangle$ , but this is equivalent to know the order r (since it enters the definition (22.2) of $\\left| u _ { s } \\right. )$ , which is just the number we want to find ! There is a way out of this logical loop: we can choose as second register the state $| 1 \\rangle = | 0 0 . . . 0 1 \\rangle$ , where all the L qubits are set to 0 except the last one which is set to 1 . This state is in fact a sum of eigenstates $\\left| u _ { s } \\right.$ :",
+        "bbox": [
+            137,
+            528,
+            858,
+            631
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\n| 1 \\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {s = 0} ^ {r - 1} | u _ {s} \\rangle \\tag {22.5}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            423,
+            631,
+            853,
+            675
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "as can be seen from the inversion of formula (22.2):",
+        "bbox": [
+            139,
+            680,
+            588,
+            697
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left| x ^ {k} \\bmod \\mathrm{N} \\right\\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {s = 0} ^ {r - 1} \\exp \\left[ \\frac {2 \\pi i s k}{r} \\right] \\left| u _ {s} \\right\\rangle \\tag {22.6}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            332,
+            706,
+            855,
+            750
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "by taking $k = 0$ . The inversion formula can be verified easily noting that",
+        "bbox": [
+            137,
+            757,
+            773,
+            774
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\sum_ {s = 0} ^ {r - 1} \\exp [ - 2 \\pi i s k / r ] = r \\delta_ {k, 0} \\tag {22.7}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            386,
+            783,
+            853,
+            826
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "(for $k = 0$ this relation is trivial, for $k \\neq 0$ use the formula for the geometric sum). Another way of proving (22.6) is to notice that the transformation matrix of (22.2) is unitary, and its inverse is given by its transpose conjugate.",
+        "bbox": [
+            137,
+            834,
+            855,
+            887
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "109",
+        "bbox": [
+            482,
+            906,
+            515,
+            919
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "In summary, taking as the input of the second register the state $| 1 \\rangle$ , the algorithm will estimate a phase $s / r$ , where s can take the values $0 \\leq s \\leq r - 1$ with equal probabilities $1 / r$ , but r is fixed to be the order of $x$ modulo $N$ . We now need a procedure to extract $r$ if we know that it is the denominator of a rational number $s / r$ . This procedure is the continued fraction algorithm we describe in next Section.",
+        "bbox": [
+            137,
+            125,
+            858,
+            213
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Note: one possible result of the algorithm is that the estimated phase is zero, since $s = 0 \\to s / r = 0$ may happen with probability $1 / r$ . One has then to repeat the algorithm until one finds a nonvanishing phase.",
+        "bbox": [
+            137,
+            225,
+            858,
+            279
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "110",
+        "bbox": [
+            482,
+            904,
+            515,
+            920
+        ],
+        "page_idx": 2
+    }
+]

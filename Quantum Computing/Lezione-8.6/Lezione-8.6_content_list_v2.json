@@ -1,0 +1,796 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23 Lecture 23: Factorization"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                121,
+                571,
+                142
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23.1 Two theorems in number theory"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                159,
+                606,
+                180
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem 1: if N is a composite (i.e. not prime) L-bit integer, and y is a solution of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ^ { 2 } \\equiv 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod N ) in the interval "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 < y < N - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(thus the trivial solutions "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ="
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 , y = N - 1 \\equiv - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod N) are excluded), then "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( y - 1 , N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( y + 1 , N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are nontrivial factors of N that can be computed with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "{ \\cal O } ( L ^ { 3 } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "operations."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                187,
+                857,
+                257
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof: since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ^ { 2 } \\equiv 1 { \\pmod { N } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", N must divide "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ^ { 2 } - 1 = ( y + 1 ) ( y - 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Moreover "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N > y + 1 > y - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and therefore N cannot divide "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( y + 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "or "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( y - 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", but must have nontrivial common factors with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( y + 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( y - 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". These common factors can be found by computing the GCD of N and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y \\pm 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with Euclid’s algorithm, which requires "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "{ \\cal O } ( L ^ { 3 } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "operations."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                269,
+                858,
+                356
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem 2: if we choose at random an integer x in the interval "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "[ 1 , N - 1 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", coprime with N , it is very probable that its order (mod N ) is even, and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r / 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is not equal "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { t o } \\pm 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod N ) (the probability is always "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\geq 1 / 2"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", see Appendix 4 of Nielsen and Chuang, where this probability is shown to be "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\textstyle { 1 - { \\frac { 1 } { 2 ^ { m } } } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "where m is the number of di↵erent prime factors of N )."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                369,
+                858,
+                456
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Then "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y = x ^ { r / 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod N) is a nontrivial solution of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ^ { 2 } \\equiv 1 { \\mathrm { ~ ( m o d ~ N ) } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                168,
+                467,
+                747,
+                486
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In conclusion, finding the order r modulo N of an integer x, chosen at random in the interval "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "[ 1 , N - 1 ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and coprime with N, allows to find in polynomial time a nontrivial solution of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y ^ { 2 } \\equiv 1 { \\pmod { N } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and hence a nontrivial factor of N ."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                500,
+                858,
+                551
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23.2 The factorization algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                572,
+                549,
+                593
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We have seen that the two theorems of the previous section can be combined to construct a factorization algorithm. This algorithm was first proposed by P.W. Shor in 1994, and produces in polynomial time and with good probability a nontrivial factor of a composite integer N. All operations can be executed on a classical computer, except the order finding subroutine that requires a quantum computer (to find the order in polynomial time)."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                600,
+                858,
+                705
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23.3 Summary of the algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                726,
+                537,
+                745
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "<sub>•</sub> Input: N"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "Output: a nontrivial factor of N"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "<sub>•</sub> Runtime: "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "O ( ( \\log _ { 2 } N ) ^ { 3 } )"
+                            },
+                            {
+                                "type": "text",
+                                "content": "operations"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                752,
+                468,
+                833
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Procedure:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                859,
+                270,
+                875
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "116"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                920
+            ]
+        }
+    ],
+    [
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1. If "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "N \\mathrm { \\ e v e n . } \\longrightarrow \\mathrm { o u t p u t = 2 }"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2. Determine whether "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "N = a ^ { b }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "for "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "a \\geq 1"
+                            },
+                            {
+                                "type": "text",
+                                "content": ", "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "b \\geq 2"
+                            },
+                            {
+                                "type": "text",
+                                "content": "(can be done by a classical algorithm in "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "{ \\cal O } ( L ^ { 3 } )"
+                            },
+                            {
+                                "type": "text",
+                                "content": "operations). If yes, <sub>\u0000!</sub> output = a."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3. Choose x in the interval "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "[ 1 , N - 1 ]"
+                            },
+                            {
+                                "type": "text",
+                                "content": ". Compute the "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\mathrm { G C D } ( x , N )"
+                            },
+                            {
+                                "type": "text",
+                                "content": ", if it is > 1 then "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\longrightarrow \\mathrm { o u t p u t } = \\mathrm { G C D } ( x , N )"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "4. Quantum subroutine to find the order r of x modulo N."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                125,
+                857,
+                268
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "5. If r is even and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r / 2 } \\neq - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod N), compute "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( x ^ { r / 2 } - 1 , N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( x ^ { r / 2 } +"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 , N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and test whether these are nontrivial factors of N . If yes, <sub>\u0000!</sub> output = these factors."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                281,
+                855,
+                332
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "NB: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r / 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "cannot be = +1 (mod N) because r is the smallest integer such that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r } \\equiv 1 { \\pmod { N } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                347,
+                855,
+                382
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23.4 Example: the factorization of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N = 9 1"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                403,
+                653,
+                422
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "i) The steps 1. and 2. are passed without exiting."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "ii) step 3. : choose for example "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "x = 4 ."
+                            },
+                            {
+                                "type": "text",
+                                "content": ", coprime with 91."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "iii) compute order of 4 modulo 91. "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "{ \\mathrm { R e s u l t } } = 6 ( 4 ^ { 6 } = 4 0 9 6 = 1 + 4 5 \\times 9 1 )"
+                            },
+                            {
+                                "type": "text",
+                                "content": "."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "iv) check that "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "x ^ { r / 2 } \\neq - 1 { \\mathrm { ~ ( m o d ~ } } N { \\mathrm { ) } } ,  4 ^ { 3 } = 6 4 \\neq - 1 { \\mathrm { ~ ( m o d ~ } } 9 1 { \\mathrm { ) } } , { \\mathrm { ~ o k } } ."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "v) GCD(64+1, 91) = 13, GCD(64-1, 91) = 7"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                432,
+                786,
+                519
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "23.5 Bibliography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                540,
+                371,
+                560
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "P. W. Shor (1994), “Algorithms for quantum computation: discrete log and factoring”, Proc. of the 35-th Annual Symposium on the Foundations of Computer Science, 124-134, IEEE Computer Society Press."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                568,
+                855,
+                619
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "117"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                919
+            ]
+        }
+    ]
+]

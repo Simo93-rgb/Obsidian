@@ -1,0 +1,1027 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20 Lecture 20: Quantum Fourier Transform (QFT)"
+                    }
+                ],
+                "level": 1
+            },
+            "bbox": [
+                139,
+                122,
+                875,
+                146
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20.1 Discrete Fourier Transform"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                160,
+                547,
+                180
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The discrete Fourier transform is defined as a transformation on N complex numbers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y _ { 0 } , y _ { 1 } , . . . , y _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "yielding N complex numbers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "z _ { 0 } , z _ { 1 } , . . . , z _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "defined by:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                188,
+                858,
+                223
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "z _ {k} \\equiv \\frac {1}{\\sqrt {N}} \\sum_ {j = 0} ^ {N - 1} y _ {j} e ^ {2 \\pi i j k / N} \\tag {20.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/5450b61cba95105339d86b27ac620ab470b702e1ae7445cbeaa9bbf1911ce82e.jpg"
+                }
+            },
+            "bbox": [
+                394,
+                233,
+                855,
+                280
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Note the analogy with the usual Fourier transform of a function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                289,
+                749,
+                307
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\tilde {f} (k) = \\frac {1}{\\sqrt {2 \\pi}} \\int d x f (x) e ^ {i k x} \\tag {20.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a81b5c97b3a4376cf42ed0006291ff904d50e764f113547a0fa1a5b074bb193d.jpg"
+                }
+            },
+            "bbox": [
+                386,
+                315,
+                855,
+                352
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where the sum on the discrete index "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "j"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is replaced by an integral on the continuous “index” "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y _ { j }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "z _ { k }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "correspond respectively to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\tilde { f } ( \\boldsymbol { k } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                359,
+                858,
+                395
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20.2 Quantum Fourier Transform"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                415,
+                559,
+                434
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "It is a unitary operation QFT defined on basis vectors "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 \\rangle , | 1 \\rangle , . . . , | N - 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "as"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                442,
+                803,
+                461
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "Q F T | j \\rangle = \\frac {1}{\\sqrt {N}} \\sum_ {k = 0} ^ {N - 1} e ^ {2 \\pi i j k / N} | k \\rangle \\tag {20.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a4fd3595efbb855b7aafa6e0fb826dc17fee051128e4f441eeaf15fdd1e4a707.jpg"
+                }
+            },
+            "bbox": [
+                364,
+                472,
+                855,
+                516
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Then the components "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y _ { j }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of a vector "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { | v \\rangle = \\sum _ { j = 0 } ^ { N - 1 } y _ { j } | j \\rangle } \\end{array}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "transform under QFT into new components "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "z _ { k }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "given by the discrete Fourier transform (prove it). We will show in the following that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "Q F T"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is indeed unitary."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                526,
+                855,
+                579
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Using n qubits, the dimension N of the vector space of physical states is "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 ^ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and the basis vectors "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 \\rangle , . . . , | j \\rangle , . . . , | 2 ^ { n } - 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are given by the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 ^ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "vectors of the computational basis "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 0 \\cdots 0 \\rangle , . . . , | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle , . . . , | 1 1 \\cdot \\cdot \\cdot 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "j _ { 1 } , j _ { 2 } , . . . , j _ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the binary expression of the integer "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "j"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                593,
+                857,
+                662
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20.3 Binary numbers and binary fractions"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                682,
+                663,
+                701
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The binary representation of the integer j is "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "j _ { 1 } j _ { 2 } . . . j _ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "where"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                711,
+                658,
+                729
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "j = j _ {1} 2 ^ {n - 1} + j _ {2} 2 ^ {n - 2} + \\dots + j _ {n} 2 ^ {0} \\tag {20.4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/10b1b386fc3e9180ad7f8c8a6e7824460ddbd61069a37b70a66d174fb8bf1c37.jpg"
+                }
+            },
+            "bbox": [
+                359,
+                739,
+                853,
+                757
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Real numbers between 0 and 1 can be represented with binary fractions, defined by"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                767,
+                855,
+                785
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "0. j _ {1} j _ {2} \\dots j _ {n} \\equiv \\frac {j _ {1}}{2} + \\frac {j _ {2}}{2 ^ {2}} + \\dots + \\frac {j _ {n}}{2 ^ {n}} \\tag {20.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/7304c156eea9c1ae3a6a671fac8ee0b0d372eea5b7f3dc516f95ed35ec12d428.jpg"
+                }
+            },
+            "bbox": [
+                354,
+                794,
+                855,
+                826
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and related to the binary integers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "j _ { 1 } j _ { 2 } . . . j _ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "by"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                833,
+                537,
+                850
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "0. j _ {1} j _ {2} \\dots j _ {n} = \\frac {1}{2 ^ {n}} j _ {1} j _ {2} \\dots j _ {n} \\tag {20.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a26b115794ea23d8f98d4602efea0539d096bf7cd45fb8b21d30435717357e75.jpg"
+                }
+            },
+            "bbox": [
+                388,
+                859,
+                855,
+                890
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "95"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20.4 Product representation of QFT"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                123,
+                594,
+                144
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem: the unitary operator QFT can be written as the product"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                152,
+                739,
+                169
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "Q F T \\left| j _ {1} j _ {2} \\dots j _ {n} \\right\\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n}} | 1 \\rangle\\right) \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}} | 1 \\rangle\\right) \\dots \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} | 1 \\rangle\\right) \\tag {20.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/51cf487b2a5bc565876d63fbc08fa695c5ed79f5996f4dd9e1a0ccdd7b8e8a63.jpg"
+                }
+            },
+            "bbox": [
+                139,
+                179,
+                855,
+                226
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                226,
+                206,
+                241
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} Q F T | j \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k = 0} ^ {2 ^ {n} - 1} e ^ {2 \\pi i j k / 2 ^ {n}} | k \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j / 2 ^ {n} (k _ {1} 2 ^ {n - 1} + \\dots + k _ {n} 2 ^ {0} ]} | k _ {1} \\dots k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} e ^ {2 \\pi i j k _ {1} 2 ^ {- 1}} | k _ {1} \\rangle \\sum_ {k _ {2} = 0} ^ {1} e ^ {2 \\pi i j k _ {2} 2 ^ {- 2}} | k _ {2} \\rangle \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j k _ {n} 2 ^ {- n}} | k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} (| 0 \\rangle + e ^ {2 \\pi i j / 2} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {2}} | 1 \\rangle) \\dots (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {n}} | 1 \\rangle) \\tag {20.8} \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/80419597dae51131bb3d72fbe4b74d63ce3160a8d9b1e3b2c328173a6ceb561c.jpg"
+                }
+            },
+            "bbox": [
+                173,
+                250,
+                863,
+                383
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and observing that"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                391,
+                309,
+                408
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "e ^ {2 \\pi i j / 2} = e ^ {2 \\pi i 0. j _ {n}}, \\quad e ^ {2 \\pi i j / 2 ^ {2}} = e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}}, \\dots , e ^ {2 \\pi i j / 2 ^ {n}} = e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} \\tag {20.9}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/7308a90e780e090fe0482cb8a762ddb80984c1c7dab4300cba8ddf7b771e07ca.jpg"
+                }
+            },
+            "bbox": [
+                181,
+                416,
+                855,
+                439
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "the theorem follows."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                450,
+                344,
+                466
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "20.5 E\u0000cient circuit for QFT"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                488,
+                510,
+                508
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/6627949cd577ad28eaff305c007d23f60b57b7d7f019e7b9076552ec7cca7980.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  subgraph Input_1[\"|j1⟩\"]\n  H --> R2 --> R3 --> Rn_1 --> Rn_1\n  end\n\n  subgraph Output_1[\"|j2⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Intermediate_1[\"|j3⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_2[\"|jn-1⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_3[\"|jn⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rm_2\n  Rm_2 -.-> Rm_1\n```",
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                142,
+                547,
+                823,
+                818
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "96"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                127,
+                196,
+                140
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {k} \\equiv \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & e ^ {2 \\pi i / 2 ^ {k}} \\end{array} \\right) \\tag {20.10}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/2d42e91b1b5015d2a552e45f99ea697bf386d4f1c33dd2e63ea2360c4cb5a4d7.jpg"
+                }
+            },
+            "bbox": [
+                410,
+                138,
+                855,
+                175
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "For example "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "R _ { 1 } = Z , R _ { 2 } = S , R _ { 3 } = T"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and in general "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "R _ { k } ^ { 2 } = R _ { k - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                182,
+                712,
+                200
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The above circuit implements the QFT on the n-qubit input state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| j \\rangle = | j _ { 1 } \\rangle \\cdots | j _ { n } \\rangle"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                200,
+                853,
+                218
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof: after the first H gate, the input state becomes (prove it):"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                230,
+                709,
+                247
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2 ^ {\\frac {1}{2}}} \\left(| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1}} | 1 \\rangle\\right) \\left| j _ {2} \\right\\rangle \\dots \\left| j _ {n} \\right\\rangle \\tag {20.11}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/b5f56c3a2db54fc42a5a27bcc5377e6e17f98f0a3c0b13d7782b91546a3d2af4.jpg"
+                }
+            },
+            "bbox": [
+                364,
+                260,
+                855,
+                294
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Applying next the controlled- "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "R _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "gate produces the state (prove it):"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                306,
+                724,
+                324
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.12}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/9abac4a02ed747891d3a136fe4950895deba31582b2c5d2fcdffd6b3ff1ba094.jpg"
+                }
+            },
+            "bbox": [
+                357,
+                337,
+                855,
+                371
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "After the application of all controlled-R gates on the first qubit the state has become"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                381,
+                855,
+                397
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.13}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/c16c00202c6536712b99dd7b7e2bca4b50139d2c335f4e0f196d1e2c702bfee6.jpg"
+                }
+            },
+            "bbox": [
+                344,
+                410,
+                855,
+                445
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Applying the same procedure to the second qubit leads to:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                456,
+                650,
+                473
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {3} \\rangle \\dots | j _ {n} \\rangle \\tag {20.14}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/04f863340b987191d89f1f892287583835ae126b12b0fd409ac058aad0248c06.jpg"
+                }
+            },
+            "bbox": [
+                230,
+                485,
+                855,
+                517
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and repeating it on all the other input qubits yields the final state that coincides with the output of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "Q F T | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in (20.7), once we invert the order of the output qubits with CROSSOVER gates."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                527,
+                855,
+                579
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The circuit proves that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "Q F T"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is unitary, since all gates are unitary. The circuit uses "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n + ( n - 1 ) + \\cdot \\cdot \\cdot + 1 = n ( n + 1 ) / 2 = \\Theta ( n ^ { 2 } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "gates. In contrast, the best classical algorithms for the discrete Fourier transform use "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\Theta ( n 2 ^ { n } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "gates, so that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { Q F T }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "has an exponential advantage on its classical counterpart."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                592,
+                855,
+                661
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "97"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                904,
+                509,
+                919
+            ]
+        }
+    ]
+]

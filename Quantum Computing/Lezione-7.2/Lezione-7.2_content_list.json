@@ -1,0 +1,569 @@
+[
+    {
+        "type": "text",
+        "text": "16 Lecture 16: Complexity",
+        "text_level": 2,
+        "bbox": [
+            139,
+            121,
+            549,
+            144
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "16.1 Asymptotic notation",
+        "text_level": 2,
+        "bbox": [
+            139,
+            159,
+            468,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "A notation that captures the essential behaviour of a function for large values of its variable.",
+        "bbox": [
+            137,
+            187,
+            857,
+            220
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1) $f ( n ) = O ( g ( n ) )$ ) if there exists a $n _ { 0 }$ such that for any $n > n _ { 0 } \\ , f ( n ) \\leq c \\ g ( n )$ with $c = { \\mathrm { c o n s t a n t } } .$ .",
+            "2) $f ( n ) = \\Omega ( g ( n ) )$ if there exists a $n _ { 0 }$ such that for any $n > n _ { 0 } \\ , f ( n ) \\geq c \\ g ( n )$ with c = constant.",
+            "3) $f ( n ) = \\Theta ( g ( n ) )$ if f (n) and $g ( n )$ have the same asymptotic behaviour up to a constant factor. If $f ( n ) = O ( g ( n ) ) = \\Omega ( g ( n ) )$ then $f ( n ) = \\Theta ( g ( n ) )$ ."
+        ],
+        "bbox": [
+            137,
+            233,
+            855,
+            366
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Examples:",
+        "text_level": 2,
+        "bbox": [
+            139,
+            378,
+            247,
+            395
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "<sub>•</sub> 2n is $O ( n ^ { 2 } ) , 2 ^ { n } \\ \\mathrm { i s } \\ \\Omega ( n ^ { 3 } )$",
+            "• $7 n ^ { 2 } + { \\sqrt { n } } \\log n$ is $\\Theta ( n ^ { 2 } )$ since $7 n ^ { 2 } \\leq 7 n ^ { 2 } + { \\sqrt { n } } \\log n \\leq 8 n ^ { 2 }$ for n su\u0000ciently large.",
+            "$\\bullet f ( n ) = O ( g ( n ) ) \\Leftrightarrow g ( n ) = \\Omega ( f ( n ) ) , f ( n ) = \\Theta ( g ( n ) ) \\Leftrightarrow g ( n ) = \\Theta ( f ( n ) ) .$",
+            "<sub>•</sub> if $g ( n )$ is a polynomial of order k, $g ( n ) = O ( n ^ { l } )$ for $k \\leq l .$ .",
+            "<sub>•</sub> log $n = O ( n ^ { k } )$ for any $k > 0$ .",
+            "• $n ^ { \\log n }$ is superpolynomial: $n ^ { k } = O ( n ^ { \\log n } )$ for any k, but $n ^ { \\log n } \\neq O ( n ^ { k } )$ .",
+            "• $n ^ { \\log n }$ is subexponential: $c ^ { n } = \\Omega ( n ^ { \\log n } )$ for any $c > 1$ , but $n ^ { \\log n } \\neq \\Omega ( c ^ { n } )$ .",
+            "<sub>•</sub> if $e ( n ) = O ( f ( n ) )$ and $g ( n ) = O { \\bigl ( } h ( n ) { \\bigr ) }$ , then $e ( n ) g ( n ) = O ( f ( n ) h ( n ) )$ ."
+        ],
+        "bbox": [
+            137,
+            408,
+            855,
+            642
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Exercise: : show that ordering n names alphabetically is ⌦(n log n). Since algorithms are known, that are $O ( n \\log n )$ , the ordering problem is $\\Theta ( n \\log n )$ .",
+        "bbox": [
+            137,
+            654,
+            857,
+            688
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "16.2 Computational complexity",
+        "text_level": 2,
+        "bbox": [
+            139,
+            711,
+            537,
+            731
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Easy problems: solution can be found in polynomial time, i.e. with a number of steps that is a polynomial function of the dimension n of the input. For example the addition of two $n { \\mathrm { - } } \\mathrm { b i t }$ integers scales as n.",
+        "bbox": [
+            137,
+            739,
+            858,
+            790
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Hard problems: superpolynomial in n. For example the factorization of an integer N requires a number of steps scaling as exp n, if n is the number of digits of N .",
+        "bbox": [
+            139,
+            804,
+            857,
+            839
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "73",
+        "bbox": [
+            487,
+            906,
+            510,
+            919
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The main complexity classes are:",
+        "bbox": [
+            139,
+            125,
+            430,
+            142
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "P: problems that can be solved in polynomial time (easy problems).",
+        "bbox": [
+            166,
+            156,
+            761,
+            173
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "NP: problems whose solution can be verified in polynomial time.",
+        "bbox": [
+            166,
+            174,
+            736,
+            188
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "NP-complete: any NP problem can be reduced to a NP-complete problem.",
+        "bbox": [
+            166,
+            190,
+            833,
+            207
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Obviously NP includes P. No proof exists, but it is generally believed that NP = P. If a polynomial-time resolution of a NP-complete problem was ever found, any NP problem could be solved in polynomial time, which would imply $\\mathrm { P = N P }$ . The current consensus is that no polynomial time resolution of a NP-complete problem exists.",
+        "bbox": [
+            137,
+            220,
+            855,
+            306
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "For example integer factorization is NP, since the solution can be checked (by multiplication) in polynomial time. However no polynomial time factorization algorithm is known within classical computation. The situation changes with quantum computation: the Shor algorithm, based on the quantum Fourier transform (see Lecture 23), factorizes in polynomial time. Unfortunatley the factorizing problem is not NP-complete, so that we cannot conclude $\\mathrm { P = N P }$ within quantum computation.",
+        "bbox": [
+            137,
+            320,
+            855,
+            423
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "16.3 Examples",
+        "text_level": 2,
+        "bbox": [
+            139,
+            445,
+            334,
+            465
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "<sub>•</sub> A graph is a finite collection of vertices $\\{ v _ { 1 } , . . . v _ { n } \\}$ , connected by links $( v _ { i } , v _ { j } )$ . The graph is non-directional if the order of the vertices in the links is irrelevant. A cycle is a sequence of vertices $\\{ v _ { 1 } , . . . v _ { m } \\}$ such that every pair $( v _ { j } , v _ { j + 1 } )$ is a link and $( v _ { m } , v _ { 1 } )$ is a link. In words, a cycle is a closed path in the graph.",
+        "bbox": [
+            137,
+            473,
+            855,
+            542
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "A cycle is simple if all its vertices appear only once.",
+        "bbox": [
+            168,
+            543,
+            620,
+            558
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "A cycle is Hamiltonian if it is simple and includes all the vertices of the graph.",
+        "bbox": [
+            168,
+            559,
+            850,
+            576
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "A cycle is Eulerian if every link of the graph is “visited” only once.",
+        "bbox": [
+            168,
+            577,
+            752,
+            593
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Given a graph, no polynomial algorithm is known to decide whether it admits a Hamiltonian cycle. Moreover the Hamiltonian cycle (HC) problem can be shown to be NP-complete.",
+        "bbox": [
+            137,
+            606,
+            855,
+            657
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Perhaps surprisingly, the Eulerian cycle (EC) problem is in class P. In fact, a graph admits an Eulerian cycle if it is connected and only an even number of lines originate from every vertex of the graph, a result due to Euler. Checking that it is connected requires $O ( n ^ { 2 } )$ operations, and checking the number of incident lines for every vertex requires $O ( n ^ { 3 } )$ operations (there are at most $n ( n - 1 ) / 2$ lines in the graph with n vertices). Thus EC is in class P.",
+        "bbox": [
+            137,
+            672,
+            855,
+            776
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "74",
+        "bbox": [
+            487,
+            904,
+            510,
+            919
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/527949056600e09cc3985c47b13c2e5ca8cad5d95776bfdbdeb25a58999fe3a1.jpg",
+        "image_caption": [
+            "Fig. 16.1 Without the dashed line, this graph has no Hamiltonian cycle, but has a Eulerian cycle. With the dashed line, there is a Hamiltonian cycle, but no Eulerian cycle."
+        ],
+        "image_footnote": [],
+        "content": "```mermaid\ngraph LR\n  1[\"1\"] --> 2[\"2\"]\n  2 -.-> 5[\"5\"]\n  3[\"3\"] --> 4[\"4\"]\n  n4[\"4\"] --> n5[\"5\"]\n```",
+        "sub_type": "flowchart",
+        "bbox": [
+            233,
+            135,
+            497,
+            287
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Both HC and EC are examples of decisional problems: an algorithm solving the problem anwers yes or no to the question of existence of particular cycles.",
+        "bbox": [
+            137,
+            353,
+            855,
+            387
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "<sub>•</sub> The Traveling Salesman Problem (TSP) is another NP-complete decisional problem, and is formulated as follows:",
+        "bbox": [
+            137,
+            401,
+            853,
+            434
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "“Given n towns and a distance $d _ { i j }$ between town i and town $j ,$ is there a closed path including all towns with total length $< d : \\mathbf { \\Omega } ^ { \\prime }$",
+        "bbox": [
+            137,
+            435,
+            855,
+            469
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "We now prove that HC reduces to TSP. It su\u0000ces to apply TSP with the following specifications: if the graph has n vertices, each vertex is considered a town, and the distance $d _ { i j }$ beween towns is assigned to be 1 if the corresponding vertices in the graph are connected by a link, and 2 otherwise. Then with TSP we can answer the question: does a closed path connecting all towns exist, with length $< n + 1 \\ ?$ . An algorithm solving TSP will provide the answer: if positive, it implies that such a path exists, and its length is n (it must be $< n + 1$ and, since the closed path connects n towns, it must be at least n). Then a Hamiltonian cycle exists in the graph, including all its vertices only once.",
+        "bbox": [
+            137,
+            483,
+            855,
+            637
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Thus, given an algorithm that solves TSP, it can be converted to an algorithm that solves HC. Since HC is NP-complete, this implies that also TSP is NP-complete: if every NP problem reduces to HC, it also reduces to TSP.",
+        "bbox": [
+            137,
+            638,
+            855,
+            688
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "<sub>•</sub> CSAT (circuit satisfybility) is the decisional problem: “Given a boolean circuit composed by AND, OR, NOT gates, does an input assignment exist that gives as output the bit $1 ? \\ : \\ \"$ . This problem can be shown (Cook-Levin proof) to be NPcomplete, by use of the Turing machine paradigm, see for ex. Chuang and Nielsen, p.146. Thus if a problem is NP, and CSAT reduces to it, the problem is also NPcomplete. In this way many other problems have been shown to be NP-complete.",
+            "SUBSET SUM is another NP-complete problem, well suited to be attacked also by quantum computing protocols. It consists in finding whether a subset exists, in a list of integers $( n _ { 1 } , . . . n _ { N } )$ , having as sum a given integer S."
+        ],
+        "bbox": [
+            137,
+            701,
+            855,
+            871
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "75",
+        "bbox": [
+            487,
+            906,
+            509,
+            919
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Note: no quantum protocol is known to solve in polynomial time NP-complete problems. It is widely believed that $\\mathrm { P \\neq N P }$ also within quantum computation.",
+        "bbox": [
+            137,
+            125,
+            857,
+            161
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "16.4 Energy and information",
+        "text_level": 2,
+        "bbox": [
+            139,
+            182,
+            505,
+            201
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Energy requirements for computation are related to reversibility. In irreversible gates, as for example the classical NAND gate, there is loss of information. To cancel information, energy is required, as stated in Landauer’s principle (1961):",
+        "bbox": [
+            137,
+            210,
+            858,
+            263
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "To cancel 1 bit, an energy of at least kT log 2 is required.",
+        "bbox": [
+            139,
+            275,
+            636,
+            293
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "This principle can be justified by considering the encoding of 1 bit by using a gas in a box. The gas is very peculiar, consisting of only one molecule. The box is divided into two parts, with a mobile partition. As such, the box contains 1 bit of information, which has value 0 if the molecule is on left of the partition, and value 1 if on the right of the partition. Suppose we want to cancel this information: we remove the partition and compress the gas to the left with a piston, which slides halfway into the box. Now the molecule will be located with certainty in the left part of the box, and carries no information. A bit has been cancelled. But work was necessary to compress the gas. This work can be computed by considering the entropy of the system before and after compression. In the initial state, the box had entropy S = k log(number of microstates) = k log 2, since there are two possible microstates (molecule on the left, molecule on the right). After the compression, only 1 microstate survives, and the box has entropy = 0. Thus the box entropy has decreased by $\\Delta S = k \\log 2$ , which corresponds to a work $W = T \\Delta S = k T \\log 2$ .",
+        "bbox": [
+            142,
+            306,
+            858,
+            547
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "16.5 Reversible classical computation: the TOFFOLI gate",
+        "text_level": 2,
+        "bbox": [
+            139,
+            568,
+            853,
+            589
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "The gates for a classical universal set, NAND and FANOUT , are non reversible. Information is lost: from the output we cannot reconstruct the input. Nevertheless, it is possible to simulate NAND and FANOUT with reversible gates. For example the To↵oli gate, a 3-bit to 3-bit gate, can be used as in Fig. 16.2 to act as NAND or FANOUT. Thus To↵oli by itself can be considered a universal set.",
+        "bbox": [
+            137,
+            596,
+            858,
+            682
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/2c91320b8be4596352c320270d33a2944ff56a3eec8e33db600acc8c256efcc3.jpg",
+        "image_caption": [
+            "TOFFOLI"
+        ],
+        "image_footnote": [],
+        "content": "a —●——— a\nb —●——— b\nc —⊕——— c ⊕ ab",
+        "sub_type": "text_image",
+        "bbox": [
+            176,
+            701,
+            364,
+            760
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/c1d2221596b6941a12502b4c7a54111db662b0c5f9e8f5cc8b85bebbed54dae0.jpg",
+        "image_caption": [
+            "NAND"
+        ],
+        "image_footnote": [],
+        "content": "a ——●—— a\nb ——●—— b\n1 —— ⊕ —— 1 ⊕ ab",
+        "sub_type": "text_image",
+        "bbox": [
+            401,
+            701,
+            589,
+            758
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "image",
+        "img_path": "images/cf3aa82344ef92d86e34c29e304c5b65b5b25d801d183388e77df4ab700c737f.jpg",
+        "image_caption": [
+            "FANOUT",
+            "Fig. 16.2 The TOFFOLI gate, and its use to simulate NAND and FANOUT"
+        ],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            631,
+            701,
+            776,
+            758
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "This shows that classical computation can be made reversible, but at the cost of introducing service bits in input (“ancilla bits”) , and producing extra bits in output (“garbage bits”). These extra bits must be cancelled at some stage, to reduce cluttering of the memory, and will require energy for their cancellation.",
+        "bbox": [
+            137,
+            828,
+            858,
+            863
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "page_number",
+        "text": "76",
+        "bbox": [
+            487,
+            906,
+            510,
+            919
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "",
+        "bbox": [
+            139,
+            125,
+            855,
+            160
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "page_number",
+        "text": "77",
+        "bbox": [
+            487,
+            906,
+            510,
+            919
+        ],
+        "page_idx": 4
+    }
+]

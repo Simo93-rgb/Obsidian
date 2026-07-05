@@ -1,0 +1,3108 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        83,
+                        102,
+                        391,
+                        122
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                101,
+                                392,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        101,
+                                        392,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "17 Lecture 17: Quantum circuits I",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        83,
+                        134,
+                        266,
+                        152
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                133,
+                                267,
+                                153
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        133,
+                                        267,
+                                        153
+                                    ],
+                                    "type": "text",
+                                    "content": "17.1 Rotation operators",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        83,
+                        158,
+                        231,
+                        173
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                157,
+                                231,
+                                173
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        157,
+                                        231,
+                                        173
+                                    ],
+                                    "type": "text",
+                                    "content": "We introduce the operators:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        136,
+                        182,
+                        509,
+                        214
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                182,
+                                509,
+                                214
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        182,
+                                        509,
+                                        214
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} X) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} X = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - i \\sin \\frac {\\theta}{2} \\\\ - i \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) (1 7. 1)",
+                                    "image_path": "d8b6af56e21c5fde0e55ee92f0855532bed6cb1a9ffa8773863b5b9a2ec767cc.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        136,
+                        216,
+                        508,
+                        247
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                216,
+                                508,
+                                247
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        216,
+                                        508,
+                                        247
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {y} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Y) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Y = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - \\sin \\frac {\\theta}{2} \\\\ \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) \\tag {17.2}",
+                                    "image_path": "bb2fe70f58aeccb4b11a2912b7f01a774a15f04476da0370c65a72c65c03cae9.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        136,
+                        249,
+                        508,
+                        282
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                249,
+                                508,
+                                282
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        249,
+                                        508,
+                                        282
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {z} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Z) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Z = \\left( \\begin{array}{c c} \\exp (- i \\frac {\\theta}{2}) & 0 \\\\ 0 & \\exp (i \\frac {\\theta}{2}) \\end{array} \\right) (1 7. 3)",
+                                    "image_path": "ec17c6f7b614f23559f3be005348efa4e7a469c77872e6f15dd445fc85212ff3.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        82,
+                        290,
+                        509,
+                        376
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                290,
+                                510,
+                                305
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        290,
+                                        510,
+                                        305
+                                    ],
+                                    "type": "text",
+                                    "content": "where the exponential is defined by its Taylor series expansion. Note that even",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                304,
+                                510,
+                                319
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        304,
+                                        139,
+                                        319
+                                    ],
+                                    "type": "text",
+                                    "content": "powers of",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        139,
+                                        304,
+                                        179,
+                                        318
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "X , Y , Z",
+                                    "score": 0.776
+                                },
+                                {
+                                    "bbox": [
+                                        179,
+                                        304,
+                                        510,
+                                        319
+                                    ],
+                                    "type": "text",
+                                    "content": "give the identity, while odd powers reproduce the same Pauli",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                318,
+                                510,
+                                334
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        318,
+                                        201,
+                                        334
+                                    ],
+                                    "type": "text",
+                                    "content": "matrices. For example",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        201,
+                                        318,
+                                        274,
+                                        332
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "X ^ { 5 } = X ^ { 3 } = X",
+                                    "score": 0.9229
+                                },
+                                {
+                                    "bbox": [
+                                        275,
+                                        318,
+                                        510,
+                                        334
+                                    ],
+                                    "type": "text",
+                                    "content": ". The rotation operators are unitary operators",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                334,
+                                510,
+                                348
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        334,
+                                        510,
+                                        348
+                                    ],
+                                    "type": "text",
+                                    "content": "acting on 1-qubit states. They are called rotation operators because they rotate",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                348,
+                                509,
+                                362
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        348,
+                                        311,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": "the qubits on the Bloch sphere, by an angle",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        311,
+                                        348,
+                                        321,
+                                        362
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta ,",
+                                    "score": 0.5638
+                                },
+                                {
+                                    "bbox": [
+                                        321,
+                                        348,
+                                        448,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": ", respectively around the",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        448,
+                                        350,
+                                        506,
+                                        362
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "x , y , z { \\mathrm { ~ a x e s } }",
+                                    "score": 0.5811
+                                },
+                                {
+                                    "bbox": [
+                                        506,
+                                        348,
+                                        509,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                361,
+                                151,
+                                378
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        361,
+                                        151,
+                                        378
+                                    ],
+                                    "type": "text",
+                                    "content": "For example",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        213,
+                        377,
+                        508,
+                        392
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                213,
+                                377,
+                                508,
+                                392
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        213,
+                                        377,
+                                        508,
+                                        392
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) | \\vec {r} \\rangle = | \\vec {r} ^ {\\prime} \\rangle , \\quad \\vec {r} ^ {\\prime} = \\mathcal {R} _ {x} (\\theta) \\vec {r} \\tag {17.4}",
+                                    "image_path": "a0afe2b91cb07da9abe6f392b952eccd7966511e58400134accc8903685407d3.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        82,
+                        397,
+                        509,
+                        499
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                397,
+                                510,
+                                412
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        397,
+                                        117,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "where",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        117,
+                                        398,
+                                        148,
+                                        412
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\mathcal { R } _ { x } ( \\theta )",
+                                    "score": 0.903
+                                },
+                                {
+                                    "bbox": [
+                                        148,
+                                        397,
+                                        348,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "acts on the 3-dimensional Bloch vector",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        349,
+                                        399,
+                                        358,
+                                        410
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\vec { r }",
+                                    "score": 0.5985
+                                },
+                                {
+                                    "bbox": [
+                                        358,
+                                        397,
+                                        510,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "by rotating it around the axis",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                412,
+                                510,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        412,
+                                        160,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "x by an angle",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        160,
+                                        412,
+                                        170,
+                                        425
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta",
+                                    "score": 0.4739
+                                },
+                                {
+                                    "bbox": [
+                                        170,
+                                        412,
+                                        510,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "(counterclockwise). Thus we have a 1-1 correspondence between",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                426,
+                                510,
+                                441
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        426,
+                                        137,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "operators",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        138,
+                                        426,
+                                        150,
+                                        440
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "R",
+                                    "score": 0.5119
+                                },
+                                {
+                                    "bbox": [
+                                        150,
+                                        426,
+                                        427,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "on the qubit Hilbert space and geometric rotations",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        427,
+                                        426,
+                                        440,
+                                        440
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\mathcal { R }",
+                                    "score": 0.4906
+                                },
+                                {
+                                    "bbox": [
+                                        441,
+                                        426,
+                                        510,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "in the usual",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                441,
+                                509,
+                                456
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        441,
+                                        509,
+                                        456
+                                    ],
+                                    "type": "text",
+                                    "content": "3-dimensional euclidean space. We now justify eq. (17.4). Consider the qubit <sub>|</sub>0<sub>i</sub>,",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                457,
+                                509,
+                                469
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        457,
+                                        509,
+                                        469
+                                    ],
+                                    "type": "text",
+                                    "content": "corresponding to the North pole on the Bloch sphere. Its components in the 2-",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                469,
+                                510,
+                                486
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        469,
+                                        510,
+                                        486
+                                    ],
+                                    "type": "text",
+                                    "content": "dimensional vector space of qubit physical states are given by (1, 0). If we act on",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                484,
+                                357,
+                                500
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        484,
+                                        282,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "this vector with the rotation operator",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        282,
+                                        484,
+                                        311,
+                                        499
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "R _ { x } ( \\theta )",
+                                    "score": 0.8837
+                                },
+                                {
+                                    "bbox": [
+                                        311,
+                                        484,
+                                        357,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "we find:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        152,
+                        509,
+                        509,
+                        543
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                152,
+                                509,
+                                509,
+                                543
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        152,
+                                        509,
+                                        509,
+                                        543
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) | 0 \\rangle = \\left( \\begin{array}{c c} \\cos {\\frac {\\theta}{2}} & - i \\sin {\\frac {\\theta}{2}} \\\\ - i \\sin {\\frac {\\theta}{2}} & \\cos {\\frac {\\theta}{2}} \\end{array} \\right) \\binom{1}{0} = \\binom{\\cos {\\frac {\\theta}{2}}}{- i \\sin {\\frac {\\theta}{2}}} \\tag {17.5}",
+                                    "image_path": "942b2313c86ac1543ebadee6d9f20b86e507f152203ee0d5ae547544f06bbf67.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        82,
+                        550,
+                        510,
+                        608
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                551,
+                                510,
+                                565
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        551,
+                                        510,
+                                        565
+                                    ],
+                                    "type": "text",
+                                    "content": "The resulting vector corresponds to a rotation of the North pole by an angle ✓",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                565,
+                                510,
+                                580
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        565,
+                                        510,
+                                        580
+                                    ],
+                                    "type": "text",
+                                    "content": "around the x-axis (counterclockwise). Indeed the rotated point on the Bloch sphere",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                579,
+                                511,
+                                596
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        579,
+                                        208,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": "corresponds to latitude",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        208,
+                                        579,
+                                        218,
+                                        592
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta",
+                                    "score": 0.4661
+                                },
+                                {
+                                    "bbox": [
+                                        218,
+                                        579,
+                                        294,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": "and longitude",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        295,
+                                        580,
+                                        330,
+                                        595
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\phi = \\textstyle { \\frac { \\pi } { 2 } }",
+                                    "score": 0.8981
+                                },
+                                {
+                                    "bbox": [
+                                        330,
+                                        579,
+                                        511,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": ", and therefore corresponds to the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                595,
+                                189,
+                                609
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        595,
+                                        189,
+                                        609
+                                    ],
+                                    "type": "text",
+                                    "content": "qubit physical state",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        113,
+                        618,
+                        508,
+                        650
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                113,
+                                618,
+                                508,
+                                650
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        113,
+                                        618,
+                                        508,
+                                        650
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "| \\psi \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle + e ^ {i \\phi} \\sin \\frac {\\theta}{2} | 1 \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle - i \\sin \\frac {\\theta}{2} | 1 \\rangle = \\binom{\\cos \\frac {\\theta}{2}}{- i \\sin \\frac {\\theta}{2}} \\tag {17.6}",
+                                    "image_path": "3178243500fb9039e27f335927d3189cafe2acca5da3da51a45b8f5373b7de3d.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "bbox": [
+                        83,
+                        660,
+                        282,
+                        675
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 12,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                658,
+                                282,
+                                677
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        658,
+                                        282,
+                                        677
+                                    ],
+                                    "type": "text",
+                                    "content": "which indeed coincides with (17.5).",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        693,
+                        352,
+                        710
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 13,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                691,
+                                352,
+                                712
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        691,
+                                        352,
+                                        712
+                                    ],
+                                    "type": "text",
+                                    "content": "17.2 Universal set of quantum gates",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        717,
+                        509,
+                        746
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 14,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                716,
+                                509,
+                                732
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        716,
+                                        268,
+                                        732
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem 1: any unitary operation",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        268,
+                                        718,
+                                        280,
+                                        730
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "U",
+                                    "score": 0.4691
+                                },
+                                {
+                                    "bbox": [
+                                        280,
+                                        716,
+                                        509,
+                                        732
+                                    ],
+                                    "type": "text",
+                                    "content": "on n qubits can be realized using only CNOT",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                732,
+                                203,
+                                747
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        732,
+                                        203,
+                                        747
+                                    ],
+                                    "type": "text",
+                                    "content": "and single qubit gates.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        290,
+                        763,
+                        303,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 15,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                305,
+                                778
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        305,
+                                        778
+                                    ],
+                                    "type": "text",
+                                    "content": "78",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        83,
+                        102,
+                        391,
+                        122
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                101,
+                                392,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        101,
+                                        392,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "17 Lecture 17: Quantum circuits I",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        83,
+                        134,
+                        266,
+                        152
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                133,
+                                267,
+                                153
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        133,
+                                        267,
+                                        153
+                                    ],
+                                    "type": "text",
+                                    "content": "17.1 Rotation operators",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        83,
+                        158,
+                        231,
+                        173
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                157,
+                                231,
+                                173
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        157,
+                                        231,
+                                        173
+                                    ],
+                                    "type": "text",
+                                    "content": "We introduce the operators:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        136,
+                        182,
+                        509,
+                        214
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                182,
+                                509,
+                                214
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        182,
+                                        509,
+                                        214
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} X) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} X = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - i \\sin \\frac {\\theta}{2} \\\\ - i \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) (1 7. 1)",
+                                    "image_path": "d8b6af56e21c5fde0e55ee92f0855532bed6cb1a9ffa8773863b5b9a2ec767cc.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 3
+                },
+                {
+                    "bbox": [
+                        136,
+                        216,
+                        508,
+                        247
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                216,
+                                508,
+                                247
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        216,
+                                        508,
+                                        247
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {y} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Y) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Y = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - \\sin \\frac {\\theta}{2} \\\\ \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) \\tag {17.2}",
+                                    "image_path": "bb2fe70f58aeccb4b11a2912b7f01a774a15f04476da0370c65a72c65c03cae9.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4
+                },
+                {
+                    "bbox": [
+                        136,
+                        249,
+                        508,
+                        282
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                136,
+                                249,
+                                508,
+                                282
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        136,
+                                        249,
+                                        508,
+                                        282
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {z} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Z) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Z = \\left( \\begin{array}{c c} \\exp (- i \\frac {\\theta}{2}) & 0 \\\\ 0 & \\exp (i \\frac {\\theta}{2}) \\end{array} \\right) (1 7. 3)",
+                                    "image_path": "ec17c6f7b614f23559f3be005348efa4e7a469c77872e6f15dd445fc85212ff3.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        82,
+                        290,
+                        509,
+                        376
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                290,
+                                510,
+                                305
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        290,
+                                        510,
+                                        305
+                                    ],
+                                    "type": "text",
+                                    "content": "where the exponential is defined by its Taylor series expansion. Note that even",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                304,
+                                510,
+                                319
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        304,
+                                        139,
+                                        319
+                                    ],
+                                    "type": "text",
+                                    "content": "powers of",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        139,
+                                        304,
+                                        179,
+                                        318
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "X , Y , Z",
+                                    "score": 0.776
+                                },
+                                {
+                                    "bbox": [
+                                        179,
+                                        304,
+                                        510,
+                                        319
+                                    ],
+                                    "type": "text",
+                                    "content": "give the identity, while odd powers reproduce the same Pauli",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                318,
+                                510,
+                                334
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        318,
+                                        201,
+                                        334
+                                    ],
+                                    "type": "text",
+                                    "content": "matrices. For example",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        201,
+                                        318,
+                                        274,
+                                        332
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "X ^ { 5 } = X ^ { 3 } = X",
+                                    "score": 0.9229
+                                },
+                                {
+                                    "bbox": [
+                                        275,
+                                        318,
+                                        510,
+                                        334
+                                    ],
+                                    "type": "text",
+                                    "content": ". The rotation operators are unitary operators",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                334,
+                                510,
+                                348
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        334,
+                                        510,
+                                        348
+                                    ],
+                                    "type": "text",
+                                    "content": "acting on 1-qubit states. They are called rotation operators because they rotate",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                348,
+                                509,
+                                362
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        348,
+                                        311,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": "the qubits on the Bloch sphere, by an angle",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        311,
+                                        348,
+                                        321,
+                                        362
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta ,",
+                                    "score": 0.5638
+                                },
+                                {
+                                    "bbox": [
+                                        321,
+                                        348,
+                                        448,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": ", respectively around the",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        448,
+                                        350,
+                                        506,
+                                        362
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "x , y , z { \\mathrm { ~ a x e s } }",
+                                    "score": 0.5811
+                                },
+                                {
+                                    "bbox": [
+                                        506,
+                                        348,
+                                        509,
+                                        362
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                361,
+                                151,
+                                378
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        361,
+                                        151,
+                                        378
+                                    ],
+                                    "type": "text",
+                                    "content": "For example",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        213,
+                        377,
+                        508,
+                        392
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                213,
+                                377,
+                                508,
+                                392
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        213,
+                                        377,
+                                        508,
+                                        392
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) | \\vec {r} \\rangle = | \\vec {r} ^ {\\prime} \\rangle , \\quad \\vec {r} ^ {\\prime} = \\mathcal {R} _ {x} (\\theta) \\vec {r} \\tag {17.4}",
+                                    "image_path": "a0afe2b91cb07da9abe6f392b952eccd7966511e58400134accc8903685407d3.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 7
+                },
+                {
+                    "bbox": [
+                        82,
+                        397,
+                        509,
+                        499
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                397,
+                                510,
+                                412
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        397,
+                                        117,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "where",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        117,
+                                        398,
+                                        148,
+                                        412
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\mathcal { R } _ { x } ( \\theta )",
+                                    "score": 0.903
+                                },
+                                {
+                                    "bbox": [
+                                        148,
+                                        397,
+                                        348,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "acts on the 3-dimensional Bloch vector",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        349,
+                                        399,
+                                        358,
+                                        410
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\vec { r }",
+                                    "score": 0.5985
+                                },
+                                {
+                                    "bbox": [
+                                        358,
+                                        397,
+                                        510,
+                                        412
+                                    ],
+                                    "type": "text",
+                                    "content": "by rotating it around the axis",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                412,
+                                510,
+                                426
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        412,
+                                        160,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "x by an angle",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        160,
+                                        412,
+                                        170,
+                                        425
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta",
+                                    "score": 0.4739
+                                },
+                                {
+                                    "bbox": [
+                                        170,
+                                        412,
+                                        510,
+                                        426
+                                    ],
+                                    "type": "text",
+                                    "content": "(counterclockwise). Thus we have a 1-1 correspondence between",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                426,
+                                510,
+                                441
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        426,
+                                        137,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "operators",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        138,
+                                        426,
+                                        150,
+                                        440
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "R",
+                                    "score": 0.5119
+                                },
+                                {
+                                    "bbox": [
+                                        150,
+                                        426,
+                                        427,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "on the qubit Hilbert space and geometric rotations",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        427,
+                                        426,
+                                        440,
+                                        440
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\mathcal { R }",
+                                    "score": 0.4906
+                                },
+                                {
+                                    "bbox": [
+                                        441,
+                                        426,
+                                        510,
+                                        441
+                                    ],
+                                    "type": "text",
+                                    "content": "in the usual",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                441,
+                                509,
+                                456
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        441,
+                                        509,
+                                        456
+                                    ],
+                                    "type": "text",
+                                    "content": "3-dimensional euclidean space. We now justify eq. (17.4). Consider the qubit <sub>|</sub>0<sub>i</sub>,",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                457,
+                                509,
+                                469
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        457,
+                                        509,
+                                        469
+                                    ],
+                                    "type": "text",
+                                    "content": "corresponding to the North pole on the Bloch sphere. Its components in the 2-",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                469,
+                                510,
+                                486
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        469,
+                                        510,
+                                        486
+                                    ],
+                                    "type": "text",
+                                    "content": "dimensional vector space of qubit physical states are given by (1, 0). If we act on",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                484,
+                                357,
+                                500
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        484,
+                                        282,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "this vector with the rotation operator",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        282,
+                                        484,
+                                        311,
+                                        499
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "R _ { x } ( \\theta )",
+                                    "score": 0.8837
+                                },
+                                {
+                                    "bbox": [
+                                        311,
+                                        484,
+                                        357,
+                                        500
+                                    ],
+                                    "type": "text",
+                                    "content": "we find:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        152,
+                        509,
+                        509,
+                        543
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                152,
+                                509,
+                                509,
+                                543
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        152,
+                                        509,
+                                        509,
+                                        543
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "R _ {x} (\\theta) | 0 \\rangle = \\left( \\begin{array}{c c} \\cos {\\frac {\\theta}{2}} & - i \\sin {\\frac {\\theta}{2}} \\\\ - i \\sin {\\frac {\\theta}{2}} & \\cos {\\frac {\\theta}{2}} \\end{array} \\right) \\binom{1}{0} = \\binom{\\cos {\\frac {\\theta}{2}}}{- i \\sin {\\frac {\\theta}{2}}} \\tag {17.5}",
+                                    "image_path": "942b2313c86ac1543ebadee6d9f20b86e507f152203ee0d5ae547544f06bbf67.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 9
+                },
+                {
+                    "bbox": [
+                        82,
+                        550,
+                        510,
+                        608
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                551,
+                                510,
+                                565
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        551,
+                                        510,
+                                        565
+                                    ],
+                                    "type": "text",
+                                    "content": "The resulting vector corresponds to a rotation of the North pole by an angle ✓",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                565,
+                                510,
+                                580
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        565,
+                                        510,
+                                        580
+                                    ],
+                                    "type": "text",
+                                    "content": "around the x-axis (counterclockwise). Indeed the rotated point on the Bloch sphere",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                579,
+                                511,
+                                596
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        579,
+                                        208,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": "corresponds to latitude",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        208,
+                                        579,
+                                        218,
+                                        592
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\theta",
+                                    "score": 0.4661
+                                },
+                                {
+                                    "bbox": [
+                                        218,
+                                        579,
+                                        294,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": "and longitude",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        295,
+                                        580,
+                                        330,
+                                        595
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\phi = \\textstyle { \\frac { \\pi } { 2 } }",
+                                    "score": 0.8981
+                                },
+                                {
+                                    "bbox": [
+                                        330,
+                                        579,
+                                        511,
+                                        596
+                                    ],
+                                    "type": "text",
+                                    "content": ", and therefore corresponds to the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                595,
+                                189,
+                                609
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        595,
+                                        189,
+                                        609
+                                    ],
+                                    "type": "text",
+                                    "content": "qubit physical state",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        113,
+                        618,
+                        508,
+                        650
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                113,
+                                618,
+                                508,
+                                650
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        113,
+                                        618,
+                                        508,
+                                        650
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "| \\psi \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle + e ^ {i \\phi} \\sin \\frac {\\theta}{2} | 1 \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle - i \\sin \\frac {\\theta}{2} | 1 \\rangle = \\binom{\\cos \\frac {\\theta}{2}}{- i \\sin \\frac {\\theta}{2}} \\tag {17.6}",
+                                    "image_path": "3178243500fb9039e27f335927d3189cafe2acca5da3da51a45b8f5373b7de3d.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 11
+                },
+                {
+                    "bbox": [
+                        83,
+                        660,
+                        282,
+                        675
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 12,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                658,
+                                282,
+                                677
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        658,
+                                        282,
+                                        677
+                                    ],
+                                    "type": "text",
+                                    "content": "which indeed coincides with (17.5).",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        693,
+                        352,
+                        710
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 13,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                691,
+                                352,
+                                712
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        691,
+                                        352,
+                                        712
+                                    ],
+                                    "type": "text",
+                                    "content": "17.2 Universal set of quantum gates",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        717,
+                        509,
+                        746
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 14,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                716,
+                                509,
+                                732
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        716,
+                                        268,
+                                        732
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem 1: any unitary operation",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        268,
+                                        718,
+                                        280,
+                                        730
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "U",
+                                    "score": 0.4691
+                                },
+                                {
+                                    "bbox": [
+                                        280,
+                                        716,
+                                        509,
+                                        732
+                                    ],
+                                    "type": "text",
+                                    "content": "on n qubits can be realized using only CNOT",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                732,
+                                203,
+                                747
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        732,
+                                        203,
+                                        747
+                                    ],
+                                    "type": "text",
+                                    "content": "and single qubit gates.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        82,
+                        106,
+                        519,
+                        137
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                106,
+                                518,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        106,
+                                        518,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem 2: any single qubit gate can be approximated by products of the Hadamard",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                167,
+                                120,
+                                215,
+                                137
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        167,
+                                        121,
+                                        177,
+                                        137
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\frac { \\pi } { 8 }",
+                                    "score": 0.8185
+                                },
+                                {
+                                    "bbox": [
+                                        204,
+                                        120,
+                                        215,
+                                        133
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.7351
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        146,
+                        427,
+                        161
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                145,
+                                427,
+                                162
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        145,
+                                        173,
+                                        162
+                                    ],
+                                    "type": "text",
+                                    "content": "Thus CNOT, H,",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        173,
+                                        147,
+                                        185,
+                                        159
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.5686
+                                },
+                                {
+                                    "bbox": [
+                                        185,
+                                        145,
+                                        427,
+                                        162
+                                    ],
+                                    "type": "text",
+                                    "content": "are an universal set for quantum computation.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        172,
+                        510,
+                        216
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                172,
+                                509,
+                                187
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        172,
+                                        509,
+                                        187
+                                    ],
+                                    "type": "text",
+                                    "content": "The proof of these two Theorems can be found in the Lecture Notes on Quantum",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                186,
+                                510,
+                                202
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        186,
+                                        510,
+                                        202
+                                    ],
+                                    "type": "text",
+                                    "content": "Computation, or in the standard references on quantum computation. Here we just",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                202,
+                                450,
+                                216
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        202,
+                                        450,
+                                        216
+                                    ],
+                                    "type": "text",
+                                    "content": "give an example, the To↵oli gate in terms of CNOT and 1-qubit gates:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        101,
+                        219,
+                        503,
+                        314
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                101,
+                                219,
+                                503,
+                                314
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        219,
+                                        503,
+                                        314
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                101,
+                                                219,
+                                                503,
+                                                314
+                                            ],
+                                            "type": "image",
+                                            "content": "= T\nH ⊕ T† ⊕ T ⊕ T† ⊕ T H\nT† ⊕ T† ⊕ S",
+                                            "image_path": "897d799ad498b423ae0c12e18b0acc0c2447dd712e23a03364f7c99de01c41c2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3,
+                    "sub_type": "text_image"
+                },
+                {
+                    "bbox": [
+                        83,
+                        329,
+                        473,
+                        345
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                328,
+                                474,
+                                346
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        328,
+                                        195,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "Note: the phase gate",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        196,
+                                        330,
+                                        206,
+                                        342
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "S",
+                                    "score": 0.6578
+                                },
+                                {
+                                    "bbox": [
+                                        207,
+                                        328,
+                                        249,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "and the",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        250,
+                                        330,
+                                        260,
+                                        346
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\frac { \\pi } { 8 }",
+                                    "score": 0.8044
+                                },
+                                {
+                                    "bbox": [
+                                        260,
+                                        328,
+                                        286,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "gate",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        286,
+                                        330,
+                                        298,
+                                        342
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.6638
+                                },
+                                {
+                                    "bbox": [
+                                        298,
+                                        328,
+                                        474,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "are given by the unitary matrices",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        172,
+                        354,
+                        509,
+                        389
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                172,
+                                354,
+                                509,
+                                389
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        172,
+                                        354,
+                                        509,
+                                        389
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "S = \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & i \\end{array} \\right), \\quad T = \\left( \\begin{array}{c c} e ^ {- i \\frac {\\pi}{8}} & 0 \\\\ 0 & e ^ {+ i \\frac {\\pi}{8}} \\end{array} \\right) = e ^ {- i \\frac {\\pi}{8} Z} \\tag {17.7}",
+                                    "image_path": "40e7333a46ffafafcdd37eaf04d972b2b6461ac457460a524243dc1e27df22f4.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        290,
+                        762,
+                        303,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                305,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        305,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "79",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        82,
+                        106,
+                        519,
+                        137
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                106,
+                                518,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        106,
+                                        518,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem 2: any single qubit gate can be approximated by products of the Hadamard",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                167,
+                                120,
+                                215,
+                                137
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        167,
+                                        121,
+                                        177,
+                                        137
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\frac { \\pi } { 8 }",
+                                    "score": 0.8185
+                                },
+                                {
+                                    "bbox": [
+                                        204,
+                                        120,
+                                        215,
+                                        133
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.7351
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        146,
+                        427,
+                        161
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                145,
+                                427,
+                                162
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        145,
+                                        173,
+                                        162
+                                    ],
+                                    "type": "text",
+                                    "content": "Thus CNOT, H,",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        173,
+                                        147,
+                                        185,
+                                        159
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.5686
+                                },
+                                {
+                                    "bbox": [
+                                        185,
+                                        145,
+                                        427,
+                                        162
+                                    ],
+                                    "type": "text",
+                                    "content": "are an universal set for quantum computation.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        172,
+                        510,
+                        216
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                172,
+                                509,
+                                187
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        172,
+                                        509,
+                                        187
+                                    ],
+                                    "type": "text",
+                                    "content": "The proof of these two Theorems can be found in the Lecture Notes on Quantum",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                186,
+                                510,
+                                202
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        186,
+                                        510,
+                                        202
+                                    ],
+                                    "type": "text",
+                                    "content": "Computation, or in the standard references on quantum computation. Here we just",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                202,
+                                450,
+                                216
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        202,
+                                        450,
+                                        216
+                                    ],
+                                    "type": "text",
+                                    "content": "give an example, the To↵oli gate in terms of CNOT and 1-qubit gates:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        101,
+                        219,
+                        503,
+                        314
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                101,
+                                219,
+                                503,
+                                314
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        219,
+                                        503,
+                                        314
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                101,
+                                                219,
+                                                503,
+                                                314
+                                            ],
+                                            "type": "image",
+                                            "content": "= T\nH ⊕ T† ⊕ T ⊕ T† ⊕ T H\nT† ⊕ T† ⊕ S",
+                                            "image_path": "897d799ad498b423ae0c12e18b0acc0c2447dd712e23a03364f7c99de01c41c2.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 3
+                        }
+                    ],
+                    "index": 3,
+                    "sub_type": "text_image"
+                },
+                {
+                    "bbox": [
+                        83,
+                        329,
+                        473,
+                        345
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                328,
+                                474,
+                                346
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        328,
+                                        195,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "Note: the phase gate",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        196,
+                                        330,
+                                        206,
+                                        342
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "S",
+                                    "score": 0.6578
+                                },
+                                {
+                                    "bbox": [
+                                        207,
+                                        328,
+                                        249,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "and the",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        250,
+                                        330,
+                                        260,
+                                        346
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "\\frac { \\pi } { 8 }",
+                                    "score": 0.8044
+                                },
+                                {
+                                    "bbox": [
+                                        260,
+                                        328,
+                                        286,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "gate",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        286,
+                                        330,
+                                        298,
+                                        342
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "T",
+                                    "score": 0.6638
+                                },
+                                {
+                                    "bbox": [
+                                        298,
+                                        328,
+                                        474,
+                                        346
+                                    ],
+                                    "type": "text",
+                                    "content": "are given by the unitary matrices",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        172,
+                        354,
+                        509,
+                        389
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                172,
+                                354,
+                                509,
+                                389
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        172,
+                                        354,
+                                        509,
+                                        389
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "S = \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & i \\end{array} \\right), \\quad T = \\left( \\begin{array}{c c} e ^ {- i \\frac {\\pi}{8}} & 0 \\\\ 0 & e ^ {+ i \\frac {\\pi}{8}} \\end{array} \\right) = e ^ {- i \\frac {\\pi}{8} Z} \\tag {17.7}",
+                                    "image_path": "40e7333a46ffafafcdd37eaf04d972b2b6461ac457460a524243dc1e27df22f4.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_ocr_enable": false,
+    "_vlm_ocr_enable": false,
+    "_version_name": "3.2.3"
+}

@@ -1,0 +1,228 @@
+[
+    {
+        "type": "text",
+        "text": "24 Lecture 24: Quantum search algorithm (Grover)",
+        "text_level": 2,
+        "bbox": [
+            137,
+            122,
+            882,
+            146
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "24.1 The problem",
+        "text_level": 2,
+        "bbox": [
+            139,
+            160,
+            374,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The problem is to find, in a set of $N \\ = \\ 2 ^ { n }$ elements, a subset of M elements that satisfies some given conditions. We say then that the search problem has M solutions.",
+        "bbox": [
+            137,
+            188,
+            855,
+            238
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "We can assume the existence of a function $f ( x )$ from n bits to 1 bit, that takes the value $f ( x ) = 1$ if x is a solution and $f ( x ) = 0$ if x is not a solution.",
+        "bbox": [
+            137,
+            239,
+            855,
+            273
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "We also assume that there is a black box (an “oracle”) $U _ { f }$ able to execute the operation on the $n + 1$ qubit state $| x \\rangle | q \\rangle$ , where $| x \\rangle$ is a n-qubit state and $| q \\rangle$ is a 1-qubit state:",
+        "bbox": [
+            137,
+            274,
+            855,
+            325
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {f} | x \\rangle | q \\rangle = | x \\rangle | q \\oplus f (x) \\rangle \\tag {24.1}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            389,
+            325,
+            853,
+            344
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "In particular",
+        "bbox": [
+            139,
+            351,
+            253,
+            366
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU _ {f} | x \\rangle | 0 \\rangle = | x \\rangle | f (x) \\rangle \\tag {24.2}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            406,
+            366,
+            853,
+            385
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "24.2 A two-bit example",
+        "text_level": 2,
+        "bbox": [
+            139,
+            407,
+            442,
+            426
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "In this example $N = 4$ , and the oracle that tests x is one of the four gates:",
+        "bbox": [
+            137,
+            435,
+            791,
+            453
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/4c5d2db76eab4ced78a5c054e039778ce34944ee6c1f57ac3c8583627da2cb86.jpg",
+        "image_caption": [
+            "Fig. 24.4 Oracles for the four cases: solution $x _ { 0 } = 0 , \\ldots$ solution $x _ { 0 } = 3$ ."
+        ],
+        "image_footnote": [],
+        "content": "x₀ = 0\nx₀ = 1\nx₀ = 2\nx₀ = 3",
+        "sub_type": "text_image",
+        "bbox": [
+            218,
+            466,
+            640,
+            600
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "each corresponding to a particular solution $x _ { 0 } .$",
+        "bbox": [
+            137,
+            649,
+            544,
+            665
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The first two qubits (the “query” qubits) encode $x ,$ the last qubit is the oracle response. The circuit for the search of the solution is:",
+        "bbox": [
+            137,
+            665,
+            855,
+            699
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "image",
+        "img_path": "images/d9a2708800971a7972f8eaf30a8e4b126ef9c4e0d38d9494efc6adc1b24956e0.jpg",
+        "image_caption": [
+            "Fig. 24.5 circuit for the search of the solution $x _ { 0 }$"
+        ],
+        "image_footnote": [],
+        "content": "```mermaid\ngraph LR\n  H1[\"H\"] --> Oracle[\"Oracle\"]\n  H2[\"H\"] --> Oracle\n  H3[\"H\"] --> Oracle\n  Oracle --> H1\n  Oracle --> H2\n  Oracle --> H3\n  H1 --> X[\"X\"]\n  H2 --> X\n  H3 --> X\n  X --> H1\n  X --> H2\n  H1 --> X\n  H2 --> H1\n  H1 --> X\n  H2 --> X\n  X --> H1\n  X --> H2\n  H1 --> X\n  H2 --> X\n  X --> H1\n  H1 --> H2\n  H2 --> H1\n  X --> H2\n  H1 --> H1\n  H2 --> H2\n  H1 --> H1\n  H2 --> H2\n```",
+        "sub_type": "flowchart",
+        "bbox": [
+            198,
+            726,
+            779,
+            821
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "113",
+        "bbox": [
+            482,
+            906,
+            515,
+            919
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Initially, the two query qubits are in the state <sub>|</sub>00<sub>i</sub>, and the last qubit in the state <sub>|</sub>1<sub>i</sub>. Only one iteration is required to obtain exactly $x _ { 0 }$ . One can verify, using the circuit, that the measurement of the top two qubits gives $x _ { 0 }$ after using the oracle only once.",
+        "bbox": [
+            139,
+            125,
+            858,
+            195
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "By contrast, a classical computer trying to find $x _ { 0 }$ by examining all the two-bit x (four of them) would require an average of 2.25 oracle calls.",
+        "bbox": [
+            139,
+            207,
+            857,
+            242
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Exercise: prove it.",
+        "bbox": [
+            139,
+            256,
+            326,
+            271
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "114",
+        "bbox": [
+            482,
+            904,
+            515,
+            920
+        ],
+        "page_idx": 1
+    }
+]

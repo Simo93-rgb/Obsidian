@@ -1,0 +1,1018 @@
+[
+    [
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.141,
+                0.122,
+                0.658,
+                0.145
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.141,
+                0.16,
+                0.448,
+                0.181
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.188,
+                0.389,
+                0.206
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.229,
+                0.217,
+                0.856,
+                0.255
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {x} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} X) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} X = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - i \\sin \\frac {\\theta}{2} \\\\ - i \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) (1 7. 1)\n\\]"
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.229,
+                0.257,
+                0.855,
+                0.294
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {y} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Y) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Y = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - \\sin \\frac {\\theta}{2} \\\\ \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) \\tag {17.2}\n\\]"
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.229,
+                0.296,
+                0.855,
+                0.335
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {z} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Z) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Z = \\left( \\begin{array}{c c} \\exp (- i \\frac {\\theta}{2}) & 0 \\\\ 0 & \\exp (i \\frac {\\theta}{2}) \\end{array} \\right) (1 7. 3)\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.345,
+                0.856,
+                0.447
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.358,
+                0.448,
+                0.855,
+                0.466
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {x} (\\theta) | \\vec {r} \\rangle = | \\vec {r} ^ {\\prime} \\rangle , \\quad \\vec {r} ^ {\\prime} = \\mathcal {R} _ {x} (\\theta) \\vec {r} \\tag {17.4}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.472,
+                0.856,
+                0.593
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.256,
+                0.605,
+                0.856,
+                0.645
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {x} (\\theta) | 0 \\rangle = \\left( \\begin{array}{c c} \\cos {\\frac {\\theta}{2}} & - i \\sin {\\frac {\\theta}{2}} \\\\ - i \\sin {\\frac {\\theta}{2}} & \\cos {\\frac {\\theta}{2}} \\end{array} \\right) \\binom{1}{0} = \\binom{\\cos {\\frac {\\theta}{2}}}{- i \\sin {\\frac {\\theta}{2}}} \\tag {17.5}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.654,
+                0.858,
+                0.723
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.191,
+                0.735,
+                0.855,
+                0.773
+            ],
+            "angle": 0,
+            "content": "\\[\n| \\psi \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle + e ^ {i \\phi} \\sin \\frac {\\theta}{2} | 1 \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle - i \\sin \\frac {\\theta}{2} | 1 \\rangle = \\binom{\\cos \\frac {\\theta}{2}}{- i \\sin \\frac {\\theta}{2}} \\tag {17.6}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.785,
+                0.474,
+                0.802
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.141,
+                0.824,
+                0.592,
+                0.844
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.852,
+                0.856,
+                0.887
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.488,
+                0.907,
+                0.51,
+                0.92
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.235,
+                0.362,
+                0.301,
+                0.378
+            ],
+            "latex": "X , Y , Z",
+            "score": 0.776
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.338,
+                0.378,
+                0.462,
+                0.395
+            ],
+            "latex": "X ^ { 5 } = X ^ { 3 } = X",
+            "score": 0.9229
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.524,
+                0.414,
+                0.541,
+                0.431
+            ],
+            "latex": "\\theta ,",
+            "score": 0.5638
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.754,
+                0.416,
+                0.851,
+                0.431
+            ],
+            "latex": "x , y , z { \\mathrm { ~ a x e s } }",
+            "score": 0.5811
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.198,
+                0.473,
+                0.25,
+                0.49
+            ],
+            "latex": "\\mathcal { R } _ { x } ( \\theta )",
+            "score": 0.903
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.269,
+                0.49,
+                0.286,
+                0.505
+            ],
+            "latex": "\\theta",
+            "score": 0.4739
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.587,
+                0.474,
+                0.603,
+                0.488
+            ],
+            "latex": "\\vec { r }",
+            "score": 0.5985
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.232,
+                0.507,
+                0.253,
+                0.523
+            ],
+            "latex": "R",
+            "score": 0.5119
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.719,
+                0.507,
+                0.741,
+                0.523
+            ],
+            "latex": "\\mathcal { R }",
+            "score": 0.4906
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.474,
+                0.576,
+                0.523,
+                0.593
+            ],
+            "latex": "R _ { x } ( \\theta )",
+            "score": 0.8837
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.35,
+                0.688,
+                0.367,
+                0.704
+            ],
+            "latex": "\\theta",
+            "score": 0.4661
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.496,
+                0.689,
+                0.555,
+                0.707
+            ],
+            "latex": "\\phi = \\textstyle { \\frac { \\pi } { 2 } }",
+            "score": 0.8981
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.451,
+                0.853,
+                0.471,
+                0.868
+            ],
+            "latex": "U",
+            "score": 0.4691
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.12,
+                0.659,
+                0.145
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.158,
+                0.449,
+                0.182
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.187,
+                0.389,
+                0.206
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.345,
+                0.858,
+                0.363
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.362,
+                0.234,
+                0.38
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.301,
+                0.362,
+                0.858,
+                0.38
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.378,
+                0.338,
+                0.397
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.463,
+                0.378,
+                0.858,
+                0.397
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.397,
+                0.858,
+                0.414
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.414,
+                0.523,
+                0.431
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.541,
+                0.414,
+                0.754,
+                0.431
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.852,
+                0.414,
+                0.857,
+                0.431
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.429,
+                0.255,
+                0.449
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.472,
+                0.197,
+                0.49
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.25,
+                0.472,
+                0.586,
+                0.49
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.603,
+                0.472,
+                0.858,
+                0.49
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.49,
+                0.269,
+                0.507
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.287,
+                0.49,
+                0.858,
+                0.507
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.507,
+                0.231,
+                0.524
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.253,
+                0.507,
+                0.718,
+                0.524
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.742,
+                0.507,
+                0.858,
+                0.524
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.524,
+                0.857,
+                0.542
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.543,
+                0.857,
+                0.558
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.558,
+                0.858,
+                0.578
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.576,
+                0.474,
+                0.594
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.524,
+                0.576,
+                0.601,
+                0.594
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.143,
+                0.655,
+                0.858,
+                0.672
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.672,
+                0.858,
+                0.689
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.688,
+                0.35,
+                0.709
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.367,
+                0.688,
+                0.495,
+                0.709
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.555,
+                0.688,
+                0.86,
+                0.709
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.707,
+                0.318,
+                0.724
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.782,
+                0.474,
+                0.805
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.821,
+                0.593,
+                0.846
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.851,
+                0.451,
+                0.87
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.471,
+                0.851,
+                0.857,
+                0.87
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.87,
+                0.342,
+                0.888
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.486,
+                0.906,
+                0.513,
+                0.924
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.126,
+                0.873,
+                0.163
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.174,
+                0.719,
+                0.192
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.205,
+                0.858,
+                0.257
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.171,
+                0.261,
+                0.847,
+                0.374
+            ],
+            "angle": 0,
+            "content": "= T\nH ⊕ T† ⊕ T ⊕ T† ⊕ T H\nT† ⊕ T† ⊕ S",
+            "sub_type": "text_image"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.391,
+                0.796,
+                0.41
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.29,
+                0.421,
+                0.856,
+                0.462
+            ],
+            "angle": 0,
+            "content": "\\[\nS = \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & i \\end{array} \\right), \\quad T = \\left( \\begin{array}{c c} e ^ {- i \\frac {\\pi}{8}} & 0 \\\\ 0 & e ^ {+ i \\frac {\\pi}{8}} \\end{array} \\right) = e ^ {- i \\frac {\\pi}{8} Z} \\tag {17.7}\n\\]"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.488,
+                0.906,
+                0.51,
+                0.92
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.281,
+                0.144,
+                0.298,
+                0.163
+            ],
+            "latex": "\\frac { \\pi } { 8 }",
+            "score": 0.8185
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.343,
+                0.143,
+                0.362,
+                0.159
+            ],
+            "latex": "T",
+            "score": 0.7351
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.292,
+                0.175,
+                0.312,
+                0.19
+            ],
+            "latex": "T",
+            "score": 0.5686
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.33,
+                0.392,
+                0.347,
+                0.407
+            ],
+            "latex": "S",
+            "score": 0.6578
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.421,
+                0.393,
+                0.437,
+                0.411
+            ],
+            "latex": "\\frac { \\pi } { 8 }",
+            "score": 0.8044
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.482,
+                0.392,
+                0.502,
+                0.407
+            ],
+            "latex": "T",
+            "score": 0.6638
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.126,
+                0.872,
+                0.145
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.486,
+                0.906,
+                0.513,
+                0.923
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.173,
+                0.292,
+                0.193
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.312,
+                0.173,
+                0.718,
+                0.193
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.205,
+                0.857,
+                0.223
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.221,
+                0.858,
+                0.24
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.24,
+                0.757,
+                0.257
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.39,
+                0.329,
+                0.411
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.348,
+                0.39,
+                0.42,
+                0.411
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.437,
+                0.39,
+                0.482,
+                0.411
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.502,
+                0.39,
+                0.797,
+                0.411
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

@@ -1,0 +1,607 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "15 Lecture 15: Classical circuits"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                121,
+                621,
+                141
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Circuits, with wires and gates, are a model of computation equivalent to the Turing machine, and often more convenient and realistic."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                156,
+                857,
+                192
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "15.1 Basic gates"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                213,
+                354,
+                233
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "A classical logical gate is a function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", taking n bits into m bits. When m = 1 the function is said to be boolean. For example, the NOT classical gate is a 1-bit to 1-bit function, the AND gate is a 2-bit to 1-bit function etc. Both implement boolean functions. Basic classical gates are given in Fig. 15.1."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                241,
+                858,
+                311
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/5531344e4f8ab5b4b4d3272dab0d4df17d45623811e910def509ee0326f4cce7.jpg"
+                },
+                "content": "NOT a → ▶ ○ → ā\nAND a b → └ — ab\nOR a b → └ — (āb̅)\nXOR a b → └ — a ⊕ b\nNAND a b → └ ○ → āb̅\nNOR a b → ◇ ○ → āb̅",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 15.1 Classical gates."
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "text_image",
+            "bbox": [
+                292,
+                346,
+                579,
+                581
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Example: a circuit that adds two 3-bit integers is shown in Fig. 15.2. It generalizes easily to n-bit integers."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                661,
+                857,
+                697
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "69"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                904,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/120618509a2c30dc6b0ea25cfdb5b66c4277407483cce14a336a9cdc65b96ade.jpg"
+                },
+                "content": "HA\nx\ny\nc\n(carry bit)\nx ⊕ y",
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "sub_type": "text_image",
+            "bbox": [
+                174,
+                144,
+                457,
+                200
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/a6ec40f01bdc779f3e4778c14dac21d62b66c891a0d5e23d71ddd9a63828a1a8.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  x[\"x\"] --> HA1[\"HA\"]\n  y[\"y\"] --> HA1\n  c[\"c\"] --> HA2[\"HA\"]\n  HA1 --> AND_Gate[\"⊙\"]\n  HA2 --> AND_Gate\n  AND_Gate --> Output_c'[\"c'\"]\n  Output_c[\"x ⊕ y ⊕ c\"]\n```",
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                529,
+                154,
+                875,
+                194
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/f444b2e28ab5a41e3e56a1b3ad3daa938e526ed3165cd98c5642760d91c7c942.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> HA[\"HA\"]\n  y0[\"y0\"] --> HA\n  x1[\"x1\"] --> FA[\"FA\"]\n  y1[\"y1\"] --> FA\n  x2[\"x2\"] --> FA\n  y2[\"y2\"] --> FA\n  FA --> x+y[\"x + y\"]\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 15.2 Adds two binary integers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x = x _ { 0 } x _ { 1 } x _ { 2 } , y = y _ { 0 } y _ { 1 } y _ { 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". The carry bit c in the half-adder HA is 1 if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x = y = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". The carry bit "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c ^ { \\prime }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in the full-adder FA is 1 if at least two input bits are 1."
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                371,
+                245,
+                729,
+                344
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Observation: any function f of n bits into m bits:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                429,
+                591,
+                448
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "f (x _ {1}, \\dots x _ {n}) = (f _ {1} (x _ {1}, \\dots x _ {n}), f _ {2} (x _ {1}, \\dots x _ {n}), \\dots , f _ {m} (x _ {1}, \\dots x _ {n})) \\tag {15.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/af3039f0432bdeac3b38b4fe63096a3b6ade0fc46f4e01ab00c603f057519057.jpg"
+                }
+            },
+            "bbox": [
+                255,
+                461,
+                853,
+                480
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "is equivalent to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "m"
+                    },
+                    {
+                        "type": "text",
+                        "content": "functions "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f _ { 1 } , f _ { 2 } , . . . , f _ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of n bits to 1 bit (the “components” of the function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                492,
+                855,
+                528
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "15.2 Universal set: NAND and FANOUT"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                549,
+                655,
+                567
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem: the gates NAND and FANOUT are a universal set: using only these gates, every function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "can be implemented in a circuit."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                578,
+                855,
+                612
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In virtue of the above observation, we need to prove the Theorem only for boolean functions "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x _ { 1 } , . . . , x _ { n } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                625,
+                853,
+                660
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We first give in Fig. 15.3 some examples of basic gates, realized with circuits that use only NAND and FANOUT."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                660,
+                855,
+                694
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "70"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                904,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/dd292d104c9c77d4168768a7a5b7e2c4ff372812fe73d2fde56bebfffd11cbbd.jpg"
+                },
+                "content": "",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 15.3 Basic gates in terms of NAND and FANOUT"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "bbox": [
+                275,
+                144,
+                800,
+                500
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The proof of the Theorem proceeds by induction on n. For "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "there are 4 possible boolean functions: the identity (represented by a wire), the NOT gate, the 0 function and the 1 function. These functions are all implementable using only NAND and FANOUT, see Fig. 15.3 (the 0 function is obtained from the 1 function simply by adding the NOT gate to the circuit)."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                564,
+                855,
+                649
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Next we suppose that the Theorem holds for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and prove that it holds for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n + 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", i.e. for boolean functions "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". To do so we define"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                650,
+                853,
+                685
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "f _ {0} (x _ {1},..., x _ {n}) \\equiv f (0, x _ {1},..., x _ {n}), \\quad f _ {1} (x _ {1},..., x _ {n}) \\equiv f (1, x _ {1},..., x _ {n}) \\tag {15.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/44e58be391da5b7fc904f00c4972ebd3acb35d89a424bb3834d83f0a51125097.jpg"
+                }
+            },
+            "bbox": [
+                194,
+                690,
+                853,
+                710
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "By the induction hypothesis, these two n-bit boolean functions are implemented by circuits with only NAND and FANOUT gates, represented in Fig. 15.4 with rectangular boxes. The same Figure proves the Theorem: indeed it realizes a circuit that computes "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", using only NOT, AND, XOR and the rectangular boxes. All these circuit components can be realized with only NAND and FANOUT, cf. Fig. 15.3."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                714,
+                855,
+                815
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "To be precise, Fig. 15.4 contains also CROSSOVER components, since there are crossings between the wires. We recall that CROSSOVER can be realized with three CNOT gates, and CNOT is realizable with NAND and FANOUT, as in Fig. 15.3."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                817,
+                855,
+                885
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "71"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                507,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/c1749005ecca0be1fee210c8a3bd11c8cc2206a9dd82d4a3646cd0e256895a8f.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> f0[\"f0(x1, ...xn)\"]\n  x1[\"x1\"] --> f0\n  x2[\"x2\"] --> f0\n  xn[\"xn\"] --> f0\n  f0 --> AND1[\"\"]\n  f0 --> f1[\"f1(x1, ...xn)\"]\n  f1 --> AND2[\"\"]\n  AND1 --> f(x0, ...xn)\n  AND2 --> f(x0, ...xn)\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 15.4 Proof of universality of NAND and FANOUT"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                181,
+                125,
+                910,
+                308
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "72"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                510,
+                919
+            ]
+        }
+    ]
+]

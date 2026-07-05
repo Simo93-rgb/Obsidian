@@ -1,0 +1,1692 @@
+[
+    [
+        {
+            "type": "doc_title",
+            "bbox": [
+                0.14,
+                0.123,
+                0.877,
+                0.147
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.14,
+                0.161,
+                0.548,
+                0.181
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.189,
+                0.859,
+                0.224
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.395,
+                0.234,
+                0.856,
+                0.281
+            ],
+            "angle": 0,
+            "content": "\\[\nz _ {k} \\equiv \\frac {1}{\\sqrt {N}} \\sum_ {j = 0} ^ {N - 1} y _ {j} e ^ {2 \\pi i j k / N} \\tag {20.1}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.29,
+                0.75,
+                0.308
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.387,
+                0.317,
+                0.856,
+                0.353
+            ],
+            "angle": 0,
+            "content": "\\[\n\\tilde {f} (k) = \\frac {1}{\\sqrt {2 \\pi}} \\int d x f (x) e ^ {i k x} \\tag {20.2}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.36,
+                0.859,
+                0.396
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.14,
+                0.416,
+                0.56,
+                0.435
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.444,
+                0.804,
+                0.462
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.366,
+                0.473,
+                0.856,
+                0.517
+            ],
+            "angle": 0,
+            "content": "\\[\nQ F T | j \\rangle = \\frac {1}{\\sqrt {N}} \\sum_ {k = 0} ^ {N - 1} e ^ {2 \\pi i j k / N} | k \\rangle \\tag {20.3}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.527,
+                0.857,
+                0.58
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.594,
+                0.858,
+                0.663
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.14,
+                0.684,
+                0.664,
+                0.703
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.712,
+                0.66,
+                0.73
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.36,
+                0.74,
+                0.855,
+                0.758
+            ],
+            "angle": 0,
+            "content": "\\[\nj = j _ {1} 2 ^ {n - 1} + j _ {2} 2 ^ {n - 2} + \\dots + j _ {n} 2 ^ {0} \\tag {20.4}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.768,
+                0.856,
+                0.786
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.356,
+                0.795,
+                0.856,
+                0.827
+            ],
+            "angle": 0,
+            "content": "\\[\n0. j _ {1} j _ {2} \\dots j _ {n} \\equiv \\frac {j _ {1}}{2} + \\frac {j _ {2}}{2 ^ {2}} + \\dots + \\frac {j _ {n}}{2 ^ {n}} \\tag {20.5}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.834,
+                0.538,
+                0.851
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.389,
+                0.86,
+                0.856,
+                0.891
+            ],
+            "angle": 0,
+            "content": "\\[\n0. j _ {1} j _ {2} \\dots j _ {n} = \\frac {1}{2 ^ {n}} j _ {1} j _ {2} \\dots j _ {n} \\tag {20.6}\n\\]"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.487,
+                0.907,
+                0.511,
+                0.92
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.143,
+                0.209,
+                0.263,
+                0.224
+            ],
+            "latex": "y _ { 0 } , y _ { 1 } , . . . , y _ { N - 1 }",
+            "score": 0.6882
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.523,
+                0.209,
+                0.642,
+                0.224
+            ],
+            "latex": "z _ { 0 } , z _ { 1 } , . . . , z _ { N - 1 }",
+            "score": 0.8942
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.701,
+                0.291,
+                0.742,
+                0.307
+            ],
+            "latex": "f ( x )",
+            "score": 0.6741
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.214,
+                0.38,
+                0.232,
+                0.393
+            ],
+            "latex": "x ,",
+            "score": 0.492
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.276,
+                0.381,
+                0.296,
+                0.395
+            ],
+            "latex": "y _ { j }",
+            "score": 0.865
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.339,
+                0.381,
+                0.359,
+                0.394
+            ],
+            "latex": "z _ { k }",
+            "score": 0.8479
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.459,
+                0.361,
+                0.475,
+                0.377
+            ],
+            "latex": "j",
+            "score": 0.5929
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.594,
+                0.377,
+                0.634,
+                0.394
+            ],
+            "latex": "f ( x )",
+            "score": 0.6102
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.677,
+                0.376,
+                0.716,
+                0.394
+            ],
+            "latex": "\\tilde { f } ( \\boldsymbol { k } )",
+            "score": 0.6777
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.618,
+                0.444,
+                0.771,
+                0.461
+            ],
+            "latex": "| 0 \\rangle , | 1 \\rangle , . . . , | N - 1 \\rangle",
+            "score": 0.8959
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.338,
+                0.532,
+                0.359,
+                0.546
+            ],
+            "latex": "y _ { j }",
+            "score": 0.8738
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.29,
+                0.549,
+                0.31,
+                0.563
+            ],
+            "latex": "z _ { k }",
+            "score": 0.4673
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.325,
+                0.563,
+                0.374,
+                0.579
+            ],
+            "latex": "Q F T",
+            "score": 0.877
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.464,
+                0.527,
+                0.614,
+                0.547
+            ],
+            "latex": "\\begin{array} { r } { | v \\rangle = \\sum _ { j = 0 } ^ { N - 1 } y _ { j } | j \\rangle } \\end{array}",
+            "score": 0.9468
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.33,
+                0.611,
+                0.51,
+                0.628
+            ],
+            "latex": "| 0 \\rangle , . . . , | j \\rangle , . . . , | 2 ^ { n } - 1 \\rangle",
+            "score": 0.9232
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.826,
+                0.595,
+                0.85,
+                0.609
+            ],
+            "latex": "2 ^ { n }",
+            "score": 0.8304
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.286,
+                0.628,
+                0.578,
+                0.646
+            ],
+            "latex": "| 0 0 \\cdots 0 \\rangle , . . . , | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle , . . . , | 1 1 \\cdot \\cdot \\cdot 1 \\rangle",
+            "score": 0.9343
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.357,
+                0.647,
+                0.371,
+                0.662
+            ],
+            "latex": "j",
+            "score": 0.5875
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.661,
+                0.611,
+                0.683,
+                0.626
+            ],
+            "latex": "2 ^ { n }",
+            "score": 0.7926
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.645,
+                0.629,
+                0.741,
+                0.646
+            ],
+            "latex": "j _ { 1 } , j _ { 2 } , . . . , j _ { n }",
+            "score": 0.9238
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.529,
+                0.714,
+                0.598,
+                0.729
+            ],
+            "latex": "j _ { 1 } j _ { 2 } . . . j _ { n }",
+            "score": 0.9057
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.439,
+                0.835,
+                0.507,
+                0.851
+            ],
+            "latex": "j _ { 1 } j _ { 2 } . . . j _ { n }",
+            "score": 0.9061
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.137,
+                0.12,
+                0.878,
+                0.15
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.187,
+                0.858,
+                0.208
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.206,
+                0.142,
+                0.227
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.263,
+                0.206,
+                0.523,
+                0.227
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.642,
+                0.206,
+                0.748,
+                0.227
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.143,
+                0.36,
+                0.459,
+                0.378
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.475,
+                0.36,
+                0.857,
+                0.378
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.143,
+                0.375,
+                0.213,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.233,
+                0.375,
+                0.275,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.296,
+                0.375,
+                0.338,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.36,
+                0.375,
+                0.593,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.635,
+                0.375,
+                0.676,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.717,
+                0.375,
+                0.725,
+                0.396
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.141,
+                0.765,
+                0.857,
+                0.788
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.138,
+                0.158,
+                0.547,
+                0.183
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.137,
+                0.412,
+                0.562,
+                0.44
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.288,
+                0.701,
+                0.308
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.742,
+                0.288,
+                0.75,
+                0.308
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.442,
+                0.617,
+                0.463
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.772,
+                0.442,
+                0.803,
+                0.463
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.526,
+                0.338,
+                0.552
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.359,
+                0.526,
+                0.463,
+                0.552
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.615,
+                0.526,
+                0.86,
+                0.552
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.545,
+                0.29,
+                0.565
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.31,
+                0.545,
+                0.858,
+                0.565
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.562,
+                0.325,
+                0.582
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.374,
+                0.562,
+                0.532,
+                0.582
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.172,
+                0.593,
+                0.826,
+                0.611
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.851,
+                0.593,
+                0.856,
+                0.611
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.61,
+                0.329,
+                0.628
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.511,
+                0.61,
+                0.661,
+                0.628
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.684,
+                0.61,
+                0.857,
+                0.628
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.628,
+                0.285,
+                0.646
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.579,
+                0.628,
+                0.645,
+                0.646
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.742,
+                0.628,
+                0.857,
+                0.646
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.644,
+                0.356,
+                0.664
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.372,
+                0.644,
+                0.379,
+                0.664
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.138,
+                0.681,
+                0.665,
+                0.706
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.711,
+                0.529,
+                0.731
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.598,
+                0.711,
+                0.66,
+                0.731
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.831,
+                0.438,
+                0.853
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.508,
+                0.831,
+                0.537,
+                0.853
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.486,
+                0.906,
+                0.513,
+                0.924
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.14,
+                0.124,
+                0.595,
+                0.145
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.153,
+                0.741,
+                0.171
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.14,
+                0.18,
+                0.856,
+                0.227
+            ],
+            "angle": 0,
+            "content": "\\[\nQ F T \\left| j _ {1} j _ {2} \\dots j _ {n} \\right\\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n}} | 1 \\rangle\\right) \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}} | 1 \\rangle\\right) \\dots \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} | 1 \\rangle\\right) \\tag {20.7}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.141,
+                0.228,
+                0.207,
+                0.242
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.174,
+                0.251,
+                0.865,
+                0.384
+            ],
+            "angle": 0,
+            "content": "\\[\n\\begin{array}{l} Q F T | j \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k = 0} ^ {2 ^ {n} - 1} e ^ {2 \\pi i j k / 2 ^ {n}} | k \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j / 2 ^ {n} (k _ {1} 2 ^ {n - 1} + \\dots + k _ {n} 2 ^ {0} ]} | k _ {1} \\dots k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} e ^ {2 \\pi i j k _ {1} 2 ^ {- 1}} | k _ {1} \\rangle \\sum_ {k _ {2} = 0} ^ {1} e ^ {2 \\pi i j k _ {2} 2 ^ {- 2}} | k _ {2} \\rangle \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j k _ {n} 2 ^ {- n}} | k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} (| 0 \\rangle + e ^ {2 \\pi i j / 2} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {2}} | 1 \\rangle) \\dots (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {n}} | 1 \\rangle) \\tag {20.8} \\\\ \\end{array}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.393,
+                0.31,
+                0.409
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.182,
+                0.418,
+                0.856,
+                0.44
+            ],
+            "angle": 0,
+            "content": "\\[\ne ^ {2 \\pi i j / 2} = e ^ {2 \\pi i 0. j _ {n}}, \\quad e ^ {2 \\pi i j / 2 ^ {2}} = e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}}, \\dots , e ^ {2 \\pi i j / 2 ^ {n}} = e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} \\tag {20.9}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.451,
+                0.345,
+                0.467
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "paragraph_title",
+            "bbox": [
+                0.14,
+                0.489,
+                0.512,
+                0.509
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "image",
+            "bbox": [
+                0.143,
+                0.548,
+                0.825,
+                0.819
+            ],
+            "angle": 0,
+            "content": "```mermaid\ngraph LR\n  subgraph Input_1[\"|j1⟩\"]\n  H --> R2 --> R3 --> Rn_1 --> Rn_1\n  end\n\n  subgraph Output_1[\"|j2⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Intermediate_1[\"|j3⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_2[\"|jn-1⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_3[\"|jn⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rm_2\n  Rm_2 -.-> Rm_1\n```",
+            "sub_type": "flowchart"
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.487,
+                0.907,
+                0.511,
+                0.92
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.141,
+                0.151,
+                0.74,
+                0.171
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.487,
+                0.513,
+                0.511
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.486,
+                0.906,
+                0.513,
+                0.924
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.139,
+                0.122,
+                0.595,
+                0.147
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.227,
+                0.21,
+                0.245
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.141,
+                0.391,
+                0.311,
+                0.41
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.141,
+                0.448,
+                0.346,
+                0.469
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ],
+    [
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.128,
+                0.198,
+                0.141
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.411,
+                0.139,
+                0.856,
+                0.176
+            ],
+            "angle": 0,
+            "content": "\\[\nR _ {k} \\equiv \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & e ^ {2 \\pi i / 2 ^ {k}} \\end{array} \\right) \\tag {20.10}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.183,
+                0.714,
+                0.201
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.201,
+                0.854,
+                0.219
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.14,
+                0.231,
+                0.71,
+                0.248
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.365,
+                0.261,
+                0.856,
+                0.295
+            ],
+            "angle": 0,
+            "content": "\\[\n\\frac {1}{2 ^ {\\frac {1}{2}}} \\left(| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1}} | 1 \\rangle\\right) \\left| j _ {2} \\right\\rangle \\dots \\left| j _ {n} \\right\\rangle \\tag {20.11}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.141,
+                0.307,
+                0.725,
+                0.325
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.359,
+                0.338,
+                0.856,
+                0.372
+            ],
+            "angle": 0,
+            "content": "\\[\n\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.12}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.141,
+                0.382,
+                0.856,
+                0.399
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.346,
+                0.412,
+                0.856,
+                0.446
+            ],
+            "angle": 0,
+            "content": "\\[\n\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.13}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.141,
+                0.457,
+                0.652,
+                0.474
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "equation",
+            "bbox": [
+                0.231,
+                0.486,
+                0.856,
+                0.518
+            ],
+            "angle": 0,
+            "content": "\\[\n\\frac {1}{2} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {3} \\rangle \\dots | j _ {n} \\rangle \\tag {20.14}\n\\]"
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.528,
+                0.856,
+                0.58
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "text",
+            "bbox": [
+                0.139,
+                0.593,
+                0.856,
+                0.662
+            ],
+            "angle": 0,
+            "content": null,
+            "merge_prev": false
+        },
+        {
+            "type": "page_number",
+            "bbox": [
+                0.487,
+                0.906,
+                0.51,
+                0.92
+            ],
+            "angle": 0,
+            "content": null
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.256,
+                0.184,
+                0.472,
+                0.199
+            ],
+            "latex": "R _ { 1 } = Z , R _ { 2 } = S , R _ { 3 } = T",
+            "score": 0.8346
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.612,
+                0.184,
+                0.704,
+                0.2
+            ],
+            "latex": "R _ { k } ^ { 2 } = R _ { k - 1 }",
+            "score": 0.9271
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.708,
+                0.201,
+                0.848,
+                0.218
+            ],
+            "latex": "| j \\rangle = | j _ { 1 } \\rangle \\cdots | j _ { n } \\rangle",
+            "score": 0.9152
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.399,
+                0.308,
+                0.423,
+                0.323
+            ],
+            "latex": "R _ { 2 }",
+            "score": 0.8419
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.304,
+                0.545,
+                0.443,
+                0.563
+            ],
+            "latex": "Q F T | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle",
+            "score": 0.9348
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.377,
+                0.594,
+                0.426,
+                0.609
+            ],
+            "latex": "Q F T",
+            "score": 0.5762
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.183,
+                0.61,
+                0.541,
+                0.627
+            ],
+            "latex": "n + ( n - 1 ) + \\cdot \\cdot \\cdot + 1 = n ( n + 1 ) / 2 = \\Theta ( n ^ { 2 } )",
+            "score": 0.9391
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.577,
+                0.628,
+                0.639,
+                0.644
+            ],
+            "latex": "\\Theta ( n 2 ^ { n } )",
+            "score": 0.8619
+        },
+        {
+            "type": "inline_formula",
+            "bbox": [
+                0.774,
+                0.627,
+                0.82,
+                0.644
+            ],
+            "latex": "\\mathrm { Q F T }",
+            "score": 0.532
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.141,
+                0.38,
+                0.86,
+                0.401
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.528,
+                0.858,
+                0.546
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.545,
+                0.303,
+                0.564
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.443,
+                0.545,
+                0.858,
+                0.564
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.563,
+                0.456,
+                0.581
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.17,
+                0.592,
+                0.377,
+                0.611
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.426,
+                0.592,
+                0.857,
+                0.611
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.61,
+                0.182,
+                0.628
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.542,
+                0.61,
+                0.857,
+                0.628
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.143,
+                0.628,
+                0.577,
+                0.645
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.64,
+                0.628,
+                0.773,
+                0.645
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.82,
+                0.628,
+                0.857,
+                0.645
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.645,
+                0.609,
+                0.664
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.142,
+                0.455,
+                0.654,
+                0.475
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.485,
+                0.905,
+                0.514,
+                0.924
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.124,
+                0.201,
+                0.144
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.179,
+                0.255,
+                0.205
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.473,
+                0.179,
+                0.611,
+                0.205
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.705,
+                0.179,
+                0.714,
+                0.205
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.229,
+                0.71,
+                0.251
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.143,
+                0.307,
+                0.399,
+                0.326
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.423,
+                0.307,
+                0.725,
+                0.326
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.14,
+                0.195,
+                0.708,
+                0.223
+            ],
+            "text": "",
+            "score": 1.0
+        },
+        {
+            "type": "ocr_text",
+            "bbox": [
+                0.848,
+                0.195,
+                0.858,
+                0.223
+            ],
+            "text": "",
+            "score": 1.0
+        }
+    ]
+]

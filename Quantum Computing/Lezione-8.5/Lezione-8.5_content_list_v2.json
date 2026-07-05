@@ -1,0 +1,956 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "22 Lecture 22: Order finding"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                121,
+                581,
+                146
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This is an application of the phase estimation algorithm, important for the factorization algorithm. Consider two integers, x and N , with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x < N"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and no common factors."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                157,
+                857,
+                207
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Definition: the order of x modulo N is the smallest positive integer r such that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r } \\equiv 1 { \\pmod { N } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                220,
+                855,
+                258
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The problem of finding the order is a di\u0000cult problem for a classical computer: no classical polynomial algorithm is known. By this we mean an algorithm polynomial in the number L of bits necessary to specify the problem, for example the number of bits necessary for the binary expression of N . Thus L satisfies "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N \\leq 2 ^ { L }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                269,
+                858,
+                339
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Exercise: find the order of 5 modulo 21"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                352,
+                527,
+                369
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem: r always exists (provided x and N are coprime) and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r \\leq N"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". For the proof, see the Appendix."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                382,
+                858,
+                416
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "22.1 The algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                438,
+                393,
+                459
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The quantum algorithm for order finding is simply the algorithm for phase estimation applied to a unitary operator "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "defined by"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                467,
+                857,
+                502
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {x, N} | y \\rangle \\equiv | x y \\bmod N \\rangle \\tag {22.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/ed6261f14bc9522539d5194432ae5826dea35bccd35602a1193f640d7e1ef7b0.jpg"
+                }
+            },
+            "bbox": [
+                401,
+                516,
+                853,
+                534
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where y is a L-bit integer, thus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 \\leq y \\leq 2 ^ { L } - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "acts on a vector space of dimension "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 ^ { L }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                546,
+                858,
+                581
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Technical note: when "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "y \\geq N"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", the application "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is defined to act on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| y \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "as the identity. Thus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "acts nontrivially on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| y \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "only for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 \\leq y \\leq N - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                593,
+                858,
+                631
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem: the states defined by"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                642,
+                458,
+                659
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| u _ {s} \\right\\rangle \\equiv \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] \\left| x ^ {k} \\bmod N \\right\\rangle \\tag {22.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bdf133204b5e144d4ee7bdc5a7387d8a8f1fee8cd99f1ee05b4e141a22290e2b.jpg"
+                }
+            },
+            "bbox": [
+                322,
+                674,
+                855,
+                719
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with integer s satisfying "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 ~ \\leq ~ s ~ \\leq ~ r - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(and r = order of x modulo "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", are eigenstates of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                730,
+                857,
+                764
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {x, N} | u _ {s} \\rangle = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] | u _ {s} \\rangle \\tag {22.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/8dcbab9c6d7f3d9c26c505d0615d742414db104efaa1cf0f38c7e3d3a9df93e6.jpg"
+                }
+            },
+            "bbox": [
+                383,
+                764,
+                853,
+                801
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Applying now the phase estimation algorithm gives an estimation the phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of the eigenvalue "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\exp [ 2 \\pi i s / r ]"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": "we can deduce r (via the continued fraction algorithm, see later), i.e. the order of x modulo N ."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                806,
+                857,
+                858
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "108"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                906,
+                515,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                169,
+                125,
+                236,
+                140
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\begin{array}{l} U _ {x, N} | u _ {s} \\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] | x ^ {k + 1} \\bmod N \\rangle \\\\ = \\frac {1}{\\sqrt {r}} \\sum_ {k = 1} ^ {r} \\exp \\left[ \\frac {- 2 \\pi i s (k - 1)}{r} \\right] | x ^ {k} \\bmod {\\mathrm{N}} \\rangle \\\\ = \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s (k - 1)}{r} \\right] | x ^ {k} \\bmod \\mathrm{N} \\rangle \\\\ = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] \\frac {1}{\\sqrt {r}} \\sum_ {k = 0} ^ {r - 1} \\exp \\left[ \\frac {- 2 \\pi i s k}{r} \\right] | x ^ {k} \\bmod N \\rangle \\\\ = \\exp \\left[ \\frac {2 \\pi i s}{r} \\right] | u _ {s} \\rangle \\tag {22.4} \\\\ \\end{array}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/9ca7ee657839fd365fba37545a2e06afe2b182132739fc7d7e2a190b622c3af7.jpg"
+                }
+            },
+            "bbox": [
+                268,
+                148,
+                855,
+                376
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We redefined "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k  k - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in the sum in the second line, and in the third line we wrote the sum from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = r"
+                    },
+                    {
+                        "type": "text",
+                        "content": "as a sum from "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = r - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "since both the exponent and the vector "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vert x ^ { k } \\mathrm { m o d ~ N } \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "do not change if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k  k + r ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "so that the term with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is equal to the term with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = r"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Indeed the exponent remains the same since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\exp [ 2 \\pi i \\times i n t e g e r ] = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| x ^ { k }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "mod "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { N } \\rangle = | x ^ { k + r }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "mod N<sub>i</sub> because "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ^ { r } \\equiv 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "mod N."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                381,
+                855,
+                482
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Exercise: prove that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { x , N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is unitary."
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                498,
+                499,
+                515
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "For the phase estimation algorithm, we need to know the eigenstate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| u _ { s } \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", but this is equivalent to know the order r (since it enters the definition (22.2) of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\left| u _ { s } \\right. )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", which is just the number we want to find ! There is a way out of this logical loop: we can choose as second register the state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 1 \\rangle = | 0 0 . . . 0 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", where all the L qubits are set to 0 except the last one which is set to 1 . This state is in fact a sum of eigenstates "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\left| u _ { s } \\right."
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                528,
+                858,
+                631
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "| 1 \\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {s = 0} ^ {r - 1} | u _ {s} \\rangle \\tag {22.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/c6779500b5331e10bf33d2f934e4e9bbba08e36d6d0fb9aa9e29aeb71d22ece2.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                631,
+                853,
+                675
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "as can be seen from the inversion of formula (22.2):"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                680,
+                588,
+                697
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| x ^ {k} \\bmod \\mathrm{N} \\right\\rangle = \\frac {1}{\\sqrt {r}} \\sum_ {s = 0} ^ {r - 1} \\exp \\left[ \\frac {2 \\pi i s k}{r} \\right] \\left| u _ {s} \\right\\rangle \\tag {22.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/80b226ebf903cb7765bd4157911eea7ade0a0c9c9e0d0f9d12fefac9eb706682.jpg"
+                }
+            },
+            "bbox": [
+                332,
+                706,
+                855,
+                750
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "by taking "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". The inversion formula can be verified easily noting that"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                757,
+                773,
+                774
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\sum_ {s = 0} ^ {r - 1} \\exp [ - 2 \\pi i s k / r ] = r \\delta_ {k, 0} \\tag {22.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d82ff2b197e54d76a86c6372c89379fb0183e2820f616766b7ee8cb506b881a3.jpg"
+                }
+            },
+            "bbox": [
+                386,
+                783,
+                853,
+                826
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "this relation is trivial, for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "k \\neq 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "use the formula for the geometric sum). Another way of proving (22.6) is to notice that the transformation matrix of (22.2) is unitary, and its inverse is given by its transpose conjugate."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                834,
+                855,
+                887
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "109"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                906,
+                515,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In summary, taking as the input of the second register the state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", the algorithm will estimate a phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", where s can take the values "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 \\leq s \\leq r - 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "with equal probabilities "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", but r is fixed to be the order of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x"
+                    },
+                    {
+                        "type": "text",
+                        "content": "modulo "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". We now need a procedure to extract "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if we know that it is the denominator of a rational number "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". This procedure is the continued fraction algorithm we describe in next Section."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                125,
+                858,
+                213
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Note: one possible result of the algorithm is that the estimated phase is zero, since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s = 0 \\to s / r = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "may happen with probability "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 / r"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". One has then to repeat the algorithm until one finds a nonvanishing phase."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                225,
+                858,
+                279
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "110"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                920
+            ]
+        }
+    ]
+]

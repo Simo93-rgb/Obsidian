@@ -1,0 +1,257 @@
+[
+    {
+        "type": "text",
+        "text": "23 Lecture 23: Factorization",
+        "text_level": 2,
+        "bbox": [
+            139,
+            121,
+            571,
+            142
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "23.1 Two theorems in number theory",
+        "text_level": 2,
+        "bbox": [
+            139,
+            159,
+            606,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Theorem 1: if N is a composite (i.e. not prime) L-bit integer, and y is a solution of $y ^ { 2 } \\equiv 1$ (mod N ) in the interval $1 < y < N - 1$ (thus the trivial solutions $y =$ $1 , y = N - 1 \\equiv - 1$ (mod N) are excluded), then $\\mathrm { G C D } ( y - 1 , N )$ and $\\mathrm { G C D } ( y + 1 , N )$ are nontrivial factors of N that can be computed with ${ \\cal O } ( L ^ { 3 } )$ operations.",
+        "bbox": [
+            137,
+            187,
+            857,
+            257
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Proof: since $y ^ { 2 } \\equiv 1 { \\pmod { N } }$ , N must divide $y ^ { 2 } - 1 = ( y + 1 ) ( y - 1 )$ . Moreover $N > y + 1 > y - 1$ and therefore N cannot divide $( y + 1 )$ or $( y - 1 )$ , but must have nontrivial common factors with $( y + 1 )$ and $( y - 1 )$ . These common factors can be found by computing the GCD of N and $y \\pm 1$ with Euclid’s algorithm, which requires ${ \\cal O } ( L ^ { 3 } )$ operations.",
+        "bbox": [
+            137,
+            269,
+            858,
+            356
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Theorem 2: if we choose at random an integer x in the interval $[ 1 , N - 1 ]$ , coprime with N , it is very probable that its order (mod N ) is even, and $x ^ { r / 2 }$ is not equal $\\mathrm { t o } \\pm 1$ (mod N ) (the probability is always $\\geq 1 / 2$ , see Appendix 4 of Nielsen and Chuang, where this probability is shown to be $\\textstyle { 1 - { \\frac { 1 } { 2 ^ { m } } } }$ where m is the number of di↵erent prime factors of N ).",
+        "bbox": [
+            137,
+            369,
+            858,
+            456
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Then $y = x ^ { r / 2 }$ (mod N) is a nontrivial solution of $y ^ { 2 } \\equiv 1 { \\mathrm { ~ ( m o d ~ N ) } }$ .",
+        "bbox": [
+            168,
+            467,
+            747,
+            486
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "In conclusion, finding the order r modulo N of an integer x, chosen at random in the interval $[ 1 , N - 1 ]$ , and coprime with N, allows to find in polynomial time a nontrivial solution of $y ^ { 2 } \\equiv 1 { \\pmod { N } }$ , and hence a nontrivial factor of N .",
+        "bbox": [
+            137,
+            500,
+            858,
+            551
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "23.2 The factorization algorithm",
+        "text_level": 2,
+        "bbox": [
+            139,
+            572,
+            549,
+            593
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "We have seen that the two theorems of the previous section can be combined to construct a factorization algorithm. This algorithm was first proposed by P.W. Shor in 1994, and produces in polynomial time and with good probability a nontrivial factor of a composite integer N. All operations can be executed on a classical computer, except the order finding subroutine that requires a quantum computer (to find the order in polynomial time).",
+        "bbox": [
+            137,
+            600,
+            858,
+            705
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "23.3 Summary of the algorithm",
+        "text_level": 2,
+        "bbox": [
+            139,
+            726,
+            537,
+            745
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "<sub>•</sub> Input: N",
+            "Output: a nontrivial factor of N",
+            "<sub>•</sub> Runtime: $O ( ( \\log _ { 2 } N ) ^ { 3 } )$ operations"
+        ],
+        "bbox": [
+            137,
+            752,
+            468,
+            833
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "<sub>•</sub> Procedure:",
+        "bbox": [
+            139,
+            859,
+            270,
+            875
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "116",
+        "bbox": [
+            482,
+            904,
+            515,
+            920
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "1. If $N \\mathrm { \\ e v e n . } \\longrightarrow \\mathrm { o u t p u t = 2 }$",
+            "2. Determine whether $N = a ^ { b }$ for $a \\geq 1$ , $b \\geq 2$ (can be done by a classical algorithm in ${ \\cal O } ( L ^ { 3 } )$ operations). If yes, <sub>\u0000!</sub> output = a.",
+            "3. Choose x in the interval $[ 1 , N - 1 ]$ . Compute the $\\mathrm { G C D } ( x , N )$ , if it is > 1 then $\\longrightarrow \\mathrm { o u t p u t } = \\mathrm { G C D } ( x , N )$",
+            "4. Quantum subroutine to find the order r of x modulo N."
+        ],
+        "bbox": [
+            137,
+            125,
+            857,
+            268
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "5. If r is even and $x ^ { r / 2 } \\neq - 1$ (mod N), compute $\\mathrm { G C D } ( x ^ { r / 2 } - 1 , N )$ and $\\mathrm { G C D } ( x ^ { r / 2 } +$ $1 , N )$ , and test whether these are nontrivial factors of N . If yes, <sub>\u0000!</sub> output = these factors.",
+        "bbox": [
+            137,
+            281,
+            855,
+            332
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "NB: $x ^ { r / 2 }$ cannot be = +1 (mod N) because r is the smallest integer such that $x ^ { r } \\equiv 1 { \\pmod { N } }$ .",
+        "bbox": [
+            137,
+            347,
+            855,
+            382
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "23.4 Example: the factorization of $N = 9 1$",
+        "text_level": 2,
+        "bbox": [
+            139,
+            403,
+            653,
+            422
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "i) The steps 1. and 2. are passed without exiting.",
+            "ii) step 3. : choose for example $x = 4 .$ , coprime with 91.",
+            "iii) compute order of 4 modulo 91. ${ \\mathrm { R e s u l t } } = 6 ( 4 ^ { 6 } = 4 0 9 6 = 1 + 4 5 \\times 9 1 )$ .",
+            "iv) check that $x ^ { r / 2 } \\neq - 1 { \\mathrm { ~ ( m o d ~ } } N { \\mathrm { ) } } ,  4 ^ { 3 } = 6 4 \\neq - 1 { \\mathrm { ~ ( m o d ~ } } 9 1 { \\mathrm { ) } } , { \\mathrm { ~ o k } } .$",
+            "v) GCD(64+1, 91) = 13, GCD(64-1, 91) = 7"
+        ],
+        "bbox": [
+            137,
+            432,
+            786,
+            519
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "23.5 Bibliography",
+        "text_level": 2,
+        "bbox": [
+            139,
+            540,
+            371,
+            560
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "P. W. Shor (1994), “Algorithms for quantum computation: discrete log and factoring”, Proc. of the 35-th Annual Symposium on the Foundations of Computer Science, 124-134, IEEE Computer Society Press.",
+        "bbox": [
+            137,
+            568,
+            855,
+            619
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "117",
+        "bbox": [
+            482,
+            904,
+            515,
+            919
+        ],
+        "page_idx": 1
+    }
+]

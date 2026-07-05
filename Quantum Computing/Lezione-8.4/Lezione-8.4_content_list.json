@@ -1,0 +1,296 @@
+[
+    {
+        "type": "text",
+        "text": "21 Lecture 21: Phase estimation",
+        "text_level": 2,
+        "bbox": [
+            139,
+            121,
+            628,
+            141
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "21.1 The circuit",
+        "text_level": 2,
+        "bbox": [
+            139,
+            159,
+            354,
+            176
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Consider the eigenvalue equation for a unitary operator $U { : }$",
+        "bbox": [
+            137,
+            187,
+            653,
+            205
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nU | u \\rangle = e ^ {2 \\pi i \\varphi} | u \\rangle \\tag {21.1}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            433,
+            214,
+            853,
+            233
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "where U and the eigenvector $| u \\rangle$ are known, and $\\varphi$ is unknown. The $\\mathrm { Q F T }$ provides an algorithm to find the phase $\\varphi ,$ , assuming that black boxes (circuits) are available to prepare the state $| u \\rangle$ and to implement controlled- $U ^ { 2 ^ { j } }$ .",
+        "bbox": [
+            137,
+            244,
+            855,
+            296
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The procedure of phase estimation uses two registers: the first register contains t qubits, each in the initial state $| 0 \\rangle$ . The number t will depend on:",
+        "bbox": [
+            137,
+            296,
+            855,
+            330
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "list",
+        "sub_type": "text",
+        "list_items": [
+            "- the accuracy we want to reach in the estimation of the phase",
+            "- the probability of success of the algorithm"
+        ],
+        "bbox": [
+            166,
+            332,
+            715,
+            364
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The second register contains initially the eigenstate $| u \\rangle$ , with the appropriate number of qubits necessary to encode the eigenstate.",
+        "bbox": [
+            137,
+            365,
+            855,
+            399
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The circuit for the phase estimation is given in Fig. 21.1. The e↵ect of the sequence of controlled-U gates on the state $| j \\rangle | u \\rangle$ is",
+        "bbox": [
+            137,
+            413,
+            855,
+            448
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left| j _ {1} \\dots j _ {t} \\right\\rangle | u \\rangle \\longrightarrow \\left| j _ {1} \\dots j _ {t} \\right\\rangle U ^ {2 ^ {t - 1} j _ {1}} \\dots U ^ {2 ^ {0} j _ {t}} | u \\rangle = | j \\rangle U ^ {j} | u \\rangle \\tag {21.2}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            255,
+            458,
+            853,
+            479
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "and recalling the eigenvalue equation (21.1):",
+        "bbox": [
+            139,
+            489,
+            527,
+            505
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left| j \\right\\rangle \\left| u \\right\\rangle \\longrightarrow \\left| j \\right\\rangle e ^ {2 \\pi i \\varphi j} \\left| u \\right\\rangle \\tag {21.3}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            403,
+            517,
+            853,
+            536
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The first register exits the H gates in the state:",
+        "bbox": [
+            139,
+            546,
+            556,
+            562
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n| 0 \\rangle \\longrightarrow \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} | j \\rangle \\tag {21.4}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            421,
+            574,
+            853,
+            622
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(remember $\\begin{array} { r } { ( | 0 \\rangle + | 1 \\rangle ) ( | 0 \\rangle + | 1 \\rangle ) \\cdot \\cdot \\cdot ( | 0 \\rangle + | 1 \\rangle ) = \\sum _ { j _ { 1 } = 0 } ^ { 1 } \\cdot \\cdot \\cdot \\sum _ { j _ { t } = 0 } ^ { 1 } | j _ { 1 } \\cdot \\cdot \\cdot j _ { t } \\rangle = \\sum _ { j = 0 } ^ { 2 ^ { t } - 1 } | j \\rangle ) } \\end{array}$",
+        "bbox": [
+            139,
+            633,
+            860,
+            655
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Thus the initial state of the two registers $| 0 \\rangle | u \\rangle$ is transformed by the circuit as:",
+        "bbox": [
+            168,
+            655,
+            855,
+            671
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\left| 0 \\right\\rangle | u \\rangle \\longrightarrow \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\varphi j} | j \\rangle | u \\rangle = \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\frac {(2 ^ {t} \\varphi) j}{2 ^ {t}}} | j \\rangle | u \\rangle \\tag {21.5}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            272,
+            682,
+            853,
+            730
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Suppose now that the phase $\\varphi$ can be expressed exactly with t bits:",
+        "bbox": [
+            137,
+            739,
+            724,
+            756
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\varphi = 0. \\varphi_ {1}... \\varphi_ {t} \\tag {21.6}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            443,
+            769,
+            853,
+            787
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "(remember that the phase as defined in (21.1) is a real number between 0 and 1). Then applying the inverse $\\mathrm { Q F T }$ to the first register gives",
+        "bbox": [
+            137,
+            796,
+            853,
+            831
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\frac {(2 ^ {t} \\varphi) j}{2 ^ {t}}} | j \\rangle \\longrightarrow | 2 ^ {t} \\varphi \\rangle = | \\varphi_ {1}... \\varphi_ {t} \\rangle \\tag {21.7}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            329,
+            843,
+            853,
+            889
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "102",
+        "bbox": [
+            482,
+            904,
+            515,
+            919
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "and measuring the register in the computational basis yields the phase $\\varphi .$",
+        "bbox": [
+            139,
+            125,
+            781,
+            144
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/42db54be769c0a01890d7ffc19d4ce95e448455b1d4d67338676a82f19815c3f.jpg",
+        "image_caption": [
+            "Fig. 21.1 The circuit for phase estimation."
+        ],
+        "image_footnote": [],
+        "content": "```mermaid\ngraph LR\n  subgraph t_qubits[\"t qubits\"]\n    direction TB\n  A[\"H\"] --> B[\"......\"]\n    C[\"......\"]\n    D[\"......\"]\n  end\n\n  subgraph u_u[\"|u⟩[\\\"|u⟩\\\"]\"]\n  E[\"U2^0\"] --> F[\"......\"]\n  G[\"U2^1\"] --> H[\"......\"]\n  I[\"U2^2\"] --> J[\"......\"]\n  K[\"U2^{t-1}\"] --> L[\"......\"]\n  end\n\n  style A fill:#fff,stroke:#333\n  style C fill:#fff,stroke:#333\n  style D fill:#fff,stroke:#333\n  style E fill:#fff,stroke:#333\n  style F fill:#fff,stroke:#333\n  style G fill:#fff,stroke:#333\n  style H fill:#fff,stroke:#333\n  style I fill:#fff,stroke:#333\n  style J fill:#fff,stroke:#333\n  style K fill:#fff,stroke:#333\n  style L fill:#fff,stroke:#333\n```",
+        "sub_type": "flowchart",
+        "bbox": [
+            196,
+            204,
+            811,
+            429
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "103",
+        "bbox": [
+            482,
+            904,
+            515,
+            919
+        ],
+        "page_idx": 1
+    }
+]

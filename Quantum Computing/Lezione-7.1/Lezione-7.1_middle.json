@@ -1,0 +1,3950 @@
+{
+    "pdf_info": [
+        {
+            "preproc_blocks": [
+                {
+                    "bbox": [
+                        83,
+                        102,
+                        370,
+                        119
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                101,
+                                371,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        101,
+                                        371,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "15 Lecture 15: Classical circuits",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        132,
+                        510,
+                        162
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                129,
+                                511,
+                                150
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        129,
+                                        511,
+                                        150
+                                    ],
+                                    "type": "text",
+                                    "content": "Circuits, with wires and gates, are a model of computation equivalent to the Turing",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                147,
+                                342,
+                                161
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        147,
+                                        342,
+                                        161
+                                    ],
+                                    "type": "text",
+                                    "content": "machine, and often more convenient and realistic.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        180,
+                        211,
+                        197
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                176,
+                                213,
+                                199
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        176,
+                                        213,
+                                        199
+                                    ],
+                                    "type": "text",
+                                    "content": "15.1 Basic gates",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        203,
+                        511,
+                        262
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                203,
+                                510,
+                                218
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        203,
+                                        280,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": "A classical logical gate is a function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        280,
+                                        203,
+                                        405,
+                                        218
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }",
+                                    "score": 0.8943
+                                },
+                                {
+                                    "bbox": [
+                                        405,
+                                        203,
+                                        510,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": ", taking n bits into",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                218,
+                                510,
+                                233
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        218,
+                                        510,
+                                        233
+                                    ],
+                                    "type": "text",
+                                    "content": "m bits. When m = 1 the function is said to be boolean. For example, the NOT",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                232,
+                                510,
+                                249
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        232,
+                                        510,
+                                        249
+                                    ],
+                                    "type": "text",
+                                    "content": "classical gate is a 1-bit to 1-bit function, the AND gate is a 2-bit to 1-bit function",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                248,
+                                510,
+                                262
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        248,
+                                        510,
+                                        262
+                                    ],
+                                    "type": "text",
+                                    "content": "etc. Both implement boolean functions. Basic classical gates are given in Fig. 15.1.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        174,
+                        292,
+                        345,
+                        490
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                174,
+                                292,
+                                345,
+                                490
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        174,
+                                        292,
+                                        345,
+                                        490
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                174,
+                                                292,
+                                                345,
+                                                490
+                                            ],
+                                            "type": "image",
+                                            "content": "NOT a → ▶ ○ → ā\nAND a b → └ — ab\nOR a b → └ — (āb̅)\nXOR a b → └ — a ⊕ b\nNAND a b → └ ○ → āb̅\nNOR a b → ◇ ○ → āb̅",
+                                            "image_path": "5531344e4f8ab5b4b4d3272dab0d4df17d45623811e910def509ee0326f4cce7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                520,
+                                220,
+                                535
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 5,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        519,
+                                        221,
+                                        536
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                519,
+                                                221,
+                                                536
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.1 Classical gates.",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "sub_type": "text_image"
+                },
+                {
+                    "bbox": [
+                        82,
+                        557,
+                        510,
+                        587
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                556,
+                                510,
+                                573
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        556,
+                                        510,
+                                        573
+                                    ],
+                                    "type": "text",
+                                    "content": "Example: a circuit that adds two 3-bit integers is shown in Fig. 15.2. It generalizes",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                572,
+                                205,
+                                587
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        572,
+                                        205,
+                                        587
+                                    ],
+                                    "type": "text",
+                                    "content": "easily to n-bit integers.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        289,
+                        762,
+                        304,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                305,
+                                777
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        305,
+                                        777
+                                    ],
+                                    "type": "text",
+                                    "content": "69",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 0,
+            "para_blocks": [
+                {
+                    "bbox": [
+                        83,
+                        102,
+                        370,
+                        119
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                101,
+                                371,
+                                122
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        101,
+                                        371,
+                                        122
+                                    ],
+                                    "type": "text",
+                                    "content": "15 Lecture 15: Classical circuits",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        132,
+                        510,
+                        162
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 1,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                129,
+                                511,
+                                150
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        129,
+                                        511,
+                                        150
+                                    ],
+                                    "type": "text",
+                                    "content": "Circuits, with wires and gates, are a model of computation equivalent to the Turing",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                147,
+                                342,
+                                161
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        147,
+                                        342,
+                                        161
+                                    ],
+                                    "type": "text",
+                                    "content": "machine, and often more convenient and realistic.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        180,
+                        211,
+                        197
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                176,
+                                213,
+                                199
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        176,
+                                        213,
+                                        199
+                                    ],
+                                    "type": "text",
+                                    "content": "15.1 Basic gates",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        203,
+                        511,
+                        262
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 3,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                203,
+                                510,
+                                218
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        203,
+                                        280,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": "A classical logical gate is a function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        280,
+                                        203,
+                                        405,
+                                        218
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }",
+                                    "score": 0.8943
+                                },
+                                {
+                                    "bbox": [
+                                        405,
+                                        203,
+                                        510,
+                                        218
+                                    ],
+                                    "type": "text",
+                                    "content": ", taking n bits into",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                218,
+                                510,
+                                233
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        218,
+                                        510,
+                                        233
+                                    ],
+                                    "type": "text",
+                                    "content": "m bits. When m = 1 the function is said to be boolean. For example, the NOT",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                232,
+                                510,
+                                249
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        232,
+                                        510,
+                                        249
+                                    ],
+                                    "type": "text",
+                                    "content": "classical gate is a 1-bit to 1-bit function, the AND gate is a 2-bit to 1-bit function",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                248,
+                                510,
+                                262
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        248,
+                                        510,
+                                        262
+                                    ],
+                                    "type": "text",
+                                    "content": "etc. Both implement boolean functions. Basic classical gates are given in Fig. 15.1.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        174,
+                        292,
+                        345,
+                        490
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                174,
+                                292,
+                                345,
+                                490
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        174,
+                                        292,
+                                        345,
+                                        490
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                174,
+                                                292,
+                                                345,
+                                                490
+                                            ],
+                                            "type": "image",
+                                            "content": "NOT a → ▶ ○ → ā\nAND a b → └ — ab\nOR a b → └ — (āb̅)\nXOR a b → └ — a ⊕ b\nNAND a b → └ ○ → āb̅\nNOR a b → ◇ ○ → āb̅",
+                                            "image_path": "5531344e4f8ab5b4b4d3272dab0d4df17d45623811e910def509ee0326f4cce7.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 4
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                520,
+                                220,
+                                535
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 5,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        519,
+                                        221,
+                                        536
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                519,
+                                                221,
+                                                536
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.1 Classical gates.",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 4,
+                    "sub_type": "text_image"
+                },
+                {
+                    "bbox": [
+                        82,
+                        557,
+                        510,
+                        587
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                556,
+                                510,
+                                573
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        556,
+                                        510,
+                                        573
+                                    ],
+                                    "type": "text",
+                                    "content": "Example: a circuit that adds two 3-bit integers is shown in Fig. 15.2. It generalizes",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                572,
+                                205,
+                                587
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        572,
+                                        205,
+                                        587
+                                    ],
+                                    "type": "text",
+                                    "content": "easily to n-bit integers.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        104,
+                        122,
+                        272,
+                        169
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                104,
+                                122,
+                                272,
+                                169
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        122,
+                                        272,
+                                        169
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                104,
+                                                122,
+                                                272,
+                                                169
+                                            ],
+                                            "type": "image",
+                                            "content": "HA\nx\ny\nc\n(carry bit)\nx ⊕ y",
+                                            "image_path": "120618509a2c30dc6b0ea25cfdb5b66c4277407483cce14a336a9cdc65b96ade.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "text_image"
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        315,
+                        130,
+                        521,
+                        164
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                315,
+                                130,
+                                521,
+                                164
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        315,
+                                        130,
+                                        521,
+                                        164
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                315,
+                                                130,
+                                                521,
+                                                164
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x[\"x\"] --> HA1[\"HA\"]\n  y[\"y\"] --> HA1\n  c[\"c\"] --> HA2[\"HA\"]\n  HA1 --> AND_Gate[\"⊙\"]\n  HA2 --> AND_Gate\n  AND_Gate --> Output_c'[\"c'\"]\n  Output_c[\"x ⊕ y ⊕ c\"]\n```",
+                                            "image_path": "a6ec40f01bdc779f3e4778c14dac21d62b66c891a0d5e23d71ddd9a63828a1a8.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1,
+                    "sub_type": "flowchart"
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        221,
+                        207,
+                        434,
+                        290
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                221,
+                                207,
+                                434,
+                                290
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        221,
+                                        207,
+                                        434,
+                                        290
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                221,
+                                                207,
+                                                434,
+                                                290
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> HA[\"HA\"]\n  y0[\"y0\"] --> HA\n  x1[\"x1\"] --> FA[\"FA\"]\n  y1[\"y1\"] --> FA\n  x2[\"x2\"] --> FA\n  y2[\"y2\"] --> FA\n  FA --> x+y[\"x + y\"]\n```",
+                                            "image_path": "f444b2e28ab5a41e3e56a1b3ad3daa938e526ed3165cd98c5642760d91c7c942.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                82,
+                                309,
+                                510,
+                                351
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 3,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        306,
+                                        511,
+                                        325
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                82,
+                                                306,
+                                                274,
+                                                325
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.2 Adds two binary integers",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                274,
+                                                311,
+                                                392,
+                                                322
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "x = x _ { 0 } x _ { 1 } x _ { 2 } , y = y _ { 0 } y _ { 1 } y _ { 2 }",
+                                            "score": 0.631
+                                        },
+                                        {
+                                            "bbox": [
+                                                392,
+                                                306,
+                                                511,
+                                                325
+                                            ],
+                                            "type": "text",
+                                            "content": ". The carry bit c in the",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        322,
+                                        511,
+                                        337
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                322,
+                                                186,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": "half-adder HA is 1 if",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                187,
+                                                324,
+                                                235,
+                                                335
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "x = y = 1",
+                                            "score": 0.8599
+                                        },
+                                        {
+                                            "bbox": [
+                                                235,
+                                                322,
+                                                309,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": ". The carry bit",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                309,
+                                                323,
+                                                320,
+                                                335
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "c ^ { \\prime }",
+                                            "score": 0.7479
+                                        },
+                                        {
+                                            "bbox": [
+                                                320,
+                                                322,
+                                                511,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": "in the full-adder FA is 1 if at least two",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        337,
+                                        165,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                337,
+                                                165,
+                                                351
+                                            ],
+                                            "type": "text",
+                                            "content": "input bits are 1.",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "sub_type": "flowchart"
+                },
+                {
+                    "bbox": [
+                        83,
+                        362,
+                        352,
+                        378
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                362,
+                                353,
+                                377
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        362,
+                                        353,
+                                        377
+                                    ],
+                                    "type": "text",
+                                    "content": "Observation: any function f of n bits into m bits:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        152,
+                        389,
+                        508,
+                        405
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                152,
+                                389,
+                                508,
+                                405
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        152,
+                                        389,
+                                        508,
+                                        405
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "f (x _ {1}, \\dots x _ {n}) = (f _ {1} (x _ {1}, \\dots x _ {n}), f _ {2} (x _ {1}, \\dots x _ {n}), \\dots , f _ {m} (x _ {1}, \\dots x _ {n})) \\tag {15.1}",
+                                    "image_path": "af3039f0432bdeac3b38b4fe63096a3b6ade0fc46f4e01ab00c603f057519057.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        82,
+                        415,
+                        509,
+                        445
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                414,
+                                511,
+                                431
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        414,
+                                        164,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "is equivalent to",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        164,
+                                        418,
+                                        177,
+                                        429
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "m",
+                                    "score": 0.5007
+                                },
+                                {
+                                    "bbox": [
+                                        177,
+                                        414,
+                                        229,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        229,
+                                        417,
+                                        288,
+                                        430
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f _ { 1 } , f _ { 2 } , . . . , f _ { n }",
+                                    "score": 0.9131
+                                },
+                                {
+                                    "bbox": [
+                                        288,
+                                        414,
+                                        511,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "of n bits to 1 bit (the “components” of the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                427,
+                                149,
+                                447
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        427,
+                                        130,
+                                        447
+                                    ],
+                                    "type": "text",
+                                    "content": "function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        130,
+                                        431,
+                                        142,
+                                        444
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f )",
+                                    "score": 0.7245
+                                },
+                                {
+                                    "bbox": [
+                                        142,
+                                        427,
+                                        149,
+                                        447
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        463,
+                        390,
+                        478
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                461,
+                                392,
+                                481
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        461,
+                                        392,
+                                        481
+                                    ],
+                                    "type": "text",
+                                    "content": "15.2 Universal set: NAND and FANOUT",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        487,
+                        509,
+                        516
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                486,
+                                510,
+                                502
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        486,
+                                        510,
+                                        502
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem: the gates NAND and FANOUT are a universal set: using only these",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                500,
+                                481,
+                                516
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        500,
+                                        194,
+                                        516
+                                    ],
+                                    "type": "text",
+                                    "content": "gates, every function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        194,
+                                        501,
+                                        309,
+                                        516
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }",
+                                    "score": 0.9292
+                                },
+                                {
+                                    "bbox": [
+                                        310,
+                                        500,
+                                        481,
+                                        516
+                                    ],
+                                    "type": "text",
+                                    "content": "can be implemented in a circuit.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        527,
+                        508,
+                        556
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                525,
+                                510,
+                                543
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        525,
+                                        510,
+                                        543
+                                    ],
+                                    "type": "text",
+                                    "content": "In virtue of the above observation, we need to prove the Theorem only for boolean",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                540,
+                                201,
+                                558
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        540,
+                                        135,
+                                        558
+                                    ],
+                                    "type": "text",
+                                    "content": "functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        135,
+                                        542,
+                                        195,
+                                        555
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9239
+                                },
+                                {
+                                    "bbox": [
+                                        196,
+                                        540,
+                                        201,
+                                        558
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        556,
+                        509,
+                        585
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                554,
+                                510,
+                                571
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        554,
+                                        510,
+                                        571
+                                    ],
+                                    "type": "text",
+                                    "content": "We first give in Fig. 15.3 some examples of basic gates, realized with circuits",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                570,
+                                273,
+                                585
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        570,
+                                        273,
+                                        585
+                                    ],
+                                    "type": "text",
+                                    "content": "that use only NAND and FANOUT.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        290,
+                        762,
+                        304,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                305,
+                                778
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        305,
+                                        778
+                                    ],
+                                    "type": "text",
+                                    "content": "70",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 1,
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        104,
+                        122,
+                        272,
+                        169
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                104,
+                                122,
+                                272,
+                                169
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        104,
+                                        122,
+                                        272,
+                                        169
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                104,
+                                                122,
+                                                272,
+                                                169
+                                            ],
+                                            "type": "image",
+                                            "content": "HA\nx\ny\nc\n(carry bit)\nx ⊕ y",
+                                            "image_path": "120618509a2c30dc6b0ea25cfdb5b66c4277407483cce14a336a9cdc65b96ade.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "text_image"
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        315,
+                        130,
+                        521,
+                        164
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                315,
+                                130,
+                                521,
+                                164
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        315,
+                                        130,
+                                        521,
+                                        164
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                315,
+                                                130,
+                                                521,
+                                                164
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x[\"x\"] --> HA1[\"HA\"]\n  y[\"y\"] --> HA1\n  c[\"c\"] --> HA2[\"HA\"]\n  HA1 --> AND_Gate[\"⊙\"]\n  HA2 --> AND_Gate\n  AND_Gate --> Output_c'[\"c'\"]\n  Output_c[\"x ⊕ y ⊕ c\"]\n```",
+                                            "image_path": "a6ec40f01bdc779f3e4778c14dac21d62b66c891a0d5e23d71ddd9a63828a1a8.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 1
+                        }
+                    ],
+                    "index": 1,
+                    "sub_type": "flowchart"
+                },
+                {
+                    "type": "image",
+                    "bbox": [
+                        221,
+                        207,
+                        434,
+                        290
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                221,
+                                207,
+                                434,
+                                290
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        221,
+                                        207,
+                                        434,
+                                        290
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                221,
+                                                207,
+                                                434,
+                                                290
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> HA[\"HA\"]\n  y0[\"y0\"] --> HA\n  x1[\"x1\"] --> FA[\"FA\"]\n  y1[\"y1\"] --> FA\n  x2[\"x2\"] --> FA\n  y2[\"y2\"] --> FA\n  FA --> x+y[\"x + y\"]\n```",
+                                            "image_path": "f444b2e28ab5a41e3e56a1b3ad3daa938e526ed3165cd98c5642760d91c7c942.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 2
+                        },
+                        {
+                            "bbox": [
+                                82,
+                                309,
+                                510,
+                                351
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 3,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        306,
+                                        511,
+                                        325
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                82,
+                                                306,
+                                                274,
+                                                325
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.2 Adds two binary integers",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                274,
+                                                311,
+                                                392,
+                                                322
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "x = x _ { 0 } x _ { 1 } x _ { 2 } , y = y _ { 0 } y _ { 1 } y _ { 2 }",
+                                            "score": 0.631
+                                        },
+                                        {
+                                            "bbox": [
+                                                392,
+                                                306,
+                                                511,
+                                                325
+                                            ],
+                                            "type": "text",
+                                            "content": ". The carry bit c in the",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        322,
+                                        511,
+                                        337
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                322,
+                                                186,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": "half-adder HA is 1 if",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                187,
+                                                324,
+                                                235,
+                                                335
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "x = y = 1",
+                                            "score": 0.8599
+                                        },
+                                        {
+                                            "bbox": [
+                                                235,
+                                                322,
+                                                309,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": ". The carry bit",
+                                            "score": 1.0
+                                        },
+                                        {
+                                            "bbox": [
+                                                309,
+                                                323,
+                                                320,
+                                                335
+                                            ],
+                                            "type": "inline_equation",
+                                            "content": "c ^ { \\prime }",
+                                            "score": 0.7479
+                                        },
+                                        {
+                                            "bbox": [
+                                                320,
+                                                322,
+                                                511,
+                                                337
+                                            ],
+                                            "type": "text",
+                                            "content": "in the full-adder FA is 1 if at least two",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "bbox": [
+                                        83,
+                                        337,
+                                        165,
+                                        351
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                83,
+                                                337,
+                                                165,
+                                                351
+                                            ],
+                                            "type": "text",
+                                            "content": "input bits are 1.",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 2,
+                    "sub_type": "flowchart"
+                },
+                {
+                    "bbox": [
+                        83,
+                        362,
+                        352,
+                        378
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 4,
+                    "lines": [
+                        {
+                            "bbox": [
+                                85,
+                                362,
+                                353,
+                                377
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        362,
+                                        353,
+                                        377
+                                    ],
+                                    "type": "text",
+                                    "content": "Observation: any function f of n bits into m bits:",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        152,
+                        389,
+                        508,
+                        405
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                152,
+                                389,
+                                508,
+                                405
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        152,
+                                        389,
+                                        508,
+                                        405
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "f (x _ {1}, \\dots x _ {n}) = (f _ {1} (x _ {1}, \\dots x _ {n}), f _ {2} (x _ {1}, \\dots x _ {n}), \\dots , f _ {m} (x _ {1}, \\dots x _ {n})) \\tag {15.1}",
+                                    "image_path": "af3039f0432bdeac3b38b4fe63096a3b6ade0fc46f4e01ab00c603f057519057.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 5
+                },
+                {
+                    "bbox": [
+                        82,
+                        415,
+                        509,
+                        445
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 6,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                414,
+                                511,
+                                431
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        414,
+                                        164,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "is equivalent to",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        164,
+                                        418,
+                                        177,
+                                        429
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "m",
+                                    "score": 0.5007
+                                },
+                                {
+                                    "bbox": [
+                                        177,
+                                        414,
+                                        229,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        229,
+                                        417,
+                                        288,
+                                        430
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f _ { 1 } , f _ { 2 } , . . . , f _ { n }",
+                                    "score": 0.9131
+                                },
+                                {
+                                    "bbox": [
+                                        288,
+                                        414,
+                                        511,
+                                        431
+                                    ],
+                                    "type": "text",
+                                    "content": "of n bits to 1 bit (the “components” of the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                427,
+                                149,
+                                447
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        427,
+                                        130,
+                                        447
+                                    ],
+                                    "type": "text",
+                                    "content": "function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        130,
+                                        431,
+                                        142,
+                                        444
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f )",
+                                    "score": 0.7245
+                                },
+                                {
+                                    "bbox": [
+                                        142,
+                                        427,
+                                        149,
+                                        447
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        83,
+                        463,
+                        390,
+                        478
+                    ],
+                    "type": "title",
+                    "angle": 0,
+                    "index": 7,
+                    "lines": [
+                        {
+                            "bbox": [
+                                82,
+                                461,
+                                392,
+                                481
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        461,
+                                        392,
+                                        481
+                                    ],
+                                    "type": "text",
+                                    "content": "15.2 Universal set: NAND and FANOUT",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "level": 2
+                },
+                {
+                    "bbox": [
+                        82,
+                        487,
+                        509,
+                        516
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                486,
+                                510,
+                                502
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        486,
+                                        510,
+                                        502
+                                    ],
+                                    "type": "text",
+                                    "content": "Theorem: the gates NAND and FANOUT are a universal set: using only these",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                500,
+                                481,
+                                516
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        500,
+                                        194,
+                                        516
+                                    ],
+                                    "type": "text",
+                                    "content": "gates, every function",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        194,
+                                        501,
+                                        309,
+                                        516
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f : \\{ 0 , 1 \\} ^ { n } \\longrightarrow \\{ 0 , 1 \\} ^ { m }",
+                                    "score": 0.9292
+                                },
+                                {
+                                    "bbox": [
+                                        310,
+                                        500,
+                                        481,
+                                        516
+                                    ],
+                                    "type": "text",
+                                    "content": "can be implemented in a circuit.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        527,
+                        508,
+                        556
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                83,
+                                525,
+                                510,
+                                543
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        525,
+                                        510,
+                                        543
+                                    ],
+                                    "type": "text",
+                                    "content": "In virtue of the above observation, we need to prove the Theorem only for boolean",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                540,
+                                201,
+                                558
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        540,
+                                        135,
+                                        558
+                                    ],
+                                    "type": "text",
+                                    "content": "functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        135,
+                                        542,
+                                        195,
+                                        555
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9239
+                                },
+                                {
+                                    "bbox": [
+                                        196,
+                                        540,
+                                        201,
+                                        558
+                                    ],
+                                    "type": "text",
+                                    "content": ".",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        556,
+                        509,
+                        585
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 10,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                554,
+                                510,
+                                571
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        554,
+                                        510,
+                                        571
+                                    ],
+                                    "type": "text",
+                                    "content": "We first give in Fig. 15.3 some examples of basic gates, realized with circuits",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                570,
+                                273,
+                                585
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        570,
+                                        273,
+                                        585
+                                    ],
+                                    "type": "text",
+                                    "content": "that use only NAND and FANOUT.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        164,
+                        122,
+                        476,
+                        421
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                164,
+                                122,
+                                476,
+                                421
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        164,
+                                        122,
+                                        476,
+                                        421
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                164,
+                                                122,
+                                                476,
+                                                421
+                                            ],
+                                            "type": "image",
+                                            "image_path": "dd292d104c9c77d4168768a7a5b7e2c4ff372812fe73d2fde56bebfffd11cbbd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                450,
+                                365,
+                                463
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 7,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        450,
+                                        365,
+                                        464
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                85,
+                                                450,
+                                                365,
+                                                464
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.3 Basic gates in terms of NAND and FANOUT",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "sub_images": [
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.01,
+                                0.0,
+                                0.792,
+                                0.09
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.013,
+                                0.167,
+                                0.798,
+                                0.251
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.019,
+                                0.318,
+                                0.811,
+                                0.415
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.022,
+                                0.488,
+                                0.99,
+                                0.656
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.01,
+                                0.716,
+                                0.702,
+                                0.823
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.058,
+                                0.91,
+                                0.913,
+                                0.997
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        82,
+                        475,
+                        509,
+                        547
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                475,
+                                510,
+                                490
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        475,
+                                        409,
+                                        490
+                                    ],
+                                    "type": "text",
+                                    "content": "The proof of the Theorem proceeds by induction on n. For",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        409,
+                                        476,
+                                        444,
+                                        488
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n = 1",
+                                    "score": 0.5159
+                                },
+                                {
+                                    "bbox": [
+                                        444,
+                                        475,
+                                        510,
+                                        490
+                                    ],
+                                    "type": "text",
+                                    "content": "there are 4",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                490,
+                                511,
+                                506
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        490,
+                                        511,
+                                        506
+                                    ],
+                                    "type": "text",
+                                    "content": "possible boolean functions: the identity (represented by a wire), the NOT gate, the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                503,
+                                509,
+                                520
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        503,
+                                        509,
+                                        520
+                                    ],
+                                    "type": "text",
+                                    "content": "0 function and the 1 function. These functions are all implementable using only",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                518,
+                                509,
+                                533
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        518,
+                                        509,
+                                        533
+                                    ],
+                                    "type": "text",
+                                    "content": "NAND and FANOUT, see Fig. 15.3 (the 0 function is obtained from the 1 function",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                532,
+                                330,
+                                548
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        532,
+                                        330,
+                                        548
+                                    ],
+                                    "type": "text",
+                                    "content": "simply by adding the NOT gate to the circuit).",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        548,
+                        508,
+                        577
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                547,
+                                509,
+                                562
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        547,
+                                        329,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": "Next we suppose that the Theorem holds for",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        329,
+                                        551,
+                                        340,
+                                        561
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n ,",
+                                    "score": 0.5088
+                                },
+                                {
+                                    "bbox": [
+                                        341,
+                                        547,
+                                        478,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": "and prove that it holds for",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        478,
+                                        548,
+                                        505,
+                                        561
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n + 1",
+                                    "score": 0.6564
+                                },
+                                {
+                                    "bbox": [
+                                        505,
+                                        547,
+                                        509,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": ",",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                561,
+                                400,
+                                578
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        561,
+                                        216,
+                                        578
+                                    ],
+                                    "type": "text",
+                                    "content": "i.e. for boolean functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        216,
+                                        563,
+                                        293,
+                                        576
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9172
+                                },
+                                {
+                                    "bbox": [
+                                        294,
+                                        561,
+                                        400,
+                                        578
+                                    ],
+                                    "type": "text",
+                                    "content": ". To do so we define",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        116,
+                        581,
+                        508,
+                        598
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                116,
+                                581,
+                                508,
+                                598
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        116,
+                                        581,
+                                        508,
+                                        598
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "f _ {0} (x _ {1},..., x _ {n}) \\equiv f (0, x _ {1},..., x _ {n}), \\quad f _ {1} (x _ {1},..., x _ {n}) \\equiv f (1, x _ {1},..., x _ {n}) \\tag {15.2}",
+                                    "image_path": "44e58be391da5b7fc904f00c4972ebd3acb35d89a424bb3834d83f0a51125097.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        82,
+                        602,
+                        509,
+                        687
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                602,
+                                510,
+                                617
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        602,
+                                        510,
+                                        617
+                                    ],
+                                    "type": "text",
+                                    "content": "By the induction hypothesis, these two n-bit boolean functions are implemented",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                617,
+                                509,
+                                631
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        617,
+                                        509,
+                                        631
+                                    ],
+                                    "type": "text",
+                                    "content": "by circuits with only NAND and FANOUT gates, represented in Fig. 15.4 with",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                631,
+                                510,
+                                645
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        631,
+                                        510,
+                                        645
+                                    ],
+                                    "type": "text",
+                                    "content": "rectangular boxes. The same Figure proves the Theorem: indeed it realizes a circuit",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                82,
+                                644,
+                                511,
+                                661
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        644,
+                                        163,
+                                        661
+                                    ],
+                                    "type": "text",
+                                    "content": "that computes",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        163,
+                                        646,
+                                        240,
+                                        660
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9151
+                                },
+                                {
+                                    "bbox": [
+                                        240,
+                                        644,
+                                        511,
+                                        661
+                                    ],
+                                    "type": "text",
+                                    "content": ", using only NOT, AND, XOR and the rectangular",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                659,
+                                509,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        659,
+                                        509,
+                                        675
+                                    ],
+                                    "type": "text",
+                                    "content": "boxes. All these circuit components can be realized with only NAND and FANOUT,",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                673,
+                                170,
+                                690
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        673,
+                                        170,
+                                        690
+                                    ],
+                                    "type": "text",
+                                    "content": "cf. Fig. 15.3.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        688,
+                        509,
+                        746
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 12,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                687,
+                                511,
+                                704
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        687,
+                                        511,
+                                        704
+                                    ],
+                                    "type": "text",
+                                    "content": "To be precise, Fig. 15.4 contains also CROSSOVER components, since there",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                703,
+                                509,
+                                717
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        703,
+                                        509,
+                                        717
+                                    ],
+                                    "type": "text",
+                                    "content": "are crossings between the wires. We recall that CROSSOVER can be realized with",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                716,
+                                509,
+                                734
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        716,
+                                        509,
+                                        734
+                                    ],
+                                    "type": "text",
+                                    "content": "three CNOT gates, and CNOT is realizable with NAND and FANOUT, as in Fig.",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                732,
+                                112,
+                                746
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        732,
+                                        112,
+                                        746
+                                    ],
+                                    "type": "text",
+                                    "content": "15.3.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        290,
+                        763,
+                        302,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 13,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                304,
+                                778
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        304,
+                                        778
+                                    ],
+                                    "type": "text",
+                                    "content": "71",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 2,
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        164,
+                        122,
+                        476,
+                        421
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                164,
+                                122,
+                                476,
+                                421
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        164,
+                                        122,
+                                        476,
+                                        421
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                164,
+                                                122,
+                                                476,
+                                                421
+                                            ],
+                                            "type": "image",
+                                            "image_path": "dd292d104c9c77d4168768a7a5b7e2c4ff372812fe73d2fde56bebfffd11cbbd.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                450,
+                                365,
+                                463
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 7,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        85,
+                                        450,
+                                        365,
+                                        464
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                85,
+                                                450,
+                                                365,
+                                                464
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.3 Basic gates in terms of NAND and FANOUT",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "sub_images": [
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.01,
+                                0.0,
+                                0.792,
+                                0.09
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.013,
+                                0.167,
+                                0.798,
+                                0.251
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.019,
+                                0.318,
+                                0.811,
+                                0.415
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.022,
+                                0.488,
+                                0.99,
+                                0.656
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.01,
+                                0.716,
+                                0.702,
+                                0.823
+                            ]
+                        },
+                        {
+                            "type": "image",
+                            "bbox": [
+                                0.058,
+                                0.91,
+                                0.913,
+                                0.997
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "bbox": [
+                        82,
+                        475,
+                        509,
+                        547
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 8,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                475,
+                                510,
+                                490
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        475,
+                                        409,
+                                        490
+                                    ],
+                                    "type": "text",
+                                    "content": "The proof of the Theorem proceeds by induction on n. For",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        409,
+                                        476,
+                                        444,
+                                        488
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n = 1",
+                                    "score": 0.5159
+                                },
+                                {
+                                    "bbox": [
+                                        444,
+                                        475,
+                                        510,
+                                        490
+                                    ],
+                                    "type": "text",
+                                    "content": "there are 4",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                490,
+                                511,
+                                506
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        490,
+                                        511,
+                                        506
+                                    ],
+                                    "type": "text",
+                                    "content": "possible boolean functions: the identity (represented by a wire), the NOT gate, the",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                503,
+                                509,
+                                520
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        503,
+                                        509,
+                                        520
+                                    ],
+                                    "type": "text",
+                                    "content": "0 function and the 1 function. These functions are all implementable using only",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                518,
+                                509,
+                                533
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        518,
+                                        509,
+                                        533
+                                    ],
+                                    "type": "text",
+                                    "content": "NAND and FANOUT, see Fig. 15.3 (the 0 function is obtained from the 1 function",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                532,
+                                330,
+                                548
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        532,
+                                        330,
+                                        548
+                                    ],
+                                    "type": "text",
+                                    "content": "simply by adding the NOT gate to the circuit).",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        548,
+                        508,
+                        577
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 9,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                547,
+                                509,
+                                562
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        547,
+                                        329,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": "Next we suppose that the Theorem holds for",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        329,
+                                        551,
+                                        340,
+                                        561
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n ,",
+                                    "score": 0.5088
+                                },
+                                {
+                                    "bbox": [
+                                        341,
+                                        547,
+                                        478,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": "and prove that it holds for",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        478,
+                                        548,
+                                        505,
+                                        561
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "n + 1",
+                                    "score": 0.6564
+                                },
+                                {
+                                    "bbox": [
+                                        505,
+                                        547,
+                                        509,
+                                        562
+                                    ],
+                                    "type": "text",
+                                    "content": ",",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                561,
+                                400,
+                                578
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        561,
+                                        216,
+                                        578
+                                    ],
+                                    "type": "text",
+                                    "content": "i.e. for boolean functions",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        216,
+                                        563,
+                                        293,
+                                        576
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9172
+                                },
+                                {
+                                    "bbox": [
+                                        294,
+                                        561,
+                                        400,
+                                        578
+                                    ],
+                                    "type": "text",
+                                    "content": ". To do so we define",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        116,
+                        581,
+                        508,
+                        598
+                    ],
+                    "type": "interline_equation",
+                    "angle": 0,
+                    "lines": [
+                        {
+                            "bbox": [
+                                116,
+                                581,
+                                508,
+                                598
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        116,
+                                        581,
+                                        508,
+                                        598
+                                    ],
+                                    "type": "interline_equation",
+                                    "content": "f _ {0} (x _ {1},..., x _ {n}) \\equiv f (0, x _ {1},..., x _ {n}), \\quad f _ {1} (x _ {1},..., x _ {n}) \\equiv f (1, x _ {1},..., x _ {n}) \\tag {15.2}",
+                                    "image_path": "44e58be391da5b7fc904f00c4972ebd3acb35d89a424bb3834d83f0a51125097.jpg"
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 10
+                },
+                {
+                    "bbox": [
+                        82,
+                        602,
+                        509,
+                        687
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 11,
+                    "lines": [
+                        {
+                            "bbox": [
+                                84,
+                                602,
+                                510,
+                                617
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        602,
+                                        510,
+                                        617
+                                    ],
+                                    "type": "text",
+                                    "content": "By the induction hypothesis, these two n-bit boolean functions are implemented",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                84,
+                                617,
+                                509,
+                                631
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        617,
+                                        509,
+                                        631
+                                    ],
+                                    "type": "text",
+                                    "content": "by circuits with only NAND and FANOUT gates, represented in Fig. 15.4 with",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                631,
+                                510,
+                                645
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        631,
+                                        510,
+                                        645
+                                    ],
+                                    "type": "text",
+                                    "content": "rectangular boxes. The same Figure proves the Theorem: indeed it realizes a circuit",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                82,
+                                644,
+                                511,
+                                661
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        82,
+                                        644,
+                                        163,
+                                        661
+                                    ],
+                                    "type": "text",
+                                    "content": "that computes",
+                                    "score": 1.0
+                                },
+                                {
+                                    "bbox": [
+                                        163,
+                                        646,
+                                        240,
+                                        660
+                                    ],
+                                    "type": "inline_equation",
+                                    "content": "f ( x _ { 0 } , x _ { 1 } , . . . , x _ { n } )",
+                                    "score": 0.9151
+                                },
+                                {
+                                    "bbox": [
+                                        240,
+                                        644,
+                                        511,
+                                        661
+                                    ],
+                                    "type": "text",
+                                    "content": ", using only NOT, AND, XOR and the rectangular",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                659,
+                                509,
+                                675
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        659,
+                                        509,
+                                        675
+                                    ],
+                                    "type": "text",
+                                    "content": "boxes. All these circuit components can be realized with only NAND and FANOUT,",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                673,
+                                170,
+                                690
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        673,
+                                        170,
+                                        690
+                                    ],
+                                    "type": "text",
+                                    "content": "cf. Fig. 15.3.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                },
+                {
+                    "bbox": [
+                        82,
+                        688,
+                        509,
+                        746
+                    ],
+                    "type": "text",
+                    "angle": 0,
+                    "index": 12,
+                    "lines": [
+                        {
+                            "bbox": [
+                                101,
+                                687,
+                                511,
+                                704
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        101,
+                                        687,
+                                        511,
+                                        704
+                                    ],
+                                    "type": "text",
+                                    "content": "To be precise, Fig. 15.4 contains also CROSSOVER components, since there",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                703,
+                                509,
+                                717
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        703,
+                                        509,
+                                        717
+                                    ],
+                                    "type": "text",
+                                    "content": "are crossings between the wires. We recall that CROSSOVER can be realized with",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                716,
+                                509,
+                                734
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        716,
+                                        509,
+                                        734
+                                    ],
+                                    "type": "text",
+                                    "content": "three CNOT gates, and CNOT is realizable with NAND and FANOUT, as in Fig.",
+                                    "score": 1.0
+                                }
+                            ]
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                732,
+                                112,
+                                746
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        83,
+                                        732,
+                                        112,
+                                        746
+                                    ],
+                                    "type": "text",
+                                    "content": "15.3.",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ],
+                    "merge_prev": false
+                }
+            ]
+        },
+        {
+            "preproc_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        108,
+                        106,
+                        542,
+                        260
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                108,
+                                106,
+                                542,
+                                260
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        106,
+                                        542,
+                                        260
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                108,
+                                                106,
+                                                542,
+                                                260
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> f0[\"f0(x1, ...xn)\"]\n  x1[\"x1\"] --> f0\n  x2[\"x2\"] --> f0\n  xn[\"xn\"] --> f0\n  f0 --> AND1[\"\"]\n  f0 --> f1[\"f1(x1, ...xn)\"]\n  f1 --> AND2[\"\"]\n  AND1 --> f(x0, ...xn)\n  AND2 --> f(x0, ...xn)\n```",
+                                            "image_path": "c1749005ecca0be1fee210c8a3bd11c8cc2206a9dd82d4a3646cd0e256895a8f.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                273,
+                                367,
+                                288
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        274,
+                                        365,
+                                        287
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                84,
+                                                274,
+                                                365,
+                                                287
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.4 Proof of universality of NAND and FANOUT",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "flowchart"
+                }
+            ],
+            "discarded_blocks": [
+                {
+                    "bbox": [
+                        290,
+                        763,
+                        304,
+                        774
+                    ],
+                    "type": "page_number",
+                    "angle": 0,
+                    "index": 2,
+                    "lines": [
+                        {
+                            "bbox": [
+                                289,
+                                762,
+                                305,
+                                778
+                            ],
+                            "spans": [
+                                {
+                                    "bbox": [
+                                        289,
+                                        762,
+                                        305,
+                                        778
+                                    ],
+                                    "type": "text",
+                                    "content": "72",
+                                    "score": 1.0
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "page_size": [
+                595,
+                842
+            ],
+            "page_idx": 3,
+            "para_blocks": [
+                {
+                    "type": "image",
+                    "bbox": [
+                        108,
+                        106,
+                        542,
+                        260
+                    ],
+                    "blocks": [
+                        {
+                            "bbox": [
+                                108,
+                                106,
+                                542,
+                                260
+                            ],
+                            "type": "image_body",
+                            "angle": 0,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        108,
+                                        106,
+                                        542,
+                                        260
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                108,
+                                                106,
+                                                542,
+                                                260
+                                            ],
+                                            "type": "image",
+                                            "content": "```mermaid\ngraph LR\n  x0[\"x0\"] --> f0[\"f0(x1, ...xn)\"]\n  x1[\"x1\"] --> f0\n  x2[\"x2\"] --> f0\n  xn[\"xn\"] --> f0\n  f0 --> AND1[\"\"]\n  f0 --> f1[\"f1(x1, ...xn)\"]\n  f1 --> AND2[\"\"]\n  AND1 --> f(x0, ...xn)\n  AND2 --> f(x0, ...xn)\n```",
+                                            "image_path": "c1749005ecca0be1fee210c8a3bd11c8cc2206a9dd82d4a3646cd0e256895a8f.jpg"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "index": 0
+                        },
+                        {
+                            "bbox": [
+                                83,
+                                273,
+                                367,
+                                288
+                            ],
+                            "type": "image_caption",
+                            "angle": 0,
+                            "index": 1,
+                            "lines": [
+                                {
+                                    "bbox": [
+                                        84,
+                                        274,
+                                        365,
+                                        287
+                                    ],
+                                    "spans": [
+                                        {
+                                            "bbox": [
+                                                84,
+                                                274,
+                                                365,
+                                                287
+                                            ],
+                                            "type": "text",
+                                            "content": "Fig. 15.4 Proof of universality of NAND and FANOUT",
+                                            "score": 1.0
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "index": 0,
+                    "sub_type": "flowchart"
+                }
+            ]
+        }
+    ],
+    "_backend": "hybrid",
+    "_ocr_enable": false,
+    "_vlm_ocr_enable": false,
+    "_version_name": "3.2.3"
+}

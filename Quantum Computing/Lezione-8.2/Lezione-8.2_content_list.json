@@ -1,0 +1,532 @@
+[
+    {
+        "type": "text",
+        "text": "20 Lecture 20: Quantum Fourier Transform (QFT)",
+        "text_level": 1,
+        "bbox": [
+            139,
+            122,
+            875,
+            146
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "20.1 Discrete Fourier Transform",
+        "text_level": 2,
+        "bbox": [
+            139,
+            160,
+            547,
+            180
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The discrete Fourier transform is defined as a transformation on N complex numbers $y _ { 0 } , y _ { 1 } , . . . , y _ { N - 1 }$ yielding N complex numbers $z _ { 0 } , z _ { 1 } , . . . , z _ { N - 1 }$ defined by:",
+        "bbox": [
+            137,
+            188,
+            858,
+            223
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz _ {k} \\equiv \\frac {1}{\\sqrt {N}} \\sum_ {j = 0} ^ {N - 1} y _ {j} e ^ {2 \\pi i j k / N} \\tag {20.1}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            394,
+            233,
+            855,
+            280
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Note the analogy with the usual Fourier transform of a function $f ( x )$ :",
+        "bbox": [
+            139,
+            289,
+            749,
+            307
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\tilde {f} (k) = \\frac {1}{\\sqrt {2 \\pi}} \\int d x f (x) e ^ {i k x} \\tag {20.2}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            386,
+            315,
+            855,
+            352
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "where the sum on the discrete index $j$ is replaced by an integral on the continuous “index” $x ,$ and $y _ { j }$ and $z _ { k }$ correspond respectively to $f ( x )$ and $\\tilde { f } ( \\boldsymbol { k } )$ .",
+        "bbox": [
+            139,
+            359,
+            858,
+            395
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "20.2 Quantum Fourier Transform",
+        "text_level": 2,
+        "bbox": [
+            139,
+            415,
+            559,
+            434
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "It is a unitary operation QFT defined on basis vectors $| 0 \\rangle , | 1 \\rangle , . . . , | N - 1 \\rangle$ as",
+        "bbox": [
+            139,
+            442,
+            803,
+            461
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nQ F T | j \\rangle = \\frac {1}{\\sqrt {N}} \\sum_ {k = 0} ^ {N - 1} e ^ {2 \\pi i j k / N} | k \\rangle \\tag {20.3}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            364,
+            472,
+            855,
+            516
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Then the components $y _ { j }$ of a vector $\\begin{array} { r } { | v \\rangle = \\sum _ { j = 0 } ^ { N - 1 } y _ { j } | j \\rangle } \\end{array}$ transform under QFT into new components $z _ { k }$ given by the discrete Fourier transform (prove it). We will show in the following that $Q F T$ is indeed unitary.",
+        "bbox": [
+            137,
+            526,
+            855,
+            579
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Using n qubits, the dimension N of the vector space of physical states is $2 ^ { n }$ , and the basis vectors $| 0 \\rangle , . . . , | j \\rangle , . . . , | 2 ^ { n } - 1 \\rangle$ are given by the $2 ^ { n }$ vectors of the computational basis $| 0 0 \\cdots 0 \\rangle , . . . , | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle , . . . , | 1 1 \\cdot \\cdot \\cdot 1 \\rangle$ , where $j _ { 1 } , j _ { 2 } , . . . , j _ { n }$ is the binary expression of the integer $j$ .",
+        "bbox": [
+            137,
+            593,
+            857,
+            662
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "20.3 Binary numbers and binary fractions",
+        "text_level": 2,
+        "bbox": [
+            139,
+            682,
+            663,
+            701
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "The binary representation of the integer j is $j _ { 1 } j _ { 2 } . . . j _ { n }$ where",
+        "bbox": [
+            139,
+            711,
+            658,
+            729
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\nj = j _ {1} 2 ^ {n - 1} + j _ {2} 2 ^ {n - 2} + \\dots + j _ {n} 2 ^ {0} \\tag {20.4}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            359,
+            739,
+            853,
+            757
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Real numbers between 0 and 1 can be represented with binary fractions, defined by",
+        "bbox": [
+            139,
+            767,
+            855,
+            785
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0. j _ {1} j _ {2} \\dots j _ {n} \\equiv \\frac {j _ {1}}{2} + \\frac {j _ {2}}{2 ^ {2}} + \\dots + \\frac {j _ {n}}{2 ^ {n}} \\tag {20.5}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            354,
+            794,
+            855,
+            826
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "and related to the binary integers $j _ { 1 } j _ { 2 } . . . j _ { n }$ by",
+        "bbox": [
+            139,
+            833,
+            537,
+            850
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "equation",
+        "text": "$$\n0. j _ {1} j _ {2} \\dots j _ {n} = \\frac {1}{2 ^ {n}} j _ {1} j _ {2} \\dots j _ {n} \\tag {20.6}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            388,
+            859,
+            855,
+            890
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "page_number",
+        "text": "95",
+        "bbox": [
+            485,
+            906,
+            510,
+            919
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "20.4 Product representation of QFT",
+        "text_level": 2,
+        "bbox": [
+            139,
+            123,
+            594,
+            144
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Theorem: the unitary operator QFT can be written as the product",
+        "bbox": [
+            139,
+            152,
+            739,
+            169
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\nQ F T \\left| j _ {1} j _ {2} \\dots j _ {n} \\right\\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n}} | 1 \\rangle\\right) \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}} | 1 \\rangle\\right) \\dots \\left(\\left| 0 \\right\\rangle + e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} | 1 \\rangle\\right) \\tag {20.7}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            139,
+            179,
+            855,
+            226
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Proof:",
+        "bbox": [
+            139,
+            226,
+            206,
+            241
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} Q F T | j \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k = 0} ^ {2 ^ {n} - 1} e ^ {2 \\pi i j k / 2 ^ {n}} | k \\rangle = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j / 2 ^ {n} (k _ {1} 2 ^ {n - 1} + \\dots + k _ {n} 2 ^ {0} ]} | k _ {1} \\dots k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} \\sum_ {k _ {1} = 0} ^ {1} e ^ {2 \\pi i j k _ {1} 2 ^ {- 1}} | k _ {1} \\rangle \\sum_ {k _ {2} = 0} ^ {1} e ^ {2 \\pi i j k _ {2} 2 ^ {- 2}} | k _ {2} \\rangle \\dots \\sum_ {k _ {n} = 0} ^ {1} e ^ {2 \\pi i j k _ {n} 2 ^ {- n}} | k _ {n} \\rangle \\\\ = \\frac {1}{2 ^ {\\frac {n}{2}}} (| 0 \\rangle + e ^ {2 \\pi i j / 2} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {2}} | 1 \\rangle) \\dots (| 0 \\rangle + e ^ {2 \\pi i j / 2 ^ {n}} | 1 \\rangle) \\tag {20.8} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            173,
+            250,
+            863,
+            383
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "and observing that",
+        "bbox": [
+            139,
+            391,
+            309,
+            408
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "equation",
+        "text": "$$\ne ^ {2 \\pi i j / 2} = e ^ {2 \\pi i 0. j _ {n}}, \\quad e ^ {2 \\pi i j / 2 ^ {2}} = e ^ {2 \\pi i 0. j _ {n - 1} j _ {n}}, \\dots , e ^ {2 \\pi i j / 2 ^ {n}} = e ^ {2 \\pi i 0. j _ {1} \\dots j _ {n}} \\tag {20.9}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            181,
+            416,
+            855,
+            439
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "the theorem follows.",
+        "bbox": [
+            139,
+            450,
+            344,
+            466
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "20.5 E\u0000cient circuit for QFT",
+        "text_level": 2,
+        "bbox": [
+            139,
+            488,
+            510,
+            508
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/6627949cd577ad28eaff305c007d23f60b57b7d7f019e7b9076552ec7cca7980.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "```mermaid\ngraph LR\n  subgraph Input_1[\"|j1⟩\"]\n  H --> R2 --> R3 --> Rn_1 --> Rn_1\n  end\n\n  subgraph Output_1[\"|j2⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Intermediate_1[\"|j3⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_2[\"|jn-1⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  subgraph Output_3[\"|jn⟩\"]\n  H --> R2 --> Rn_2 --> Rn_1\n  end\n\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rn_2\n  Rn_2 -.-> Rn_1\n  Rn_1 -.-> Rm_2\n  Rm_2 -.-> Rm_1\n```",
+        "sub_type": "flowchart",
+        "bbox": [
+            142,
+            547,
+            823,
+            818
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "page_number",
+        "text": "96",
+        "bbox": [
+            485,
+            906,
+            510,
+            919
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "where",
+        "bbox": [
+            139,
+            127,
+            196,
+            140
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\nR _ {k} \\equiv \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & e ^ {2 \\pi i / 2 ^ {k}} \\end{array} \\right) \\tag {20.10}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            410,
+            138,
+            855,
+            175
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "For example $R _ { 1 } = Z , R _ { 2 } = S , R _ { 3 } = T$ , and in general $R _ { k } ^ { 2 } = R _ { k - 1 }$ .",
+        "bbox": [
+            137,
+            182,
+            712,
+            200
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The above circuit implements the QFT on the n-qubit input state $| j \\rangle = | j _ { 1 } \\rangle \\cdots | j _ { n } \\rangle$",
+        "bbox": [
+            139,
+            200,
+            853,
+            218
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Proof: after the first H gate, the input state becomes (prove it):",
+        "bbox": [
+            139,
+            230,
+            709,
+            247
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac {1}{2 ^ {\\frac {1}{2}}} \\left(| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1}} | 1 \\rangle\\right) \\left| j _ {2} \\right\\rangle \\dots \\left| j _ {n} \\right\\rangle \\tag {20.11}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            364,
+            260,
+            855,
+            294
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Applying next the controlled- $R _ { 2 }$ gate produces the state (prove it):",
+        "bbox": [
+            139,
+            306,
+            724,
+            324
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.12}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            357,
+            337,
+            855,
+            371
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "After the application of all controlled-R gates on the first qubit the state has become",
+        "bbox": [
+            139,
+            381,
+            855,
+            397
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac {1}{2 ^ {\\frac {1}{2}}} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {2} \\rangle \\dots | j _ {n} \\rangle \\tag {20.13}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            344,
+            410,
+            855,
+            445
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Applying the same procedure to the second qubit leads to:",
+        "bbox": [
+            139,
+            456,
+            650,
+            473
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\frac {1}{2} (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {1} j _ {2} \\dots j _ {n}} | 1 \\rangle) (| 0 \\rangle + e ^ {2 \\pi i 0. j _ {2} \\dots j _ {n}} | 1 \\rangle) | j _ {3} \\rangle \\dots | j _ {n} \\rangle \\tag {20.14}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            230,
+            485,
+            855,
+            517
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "and repeating it on all the other input qubits yields the final state that coincides with the output of $Q F T | j _ { 1 } j _ { 2 } \\cdot \\cdot \\cdot j _ { n } \\rangle$ in (20.7), once we invert the order of the output qubits with CROSSOVER gates.",
+        "bbox": [
+            137,
+            527,
+            855,
+            579
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "The circuit proves that $Q F T$ is unitary, since all gates are unitary. The circuit uses $n + ( n - 1 ) + \\cdot \\cdot \\cdot + 1 = n ( n + 1 ) / 2 = \\Theta ( n ^ { 2 } )$ gates. In contrast, the best classical algorithms for the discrete Fourier transform use $\\Theta ( n 2 ^ { n } )$ gates, so that $\\mathrm { Q F T }$ has an exponential advantage on its classical counterpart.",
+        "bbox": [
+            137,
+            592,
+            855,
+            661
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "page_number",
+        "text": "97",
+        "bbox": [
+            485,
+            904,
+            509,
+            919
+        ],
+        "page_idx": 2
+    }
+]

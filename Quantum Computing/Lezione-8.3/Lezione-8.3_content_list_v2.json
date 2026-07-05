@@ -1,0 +1,478 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "24 Lecture 24: Quantum search algorithm (Grover)"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                137,
+                122,
+                882,
+                146
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "24.1 The problem"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                160,
+                374,
+                180
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The problem is to find, in a set of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N \\ = \\ 2 ^ { n }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "elements, a subset of M elements that satisfies some given conditions. We say then that the search problem has M solutions."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                188,
+                855,
+                238
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We can assume the existence of a function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "from n bits to 1 bit, that takes the value "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x ) = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if x is a solution and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x ) = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if x is not a solution."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                239,
+                855,
+                273
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We also assume that there is a black box (an “oracle”) "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "able to execute the operation on the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n + 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "qubit state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| x \\rangle | q \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| x \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is a n-qubit state and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| q \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is a 1-qubit state:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                274,
+                855,
+                325
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {f} | x \\rangle | q \\rangle = | x \\rangle | q \\oplus f (x) \\rangle \\tag {24.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/0aa011679e3253ef4a0f0270349d1022b821dff08d13726b181b2f7ecf387d72.jpg"
+                }
+            },
+            "bbox": [
+                389,
+                325,
+                853,
+                344
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In particular"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                351,
+                253,
+                366
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {f} | x \\rangle | 0 \\rangle = | x \\rangle | f (x) \\rangle \\tag {24.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/6d98e912eae95821c80d0a3b172cb936e4d0ffebb534ca9163d9973ab5d6b7c7.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                366,
+                853,
+                385
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "24.2 A two-bit example"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                407,
+                442,
+                426
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In this example "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N = 4"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and the oracle that tests x is one of the four gates:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                435,
+                791,
+                453
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/4c5d2db76eab4ced78a5c054e039778ce34944ee6c1f57ac3c8583627da2cb86.jpg"
+                },
+                "content": "x₀ = 0\nx₀ = 1\nx₀ = 2\nx₀ = 3",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 24.4 Oracles for the four cases: solution "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 } = 0 , \\ldots"
+                    },
+                    {
+                        "type": "text",
+                        "content": "solution "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 } = 3"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "text_image",
+            "bbox": [
+                218,
+                466,
+                640,
+                600
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "each corresponding to a particular solution "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 } ."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                649,
+                544,
+                665
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The first two qubits (the “query” qubits) encode "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "the last qubit is the oracle response. The circuit for the search of the solution is:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                665,
+                855,
+                699
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/d9a2708800971a7972f8eaf30a8e4b126ef9c4e0d38d9494efc6adc1b24956e0.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  H1[\"H\"] --> Oracle[\"Oracle\"]\n  H2[\"H\"] --> Oracle\n  H3[\"H\"] --> Oracle\n  Oracle --> H1\n  Oracle --> H2\n  Oracle --> H3\n  H1 --> X[\"X\"]\n  H2 --> X\n  H3 --> X\n  X --> H1\n  X --> H2\n  H1 --> X\n  H2 --> H1\n  H1 --> X\n  H2 --> X\n  X --> H1\n  X --> H2\n  H1 --> X\n  H2 --> X\n  X --> H1\n  H1 --> H2\n  H2 --> H1\n  X --> H2\n  H1 --> H1\n  H2 --> H2\n  H1 --> H1\n  H2 --> H2\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 24.5 circuit for the search of the solution "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 }"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                198,
+                726,
+                779,
+                821
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "113"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                906,
+                515,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Initially, the two query qubits are in the state <sub>|</sub>00<sub>i</sub>, and the last qubit in the state <sub>|</sub>1<sub>i</sub>. Only one iteration is required to obtain exactly "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". One can verify, using the circuit, that the measurement of the top two qubits gives "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "after using the oracle only once."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                125,
+                858,
+                195
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "By contrast, a classical computer trying to find "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x _ { 0 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "by examining all the two-bit x (four of them) would require an average of 2.25 oracle calls."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                207,
+                857,
+                242
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Exercise: prove it."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                256,
+                326,
+                271
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "114"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                920
+            ]
+        }
+    ]
+]

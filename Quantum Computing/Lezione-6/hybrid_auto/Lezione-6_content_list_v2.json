@@ -1,0 +1,2926 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13 Lecture 13: Classical and Quantum Cryptography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                120,
+                855,
+                171
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.1 Topics in classical cryptography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                185,
+                600,
+                206
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Cesar’s code: alphabetical substitutions. Symmetric key for coding and decoding"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                212,
+                855,
+                231
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Frequency analysis. Vernam: keys are random and as long as message, and one key for one message (one-time pad)."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                244,
+                855,
+                278
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Mechanical encrypting devices, Leonardo da Vinci, Leon Battista Alberti."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                292,
+                796,
+                309
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Arthur Scherbius: Enigma (3 rotating disks). Reflector <sub>)</sub> symmetric coding. 26 <sub>⇥</sub> 26 <sub>⇥</sub> 26 = 17576 initial positions of the rotors. Interchangeable rotors: number of possible keys increases by a factor 3!. Insertion of a plugboard (interchanges 6 couples of letters before entering the rotors. 100391791500 ways to do it, with 26 letters) In total <sub>⇠</sub> 10<sup>16</sup> key combinations. Weighs 12 kg, 34 <sub>⇥</sub> 28 <sub>⇥</sub> 15 cm."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                322,
+                855,
+                407
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Alan Turing, “On Computable Numbers” , 1937. Bletchley Park, the Bombe, Colossus."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                420,
+                853,
+                454
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> ENIAC, Electronic Numerical Integrator and Calculator, 1945."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                469,
+                702,
+                486
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Data Encryption Standard (DES), 1976. All these systems need key transmission: same key necessary to encrypt and decrypt."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                500,
+                853,
+                533
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Public key cryptography: the lock metaphor. Asymmetric key, using modular arithmetic and practical irreversibility of some mathematical functions. Whit Di\u0000e and Martin Hellmann, “New Directions in Cryptography”, 1976. Ron Rivest, Adi Shamir and Leonard Adleman, RSA algorithm based on the di\u0000culty of inverting pq = N , with p, q = large primes."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                548,
+                855,
+                634
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Bibliography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                646,
+                272,
+                665
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Marcus du Sautoy, “The music of the primes” (trad. italiana: “L’ enigma dei numeri primi”, Rizzoli 2004)"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                678,
+                855,
+                712
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Simon Singh, “The Codebook”, 1999"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                725,
+                463,
+                741
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2 Modular arithmetic"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                765,
+                455,
+                783
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2.1 Definition and properties"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                793,
+                475,
+                810
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Systematically studied by Carl Friedrich Gauss (1801)."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                819,
+                616,
+                837
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The notation"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                850,
+                258,
+                865
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a \\equiv b (\\text {mod} n) \\tag {13.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3025669e3023e1a9283fce240bed28108222d09aac9d6d3cca55f91a5f4d1a4e.jpg"
+                }
+            },
+            "bbox": [
+                436,
+                866,
+                853,
+                885
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "56"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "means that the relative integers a and b di↵er by integer multiples of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "n ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "i.e.:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                126,
+                800,
+                142
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a = b + n k \\tag {13.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3904883dbbc60a291be0198db677170a3c70bedf309b79dc16c644df12863457.jpg"
+                }
+            },
+            "bbox": [
+                452,
+                156,
+                853,
+                172
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with k relative integer. For example 2 <sub>⌘</sub> 38 (mod 12) and also "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "3 8 \\equiv 2 { \\ ( m o d \\ 1 2 ) }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                183,
+                833,
+                200
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Modularity is compatible with addition and multiplication. If "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a \\equiv b { \\bigl ( } m o d ~ n { \\bigr ) }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c \\equiv d { \\bigl ( } m o d n { \\bigr ) }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", then"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                212,
+                853,
+                247
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a + c \\equiv b + d (\\text {mod} n), \\quad a c \\equiv b d (\\text {mod} n) \\tag {13.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/121d4b4cfb8c6b1206ca8834b844cd20931b6248032e4de85eddce2c1053a265.jpg"
+                }
+            },
+            "bbox": [
+                315,
+                260,
+                853,
+                277
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Cancellation law: if"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                288,
+                315,
+                304
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "u x \\equiv u y (\\text {mod} n) \\tag {13.4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/946f3e58ee4591b186b5e04fe885cdafce7646134ff1ad3a0c98363b06109e5a.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                306,
+                853,
+                323
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "then"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                330,
+                184,
+                344
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "x \\equiv y (\\text {mod} n) \\tag {13.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/13a70ffdd8038de3f3aeb92461e7b0e2027bee7a8e5dc548d2299e6b5837e300.jpg"
+                }
+            },
+            "bbox": [
+                435,
+                347,
+                853,
+                363
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "only if u is coprime with n (no common factors). Indeed "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u x \\equiv u y ~ ( m o d ~ n )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "means that n divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u ( x - y )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and if n is coprime with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "u ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "it cannot divide it, and therefore must divide "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x - y , \\mathrm { i . e . } \\ x \\equiv y \\ ( m o d \\ n )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                370,
+                855,
+                422
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The smaller a satisfying "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a \\equiv b { \\bigl ( } m o d ~ n { \\bigr ) }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is simply the remainder of the division "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "b / n"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Conventionally we denote this remainder by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "b \\ ( m o d \\ n )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Thus the notation"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                435,
+                855,
+                469
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a = b (\\text {mod} n) \\tag {13.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/5b1543f25a1570c38b21a7c7655f57f50468fa5bf1fdbd2292dc40de2b65f67c.jpg"
+                }
+            },
+            "bbox": [
+                436,
+                482,
+                853,
+                499
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with = sign means that a is the remainder of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "b / n"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Note that in this case "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a < n"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". For example "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 = 3 8"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod 12) but 26  38 (mod 12). The following property holds:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                510,
+                855,
+                544
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a b (\\text {mod} n) = [ a (\\text {mod} n) b (\\text {mod} n) ] (\\text {mod} n) \\tag {13.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3035d3e17eec533109aef0f3869e6078d51cd01fda7aa63b92f2501f2d6fde94.jpg"
+                }
+            },
+            "bbox": [
+                302,
+                556,
+                853,
+                574
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2.2 Little Fermat Theorem"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                592,
+                453,
+                607
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a ^ {p} \\equiv a (\\text {mod} p) \\tag {13.8}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/094aec5b7339d2ae113da25f7432fdb4e95325212ad5e4c0a0a56c88f0194022.jpg"
+                }
+            },
+            "bbox": [
+                431,
+                619,
+                853,
+                636
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "for any integer a and prime "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p ."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                642,
+                403,
+                659
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof: by induction. It evidently holds for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a = 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Suppose that (13.8) holds for an arbitrary integer a, then prove that"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                671,
+                855,
+                706
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "(a + 1) ^ {p} \\equiv a + 1 (\\text {mod} p) \\tag {13.9}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/c92306dffc7434541256166ed19a798637e4e9065608140b41e994d79faae05e.jpg"
+                }
+            },
+            "bbox": [
+                391,
+                719,
+                853,
+                736
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Recall Newton’s binomial expansion"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                747,
+                457,
+                763
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "(a + 1) ^ {p} = \\sum_ {n = 0} ^ {p} \\binom {p} {n} a ^ {n} = 1 + \\binom {p} {1} a + \\binom {p} {2} a ^ {2} + \\dots \\binom {p} {p - 1} a ^ {p - 1} + a ^ {p} \\tag {13.10}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/e06345436828cb4d0cc36241038dffc2c8c050208331acf42ffd736573d944ec.jpg"
+                }
+            },
+            "bbox": [
+                181,
+                775,
+                853,
+                818
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Notice now that, when "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 < n < p"
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                827,
+                445,
+                844
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\binom {p} {n} = \\frac {p (p - 1) \\dots (p - n + 1)}{n !} \\tag {13.11}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/1add6bf46e6ff8f7271e555dd97e3ef6db8ed3e3c15a64231b189e6364aed5f9.jpg"
+                }
+            },
+            "bbox": [
+                374,
+                853,
+                853,
+                890
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "57"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                509,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "is divisible by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is prime. Indeed binomial coe\u0000cients are integers, so that the denominator in the fraction must divide "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( p - 1 ) . . . ( p - n + 1 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(it cannot divide the prime "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and therefore (13.11) for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 < n < p"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is an integer multiple of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p ."
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Then all the terms in (13.10) between 1 and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a ^ { p }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are integer multiples of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "so that"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                124,
+                855,
+                195
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "(a + 1) ^ {p} \\equiv a ^ {p} + 1 (\\text {mod} p) \\equiv a + 1 (\\text {mod} p) \\tag {13.12}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/085046cb21d1841bcbe5e3f3ae595bbe558c503feb029ec1a220d5d7a10f6678.jpg"
+                }
+            },
+            "bbox": [
+                315,
+                206,
+                853,
+                225
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "after using the induction hypothesis "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a ^ { p } \\equiv a ~ ( m o d ~ p ) . ~ \\perp"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                234,
+                623,
+                250
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Note: if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p"
+                    },
+                    {
+                        "type": "text",
+                        "content": "does not divide a (as for example when "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a \\ < \\ p )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "we can apply the cancellation law and Fermat’s little theorem becomes"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                263,
+                855,
+                298
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a ^ {p - 1} \\equiv 1 (\\text {mod} p) \\tag {13.13}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/5a9005db7c6f7272ea1af5e79c018af0bf66537941b9b4b3d60fe6a2d7e271a2.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                310,
+                853,
+                328
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2.3 Euclid’s algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                346,
+                406,
+                363
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "It is described in Euclid’s books 7 and 10 of the Elements (circa 300 "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { a . C . } )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and determines the greatest common divisor (GCD) of two integers a, b."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                372,
+                855,
+                407
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "If "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a > b ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", the sequence"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                420,
+                332,
+                437
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a = q _ {0} b + r _ {0}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/76a340a2aa05e3007feb77146263d0be3fb6bf4f78adad09cca52e35d5cfeede.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                451,
+                512,
+                466
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "b = q _ {1} r _ {0} + r _ {1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/2fac8f49e6065b4807a007ad777abcdba768ae379e32473c385596b90178c1d8.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                470,
+                519,
+                486
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "r _ {0} = q _ {2} r _ {1} + r _ {2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/ea76f5cb69470f77d441ebe82377bbe9d3488403ce990390a85c3d592c3d0a94.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                494,
+                527,
+                507
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\dots",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bf8cac648359e7d20584a7e0391c6a118d60e2b08552692be21ce56eaf2ce9c6.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                516,
+                433,
+                523
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "r _ {N - 3} = q _ {N - 1} r _ {N - 2} + r _ {N - 1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/6df5e36d7b1d119a9818dfeaa2e1c50e9d8d8ab714179032644a6b51ea6df9e7.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                535,
+                621,
+                548
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "r _ {N - 2} = q _ {N} r _ {N - 1} + r _ {N} \\tag {13.14}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/8fd032470279e2cf7d7795a38fdba10649b1e771833ae4903d04a33e67d45016.jpg"
+                }
+            },
+            "bbox": [
+                406,
+                554,
+                853,
+                570
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "ends with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N } = 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(a remainder is stricly smaller than the divisor, so that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { k } < r _ { k - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and the series of remainders must terminate with 0). Then the last nonvanishing remainder "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the greatest common divisor of a and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "b ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "denoted by "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( a , b )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                581,
+                855,
+                633
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Proof: since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 2 } = q _ { N } r _ { N - 1 } , r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Then "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 3 } = q _ { N - 1 } r _ { N - 2 } + r _ { N - 1 } ="
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( q _ { N - 1 } q _ { N } + 1 ) r _ { N - 1 } \\Longrightarrow r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "divides also "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 3 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Iterating, we prove that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "divides all the remainders, and also a and b. Thus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is a divisor of a and b. Next we prove that it is the greatest divisor. Any divisor c must divide "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { 0 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", because "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { 0 } = a - q _ { 0 } b"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Analogously we show that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c"
+                    },
+                    {
+                        "type": "text",
+                        "content": "divides all the remainders, and therefore divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", which implies "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c \\leq r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Therefore "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 1 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the GCD of a and b."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                646,
+                857,
+                749
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2.4 Extended Euclid’s algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                768,
+                509,
+                785
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "An immediate consequence of Euclid’s algorithm is that we can write the GCD of a and b as"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                794,
+                858,
+                826
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "G C D (a, b) = s a + t b \\tag {13.15}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/046f7f4720074e50c7d2400a4c5168d59f4a1508f1c467ef5ac129053c359f99.jpg"
+                }
+            },
+            "bbox": [
+                410,
+                829,
+                853,
+                846
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "s , t"
+                    },
+                    {
+                        "type": "text",
+                        "content": "relative integers. Indeed starting from the bottom of the sequence in (13.14) we have "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { G C D } ( a , b ) = r _ { N - 1 } = r _ { N - 3 } - q _ { N - 1 } r _ { N - 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and we obtain the GCD as a linear combination with integer coe\u0000cients of the remainders "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 2 } , r _ { N - 3 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Similarly we can express "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 2 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "r _ { N - 3 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "as linear combinations of preceding remainders, and so "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { o n } \\Longrightarrow \\mathrm { M C D } ( a , b )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is expressed as in (13.15)."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                852,
+                855,
+                887
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "58"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                509,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": []
+            },
+            "bbox": [
+                137,
+                124,
+                857,
+                177
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.2.5 Linear modular equations"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                197,
+                480,
+                214
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The extended Euclid’s algorithm allows to solve for x linear modular equations of the type:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                223,
+                858,
+                256
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a x \\equiv c (\\text {mod} b), \\quad a, b, c, x \\text {integers} \\tag {13.16}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/630ea599c6a3fc8cdcc76a269c3f389921f72fc8eb3a11d46412f89b60c75913.jpg"
+                }
+            },
+            "bbox": [
+                346,
+                258,
+                853,
+                275
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We want to find x such that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "a x - c"
+                    },
+                    {
+                        "type": "text",
+                        "content": "be an integer multiple of b, which is equivalent to find integers x, y such that"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                282,
+                855,
+                316
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "a x + b y = c \\tag {13.17}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bd233845cf15650fa1252bbce9bbcdfa8862b8a91fcd8a8c1067cce1d16c5bbd.jpg"
+                }
+            },
+            "bbox": [
+                448,
+                317,
+                853,
+                334
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Consider"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                341,
+                221,
+                356
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "s a + t b = g \\tag {13.18}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/354d080622c1b71f841de3f21211696c587fde8c570f452721a84f9d50ea9c16.jpg"
+                }
+            },
+            "bbox": [
+                450,
+                360,
+                853,
+                376
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "g \\ = \\ \\mathrm { G C D } ( a , b )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and s, t can be found with Euclid’s extended algorithm. Since g divides a and b, g must divide also c, cf. (13.17). Thus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "c / g"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is an integer. A solution for x and y is then given by"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                384,
+                855,
+                435
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "x = s (c / g), \\quad y = t (c / g) \\tag {13.19}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bab8153878551219ca27349f10245c7d5d12e0d38d156957ec3a4b58e61f286b.jpg"
+                }
+            },
+            "bbox": [
+                394,
+                450,
+                853,
+                467
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Exercise: use the extended Euclid’s algorithm to find x such that "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "7 x \\equiv 1 \\ ( m o d 1 6 0 )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Answer: "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x = 2 3"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                480,
+                855,
+                514
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.3 RSA algorithm - public key cryptography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                537,
+                717,
+                558
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Rivest, Shamir and Adleman (RSA) algorithm is based on an asymmetric key. The key used to encode the message is public, and di↵erent from the secret key used to decrypt it."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                565,
+                855,
+                617
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Bob wants to send a message M to Alice. For example Alice is a bank and Bob is a client who wants to send his credit card number M to the bank. The protocol runs as follows."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                630,
+                855,
+                680
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Alice:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                695,
+                203,
+                709
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "1) chooses two giant prime numbers, p and q. We assume that M is always less that the product pq. To illustrate the procedure, we take two small prime numbers "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "p = 1 7 , q = 1 1"
+                            },
+                            {
+                                "type": "text",
+                                "content": ". The two primes are the private key, known only by Alice."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "2) computes "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "N = p q"
+                            },
+                            {
+                                "type": "text",
+                                "content": ". Here "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "N = 1 8 7"
+                            },
+                            {
+                                "type": "text",
+                                "content": "."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "3) chooses another number e, relatively prime with "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "( p - 1 ) ( q - 1 )"
+                            },
+                            {
+                                "type": "text",
+                                "content": "and smaller than "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "( p - 1 ) ( q - 1 )"
+                            },
+                            {
+                                "type": "text",
+                                "content": ". For example "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "e = 7"
+                            },
+                            {
+                                "type": "text",
+                                "content": "is relatively prime with 160 (i.e. their GCD is 1), and < than 160."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                726,
+                855,
+                873
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "59"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                509,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "4) publishes e and N . This couple of integers is the public key."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                124,
+                689,
+                143
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Bob:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                156,
+                193,
+                172
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1) encrypts his credit card number M into a coded message C with the formula:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                186,
+                840,
+                205
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "C = M ^ {e} (\\text {mod} N) \\tag {13.20}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/0870efe06c13918e48f385f494ad5eeb41d791c4bdcb93ad88ad1d762d3140d0.jpg"
+                }
+            },
+            "bbox": [
+                421,
+                218,
+                855,
+                235
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "using the public key "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( N , e )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". For example, if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M = 8 8 , C = 8 8 ^ { 7 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod 187). This calculation is simplified if we use (13.7): 88<sup>7</sup> (mod "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 8 7 ) \\ = \\ [ 8 8 ^ { 4 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(mod 187) <sub>⇥</sub> 88<sup>2</sup> (mod 187)<sub>⇥</sub>88 (mod 187)] (mod 187) = 132<sub>⇥</sub>77<sub>⇥</sub>88 (mod 187) = 894432 (mod 187) = 11. Thus "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C = 1 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is the coded message."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                247,
+                897,
+                317
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2) sends C to Alice. A malicious interceptor, traditionally called Eve, will not be able to decode the message, if p and q are very large primes. Indeed to decrypt C, i.e. to invert formula (13.20), the knowledge of p and q is necessary. Eve can try to deduce p and q by factorizing the giant number N, but this is an arduous task with conventional computers: the number of necessary operations grows exponentially with N in all classical known algorithms."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                330,
+                860,
+                434
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "Alice:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                445,
+                203,
+                462
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "1) computes the decryption key d, defined by"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                476,
+                537,
+                495
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "e d = 1 (\\text {mod} (p - 1) (q - 1)) \\tag {13.21}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/17ec9060ae91c00073d937f64e1b9d0bd5683942b2d1f5cd500cb661fefe2d52.jpg"
+                }
+            },
+            "bbox": [
+                378,
+                508,
+                853,
+                527
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In our example 7d = 1 (mod 160) can be solved easily with Euclid’s extended algorithm, to find "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "d = 2 3"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                538,
+                855,
+                571
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "2) using this key, which has required the knowledge of the secret couple "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( p , q )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", she can decrypt the coded message C by virtue of the inversion formula"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                586,
+                857,
+                621
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M = C ^ {d} (\\text {mod} N) \\tag {13.22}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/9395ca1ed46d764869342d81519a988f3afbe52b77a5ff256eb597cd1083049a.jpg"
+                }
+            },
+            "bbox": [
+                421,
+                633,
+                853,
+                652
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "obtaining "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M = 1 1 ^ { 2 3 }"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( m o d 1 8 7 ) = 8 8 "
+                    },
+                    {
+                        "type": "text",
+                        "content": ", recovering the message M of Bob."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                664,
+                761,
+                683
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We now prove the inversion formula. Raising to the d-th power both members of the encryption formula yields"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                695,
+                857,
+                728
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "C ^ {d} \\equiv M ^ {e d} (\\text {mod} N) \\tag {13.23}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/ad339921241357b0ed41378cbd38d25cd832d4701d8aa95bfaa0d4e1d95f6014.jpg"
+                }
+            },
+            "bbox": [
+                411,
+                741,
+                853,
+                760
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The equation (13.21) defining d implies"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                772,
+                487,
+                791
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "e d = 1 + r (p - 1) (q - 1) = 1 + k (p - 1) = 1 + h (q - 1) \\tag {13.24}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/fcdaf3bf4d703f04e780ccccc749b671a482d9c4126a613d88805255d6e05be2.jpg"
+                }
+            },
+            "bbox": [
+                231,
+                804,
+                853,
+                822
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "If M is not a multiple of p, then M and p are coprime, because p is prime. By Fermat’s little theorem"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                835,
+                855,
+                866
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {p - 1} = 1 (\\text {mod} p) \\tag {13.25}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d852211a89d7c18f59496f1192090cf706b5c6151a398112993072bb75c9afdd.jpg"
+                }
+            },
+            "bbox": [
+                418,
+                869,
+                853,
+                888
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "60"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                126,
+                181,
+                142
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {e d} = M ^ {1 + k (p - 1)} = \\left(M ^ {p - 1}\\right) ^ {k} M \\equiv 1 ^ {k} M (\\text {mod} p) = M (\\text {mod} p) \\tag {13.26}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/513e644e0a9e83c1fd03a0ae95b1c0fea2852cd929b7bc0cef157562e38f3833.jpg"
+                }
+            },
+            "bbox": [
+                203,
+                156,
+                855,
+                175
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                187,
+                189,
+                203
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {e d} \\equiv M (\\text {mod} p) \\tag {13.27}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/32669443b793b65a678b2c0e2eb5f774749fe201a73f7e1a9813d4d7335b273b.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                205,
+                855,
+                225
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "If M is a multiple of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "p ,"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                230,
+                346,
+                248
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {e d} \\equiv 0 (\\text {mod} p) \\equiv M (\\text {mod} p) \\tag {13.28}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3ae4421d28208e43cb5200ec1c0dfa958f1122a8aeaedb792d8099789ef57c6f.jpg"
+                }
+            },
+            "bbox": [
+                364,
+                262,
+                855,
+                282
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We can conclude that p always divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M ^ { e d } - M"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Similarly we prove that"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                293,
+                784,
+                311
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {e d} \\equiv M (\\text {mod} q) \\tag {13.29}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/f7c3ecabe3acfdebfe2cdafb0abc53454c37158ba7c78c0829b2c031b9ef2028.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                324,
+                855,
+                343
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "i.e. q divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M ^ { e d } - M"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Since p and q are primes, also "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N = p q"
+                    },
+                    {
+                        "type": "text",
+                        "content": "divides "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M ^ { e d } - M"
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                355,
+                845,
+                375
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M ^ {e d} \\equiv M (\\text {mod} N) \\tag {13.30}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/0f6ea491959bb64d7a8a2415c815840a28b6262da3de2700f8dd51368a9c09f9.jpg"
+                }
+            },
+            "bbox": [
+                418,
+                387,
+                855,
+                407
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus, using (13.23)"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                418,
+                312,
+                437
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "C ^ {d} \\equiv M ^ {e d} (\\text {mod} N) \\equiv M (\\text {mod} N) \\Longrightarrow M \\equiv C ^ {d} (\\text {mod} N) \\tag {13.31}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/f7821e9a6abe0d571f69e580664e5c0d61614e8b9a1358731842bc3a96a348c5.jpg"
+                }
+            },
+            "bbox": [
+                221,
+                449,
+                855,
+                469
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Finally, since "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M < N"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(N is very large), it is also the smallest M satisfying "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "M \\equiv"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "C ^ { d } \\ ( m o d \\ N )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", i.e."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                481,
+                855,
+                514
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "M = C ^ {d} (\\text {mod} N) \\tag {13.32}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/185a0076926ffa1c9f8bd223c13a70bbd2f1c7d67a50a6f0845026aaaf6c3702.jpg"
+                }
+            },
+            "bbox": [
+                421,
+                514,
+                855,
+                533
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and the inversion formula is proved."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                539,
+                482,
+                558
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.4 Quantum cryptography"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                580,
+                500,
+                600
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "As discussed in Lecture 23, a quantum algorithm due to Peter Shor factorizes N in polynomial time. When quantum computers will be commercially available, the security of the RSA encryption protocol will vanish. Quantum mechanics however o↵ers an intrinsecally secure solution: quantum cryptography."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                608,
+                857,
+                678
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.4.1 BB84 protocol"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                696,
+                371,
+                713
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Alice wants to send a message to Bob, in the form of a string of bits. Using polarized photons, Alice could send a sequence of them, with polarizations corresponding to the states <sub>|</sub>0<sub>i</sub> and <sub>|</sub>1<sub>i</sub>, the sequence reproducing the message. Bob has a vertical polarizer, and can therefore distinguish the two orthogonal polarization states, and thus reconstruct the message of Alice."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                722,
+                855,
+                808
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "However the photons can be intercepted by Eve, who can measure their polarization by using a vertical polarizer. She can read the message, and send the same sequence to Bob, who will not suspect Eve’s intervention. So Eve’s eavesdropping is undetected in this case, and the transmission between Alice and Bob is not secure."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                809,
+                855,
+                878
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "61"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                509,
+                920
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "However Alice can send photons in two di↵erent bases: the <sub>|</sub>0<sub>i</sub>, <sub>|</sub>1<sub>i</sub> basis, corresponding to horizontal and vertical polarizations, and the <sub>|</sub>+<sub>i</sub>, <sub>|\u0000i</sub> basis, corresponding to "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 5 ^ { \\circ }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 3 5 ^ { \\circ }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "polarizations. Alice chooses the bases randomly, and so does Bob when he measures the photons sent by Alice, using vertical or "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 5 ^ { \\circ }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "polarizers. The bit 0 is encoded in the <sub>|</sub>0<sub>i</sub> and <sub>|</sub>+<sub>i</sub> photons, while the bit 1 is encoded in the <sub>|</sub>1<sub>i</sub> and <sub>|\u0000i</sub> photons. Exploiting the two bases, Alice and Bob can verify whether their communication is secure, free from interception. The BB84 protocol, proposed by Bennet and Brassard in 1984, runs as follows."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                124,
+                855,
+                261
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Alice sends a string of photons to check security, say 200 photons. She chooses the bases at random, and sends a string of 200 bits by coding the bits 0 and 1 as discussed above. Bob measures the photons sent by Alice using at random the polarizers corresponding to the two bases. When Bob uses the same basis chosen by Alice, the results of Alice and Bob will agree: if Alice sends the bit 0(1), Bob will measure the bit 0(1). When Alice and Bob use di↵erent bases, the measurement by Bob has a probability "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 / 2"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to agree with the bit sent by Alice (for example a photon sent by Alice in the state <sub>|\u0000i</sub> (bit 1) has a probability "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "1 / 2"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to pass (bit 1) Bob’s vertical polarizer). After the 200 photons have been sent by Alice, and measured by Bob, Alice calls Bob by phone, in a public channel, and compares with Bob the bases used for every photon. Alice and Bob can write down a list of the photons that have been sent and measured on the same bases (approximately one half of the 200 photons). The results on the other photons are just discarded. Then Alice and Bob check whether they agree on the bits encoded in the polarizations. If disagreements are above a certain threshold (depending for ex. on the noise of the optical fiber used or the transmission) they can deduce that Eve has tried to intercept."
+                    }
+                ]
+            },
+            "bbox": [
+                142,
+                263,
+                855,
+                552
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Indeed, if Eve is intercepting, she measures the photons sent by Alice with two polarizers (let us suppose that she knows that Alice and Bob use vertical and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "4 5 ^ { \\circ }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "polarizers), but she cannot know which of the two bases has been used by Alice, since Alice phones Bob after the transmission of the 200 photons. Eve has a 50% chance to guess the correct basis, and use the correct polarizer to measure photons without disturbing them (recovering the bit and transmitting the same photon to Bob). In this case the bit sent by Alice will coincide with the bit received by Bob. However, in approximately the other half of the cases, Eve will not guess right, and use a polarizer not adapted to the basis chosen by Alice. In this case, the photon Eve transmits to Bob has a 50% chance to yield the correct bit (i.e. the same bit Alice sent) when it is measured by Bob. Thus, compounding these probabilities, Eve has a 75% chance of being undetected, for every photon she intercepts. With 100 photons, she has a "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( 3 / 4 ) ^ { 1 0 0 } \\approx 3 . 2 \\times 1 0 ^ { - 1 3 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "chance of being undetected, and Alice and Bob, checking the agreement between their bits, will know whether they have been intercepted."
+                    }
+                ]
+            },
+            "bbox": [
+                142,
+                555,
+                855,
+                810
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "After this security check, Alice and Bob can use the same channel (for ex. optical fiber) to send messages, or a secret key to encode future messages. This is why the BB84 algorithm is also called e quantum key distribution (QKD) algorithm. Note that the probabilistic character of measurement of photons using di↵erent bases in emission and reception can be used by Alice to produce genuinely random sequences of bits 0 and 1, and use them as secret keys if the channel is secure."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                825,
+                857,
+                878
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "62"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": []
+            },
+            "bbox": [
+                137,
+                126,
+                857,
+                177
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "13.4.2 Ekert protocol"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                197,
+                371,
+                214
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "In this protocol, proposed by Artur Ekert in 1991, the photons are not prepared by Alice, but by a third party (Charlie) who produces pairs of entangled photons, for ex. in the Bell state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| \\beta _ { 0 0 } \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and sends one to Alice and the other to Bob. Alice and Bob measure the photons using again two di↵erent polarizing filters chosen at random. The remaining part of the protocol is identical to the BB84. If there are no interceptors, Alice and Bob receive correlated photons, and if they choose the same bases for the measurement their bits should be identical. If not, there is a detected intrusion by Eve."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                223,
+                860,
+                363
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "63"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                920
+            ]
+        }
+    ]
+]

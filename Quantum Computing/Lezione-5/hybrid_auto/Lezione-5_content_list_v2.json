@@ -1,0 +1,1391 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "4.2 Teleportation (Bennet et al. 1993)"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                123,
+                618,
+                144
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The teleportation protocol allows Alice to “send” an unknown qubit <sub>|</sub> <sub>i</sub> to Bob without using a quantum channel, i.e. without physically sending the qubit, but using only a classical channel, as for example a phone communication. To achieve this, Alice and Bob share a pair of qubits in the entangled state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { | \\beta _ { 0 0 } \\rangle = \\frac { | 0 0 \\rangle + | 1 1 \\rangle } { \\sqrt { 2 } } } \\end{array}"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". Alice entangles her qubit with the unknown qubit "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| \\psi \\rangle = \\alpha | 0 \\rangle + \\beta | 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "she wants to teleport, using a CNOT gate. She then applies the Hadamard gate to the first qubit (the qubit that originally was in the state <sub>|</sub> <sub>i</sub>) and measures the two qubits. After this, Alice telephones the result of her meaurements to Bob. According to the result 00, 01, 10, 11 communicated by Alice, Bob e↵ects one of four operations on his qubit , respectively "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "I , Z , X , Z X"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and by so doing transforms the state of his qubit exactly in the state <sub>|</sub> <sub>i</sub> of the qubit originally owned by Alice."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                152,
+                860,
+                344
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The corresponding quantum circuit is"
+                    }
+                ]
+            },
+            "bbox": [
+                169,
+                356,
+                500,
+                372
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/e9a97c59f601119511ce6d6eeeb77a0e73ee7b5c65e4b26b28cadd0243fd1e6c.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  t3 -->|X_Z[\"X\\nZ\"]| t3\n  t3 -->|X_Z| t3\n  t3 -->|X_Z| t3\n  t3 -->|X_Z| t3\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 4.1 Teleportation circuit"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                186,
+                406,
+                823,
+                514
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "a 3-qubit circuit where the upper two qubits belong to Alice and the lower qubit belongs to Bob. By following the evolution of the initial 3-qubit state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "( \\alpha | 0 \\rangle +"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\beta | 1 \\rangle ) \\frac { | \\bar { 0 } 0 \\rangle + | 1 1 \\rangle } { \\sqrt { 2 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "across the CNOT and H gates, one finds that the 3-qubit state before Alice measurements is"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                560,
+                858,
+                630
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2} \\left[ | 0 0 \\rangle (\\alpha | 0 \\rangle + \\beta | 1 \\rangle) + | 0 1 \\rangle (\\alpha | 1 \\rangle + \\beta | 0 \\rangle) + | 1 0 \\rangle (\\alpha | 0 \\rangle - \\beta | 1 \\rangle) + | 1 1 \\rangle (\\alpha | 1 \\rangle - \\beta | 0 \\rangle) \\right] \\tag {4.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d77501d6f83fff25aa485af6547ddd8bbb6603c6a2a1b5a43461bef2cd128759.jpg"
+                }
+            },
+            "bbox": [
+                156,
+                638,
+                853,
+                686
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "A measurement by Alice produces a collapse into one of the four states contained in this superposition. For example if Alice measures 01 the state (4.1) collapses into"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                686,
+                857,
+                722
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| 0 1 \\right\\rangle (\\alpha | 1 \\rangle + \\beta | 0 \\rangle) \\tag {4.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/cef7ec08f74fc2050f134f7db9f0d7f3d5e9a7e4116d31b7a7499ea4f8815cd1.jpg"
+                }
+            },
+            "bbox": [
+                423,
+                733,
+                853,
+                752
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This state is a product state, with Bob’s qubit in the state"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                766,
+                653,
+                783
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\alpha | 1 \\rangle + \\beta | 0 \\rangle \\tag {4.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/35872c5b2010b08cd559616c032a71b64347d054a2380951555aa36fc493d4d3.jpg"
+                }
+            },
+            "bbox": [
+                445,
+                796,
+                853,
+                815
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Alice phones her result 01 to Bob, so that Bob learns that his qubit is in the state (4.3). He therefore applies to it the gate X and reconstructs the original "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| \\psi \\rangle = \\alpha | 0 \\rangle + \\beta | 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "state."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                828,
+                858,
+                881
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "20"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "<sub>•</sub> Observations:"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                125,
+                295,
+                142
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "i) the state <sub>|</sub> <sub>i</sub> is teleported at a speed always "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "\\leq c ."
+                            },
+                            {
+                                "type": "text",
+                                "content": ", since it is limited by the speed of the classical communication."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "ii) the original state <sub>|</sub> <sub>i</sub> owned by Alice gets destroyed (by measurement), so that there is no violation of the no cloning theorem."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "iii) teleportation is not vulnerable to noise, since it does not use a physical carrier. (The classical part of the protocol, i.e. communication of Alice’ results to Bob, could be disturbed by classical causes)."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                156,
+                855,
+                304
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5 Lecture 5"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                328,
+                329,
+                349
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.1 Quantum parallelism"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                366,
+                457,
+                385
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Quantum gates implement linear operations, and therefore can operate in parallel on all the states contained in a superposition. Consider a Boolean function f , i.e. a function taking N bits into 1 bit. Thus the domain of f is the set of binary N-bit integers x and the image is <sub>{</sub>0, 1<sub>}</sub>. By <sub>|</sub>x<sub>i</sub> we denote the N-qubit state specified by the string of 0’s and 1’s in x: thus for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { N } { = } 4"
+                    },
+                    {
+                        "type": "text",
+                        "content": "if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x = 0 1 1 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", then "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| x \\rangle = | 0 \\rangle | 1 \\rangle | 1 \\rangle | 0 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". We define now a unitary "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { N } { + } 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "qubit operator "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "that acts on the computational basis of N+1 qubits as follows:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                395,
+                855,
+                514
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {f} (| x \\rangle | y \\rangle) = | x \\rangle | y \\oplus f (x) \\rangle \\tag {5.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/7341366a0a1359002ddfeb2fb17e1de107ea7dd391619c4f46517bbe1c956d51.jpg"
+                }
+            },
+            "bbox": [
+                386,
+                528,
+                853,
+                546
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where <sub>\u0000</sub> denotes addition modulo 2. If the input N+1 qubit state is a “democratic” superposition of all the states of the computational basis, tensored with <sub>|</sub>0<sub>i</sub> , we find"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                557,
+                855,
+                605
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U _ {f} (\\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x} | x \\rangle | 0 \\rangle) = \\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x} | x \\rangle | f (x) \\rangle \\tag {5.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/eb7d4b719964c30653752b38c98dce35f77dc6926bcb92fea5ff7def59578019.jpg"
+                }
+            },
+            "bbox": [
+                324,
+                605,
+                853,
+                642
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We see that applying "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "only once has produced a state containing all the values of the function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "an operation that classically would require "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 ^ { N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "evaluations of the function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "one for each value of the variable x. But extracting this information from the output state is not so easy. Measuring the N+1 qubit output state in the computational basis yields a particular value for x, giving the corresponding value for "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and destroys all the rest of the information (all the other "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x , f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "values). We will see in next Section how interference may be used to recover more information."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                647,
+                855,
+                782
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The superposed state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\textstyle { \\frac { 1 } { \\sqrt { N } } } \\sum _ { x } \\left| x \\right."
+                    },
+                    {
+                        "type": "text",
+                        "content": "can be easily obtained by using N Hadamard gates on N qubits in the state <sub>|</sub>0<sub>i</sub>:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                783,
+                855,
+                821
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "(H \\otimes H \\otimes \\dots \\otimes H) | 0 \\rangle | 0 \\rangle \\dots | 0 \\rangle = \\frac {1}{\\sqrt {2 ^ {N}}} (| 0 \\rangle + | 1 \\rangle) (| 0 \\rangle + | 1 \\rangle) \\dots (| 0 \\rangle + | 1 \\rangle) = \\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x} | x \\rangle \\tag {5.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/52687d481380ccfee1e49b1eaba663ee896555d939130a04ffab2bcbf128d8c7.jpg"
+                }
+            },
+            "bbox": [
+                142,
+                832,
+                853,
+                887
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "21"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                507,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The combined action of the Hadamard gates and the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "operator is represented by the following circuit:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                125,
+                857,
+                160
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/15683c7ec635490b6eba0fcbcd9d935b2c7e6b3eaea1c69c99aa812497a63785.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  A[\"|0⟩\"] --> B[\"H\"]\n  C[\"|0⟩\"] --> D[\"H\"]\n  E[\"|0⟩\"] --> F[\"H\"]\n  G[\"|0⟩\"] --> H[\"H\"]\n  B --> I[\"Uf\"]\n  D --> I\n  F --> I\n  H --> I\n  I --> J[\"\"]\n  J --> K[\"1/√2^N ∑_x |x⟩|f(x)⟩\"]\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 5.1 Parallel evaluation of a Boolean function f"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                231,
+                166,
+                584,
+                299
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "<sub>•</sub> Exercise: prove that "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "U _ { f }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "is unitary."
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "<sub>•</sub> Exercise: find the circuit that implements "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "U _ { f }"
+                            },
+                            {
+                                "type": "text",
+                                "content": "when "
+                            },
+                            {
+                                "type": "equation_inline",
+                                "content": "N = 1"
+                            },
+                            {
+                                "type": "text",
+                                "content": "."
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                342,
+                680,
+                391
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.2 Deutsch algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                412,
+                428,
+                432
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This algorithm allows to find whether a function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is constant or nonconstant, by combining parallelism and interference. Consider the circuit:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                440,
+                858,
+                473
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/f4a5f0c3d5119a5c8b59190db2320582299b1be56fdc8f2fd3f9f4976d2884c3.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  A[\"|0⟩\"] --> B[\"H\"]\n  C[\"|1⟩\"] --> D[\"H\"]\n  B --> E[\"Uf\"]\n  D --> E\n  E --> F[\"H\"]\n  F --> G[\"Output\"]\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 5.2 Circuit for Deutsch’s algorithm "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                193,
+                498,
+                563,
+                568
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is defined in (5.1). Following the evolution of the initial 2-qubit state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 \\rangle | 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "through the unitary gates yields as final state:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                617,
+                858,
+                654
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {| 0 \\rangle | f (0) \\rangle - | 0 \\rangle | 1 \\oplus f (0) \\rangle}{\\sqrt {2}} = \\pm | 0 \\rangle \\frac {| 0 \\rangle - | 1 \\rangle}{\\sqrt {2}} \\quad \\text {if} f (0) = f (1) \\tag {5.4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/512e2cc67f6d6e8de5a328f329d04aaabefe5805bdbc003c82760df6b40f6cf2.jpg"
+                }
+            },
+            "bbox": [
+                231,
+                663,
+                853,
+                701
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {| 1 \\rangle | f (0) \\rangle - | 1 \\rangle | f (1) \\rangle}{\\sqrt {2}} \\quad = \\pm | 1 \\rangle \\frac {| 0 \\rangle - | 1 \\rangle}{\\sqrt {2}} \\quad \\text {if} f (0) \\neq f (1) \\tag {5.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/85129188693895328ca6e2b455b61924ac5e06a6e18281c213e6e21d510338c7.jpg"
+                }
+            },
+            "bbox": [
+                233,
+                712,
+                853,
+                751
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "or in a single formula:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                755,
+                334,
+                771
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\pm | f (0) \\oplus f (1) \\rangle \\frac {| 0 \\rangle - | 1 \\rangle}{\\sqrt {2}} \\tag {5.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/e892406d41b6d630b4a0a0b560757c73e07cb18136151b31d099423cc461c96d.jpg"
+                }
+            },
+            "bbox": [
+                394,
+                769,
+                853,
+                806
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus by measuring the first qubit we can determine whether the function f is constant (result 0) or nonconstant (result 1). Constancy of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is a global property, and classically two evaluations of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f"
+                    },
+                    {
+                        "type": "text",
+                        "content": "would be necessary to establish it, while a single application of Deutsch’s quantum circuit is su\u0000cient."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                811,
+                858,
+                878
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "22"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "5.3 Deutsch-Jozsa algorithm"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                123,
+                500,
+                144
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Combining together the two preceding Sections leads to a generalization of the Deutsch algorithm, due to Deutsch and Jozsa. The circuit is:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                152,
+                857,
+                188
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/906dea8c8a09c7a2cf99dd3f5564e77ccc6b4dd496c34f6b8c9b7afc553f0e55.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  A[\"|0⟩\"] -->|\"N\"| B[\"H⊗N\"]\n  C[\"|1⟩\"] --> D[\"H\"]\n  B --> E[\"Uf\"]\n  D --> E\n  E --> F[\"H⊗N\"]\n  F --> G[\"Output\"]\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 5.3 Circuit for Deutsch-Jozsa algorithm f"
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                189,
+                207,
+                631,
+                294
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where the slash in the first line indicates N qubits in the first register. The input state is a "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N + 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "qubit state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 . . . 0 \\rangle | 1 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", with <sub>|</sub>0...0<sub>i</sub> = the state of N qubits all initialized to <sub>|</sub>0<sub>i</sub>. The "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N + 1"
+                    },
+                    {
+                        "type": "text",
+                        "content": "qubit state emerging from the first battery of H gates is"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                345,
+                858,
+                410
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x = 0} ^ {2 ^ {N} - 1} | x \\rangle \\frac {| 0 \\rangle - | 1 \\rangle}{\\sqrt {2}} \\tag {5.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/30db267a773759d7d8105395e485dfbb5837ebd2c506b8175eb614b0524e60ce.jpg"
+                }
+            },
+            "bbox": [
+                401,
+                410,
+                855,
+                457
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "which becomes, after applying "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f } \\mathbf { \\hat { \\mathbf { \\Phi } } }"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                459,
+                442,
+                478
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x = 0} ^ {2 ^ {N} - 1} | x \\rangle \\frac {| f (x) \\rangle - | 1 \\oplus f (x) \\rangle}{\\sqrt {2}} = \\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {x = 0} ^ {2 ^ {N} - 1} (- 1) ^ {f (x)} | x \\rangle \\frac {| 0 \\rangle - | 1 \\rangle}{\\sqrt {2}} \\tag {5.8}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/b5853022095c21de5c2706cd7506307a150edd7e9471a2a092daf86e88c79f26.jpg"
+                }
+            },
+            "bbox": [
+                196,
+                484,
+                855,
+                532
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Observe now that the action of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "H ^ { \\otimes N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "on "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| x \\rangle = | x _ { 1 } \\rangle | x _ { 1 } \\rangle . . . | x _ { N } \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ":"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                538,
+                675,
+                557
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "H ^ {\\otimes N} | x \\rangle = \\frac {1}{\\sqrt {2 ^ {N}}} (| 0 \\rangle + (- 1) ^ {x _ {1}} | 1 \\rangle) (| 0 \\rangle + (- 1) ^ {x _ {2}} | 1 \\rangle) \\dots (| 0 \\rangle + (- 1) ^ {x _ {N}} | 1 \\rangle) \\tag {5.9}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/52bc1f15aee1fa423012bbdad7ef96f492d302d83beaf27720ea673634d9fa92.jpg"
+                }
+            },
+            "bbox": [
+                171,
+                562,
+                855,
+                598
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "can also be written as"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                604,
+                337,
+                619
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "H ^ {\\otimes N} | x \\rangle = \\frac {1}{\\sqrt {2 ^ {N}}} \\sum_ {y = 0} ^ {2 ^ {N} - 1} (- 1) ^ {x \\cdot y} | y \\rangle \\tag {5.10}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/ae572e0590dd07144d8a0e7445b7aef82c4219ecde656c43e694cc5afbcf7a7b.jpg"
+                }
+            },
+            "bbox": [
+                363,
+                624,
+                855,
+                672
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "with the definition"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                678,
+                305,
+                694
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "x \\cdot y \\equiv x _ {1} y _ {1} \\oplus x _ {2} y _ {2} \\oplus \\dots \\oplus x _ {N} y _ {N} \\tag {5.11}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/db3d27b1b9939dd178111ea866029c89b89c7144b4324f8678b431ad76b75e6c.jpg"
+                }
+            },
+            "bbox": [
+                357,
+                695,
+                853,
+                714
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Then the state of the first N -qubit register before the measurement is"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                718,
+                749,
+                735
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2 ^ {N}} \\sum_ {y = 0} ^ {2 ^ {N} - 1} \\left[ \\sum_ {x = 0} ^ {2 ^ {N} - 1} (- 1) ^ {f (x)} (- 1) ^ {x \\cdot y} \\right] | y \\rangle \\tag {5.12}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/1f9a024f83d8ed0d2a9e6d3f802a90b3306ced1485867e43a9d6929d295fcf4b.jpg"
+                }
+            },
+            "bbox": [
+                349,
+                739,
+                855,
+                796
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus the probability of finding "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "0 , 0 , . . . 0"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in a measurement of the first register (N qubits) is"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                800,
+                855,
+                834
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "p (0, 0, \\dots 0) = \\left| \\frac {1}{2 ^ {N}} \\sum_ {x = 0} ^ {2 ^ {N} - 1} (- 1) ^ {f (x)} \\right| ^ {2} \\tag {5.13}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d25f26299080ac68c1e037ea39d1a3fcf7904b2cbed63856eac649048bbd5eef.jpg"
+                }
+            },
+            "bbox": [
+                357,
+                834,
+                855,
+                891
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "23"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                906,
+                510,
+                920
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "This probability is 1 if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is constant, and is 0 if "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ( x )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is balanced, i.e. with an equal number of values 1 and 0. Then by measuring the first register (N measurements) we can find whether "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is constant or not. The total number of operations grows linearly with "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "N"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", even considering the H gates in the circuit 5.3, and only one "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { ^ { * } r u n } ^ { \\prime \\mathrm { * } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U _ { f }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is necessary."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                125,
+                853,
+                210
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "By contrast, to obtain this information classically would require "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "2 ^ { N }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "evaluations of the function "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "f ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": "growing exponentially with N."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                211,
+                853,
+                245
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "24"
+                    }
+                ]
+            },
+            "bbox": [
+                485,
+                904,
+                510,
+                919
+            ]
+        }
+    ]
+]

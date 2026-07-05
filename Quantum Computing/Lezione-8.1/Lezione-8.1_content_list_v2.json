@@ -1,0 +1,538 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "17 Lecture 17: Quantum circuits I"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                121,
+                657,
+                144
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "17.1 Rotation operators"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                159,
+                447,
+                180
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "We introduce the operators:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                187,
+                388,
+                205
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {x} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} X) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} X = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - i \\sin \\frac {\\theta}{2} \\\\ - i \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) (1 7. 1)",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/d8b6af56e21c5fde0e55ee92f0855532bed6cb1a9ffa8773863b5b9a2ec767cc.jpg"
+                }
+            },
+            "bbox": [
+                228,
+                216,
+                855,
+                254
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {y} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Y) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Y = \\left( \\begin{array}{c c} \\cos \\frac {\\theta}{2} & - \\sin \\frac {\\theta}{2} \\\\ \\sin \\frac {\\theta}{2} & \\cos \\frac {\\theta}{2} \\end{array} \\right) \\tag {17.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/bb2fe70f58aeccb4b11a2912b7f01a774a15f04476da0370c65a72c65c03cae9.jpg"
+                }
+            },
+            "bbox": [
+                228,
+                256,
+                853,
+                293
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {z} (\\theta) \\equiv \\exp (- i \\frac {\\theta}{2} Z) = \\cos \\frac {\\theta}{2} I - i \\sin \\frac {\\theta}{2} Z = \\left( \\begin{array}{c c} \\exp (- i \\frac {\\theta}{2}) & 0 \\\\ 0 & \\exp (i \\frac {\\theta}{2}) \\end{array} \\right) (1 7. 3)",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/ec17c6f7b614f23559f3be005348efa4e7a469c77872e6f15dd445fc85212ff3.jpg"
+                }
+            },
+            "bbox": [
+                228,
+                295,
+                853,
+                334
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where the exponential is defined by its Taylor series expansion. Note that even powers of "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "X , Y , Z"
+                    },
+                    {
+                        "type": "text",
+                        "content": "give the identity, while odd powers reproduce the same Pauli matrices. For example "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "X ^ { 5 } = X ^ { 3 } = X"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". The rotation operators are unitary operators acting on 1-qubit states. They are called rotation operators because they rotate the qubits on the Bloch sphere, by an angle "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\theta ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", respectively around the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "x , y , z { \\mathrm { ~ a x e s } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". For example"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                344,
+                855,
+                446
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {x} (\\theta) | \\vec {r} \\rangle = | \\vec {r} ^ {\\prime} \\rangle , \\quad \\vec {r} ^ {\\prime} = \\mathcal {R} _ {x} (\\theta) \\vec {r} \\tag {17.4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/a0afe2b91cb07da9abe6f392b952eccd7966511e58400134accc8903685407d3.jpg"
+                }
+            },
+            "bbox": [
+                357,
+                447,
+                853,
+                465
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathcal { R } _ { x } ( \\theta )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "acts on the 3-dimensional Bloch vector "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\vec { r }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "by rotating it around the axis x by an angle "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\theta"
+                    },
+                    {
+                        "type": "text",
+                        "content": "(counterclockwise). Thus we have a 1-1 correspondence between operators "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "R"
+                    },
+                    {
+                        "type": "text",
+                        "content": "on the qubit Hilbert space and geometric rotations "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathcal { R }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "in the usual 3-dimensional euclidean space. We now justify eq. (17.4). Consider the qubit <sub>|</sub>0<sub>i</sub>, corresponding to the North pole on the Bloch sphere. Its components in the 2- dimensional vector space of qubit physical states are given by (1, 0). If we act on this vector with the rotation operator "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "R _ { x } ( \\theta )"
+                    },
+                    {
+                        "type": "text",
+                        "content": "we find:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                471,
+                855,
+                592
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "R _ {x} (\\theta) | 0 \\rangle = \\left( \\begin{array}{c c} \\cos {\\frac {\\theta}{2}} & - i \\sin {\\frac {\\theta}{2}} \\\\ - i \\sin {\\frac {\\theta}{2}} & \\cos {\\frac {\\theta}{2}} \\end{array} \\right) \\binom{1}{0} = \\binom{\\cos {\\frac {\\theta}{2}}}{- i \\sin {\\frac {\\theta}{2}}} \\tag {17.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/942b2313c86ac1543ebadee6d9f20b86e507f152203ee0d5ae547544f06bbf67.jpg"
+                }
+            },
+            "bbox": [
+                255,
+                604,
+                855,
+                644
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The resulting vector corresponds to a rotation of the North pole by an angle ✓ around the x-axis (counterclockwise). Indeed the rotated point on the Bloch sphere corresponds to latitude "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\theta"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and longitude "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\phi = \\textstyle { \\frac { \\pi } { 2 } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", and therefore corresponds to the qubit physical state"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                653,
+                857,
+                722
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "| \\psi \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle + e ^ {i \\phi} \\sin \\frac {\\theta}{2} | 1 \\rangle = \\cos \\frac {\\theta}{2} | 0 \\rangle - i \\sin \\frac {\\theta}{2} | 1 \\rangle = \\binom{\\cos \\frac {\\theta}{2}}{- i \\sin \\frac {\\theta}{2}} \\tag {17.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/3178243500fb9039e27f335927d3189cafe2acca5da3da51a45b8f5373b7de3d.jpg"
+                }
+            },
+            "bbox": [
+                189,
+                733,
+                853,
+                771
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "which indeed coincides with (17.5)."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                783,
+                473,
+                801
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "17.2 Universal set of quantum gates"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                823,
+                591,
+                843
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem 1: any unitary operation "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U"
+                    },
+                    {
+                        "type": "text",
+                        "content": "on n qubits can be realized using only CNOT and single qubit gates."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                851,
+                855,
+                885
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "78"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                906,
+                509,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Theorem 2: any single qubit gate can be approximated by products of the Hadamard "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac { \\pi } { 8 }"
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "T"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                125,
+                872,
+                162
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus CNOT, H, "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "T"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are an universal set for quantum computation."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                173,
+                717,
+                191
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The proof of these two Theorems can be found in the Lecture Notes on Quantum Computation, or in the standard references on quantum computation. Here we just give an example, the To↵oli gate in terms of CNOT and 1-qubit gates:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                204,
+                857,
+                256
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/897d799ad498b423ae0c12e18b0acc0c2447dd712e23a03364f7c99de01c41c2.jpg"
+                },
+                "content": "= T\nH ⊕ T† ⊕ T ⊕ T† ⊕ T H\nT† ⊕ T† ⊕ S",
+                "image_caption": [],
+                "image_footnote": []
+            },
+            "sub_type": "text_image",
+            "bbox": [
+                169,
+                260,
+                845,
+                372
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Note: the phase gate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "S"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and the "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac { \\pi } { 8 }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "gate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "T"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are given by the unitary matrices"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                390,
+                794,
+                409
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "S = \\left( \\begin{array}{c c} 1 & 0 \\\\ 0 & i \\end{array} \\right), \\quad T = \\left( \\begin{array}{c c} e ^ {- i \\frac {\\pi}{8}} & 0 \\\\ 0 & e ^ {+ i \\frac {\\pi}{8}} \\end{array} \\right) = e ^ {- i \\frac {\\pi}{8} Z} \\tag {17.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/40e7333a46ffafafcdd37eaf04d972b2b6461ac457460a524243dc1e27df22f4.jpg"
+                }
+            },
+            "bbox": [
+                289,
+                420,
+                855,
+                461
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "79"
+                    }
+                ]
+            },
+            "bbox": [
+                487,
+                904,
+                509,
+                919
+            ]
+        }
+    ]
+]

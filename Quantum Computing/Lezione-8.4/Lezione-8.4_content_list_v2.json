@@ -1,0 +1,555 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "21 Lecture 21: Phase estimation"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                121,
+                628,
+                141
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "21.1 The circuit"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                139,
+                159,
+                354,
+                176
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Consider the eigenvalue equation for a unitary operator "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U { : }"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                187,
+                653,
+                205
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "U | u \\rangle = e ^ {2 \\pi i \\varphi} | u \\rangle \\tag {21.1}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/b55ddc92e704c96e2e7275eed087948a9779c8a2f32308869d905a93d0a8eee9.jpg"
+                }
+            },
+            "bbox": [
+                433,
+                214,
+                853,
+                233
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "where U and the eigenvector "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| u \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "are known, and "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\varphi"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is unknown. The "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { Q F T }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "provides an algorithm to find the phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\varphi ,"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", assuming that black boxes (circuits) are available to prepare the state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| u \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "and to implement controlled- "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "U ^ { 2 ^ { j } }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                244,
+                855,
+                296
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The procedure of phase estimation uses two registers: the first register contains t qubits, each in the initial state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ". The number t will depend on:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                296,
+                855,
+                330
+            ]
+        },
+        {
+            "type": "list",
+            "content": {
+                "list_type": "text_list",
+                "list_items": [
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "- the accuracy we want to reach in the estimation of the phase"
+                            }
+                        ]
+                    },
+                    {
+                        "item_type": "text",
+                        "item_content": [
+                            {
+                                "type": "text",
+                                "content": "- the probability of success of the algorithm"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "bbox": [
+                166,
+                332,
+                715,
+                364
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The second register contains initially the eigenstate "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| u \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": ", with the appropriate number of qubits necessary to encode the eigenstate."
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                365,
+                855,
+                399
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The circuit for the phase estimation is given in Fig. 21.1. The e↵ect of the sequence of controlled-U gates on the state "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| j \\rangle | u \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                413,
+                855,
+                448
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| j _ {1} \\dots j _ {t} \\right\\rangle | u \\rangle \\longrightarrow \\left| j _ {1} \\dots j _ {t} \\right\\rangle U ^ {2 ^ {t - 1} j _ {1}} \\dots U ^ {2 ^ {0} j _ {t}} | u \\rangle = | j \\rangle U ^ {j} | u \\rangle \\tag {21.2}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/de2bdd790223e99f7b6b9793daa8eddceed0d2c6f5e69191e4cba72e53f197a1.jpg"
+                }
+            },
+            "bbox": [
+                255,
+                458,
+                853,
+                479
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and recalling the eigenvalue equation (21.1):"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                489,
+                527,
+                505
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| j \\right\\rangle \\left| u \\right\\rangle \\longrightarrow \\left| j \\right\\rangle e ^ {2 \\pi i \\varphi j} \\left| u \\right\\rangle \\tag {21.3}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/17f62a702b81ce8ada3b29e626e30c629dd255ef998069ea9fa9c3afcf08ac4f.jpg"
+                }
+            },
+            "bbox": [
+                403,
+                517,
+                853,
+                536
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "The first register exits the H gates in the state:"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                546,
+                556,
+                562
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "| 0 \\rangle \\longrightarrow \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} | j \\rangle \\tag {21.4}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/6977178bdab41c14f40406676f911bf46745270719f47a14afc6cffa07b8aa98.jpg"
+                }
+            },
+            "bbox": [
+                421,
+                574,
+                853,
+                622
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(remember "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\begin{array} { r } { ( | 0 \\rangle + | 1 \\rangle ) ( | 0 \\rangle + | 1 \\rangle ) \\cdot \\cdot \\cdot ( | 0 \\rangle + | 1 \\rangle ) = \\sum _ { j _ { 1 } = 0 } ^ { 1 } \\cdot \\cdot \\cdot \\sum _ { j _ { t } = 0 } ^ { 1 } | j _ { 1 } \\cdot \\cdot \\cdot j _ { t } \\rangle = \\sum _ { j = 0 } ^ { 2 ^ { t } - 1 } | j \\rangle ) } \\end{array}"
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                633,
+                860,
+                655
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Thus the initial state of the two registers "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "| 0 \\rangle | u \\rangle"
+                    },
+                    {
+                        "type": "text",
+                        "content": "is transformed by the circuit as:"
+                    }
+                ]
+            },
+            "bbox": [
+                168,
+                655,
+                855,
+                671
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\left| 0 \\right\\rangle | u \\rangle \\longrightarrow \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\varphi j} | j \\rangle | u \\rangle = \\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\frac {(2 ^ {t} \\varphi) j}{2 ^ {t}}} | j \\rangle | u \\rangle \\tag {21.5}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/803831f3eb5bc3d1dd29c22ba5da9e11b3d498ea649c20b605be6f9528296317.jpg"
+                }
+            },
+            "bbox": [
+                272,
+                682,
+                853,
+                730
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "Suppose now that the phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\varphi"
+                    },
+                    {
+                        "type": "text",
+                        "content": "can be expressed exactly with t bits:"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                739,
+                724,
+                756
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\varphi = 0. \\varphi_ {1}... \\varphi_ {t} \\tag {21.6}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/9b7180ea960f49f6845cdbe9a5a7be1fa8ed11e2077b7c74dcb0f37c25245022.jpg"
+                }
+            },
+            "bbox": [
+                443,
+                769,
+                853,
+                787
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(remember that the phase as defined in (21.1) is a real number between 0 and 1). Then applying the inverse "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\mathrm { Q F T }"
+                    },
+                    {
+                        "type": "text",
+                        "content": "to the first register gives"
+                    }
+                ]
+            },
+            "bbox": [
+                137,
+                796,
+                853,
+                831
+            ]
+        },
+        {
+            "type": "equation_interline",
+            "content": {
+                "math_content": "\\frac {1}{2 ^ {\\frac {t}{2}}} \\sum_ {j = 0} ^ {2 ^ {t} - 1} e ^ {2 \\pi i \\frac {(2 ^ {t} \\varphi) j}{2 ^ {t}}} | j \\rangle \\longrightarrow | 2 ^ {t} \\varphi \\rangle = | \\varphi_ {1}... \\varphi_ {t} \\rangle \\tag {21.7}",
+                "math_type": "latex",
+                "image_source": {
+                    "path": "images/1077db5948196cfb4067def7a7ab7a1650f7f6023e35f5833cc6da010a106557.jpg"
+                }
+            },
+            "bbox": [
+                329,
+                843,
+                853,
+                889
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "102"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                919
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "and measuring the register in the computational basis yields the phase "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\varphi ."
+                    }
+                ]
+            },
+            "bbox": [
+                139,
+                125,
+                781,
+                144
+            ]
+        },
+        {
+            "type": "image",
+            "content": {
+                "image_source": {
+                    "path": "images/42db54be769c0a01890d7ffc19d4ce95e448455b1d4d67338676a82f19815c3f.jpg"
+                },
+                "content": "```mermaid\ngraph LR\n  subgraph t_qubits[\"t qubits\"]\n    direction TB\n  A[\"H\"] --> B[\"......\"]\n    C[\"......\"]\n    D[\"......\"]\n  end\n\n  subgraph u_u[\"|u⟩[\\\"|u⟩\\\"]\"]\n  E[\"U2^0\"] --> F[\"......\"]\n  G[\"U2^1\"] --> H[\"......\"]\n  I[\"U2^2\"] --> J[\"......\"]\n  K[\"U2^{t-1}\"] --> L[\"......\"]\n  end\n\n  style A fill:#fff,stroke:#333\n  style C fill:#fff,stroke:#333\n  style D fill:#fff,stroke:#333\n  style E fill:#fff,stroke:#333\n  style F fill:#fff,stroke:#333\n  style G fill:#fff,stroke:#333\n  style H fill:#fff,stroke:#333\n  style I fill:#fff,stroke:#333\n  style J fill:#fff,stroke:#333\n  style K fill:#fff,stroke:#333\n  style L fill:#fff,stroke:#333\n```",
+                "image_caption": [
+                    {
+                        "type": "text",
+                        "content": "Fig. 21.1 The circuit for phase estimation."
+                    }
+                ],
+                "image_footnote": []
+            },
+            "sub_type": "flowchart",
+            "bbox": [
+                196,
+                204,
+                811,
+                429
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "103"
+                    }
+                ]
+            },
+            "bbox": [
+                482,
+                904,
+                515,
+                919
+            ]
+        }
+    ]
+]
