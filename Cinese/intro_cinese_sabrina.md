@@ -45,64 +45,21 @@ g, k, h
 Esempi: hǎo 好 · gē 哥 · kě yǐ 可以
 
 ## Sibilanti / retroflesse
-
-j q x · z c s · zh ch sh r
-
-Esempi: shì 是 · xiè 谢 · qǐng 请
-
-Le labbra lavorano molto: chiusura e rilascio
-
-$$
-b = \text {simile a una p morbida, senza forte aspirazione}
-$$
-
-$$
-p = \text {simile a p, con più aria in uscita}
-$$
-
-$$
-\mathrm{m} = \text {come in italiano “mamma”}
-$$
-
-$$
-f = \text {come in italiano “fata”}
-$$
-
-$$
-\text {Allenati con: ba, pa, ma, fa / bo, po, mo, fo}
-$$
-
-Stesso suono di base, significato diverso con il tono
-
-$$
-\mathrm{ma} \rightarrow \mathrm{mā/má/mǎ/mà}
-$$
-
-$$
-b a \rightarrow b \bar {a} / b á / b \check {a} / b à
-$$
-
-$$
-\mathrm{mi} \rightarrow \mathrm{mī/mí/mǐ/mì}
-$$
-
-$$
-\mathrm{fu} \rightarrow \mathrm{fū/fú/fǔ/fù}
-$$
-
-Ripeti lentamente: consonante + vocale, poi cambia il tono
-
-Le vocali sono il cuore della sillaba
-
-a, o, e, i, u, ü
-
-Dittonghi comuni: ai, ei, ui, ao, ou, iu
-
-Combinazioni frequenti: ia, ie, ua, uo, üe
-
-Suggerimento: pronuncia prima la vocale chiaramente, poi aggiungi il tono
  
----
+j q x · z c s · zh ch sh r
+ 
+Esempi: shì 是 · xiè 谢 · qǐng 请
+ 
+> [!tip] Nota del Tutor
+> Per un italiano, la sfida principale è distinguere tra:
+> - **Palatali (j, q, x):** la lingua si appoggia al palato duro.
+> - **Retroflesse (zh, ch, sh):** la lingua si "arrotola" verso la parte posteriore del palato.
+> - **Altro (z, c, s):** suoni simili alle sibilanti italiane ma con una posizione della lingua leggermente diversa.
+> 
+> È fondamentale ascoltare bene la differenza tra 's' (dentale) e 'sh' (retroflessa).
+> 
+> ---
+
  
 ## Saluti e Cortesia
  
