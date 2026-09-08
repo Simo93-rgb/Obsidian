@@ -1,0 +1,2870 @@
+[
+    {
+        "type": "text",
+        "text": "Pinyin e pronuncia cinese",
+        "text_level": 2,
+        "bbox": [
+            303,
+            283,
+            693,
+            350
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Guida base in italiano: toni, consonanti + vocali e flashcard di uso quotidiano",
+        "bbox": [
+            200,
+            396,
+            786,
+            435
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "中⽂拼⾳ · 4 toni · esempi semplici",
+        "bbox": [
+            369,
+            550,
+            625,
+            590
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 0
+    },
+    {
+        "type": "text",
+        "text": "Ogni tono cambia il significato della sillaba",
+        "bbox": [
+            53,
+            122,
+            312,
+            151
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "image",
+        "img_path": "images/10a48cc5e1d3dc10c46e08b5f146f791cd5343f0c6a09e1c83b716d7eedeb61a.jpg",
+        "image_caption": [],
+        "image_footnote": [],
+        "content": "",
+        "bbox": [
+            42,
+            240,
+            827,
+            724
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "I 4 toni cinesi",
+        "bbox": [
+            50,
+            27,
+            232,
+            75
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            888,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            838,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 1
+    },
+    {
+        "type": "text",
+        "text": "Leggi sempre prima il tono, poi il suono della sillaba",
+        "bbox": [
+            52,
+            122,
+            369,
+            151
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Esempio: mā / má / mǎ / mà",
+        "bbox": [
+            740,
+            238,
+            897,
+            300
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\bar {a} = \\text {tono 1} \\rightarrow \\text {voce alta e stabile}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            337,
+            377,
+            671,
+            420
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "á = tono 2 → la voce sale",
+        "bbox": [
+            96,
+            442,
+            369,
+            488
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "ǎ = tono 3 → la voce scende e poi risale",
+        "bbox": [
+            96,
+            509,
+            461,
+            553
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "à = tono 4 → la voce scende in modo deciso",
+        "bbox": [
+            96,
+            570,
+            497,
+            611
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "a = tono neutro → leggero e breve",
+        "bbox": [
+            96,
+            635,
+            452,
+            681
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "Come leggere gli accenti",
+        "bbox": [
+            50,
+            27,
+            387,
+            83
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            950,
+            74
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 2
+    },
+    {
+        "type": "text",
+        "text": "Divisione utile per memorizzare la posizione della bocca",
+        "bbox": [
+            53,
+            122,
+            394,
+            151
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Labiali",
+        "text_level": 2,
+        "bbox": [
+            118,
+            233,
+            168,
+            262
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "b, p, m, f",
+        "bbox": [
+            236,
+            294,
+            316,
+            333
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Esempi: bà 爸 · mā 妈 · fàn 饭",
+        "bbox": [
+            85,
+            359,
+            343,
+            401
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Dentali",
+        "text_level": 2,
+        "bbox": [
+            559,
+            235,
+            613,
+            262
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "d, t, n, l",
+        "bbox": [
+            684,
+            294,
+            751,
+            333
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Esempi: nǐ 你 · tā 他 · lǎo shī ⽼师",
+        "bbox": [
+            528,
+            359,
+            818,
+            401
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Velari / gutturali",
+        "text_level": 2,
+        "bbox": [
+            84,
+            566,
+            203,
+            601
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "g, k, h",
+        "bbox": [
+            248,
+            629,
+            302,
+            668
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Esempi: hǎo 好 · gē 哥 · kě yǐ 可以",
+        "bbox": [
+            85,
+            692,
+            379,
+            738
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Sibilanti / retroflesse",
+        "text_level": 2,
+        "bbox": [
+            547,
+            550,
+            623,
+            614
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "j q x · z c s · zh ch sh r",
+        "bbox": [
+            625,
+            629,
+            808,
+            668
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Esempi: shì 是 · xiè 谢 · qǐng 请",
+        "bbox": [
+            528,
+            692,
+            795,
+            738
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "Suoni per categoria",
+        "bbox": [
+            50,
+            27,
+            316,
+            83
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 3
+    },
+    {
+        "type": "text",
+        "text": "Le labbra lavorano molto: chiusura e rilascio",
+        "bbox": [
+            52,
+            122,
+            322,
+            150
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\nb = \\text {simile a una p morbida, senza forte aspirazione}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            276,
+            375,
+            731,
+            420
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\np = \\text {simile a p, con più aria in uscita}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            96,
+            438,
+            459,
+            485
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{m} = \\text {come in italiano “mamma”}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            98,
+            505,
+            411,
+            546
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\nf = \\text {come in italiano “fata”}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            98,
+            572,
+            353,
+            614
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\text {Allenati con: ba, pa, ma, fa / bo, po, mo, fo}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            98,
+            638,
+            473,
+            679
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "Suoni labiali: come si formano",
+        "bbox": [
+            48,
+            27,
+            460,
+            77
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            888,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            952,
+            938
+        ],
+        "page_idx": 4
+    },
+    {
+        "type": "text",
+        "text": "Stesso suono di base, significato diverso con il tono",
+        "bbox": [
+            52,
+            122,
+            369,
+            151
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{ma} \\rightarrow \\mathrm{mā/má/mǎ/mà}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            376,
+            374,
+            635,
+            416
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\nb a \\rightarrow b \\bar {a} / b á / b \\check {a} / b à\n$$",
+        "text_format": "latex",
+        "bbox": [
+            96,
+            440,
+            323,
+            485
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{mi} \\rightarrow \\mathrm{mī/mí/mǐ/mì}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            97,
+            507,
+            323,
+            551
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{fu} \\rightarrow \\mathrm{fū/fú/fǔ/fù}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            97,
+            575,
+            290,
+            616
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Ripeti lentamente: consonante + vocale, poi cambia il tono",
+        "bbox": [
+            97,
+            642,
+            614,
+            685
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "Consonanti + vocali + toni",
+        "bbox": [
+            50,
+            27,
+            405,
+            77
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            950,
+            74
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 5
+    },
+    {
+        "type": "text",
+        "text": "Le vocali sono il cuore della sillaba",
+        "bbox": [
+            52,
+            122,
+            266,
+            150
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "a, o, e, i, u, ü",
+        "bbox": [
+            436,
+            411,
+            575,
+            457
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Dittonghi comuni: ai, ei, ui, ao, ou, iu",
+        "bbox": [
+            96,
+            474,
+            473,
+            527
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Combinazioni frequenti: ia, ie, ua, uo, üe",
+        "bbox": [
+            98,
+            542,
+            458,
+            585
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Suggerimento: pronuncia prima la vocale chiaramente, poi aggiungi il tono",
+        "bbox": [
+            98,
+            603,
+            752,
+            646
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "Le vocali del pinyin",
+        "bbox": [
+            50,
+            27,
+            312,
+            83
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            950,
+            74
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 6
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "你好",
+        "text_level": 2,
+        "bbox": [
+            466,
+            279,
+            529,
+            340
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: nǐ hǎo",
+        "bbox": [
+            350,
+            400,
+            483,
+            442
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "ciao / salve",
+        "bbox": [
+            146,
+            605,
+            257,
+            648
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "equation",
+        "text": "$$\nn \\check {i} = n + i \\mid h \\check {a} o = h + a + o\n$$",
+        "text_format": "latex",
+        "bbox": [
+            408,
+            607,
+            612,
+            646
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 你好！Nǐ hǎo! = Ciao!",
+        "bbox": [
+            387,
+            762,
+            615,
+            794
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 1",
+        "bbox": [
+            50,
+            27,
+            207,
+            75
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            888,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 7
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "谢谢",
+        "text_level": 2,
+        "bbox": [
+            467,
+            281,
+            528,
+            340
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: xiè xie",
+        "bbox": [
+            350,
+            400,
+            483,
+            442
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "grazie",
+        "bbox": [
+            146,
+            607,
+            205,
+            650
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            535,
+            654,
+            566
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {xiè = x + i + e | xie = x + i + e (tono neutro nella seconda sillaba)} \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            587,
+            773,
+            666
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 谢谢你。Xiè xie nǐ. = Grazie.",
+        "bbox": [
+            368,
+            762,
+            633,
+            792
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 2",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            952,
+            938
+        ],
+        "page_idx": 8
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "再⻅",
+        "text_level": 2,
+        "bbox": [
+            467,
+            281,
+            527,
+            340
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: zài jiàn",
+        "bbox": [
+            347,
+            400,
+            486,
+            442
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "arrivederci",
+        "bbox": [
+            146,
+            607,
+            252,
+            644
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "equation",
+        "text": "$$\nz \\dot {a} i = z + a + i \\mid j i \\dot {a} n = j + i + a + n\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            609,
+            658,
+            646
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 明天再⻅。Míng tiān zài jiàn. = A domani.",
+        "bbox": [
+            326,
+            762,
+            675,
+            794
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 3",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 9
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "你好吗？",
+        "text_level": 2,
+        "bbox": [
+            437,
+            279,
+            544,
+            340
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: nǐ hǎo ma?",
+        "bbox": [
+            327,
+            400,
+            506,
+            442
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "come stai?",
+        "bbox": [
+            146,
+            607,
+            250,
+            644
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            535,
+            654,
+            566
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {nǐ = n + i | hǎo = h + a + o | ma = m + a (tono} \\\\ \\text {neutro)} \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            587,
+            767,
+            666
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 你好吗？我很好。Nǐ hǎo ma? Wǒ hěn hǎo.",
+        "bbox": [
+            321,
+            762,
+            679,
+            794
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 4",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 10
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "我很好",
+        "text_level": 2,
+        "bbox": [
+            452,
+            281,
+            543,
+            340
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǒ hěn hǎo",
+        "bbox": [
+            325,
+            400,
+            509,
+            442
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            214,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "sto bene",
+        "bbox": [
+            146,
+            607,
+            231,
+            644
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{w} \\check {\\mathrm{o}} = \\mathrm{w} + \\mathrm{o} \\mid \\mathrm{h} \\check {\\mathrm{e}} \\mathrm{n} = \\mathrm{h} + \\mathrm{e} + \\mathrm{n} \\mid \\mathrm{h} \\check {\\mathrm{a}} \\mathrm{o} = \\mathrm{h} + \\mathrm{a} + \\mathrm{o}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            607,
+            768,
+            646
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 我很好，谢谢。Wǒ hěn hǎo, xièxie.",
+        "bbox": [
+            344,
+            762,
+            657,
+            792
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 5",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 11
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "请",
+        "text_level": 2,
+        "bbox": [
+            481,
+            281,
+            513,
+            340
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: qǐng",
+        "bbox": [
+            360,
+            400,
+            475,
+            444
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "per favore / prego",
+        "bbox": [
+            146,
+            605,
+            321,
+            650
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "equation",
+        "text": "$$\nq \\check {\\mathrm{ing}} = q + \\mathrm{i} + n + g\n$$",
+        "text_format": "latex",
+        "bbox": [
+            409,
+            609,
+            550,
+            646
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 请坐。Qǐng zuò. = Prego, siediti/si sieda",
+        "bbox": [
+            333,
+            762,
+            668,
+            796
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 6",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 12
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "对不起",
+        "text_level": 2,
+        "bbox": [
+            451,
+            281,
+            545,
+            340
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: duì bu qǐ",
+        "bbox": [
+            338,
+            400,
+            497,
+            444
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "scusa / mi dispiace",
+        "bbox": [
+            146,
+            605,
+            328,
+            650
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{du} \\dot {\\mathrm{i}} = \\mathrm{d} + \\mathrm{u} + \\mathrm{i} \\mid \\mathrm{bu} = \\mathrm{b} + \\mathrm{u} \\mid \\mathrm{q} \\check {\\mathrm{i}} = \\mathrm{q} + \\mathrm{i}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            408,
+            607,
+            704,
+            646
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 对不起，我迟到了。Duì bu qǐ, wǒ chí dào le.",
+        "bbox": [
+            316,
+            762,
+            684,
+            794
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 7",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 13
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "没关系",
+        "text_level": 2,
+        "bbox": [
+            451,
+            281,
+            542,
+            340
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: méi guān xi",
+        "bbox": [
+            325,
+            400,
+            509,
+            444
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            527,
+            293,
+            562
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "non importa / non fa niente",
+        "bbox": [
+            146,
+            579,
+            347,
+            670
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "equation",
+        "text": "$$\nm \\acute {e} i = m + e + i \\mid g u \\bar {a} n = g + u + a + n \\mid x i = x + i\n$$",
+        "text_format": "latex",
+        "bbox": [
+            408,
+            607,
+            781,
+            646
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 没关系。Méi guān xi. = Non fa niente.",
+        "bbox": [
+            338,
+            762,
+            663,
+            794
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 8",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            784,
+            916,
+            953,
+            938
+        ],
+        "page_idx": 14
+    },
+    {
+        "type": "text",
+        "text": "Ripetizione breve per fissare la pronuncia",
+        "bbox": [
+            53,
+            122,
+            307,
+            151
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Leggi ad alta voce: nǐ hǎo / xiè xie / zài jiàn",
+        "bbox": [
+            314,
+            412,
+            696,
+            455
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Poi scandisci le lettere: n-i, h-a-o, x-i-e, z-a-i, j-i-a-n",
+        "bbox": [
+            96,
+            474,
+            551,
+            514
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Infine cambia il tono su ma, ba, mi, fu",
+        "bbox": [
+            98,
+            533,
+            481,
+            579
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Obiettivo: riconoscere suono, tono e lettere del pinyin",
+        "bbox": [
+            98,
+            601,
+            568,
+            644
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "header",
+        "text": "Mini esercizio finale",
+        "bbox": [
+            50,
+            27,
+            319,
+            75
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per continuare",
+        "bbox": [
+            837,
+            916,
+            953,
+            940
+        ],
+        "page_idx": 15
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "早上好",
+        "text_level": 2,
+        "bbox": [
+            452,
+            279,
+            544,
+            340
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: zǎo shàng hǎo",
+        "bbox": [
+            317,
+            400,
+            516,
+            442
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "buongiorno",
+        "bbox": [
+            146,
+            607,
+            259,
+            648
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} z \\check {a} o = z + a + o \\mid \\text {shàng} = \\mathrm{sh} + a + n + g \\mid h \\check {a} o = h + a + \\\\ o \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            780,
+            657
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 早上好！Zǎoshang hǎo! = Buongiorno!",
+        "bbox": [
+            332,
+            750,
+            663,
+            781
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 9",
+        "bbox": [
+            50,
+            27,
+            210,
+            75
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            940
+        ],
+        "page_idx": 16
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "晚上好",
+        "text_level": 2,
+        "bbox": [
+            452,
+            281,
+            543,
+            340
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǎn shàng hǎo",
+        "bbox": [
+            314,
+            400,
+            520,
+            442
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "buonasera",
+        "bbox": [
+            146,
+            607,
+            250,
+            642
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {wǎn = w + a + n} \\mid \\text {shang = sh + a + n + g} \\mid \\text {hǎo = h + a} \\\\ + 0 \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            779,
+            657
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 晚上好！Wǎnshang hǎo! = Buonasera!",
+        "bbox": [
+            332,
+            750,
+            663,
+            781
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 10",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            888,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 17
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "你叫什么名字？",
+        "text_level": 2,
+        "bbox": [
+            400,
+            277,
+            582,
+            333
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: nǐ jiào shén me míng zi?",
+        "bbox": [
+            272,
+            400,
+            561,
+            442
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "come ti chiami?",
+        "bbox": [
+            146,
+            607,
+            300,
+            644
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\mathrm{n} \\check {\\mathrm{i}} = \\mathrm{n} + \\mathrm{i} \\mid \\text {jiào} = \\mathrm{j} + \\mathrm{i} + \\mathrm{a} + \\mathrm{o} \\mid \\text {shénme} = \\mathrm{sh} + \\mathrm{e} + \\mathrm{n} + \\\\ \\text {me} \\mid \\text {míngzi} = \\mathrm{m+i+ng+zi} \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            772,
+            662
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 你叫什么名字？Nǐ jiào shénme míngzi?",
+        "bbox": [
+            329,
+            750,
+            665,
+            781
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 11",
+        "bbox": [
+            50,
+            27,
+            220,
+            75
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 18
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "我叫 Mario",
+        "text_level": 2,
+        "bbox": [
+            428,
+            279,
+            566,
+            331
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǒ jiào Mario",
+        "bbox": [
+            318,
+            400,
+            515,
+            442
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "mi chiamo Mario",
+        "bbox": [
+            146,
+            607,
+            311,
+            644
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {wǒ = w + o | jiào = j + i + a + o | Luca = nome} \\\\ \\text {proprio} \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            729,
+            662
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 我叫 Mario。Wǒ jiào Mario. = Mi chiamo Mario.",
+        "bbox": [
+            304,
+            750,
+            689,
+            781
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 12",
+        "bbox": [
+            50,
+            27,
+            226,
+            75
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 19
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "多少钱？",
+        "text_level": 2,
+        "bbox": [
+            438,
+            279,
+            544,
+            340
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: duō shǎo qián?",
+        "bbox": [
+            312,
+            400,
+            521,
+            442
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "quanto costa?",
+        "bbox": [
+            146,
+            607,
+            283,
+            650
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\mathrm{duōshao=d+u+o+shao} \\mid \\text {qián} = \\mathrm{q+i+a+n}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            408,
+            609,
+            778,
+            646
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 这个多少钱？ zhè ge duō shǎo qián? = Quanto costa questo?",
+        "bbox": [
+            266,
+            750,
+            728,
+            781
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 14",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 20
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "我要这个",
+        "text_level": 2,
+        "bbox": [
+            437,
+            281,
+            558,
+            340
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǒ yào zhè ge",
+        "bbox": [
+            317,
+            400,
+            516,
+            442
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "voglio questo",
+        "bbox": [
+            146,
+            607,
+            277,
+            650
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {wǒ = w + o | yào = y + a + o | zhè = zh + e | ge = g + e} \\\\ \\text {e} \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            780,
+            657
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 我要这个。Wǒ yào zhège. = Prendo questo.",
+        "bbox": [
+            317,
+            750,
+            675,
+            781
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 15",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 21
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "我不知道",
+        "text_level": 2,
+        "bbox": [
+            437,
+            281,
+            558,
+            340
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǒ bù zhī dào",
+        "bbox": [
+            318,
+            400,
+            515,
+            442
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "non lo so",
+        "bbox": [
+            146,
+            607,
+            236,
+            644
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\text {wǒ = w + o | bù = b + u | zhī = zh + i | dào = d + a +} \\\\ \\text {o} \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            776,
+            659
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 我不知道。Wǒ bù zhīdào. = Non lo so.",
+        "bbox": [
+            333,
+            750,
+            659,
+            779
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 16",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            888,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 22
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "我听不懂",
+        "text_level": 2,
+        "bbox": [
+            437,
+            279,
+            558,
+            340
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: wǒ tīng bù dǒng",
+        "bbox": [
+            308,
+            400,
+            526,
+            442
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "non capisco",
+        "bbox": [
+            146,
+            607,
+            260,
+            650
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            542,
+            654,
+            572
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "equation",
+        "text": "$$\n\\begin{array}{l} \\mathrm{w} \\check {\\mathrm{o}} = \\mathrm{w} + \\mathrm{o} \\mid \\mathrm{t} \\bar {\\mathrm{i}} \\mathrm{n} \\mathrm{g} = \\mathrm{t} + \\mathrm{i} + \\mathrm{n} \\mathrm{g} \\mid \\mathrm{b} \\dot {\\mathrm{u}} = \\mathrm{b} + \\mathrm{u} \\mid \\mathrm{d} \\check {\\mathrm{o}} \\mathrm{n} \\mathrm{g} = \\mathrm{d} \\\\ + o + n g \\\\ \\end{array}\n$$",
+        "text_format": "latex",
+        "bbox": [
+            407,
+            590,
+            778,
+            662
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 对不起，我听不懂。Duì bu qǐ, wǒ tīng bù dǒng.",
+        "bbox": [
+            303,
+            750,
+            689,
+            781
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 17",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 23
+    },
+    {
+        "type": "text",
+        "text": "Ogni pressione della freccia mostra la flashcard successiva",
+        "bbox": [
+            53,
+            122,
+            412,
+            151
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "可以",
+        "text_level": 2,
+        "bbox": [
+            467,
+            281,
+            529,
+            340
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Pinyin: kě yǐ",
+        "bbox": [
+            360,
+            400,
+            473,
+            442
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Significato",
+        "bbox": [
+            213,
+            553,
+            293,
+            587
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "si può / va bene",
+        "bbox": [
+            146,
+            605,
+            300,
+            648
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Sillabe e lettere",
+        "bbox": [
+            535,
+            557,
+            654,
+            588
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "equation",
+        "text": "$$\nk \\check {e} = k + e \\mid y \\check {i} = y + i\n$$",
+        "text_format": "latex",
+        "bbox": [
+            408,
+            607,
+            569,
+            646
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "text",
+        "text": "Esempio d’uso: 可以。Kě yǐ. = Va bene / Si può.",
+        "bbox": [
+            355,
+            750,
+            638,
+            781
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "header",
+        "text": "Flashcard 18",
+        "bbox": [
+            50,
+            27,
+            225,
+            75
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "header",
+        "text": "",
+        "bbox": [
+            887,
+            5,
+            947,
+            74
+        ],
+        "page_idx": 24
+    },
+    {
+        "type": "footer",
+        "text": "Premi → per la flashcard successiva",
+        "bbox": [
+            788,
+            916,
+            956,
+            938
+        ],
+        "page_idx": 24
+    }
+]
