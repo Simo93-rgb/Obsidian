@@ -30,33 +30,55 @@
 > [!abstract] Guida all'articolazione
 > La sfida principale per un italiano è la distinzione tra suoni aspirati e non aspirati, e la corretta posizione della lingua.
 
-| Gruppo | Consonanti | Note per Italiani | Esempi |
-| :--- | :--- | :--- | :--- |
-| **Labiali** | b, p, m, f | La **p** è "aspirata" (emetti una nuvola d'aria). La **f** è simile all'italiano ma più "soffice". | bà, mā, fàn |
-| **Dentali** | d, t, n, l | Molto simili all'italiano. La **l** è leggermente più retroflessa. | nǐ, tā, lǎo shī |
-| **Velari** | g, k, h | La **h** è un sospiro profondo che viene dalla gola (non è una "h" italiana). | hǎo, gē, kě yǐ |
-| **Sibilanti** | j, q, x, z, c, s, zh, ch, sh, r | **j, q, x** sono palatali; **zh, ch, sh** sono retroflesse (lingua arrotolata). | shì, xiè, qǐng |
 
----
+| Gruppo | Consonanti | Esempi |
+| :--- | :--- | :--- |
+| **Labiali** | b, p, m, f | bà, mā, fàn |
+| **Dentali** | d, t, n, l | nǐ, tā, lǎo shī |
+| **Velari** | g, k, h | hǎo, gē, kě yǐ |
+| **Sibilanti** | j, q, x, z, c, s, zh, ch, sh, r | shì, xiè, qǐng |
 
-## 👄 Vocali e Dittonghi
+### Labiali
+| Consonante | Note | Esempio |
+| :--- | :--- | :--- |
+| b | simile a una p morbida, senza forta aspirazione | bà |
+| p | simile a b, ma con più aria in uscita | pàn |
+| m | come mamma | mā |
+| f | come in italiano "fata" | fàn |
 
-Vocali base: **a, o, e, i, u, ü**
-Dittonghi comuni: **ai, ei, ui, ao, ou, iu**
+### Dentali
+| Consonante | Note | Esempio |
+| :--- | :--- | :--- |
+| d | simile alla d italiana | dào |
+| t | simile alla t italiana | tā |
+| n | simile alla n italiana | nǐ |
+| l | simile alla l italiana, ma con la lingua leggermente più retroflessa | lǎo shī |
 
-> [!tip] Nota del Tutor
-> - **Suono "ü":** Immagina di dire "i" ma con le labbra arrotondate come se dovessi fischiare.
-> - **Suono "r":** Non è una "r" vibrante. È un suono più simile a una "j" dolce, quasi come un sussurro.
-> 
-> **Suggerimento:** Pronuncia prima la vocale chiaramente, poi aggiungi il tono. È la base per una pronuncia fluida.
+### Velari
+| Consonante | Note                                                             | Esempio |
+| :--------- | :--------------------------------------------------------------- | :------ |
+| g          | simile alla g italiana                                           | gē      |
+| k          | simile alla k italiana                                           | kě yǐ   |
+| h          | un sospiro profondo che viene dalla gola (non è una "h" inglese) | hǎo     |
 
----
+### Sibilanti
+| Consonante | Note                                       | Esempio |
+| :--------- | :----------------------------------------- | :------ |
+| j          | palatale, simile a un "i" molto dolce      | jǐn     |
+| q          | palatale, simile a una "c" dolce e soffice | qǐng    |
+| x          | palatale, simile a una "s" dolce e soffice | xiè     |
+| z          | simile alla "z" italiana                   | zài     |
+| c          | simile a un suono "ts"                     | cì      |
+| s          | simile alla "sc"                           | shì     |
 
-## Sibilanti / retroflesse
+### Retroflesse
 
-j q x · z c s · zh ch sh r
-
-Esempi: shì 是 · xiè 谢 · qǐng 请
+| Consonante | Note                                                                                                | Esempio |
+| :--------- | :-------------------------------------------------------------------------------------------------- | :------ |
+| zh         | retroflessa (lingua arrotolata), simile a una "j" italiana ma con la lingua più indietro            | zhè     |
+| ch         | retroflessa (lingua arrotolata), simile a una "c" (come in "ciao") ma con la lingua più indietro    | chī     |
+| sh         | retroflessa (lingua arrotolata), simile a una "sc" (come in "sciare") ma con la lingua più indietro | shàng   |
+| r          | retroflessa, suono dolce e quasi sussurrato, non vibrante                                           | rèn     |
 
 > [!tip] Nota del Tutor
 > Per un italiano, la sfida principale è distinguere tra:
@@ -65,6 +87,20 @@ Esempi: shì 是 · xiè 谢 · qǐng 请
 > - **Altro (z, c, s):** suoni simili alle sibilanti italiane ma con una posizione della lingua leggermente diversa.
 > 
 > È fondamentale ascoltare bene la differenza tra 's' (dentale) e 'sh' (retroflessa).
+---
+
+## 👄 Vocali e Dittonghi
+
+Vocali base: **a, o, e, i, u, ü**
+Dittonghi comuni: **ai, ei, ui, ao, ou, iu**
+
+> [!tip] Nota del Tutor
+> - **Suono "ü":** Immagina di dire "iu" ma con le labbra arrotondate come se dovessi fischiare. Somiglia a un suono vocalico francese.
+> - **Suono "ui":** Si pronuncia come "uei".
+> - **Suono "iu":** Si peonuncia come "iou".
+> 
+> **Suggerimento:** Pronuncia prima la vocale chiaramente, poi aggiungi il tono. È la base per una pronuncia fluida.
+
 
 ---
  
@@ -76,7 +112,7 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
  
 ## 你好
  
-Pinyin: nǐ hǎo
+Pinyin: nǐ hǎo 
  
 > [!info] **Significato**
 > ciao / salve
