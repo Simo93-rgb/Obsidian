@@ -102,7 +102,7 @@ Combinazioni frequenti: ia, ie, ua, uo, üe
 
 Suggerimento: pronuncia prima la vocale chiaramente, poi aggiungi il tono
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 你好
 
@@ -120,7 +120,7 @@ $$
 
 Esempio d’uso: 你好！Nǐ hǎo! = Ciao!
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 谢谢
 
@@ -138,7 +138,7 @@ $$
 
 Esempio d’uso: 谢谢你。Xiè xie nǐ. = Grazie.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 再⻅
 
@@ -156,7 +156,7 @@ $$
 
 Esempio d’uso: 明天再⻅。Míng tiān zài jiàn. = A domani.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 你好吗？
 
@@ -174,7 +174,7 @@ $$
 
 Esempio d’uso: 你好吗？我很好。Nǐ hǎo ma? Wǒ hěn hǎo.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 我很好
 
@@ -192,7 +192,7 @@ $$
 
 Esempio d’uso: 我很好，谢谢。Wǒ hěn hǎo, xièxie.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 请
 
@@ -210,7 +210,7 @@ $$
 
 Esempio d’uso: 请坐。Qǐng zuò. = Prego, siediti/si sieda
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 对不起
 
@@ -228,7 +228,7 @@ $$
 
 Esempio d’uso: 对不起，我迟到了。Duì bu qǐ, wǒ chí dào le.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 没关系
 
@@ -256,7 +256,7 @@ Infine cambia il tono su ma, ba, mi, fu
 
 Obiettivo: riconoscere suono, tono e lettere del pinyin
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 早上好
 
@@ -274,7 +274,7 @@ $$
 
 Esempio d’uso: 早上好！Zǎoshang hǎo! = Buongiorno!
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 晚上好
 
@@ -287,12 +287,12 @@ buonasera
 Sillabe e lettere
 
 $$
-\begin{array}{l} \text {wǎn = w + a + n} \mid \text {shang = sh + a + n + g} \mid \text {hǎo = h + a} \\ + 0 \end{array}
+\begin{array}{l} \text {wǎn = w + a + n} \mid \text {shang = sh + a + n + g} \mid \text {hǎo = h + a} \\ + o \end{array}
 $$
 
 Esempio d’uso: 晚上好！Wǎnshang hǎo! = Buonasera!
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 你叫什么名字？
 
@@ -305,12 +305,12 @@ come ti chiami?
 Sillabe e lettere
 
 $$
-\begin{array}{l} \mathrm{n} \check {\mathrm{i}} = \mathrm{n} + \mathrm{i} \mid \text {jiào} = \mathrm{j} + \mathrm{i} + \mathrm{a} + \mathrm{o} \mid \text {shénme} = \mathrm{sh} + \mathrm{e} + \mathrm{n} + \\ \text {me} \mid \text {míngzi} = \mathrm{m+i+ng+zi} \\ \end{array}
+\begin{array}{l} \mathrm{n} \check {\mathrm{i}} = \mathrm{n} + \mathrm{i} \mid \text {jiào} = \mathrm{j} + \mathrm{i} + \mathrm{a} + \mathrm{o} \mid \text {shénme} = \mathrm{sh} + \mathrm{e} + \mathrm{n} + \\ \text {me} \mid \text {míngzi} = \mathrm{m + i + ng + zi} \\ \end{array}
 $$
 
 Esempio d’uso: 你叫什么名字？Nǐ jiào shénme míngzi?
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 我叫 Mario
 
@@ -323,12 +323,12 @@ mi chiamo Mario
 Sillabe e lettere
 
 $$
-\begin{array}{l} \text {wǒ = w + o | jiào = j + i + a + o | Luca = nome} \\ \text {proprio} \end{array}
+\begin{array}{l} \text {wǒ = w + o | jiào = j + i + a + o | Mario = nome} \\ \text {proprio} \end{array}
 $$
 
 Esempio d’uso: 我叫 Mario。Wǒ jiào Mario. = Mi chiamo Mario.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 多少钱？
 
@@ -341,12 +341,12 @@ quanto costa?
 Sillabe e lettere
 
 $$
-\mathrm{duōshao=d+u+o+shao} \mid \text {qián} = \mathrm{q+i+a+n}
+\mathrm{duōshao = d + u + o + shao} \mid \text {qián} = \mathrm{q+i+a+n}
 $$
 
 Esempio d’uso: 这个多少钱？ zhè ge duō shǎo qián? = Quanto costa questo?
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 我要这个
 
@@ -364,7 +364,7 @@ $$
 
 Esempio d’uso: 我要这个。Wǒ yào zhège. = Prendo questo.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 我不知道
 
@@ -382,7 +382,7 @@ $$
 
 Esempio d’uso: 我不知道。Wǒ bù zhīdào. = Non lo so.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 我听不懂
 
@@ -400,7 +400,7 @@ $$
 
 Esempio d’uso: 对不起，我听不懂。Duì bu qǐ, wǒ tīng bù dǒng.
 
-Ogni pressione della freccia mostra la flashcard successiva
+
 
 ## 可以
 
