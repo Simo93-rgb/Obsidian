@@ -28,57 +28,57 @@
 ## 🗣️ Classificazione delle Consonanti
 
 > [!abstract] Guida all'articolazione
-> La sfida principale per un italiano è la distinzione tra suoni aspirati e non aspirati, e la corretta posizione della lingua.
+> La sfida principale per un italiano è la distinzione tra suoni aspirati e non aspirati e la corretta posizione della lingua. Noi non abbiamo questi suoni e un po' come con l'inglese che abbiamo imparato a emettere il suono della `h` anche qui dobbiamo imparare a pronunciarli. Omettendo questi suoni potresti dire roma per toma, se sei fortunato. 
 
 
-| Gruppo | Consonanti | Esempi |
-| :--- | :--- | :--- |
-| **Labiali** | b, p, m, f | bà, mā, fàn |
-| **Dentali** | d, t, n, l | nǐ, tā, lǎo shī |
-| **Velari** | g, k, h | hǎo, gē, kě yǐ |
-| **Sibilanti** | j, q, x, z, c, s, zh, ch, sh, r | shì, xiè, qǐng |
+| Gruppo        | Consonanti                      | Esempi          | Caratteri |
+| :------------ | :------------------------------ | :-------------- | --------- |
+| **Labiali**   | b, p, m, f                      | bà, mā, fàn     | 爸，拍，妈，饭     |
+| **Dentali**   | d, t, n, l                      | dào, tā, nǐ, lǎo shī | 到，他，你，老师    |
+| **Velari**    | g, k, h                         | hǎo, gē, kě yǐ  | 好， 哥，可以   |
+| **Sibilanti** | j, q, x, z, c, s, zh, ch, sh, r | shì, xiè, qǐng  | 是， 谢， 请，金，在，次，这，吃，上，人 |
 
 ### Labiali
-| Consonante | Note | Esempio |
-| :--- | :--- | :--- |
-| b | simile a una p morbida, senza forta aspirazione | bà |
-| p | simile a b, ma con più aria in uscita | pàn |
-| m | come mamma | mā |
-| f | come in italiano "fata" | fàn |
+| Consonante | Note                                            | Esempio | Caratteri |
+| :--------- | :---------------------------------------------- | :------ | --------- |
+| b          | simile a una p morbida, senza forta aspirazione | bà      | 爸         |
+| p          | simile a b, ma con più aria in uscita           | pàn     | 拍         |
+| m          | come mamma                                      | mā      | 妈         |
+| f          | come in italiano "fata"                         | fàn     | 饭         |
 
 ### Dentali
-| Consonante | Note | Esempio |
-| :--- | :--- | :--- |
-| d | simile alla d italiana | dào |
-| t | simile alla t italiana | tā |
-| n | simile alla n italiana | nǐ |
-| l | simile alla l italiana, ma con la lingua leggermente più retroflessa | lǎo shī |
+| Consonante | Note | Esempio | Caratteri |
+| :--- | :--- | :--- | :--- |
+| d | simile alla d italiana | dào | 到 |
+| t | simile alla t italiana | tā | 他 |
+| n | simile alla n italiana | nǐ | 你 |
+| l | simile alla l italiana, ma con la lingua leggermente più retroflessa | lǎo shī | 老师 |
 
 ### Velari
-| Consonante | Note                                                             | Esempio |
-| :--------- | :--------------------------------------------------------------- | :------ |
-| g          | simile alla g italiana                                           | gē      |
-| k          | simile alla k italiana                                           | kě yǐ   |
-| h          | un sospiro profondo che viene dalla gola (non è una "h" inglese) | hǎo     |
+| Consonante | Note                                                             | Esempio | Caratteri |
+| :--------- | :--------------------------------------------------------------- | :------ | --------- |
+| g          | simile alla g italiana                                           | gē      | 哥       |
+| k          | simile alla k italiana                                           | kě yǐ   | 可以     |
+| h          | un sospiro profondo che viene dalla gola (non è una "h" inglese) | hǎo     | 好       |
 
 ### Sibilanti
-| Consonante | Note                                       | Esempio |
-| :--------- | :----------------------------------------- | :------ |
-| j          | palatale, simile a un "i" molto dolce      | jǐn     |
-| q          | palatale, simile a una "c" dolce e soffice | qǐng    |
-| x          | palatale, simile a una "s" dolce e soffice | xiè     |
-| z          | simile alla "z" italiana                   | zài     |
-| c          | simile a un suono "ts"                     | cì      |
-| s          | simile alla "sc"                           | shì     |
+| Consonante | Note                                       | Esempio | Caratteri |
+| :--------- | :----------------------------------------- | :------ | --------- |
+| j          | palatale, simile a un "i" molto dolce      | jǐn     | 金       |
+| q          | palatale, simile a una "c" dolce e soffice | qǐng    | 请       |
+| x          | palatale, simile a una "s" dolce e soffice | xiè     | 谢       |
+| z          | simile alla "z" italiana                   | zài     | 在       |
+| c          | simile a un suono "ts"                     | cì      | 次       |
+| s          | simile alla "sc"                           | sì     | 是       |
 
 ### Retroflesse
 
-| Consonante | Note                                                                                                | Esempio |
-| :--------- | :-------------------------------------------------------------------------------------------------- | :------ |
-| zh         | retroflessa (lingua arrotolata), simile a una "j" italiana ma con la lingua più indietro            | zhè     |
-| ch         | retroflessa (lingua arrotolata), simile a una "c" (come in "ciao") ma con la lingua più indietro    | chī     |
-| sh         | retroflessa (lingua arrotolata), simile a una "sc" (come in "sciare") ma con la lingua più indietro | shàng   |
-| r          | retroflessa, suono dolce e quasi sussurrato, non vibrante                                           | rèn     |
+| Consonante | Note                                                                                                | Esempio | Caratteri |
+| :--------- | :-------------------------------------------------------------------------------------------------- | :------ | --------- |
+| zh         | retroflessa (lingua arrotolata), simile a una "j" italiana ma con la lingua più indietro            | zhè     | 这       |
+| ch         | retroflessa (lingua arrotolata), simile a una "c" (come in "ciao") ma con la lingua più indietro    | chī     | 吃       |
+| sh         | retroflessa (lingua arrotolata), simile a una "sc" (come in "sciare") ma con la lingua più indietro | shàng   | 上       |
+| r          | retroflessa, suono dolce e quasi sussurrato, non vibrante                                           | rèn     | 人       |
 
 > [!tip] Nota del Tutor
 > Per un italiano, la sfida principale è distinguere tra:
@@ -88,6 +88,15 @@
 > 
 > È fondamentale ascoltare bene la differenza tra 's' (dentale) e 'sh' (retroflessa).
 ---
+> [!info] Scioglilingua di riferimento (Differenziazione s vs sh)
+> In fonetica cinese lo scioglilingua per eccellenza per allenare questa coppia minima è:
+> 四是四，十是十
+> Sì shì sì, shí shì shí.
+> ("Quattro è quattro, dieci è dieci.")
+> sì [s] $\rightarrow$ sibilante secca dentale.
+> shì / shí [ʂ] $\rightarrow$ retroflesso profondo. 
+>
+>
 
 ## 👄 Vocali e Dittonghi
 
@@ -101,7 +110,9 @@ Dittonghi comuni: **ai, ei, ui, ao, ou, iu**
 > 
 > **Suggerimento:** Pronuncia prima la vocale chiaramente, poi aggiungi il tono. È la base per una pronuncia fluida.
 
-
+> [!info] Arch Chinese Pinyin Table
+> [Arch Chinese Pinyin Table](https://www.archchinese.com/chinese_pinyin.html) è una pagina web che contiene una tabella *Consonanti* x *Vocali* con tutte le pronunce. Al netto di essere loggato permette il download di ogni pronuncia in formato *mp3*. Contiene anche giochi, esercizi per scrittura a mano libera e molto altro. 
+> Valida alternativa è [Yabla](https://chinese.yabla.com/)
 ---
  
 ## Saluti e Cortesia
