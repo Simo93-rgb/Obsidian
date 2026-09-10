@@ -31,13 +31,6 @@
 > La sfida principale per un italiano è la distinzione tra suoni aspirati e non aspirati e la corretta posizione della lingua. Noi non abbiamo questi suoni e un po' come con l'inglese che abbiamo imparato a emettere il suono della `h` anche qui dobbiamo imparare a pronunciarli. Omettendo questi suoni potresti dire roma per toma, se sei fortunato. 
 
 
-| Gruppo        | Consonanti                      | Esempi          | Caratteri |
-| :------------ | :------------------------------ | :-------------- | --------- |
-| **Labiali**   | b, p, m, f                      | bà, mā, fàn     | 爸，拍，妈，饭     |
-| **Dentali**   | d, t, n, l                      | dào, tā, nǐ, lǎo shī | 到，他，你，老师    |
-| **Velari**    | g, k, h                         | hǎo, gē, kě yǐ  | 好， 哥，可以   |
-| **Sibilanti** | j, q, x, z, c, s, zh, ch, sh, r | shì, xiè, qǐng  | 是， 谢， 请，金，在，次，这，吃，上，人 |
-
 ### Labiali
 | Consonante | Note                                            | Esempio | Caratteri |
 | :--------- | :---------------------------------------------- | :------ | --------- |
@@ -88,9 +81,17 @@
 > 
 > È fondamentale ascoltare bene la differenza tra 's' (dentale) e 'sh' (retroflessa).
 
----
+### Schema Riassuntivo
 
-> [!info] Scioglilingua di riferimento (Differenziazione s vs sh)
+| **Gruppo**      | **Consonanti**   | **Esempi**                   | **Caratteri** |
+| --------------- | ---------------- | ---------------------------- | ------------- |
+| **Labiali**     | b, p, m, f       | bà, mā, fàn                  | 爸，拍，妈，饭       |
+| **Dentali**     | d, t, n, l       | dào, tā, nǐ, lǎo shī         | 到，他，你，老师      |
+| **Velari**      | g, k, h          | hǎo, gē, kě yǐ               | 好，哥，可以        |
+| **Sibilanti**   | j, q, x, z, c, s | shì, xiè, qǐng, zài, cì, zhè | 是，谢，请，在，次，这   |
+| **Retroflesse** | zh, ch, sh, r    | chī, shàng, rén              | 吃，上，人         |
+
+> [!tip] Scioglilingua di riferimento (Differenziazione s vs sh)
 > In fonetica cinese lo scioglilingua per eccellenza per allenare questa coppia minima è:
 > 四是四，十是十
 > Sì shì sì, shí shì shí.
@@ -114,18 +115,21 @@ Dittonghi comuni: **ai, ei, ui, ao, ou, iu**
 > [Arch Chinese Pinyin Table](https://www.archchinese.com/chinese_pinyin.html) è una pagina web che contiene una tabella *Consonanti* x *Vocali* con tutte le pronunce. Al netto di essere loggato permette il download di ogni pronuncia in formato *mp3*. Contiene anche giochi, esercizi per scrittura a mano libera e molto altro. 
 > Valida alternativa è [Yabla](https://chinese.yabla.com/)
 
+> [!tip] Canzoncina fastidiosa con tutti i suoni pinyin
+> ![](https://www.youtube.com/watch?v=b9Ayvjy-Dgs)
 ---
 
+---
 ## Saluti e Cortesia
 
 Questa sezione include le espressioni fondamentali per i primi incontri e la cortesia quotidiana.
 
 ---
 
-### 你好
+### 你好 Nǐ hǎo
 
 - **Pinyin:** nǐ hǎo
-- **Significato:** ciao / salve
+- **Significato:** ciao / salve (tu bene)
 - **Esempio d’uso:** 你好！Nǐ hǎo! (Ciao!)
 
 **Analisi Fonetica:**
@@ -136,15 +140,17 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 | 好 | hǎo | h + a + o |
 
 > [!tip] Nota del Tutor
-> Il 'nǐ' è in tono 3 e il 'hǎo' è in tono 3. Quando due toni 3 sono vicini, il primo tende a diventare quasi un tono 2.
+> Il `nǐ` è in tono 3 e il `hǎo` è in tono 3. Quando due toni 3 sono vicini, il primo tende a diventare quasi un tono 2. L'idea è quella di ammorbidire il flusso della parlata.
 
 ---
 
-### 谢谢
+### 谢谢 Xiè xie
 
 - **Pinyin:** xiè xie
 - **Significato:** grazie
 - **Esempio d’uso:** 谢谢你。Xiè xie nǐ. (Grazie.)
+	- xiè xie: grazie
+	- nǐ: tu / te
 
 **Analisi Fonetica:**
 
@@ -158,11 +164,13 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ---
 
-### 再⻅
+### 再⻅ Zài jiàn
 
 - **Pinyin:** zài jiàn
 - **Significato:** arrivederci
-- **Esempio d’uso:** 明天再⻅。Míng tiān zài jiàn. (A domani.)
+- **Esempio d’uso:** 明天再⻅。Míng tiān zài jiàn. (A domani / ci vediamo domani)
+	- míng tiān: domani
+	- zài jiàn: arrivederci
 
 **Analisi Fonetica:**
 
@@ -173,11 +181,15 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ---
 
-### 对不起
+### 对不起 Duì bu qǐ
 
 - **Pinyin:** duì bu qǐ
 - **Significato:** scusa / mi dispiace
 - **Esempio d’uso:** 对不起，我迟到了。Duì bu qǐ, wǒ chí dào le. (Scusa, sono in ritardo.)
+	- Duì bu qǐ: scusa
+	- wǒ: io
+	- chí dào: essere in ritardo
+	- le: particella grammaticale per cambiamento di stato o una azione completata
 
 **Analisi Fonetica:**
 
@@ -189,7 +201,7 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ---
 
-### 没关系
+### 没关系 Méi guān xi
 
 - **Pinyin:** méi guān xi
 - **Significato:** non importa / non fa niente
@@ -204,15 +216,17 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 | 系 | xi | x + i |
 
 > [!tip] Nota del Tutor
-> Questa è la risposta standard a "对不起". Imparala come un blocco unico (chunk) di suono.
+> Questa è la risposta standard a `对不起` (duì bu qǐ). Imparala come un blocco unico (chunk) di suono.
 
 ---
 
-### 早上好
+### 早上好 Zǎo shàng hǎo
 
 - **Pinyin:** zǎo shàng hǎo
 - **Significato:** buongiorno
-- **Esempio d’uso:** 早上好！Zǎoshang hǎo! (Buongiorno!)
+- **Esempio d’uso:** 早上好！Zǎo shàng hǎo! (Buongiorno!)
+	- Zǎo shang: mattina
+	- hǎo: buono / bene
 
 **Analisi Fonetica:**
 
@@ -224,11 +238,13 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ---
 
-### 晚上好
+### 晚上好 Wǎn shàng hǎo
 
 - **Pinyin:** wǎn shàng hǎo
 - **Significato:** buonasera
-- **Esempio d’uso:** 晚上好！Wǎnshang hǎo! (Buonasera!)
+- **Esempio d’uso:** 晚上好！Wǎn shàng hǎo! (Buonasera!)
+	- Wǎn shàn: sera / notte
+	- hǎo: buono / bene
 
 **Analisi Fonetica:**
 
@@ -246,11 +262,16 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 ---
 
-### 你好吗？
+### 你好吗？Nǐ hǎo ma?
 
 - **Pinyin:** nǐ hǎo ma?
 - **Significato:** come stai?
 - **Esempio d’uso:** 你好吗？我很好。Nǐ hǎo ma? Wǒ hěn hǎo.
+	- Nǐ hǎo: ciao / salve
+	- ma: particella tono neutro per domanda
+	- wǒ: io / me
+	- hěn: molto
+	- hǎo: buono / bene 
 
 **Analisi Fonetica:**
 
@@ -261,15 +282,19 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 | 吗 | ma | m + a (neutro) |
 
 > [!tip] Nota del Tutor
-> La particella interrogativa 'ma' è sempre in tono neutro e viene aggiunta alla fine della domanda.
+> La particella interrogativa `ma` è sempre in tono neutro e viene aggiunta alla fine della domanda.
+
 
 ---
 
-### 我很好
+### 我很好 Wǒ hěn hǎo
 
 - **Pinyin:** wǒ hěn hǎo
 - **Significato:** sto bene
 - **Esempio d’uso:** 我很好，谢谢。Wǒ hěn hǎo, xièxie.
+
+> [!info] nota del Tutor
+> `Hěn` significa molto ma nella frase `wǒ hěn hǎo` si svuota del suo significato e funge solo da collante grammaticale. Per rispondere alla domanda `nǐ hǎo ma` `你好吗` con un sonoro "sto MOLTO bene" o si enfatizza la pronuncia di `hěn` oppure bisogna ricorrere a parole differenti come `fēicháng hǎo (非常好)` che si potrebbe esprimere come "benissimo" oppure "super bene". Nel caso rispondessi con `wǒ fēicháng hǎo` non accadrebbe il fenomeno dello svuotamento di significato ma sarebbe più rigido.
 
 **Analisi Fonetica:**
 
@@ -281,20 +306,20 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 ---
 
-### 你叫什么名字？
+### 你叫什么名字？nǐ jiào shénme míngzi?
 
-- **Pinyin:** nǐ jiào shén me míng zi?
+- **Pinyin:** nǐ jiào shénme míngzi?
 - **Significato:** come ti chiami?
 - **Esempio d’uso:** 你叫什么名字？Nǐ jiào shénme míngzi?
 
 **Analisi Fonetica:**
 
-| Carattere | Pinyin | Scomposizione |
-| :--- | :--- | :--- |
-| 你 | nǐ | n + i |
-| 叫 | jiào | j + i + a + o |
-| 什么 | shén me | sh + e + n + me |
-| 名字 | míng zi | m + i + ng + zi |
+| Carattere | Pinyin | Scomposizione   |
+| :-------- | :----- | :-------------- |
+| 你         | nǐ     | n + i           |
+| 叫         | jiào   | j + i + a + o   |
+| 什么        | shénme | sh + e + n + me |
+| 名字        | míngzi | m + i + ng + zi |
 
 ---
 
@@ -303,6 +328,9 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 - **Pinyin:** wǒ jiào Mario
 - **Significato:** mi chiamo Mario
 - **Esempio d’uso:** 我叫 Mario。Wǒ jiào Mario.
+	- wǒ: io / me
+	- jiào: chiamarsi
+	- Mario: 🍄 🧑‍🔧 🧢 🌟 🐢 💒
 
 **Analisi Fonetica:**
 
@@ -319,11 +347,23 @@ Espressioni utili per gestire acquisti e richieste di base.
 
 ---
 
-### 多少钱？
+### 多少钱？Duō shǎo qián?
 
 - **Pinyin:** duō shǎo qián?
 - **Significato:** quanto costa?
-- **Esempio d’uso:** 这个多少钱？ zhè ge duō shǎo qián? (Quanto costa questo?)
+- **Esempio d’uso:** 这个多少钱？ zhège duōshǎo qián? (Quanto costa questo?)
+	- zhè: funzione di pronome dimostrativo
+	- ge: oggi serve solo come supporto, in passato rappresentava unità o pezzi singoli.
+	- duō: molto / numeroso
+	- shǎo: poco / scarso
+	- qián: denaro / soldi / moneta
+
+> [!info] Antonimi Contrari
+> L'unione di due antonimi contrari come `molto-poco` crea la forma interrogativa di misura. Ma andrà studiato meglio più avanti, questa è solo una anticipazione che vuole dare senso al "molto-poco". 
+
+>[!danger] Attenzione
+>Il numero di caratteri cinesi e di morfemi pinyin non coincidono sempre, ma ogni carattere ha un suo fonema nella tabella [Mandarin Chinese Pinyin Table](https://www.archchinese.com/chinese_pinyin.html). Quindi, ad esempio `duōshǎo` è composto da 读 (duō)(molto) e da 少 (shǎo)(poco) ma in pinyin non va separato. 
+
 
 **Analisi Fonetica:**
 
