@@ -119,7 +119,6 @@ Dittonghi comuni: **ai, ei, ui, ao, ou, iu**
 > ![](https://www.youtube.com/watch?v=b9Ayvjy-Dgs)
 ---
 
----
 ## Saluti e Cortesia
 
 Questa sezione include le espressioni fondamentali per i primi incontri e la cortesia quotidiana.
@@ -130,7 +129,10 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 - **Pinyin:** nǐ hǎo
 - **Significato:** ciao / salve (tu bene)
-- **Esempio d’uso:** 你好！Nǐ hǎo! (Ciao!)
+- **Esempio d’uso:** 王老师，你好！Wáng lǎoshī, nǐ hǎo! (Buongiorno, maestro Wang!)
+	- Wáng: Wang (cognome comune usato per salutare formalmente)
+	- lǎoshī: insegnante / maestro
+	- nǐ hǎo: ciao / buongiorno (lett. "tu bene")
 
 **Analisi Fonetica:**
 
@@ -140,13 +142,13 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 | 好 | hǎo | h + a + o |
 
 > [!tip] Nota del Tutor
-> Il `nǐ` è in tono 3 e il `hǎo` è in tono 3. Quando due toni 3 sono vicini, il primo tende a diventare quasi un tono 2. L'idea è quella di ammorbidire il flusso della parlata.
+> Il `nǐ` è in tono 3 e il `hǎo` è in tono 3. Quando due toni 3 sono vicini, il primo tende a diventare quasi un tono 2. L'idea è quella di migliorare il flusso della parlata, come accade in francese con la liaison o con il connected speech inglese.
 
 ---
 
 ### 谢谢 Xiè xie
 
-- **Pinyin:** xiè xie
+- **Pinyin:** [xiè xie](https://www.youtube.com/shorts/wGidnP_E9bs)
 - **Significato:** grazie
 - **Esempio d’uso:** 谢谢你。Xiè xie nǐ. (Grazie.)
 	- xiè xie: grazie
@@ -166,7 +168,7 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ### 再⻅ Zài jiàn
 
-- **Pinyin:** zài jiàn
+- **Pinyin:** [zài jiàn](https://www.youtube.com/shorts/osQLhPX8mQ4)
 - **Significato:** arrivederci
 - **Esempio d’uso:** 明天再⻅。Míng tiān zài jiàn. (A domani / ci vediamo domani)
 	- míng tiān: domani
@@ -183,9 +185,9 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ### 对不起 Duì bu qǐ
 
-- **Pinyin:** duì bu qǐ
+- **Pinyin:** [duì bu qǐ](https://www.youtube.com/shorts/NMCrkWoH2bI)
 - **Significato:** scusa / mi dispiace
-- **Esempio d’uso:** 对不起，我迟到了。Duì bu qǐ, wǒ chí dào le. (Scusa, sono in ritardo.)
+- **Esempio d’uso:** 对不起，我迟到了。Duì bu qǐ, wǒ [chí dào](https://www.youtube.com/watch?v=mBqTfONfg58) le. (Scusa, sono in ritardo.)
 	- Duì bu qǐ: scusa
 	- wǒ: io
 	- chí dào: essere in ritardo
@@ -203,9 +205,12 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ### 没关系 Méi guān xi
 
-- **Pinyin:** méi guān xi
+- **Pinyin:** [méi guān xi](https://www.youtube.com/shorts/DIq_r5B1gdU)
 - **Significato:** non importa / non fa niente
-- **Esempio d’uso:** 没关系。Méi guān xi. (Non fa niente.)
+- **Esempio d’uso:** A: 对不起！ B: 没关系。Duì bu qǐ! — Méi guān xi. (A: Scusa! — B: Non fa niente / Non importa.)
+	- duì bu qǐ: scusa / mi dispiace
+	- méi: non / non esserci (negazione)
+	- guānxi: relazione / legame (lett. "non ha importanza / nessun legame problematico")
 
 **Analisi Fonetica:**
 
@@ -222,10 +227,10 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ### 早上好 Zǎo shàng hǎo
 
-- **Pinyin:** zǎo shàng hǎo
+- **Pinyin:** [zǎo shàng hǎo](https://www.youtube.com/shorts/nfjo1CEofbs)
 - **Significato:** buongiorno
 - **Esempio d’uso:** 早上好！Zǎo shàng hǎo! (Buongiorno!)
-	- Zǎo shang: mattina
+	- Zǎo shàng: mattina
 	- hǎo: buono / bene
 
 **Analisi Fonetica:**
@@ -240,10 +245,10 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 ### 晚上好 Wǎn shàng hǎo
 
-- **Pinyin:** wǎn shàng hǎo
+- **Pinyin:** [wǎn shàng hǎo](https://www.youtube.com/shorts/BEeldDnr-h0)
 - **Significato:** buonasera
 - **Esempio d’uso:** 晚上好！Wǎn shàng hǎo! (Buonasera!)
-	- Wǎn shàn: sera / notte
+	- Wǎn shàng: sera / notte
 	- hǎo: buono / bene
 
 **Analisi Fonetica:**
@@ -264,7 +269,7 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 ### 你好吗？Nǐ hǎo ma?
 
-- **Pinyin:** nǐ hǎo ma?
+- **Pinyin:** [nǐ hǎo ma?](https://www.youtube.com/shorts/dKKziGKeDYQ)
 - **Significato:** come stai?
 - **Esempio d’uso:** 你好吗？我很好。Nǐ hǎo ma? Wǒ hěn hǎo.
 	- Nǐ hǎo: ciao / salve
@@ -291,7 +296,11 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 - **Pinyin:** wǒ hěn hǎo
 - **Significato:** sto bene
-- **Esempio d’uso:** 我很好，谢谢。Wǒ hěn hǎo, xièxie.
+- **Esempio d’uso:** 我很好，谢谢！Wǒ hěn hǎo, xièxie! (Sto bene, grazie!)
+	- wǒ: io
+	- hěn: molto (qui con funzione di raccordo grammaticale neutro)
+	- hǎo: bene / buono
+	- xièxie: grazie
 
 > [!info] nota del Tutor
 > `Hěn` significa molto ma nella frase `wǒ hěn hǎo` si svuota del suo significato e funge solo da collante grammaticale. Per rispondere alla domanda `nǐ hǎo ma` `你好吗` con un sonoro "sto MOLTO bene" o si enfatizza la pronuncia di `hěn` oppure bisogna ricorrere a parole differenti come `fēicháng hǎo (非常好)` che si potrebbe esprimere come "benissimo" oppure "super bene". Nel caso rispondessi con `wǒ fēicháng hǎo` non accadrebbe il fenomeno dello svuotamento di significato ma sarebbe più rigido.
@@ -306,11 +315,17 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 ---
 
-### 你叫什么名字？nǐ jiào shénme míngzi?
+### 你叫什么名字？ Nǐ jiào shénme míngzi?
 
-- **Pinyin:** nǐ jiào shénme míngzi?
+- **Pinyin:** [nǐ jiào shénme míngzi?](https://www.youtube.com/shorts/EZW-9rrFGOw)
 - **Significato:** come ti chiami?
-- **Esempio d’uso:** 你叫什么名字？Nǐ jiào shénme míngzi?
+- **Esempio d’uso:** 你叫什么名字？我叫李华。Nǐ jiào shénme míngzi? Wǒ jiào Lǐ Huá. (Come ti chiami? Mi chiamo Li Hua.)
+	- nǐ: tu
+	- jiào: chiamarsi / chiamare
+	- shénme: che cosa / quale
+	- míngzi: nome
+	- wǒ: io
+	- Lǐ Huá: Li Hua (nome proprio cinese molto comune)
 
 **Analisi Fonetica:**
 
@@ -323,14 +338,15 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 ---
 
-### 我叫 Mario
+### 我叫 Mario Wǒ jiào Mario
 
 - **Pinyin:** wǒ jiào Mario
 - **Significato:** mi chiamo Mario
-- **Esempio d’uso:** 我叫 Mario。Wǒ jiào Mario.
+- **Esempio d’uso:** 你好，我叫 Mario。Nǐ hǎo, wǒ jiào Mario. (Ciao, mi chiamo Mario.)
+	- nǐ hǎo: ciao
 	- wǒ: io / me
 	- jiào: chiamarsi
-	- Mario: 🍄 🧑‍🔧 🧢 🌟 🐢 💒
+	- Mario: Mario (nome proprio) 🍄
 
 **Analisi Fonetica:**
 
@@ -349,7 +365,7 @@ Espressioni utili per gestire acquisti e richieste di base.
 
 ### 多少钱？Duō shǎo qián?
 
-- **Pinyin:** duō shǎo qián?
+- **Pinyin:** [duō shǎo qián?](https://www.youtube.com/shorts/V9hl27crNtk)
 - **Significato:** quanto costa?
 - **Esempio d’uso:** 这个多少钱？ zhège duōshǎo qián? (Quanto costa questo?)
 	- zhè: funzione di pronome dimostrativo
@@ -362,7 +378,7 @@ Espressioni utili per gestire acquisti e richieste di base.
 > L'unione di due antonimi contrari come `molto-poco` crea la forma interrogativa di misura. Ma andrà studiato meglio più avanti, questa è solo una anticipazione che vuole dare senso al "molto-poco". 
 
 >[!danger] Attenzione
->Il numero di caratteri cinesi e di morfemi pinyin non coincidono sempre, ma ogni carattere ha un suo fonema nella tabella [Mandarin Chinese Pinyin Table](https://www.archchinese.com/chinese_pinyin.html). Quindi, ad esempio `duōshǎo` è composto da 读 (duō)(molto) e da 少 (shǎo)(poco) ma in pinyin non va separato. 
+>Il numero di caratteri cinesi e di morfemi pinyin non coincidono sempre, ma ogni carattere ha un suo fonema nella tabella [Mandarin Chinese Pinyin Table](https://www.archchinese.com/chinese_pinyin.html). Quindi, ad esempio `duōshǎo` è composto da 多 (duō)(molto) e da 少 (shǎo)(poco) ma in pinyin non va separato. 
 
 
 **Analisi Fonetica:**
@@ -374,11 +390,14 @@ Espressioni utili per gestire acquisti e richieste di base.
 
 ---
 
-### 我要这个
+### 我要这个 Wǒ yào zhège
 
-- **Pinyin:** wǒ yào zhè ge
+- **Pinyin:** [wǒ yào zhè ge](https://www.youtube.com/shorts/zQLHB_i0WqA)
 - **Significato:** voglio questo / prendo questo
 - **Esempio d’uso:** 我要这个。Wǒ yào zhège. (Prendo questo.)
+	- wǒ: io / me
+	- yào: volontà diretta / decisione
+	- zhège: questo / questo + il
 
 **Analisi Fonetica:**
 
@@ -388,13 +407,18 @@ Espressioni utili per gestire acquisti e richieste di base.
 | 要 | yào | y + a + o |
 | 这个 | zhè ge | zh + e + g + e |
 
+> [!tip] Forma di cortesia: 我想要这个 (Wǒ xiǎng yào zhège)
+> Aggiungere il verbo di desiderio `xiǎng` (*volere/desiderare*) rende la richiesta più garbata ed educata: equivale a usare il nostro condizionale di cortesia ("Vorrei questo") rispetto all'indicativo diretto *wǒ yào* ("Voglio questo / Prendo questo"). 
+
 ---
 
-### 请
+### 请 Qǐng
 
-- **Pinyin:** qǐng
+- **Pinyin:** [qǐng](https://www.youtube.com/shorts/AbkHkxqEWoU)
 - **Significato:** per favore / prego
-- **Esempio d’uso:** 请坐。Qǐng zuò. (Prego, siediti/si sieda.)
+- **Esempio d’uso:** 请坐。Qǐng zuò. (Prego, si accomodi / siediti.)
+	- qǐng: per favore / prego
+	- zuò: sedersi
 
 **Analisi Fonetica:**
 
@@ -403,7 +427,7 @@ Espressioni utili per gestire acquisti e richieste di base.
 | 请 | qǐng | q + i + n + g |
 
 > [!tip] Nota del Tutor
-> 'Qǐng' è una parola chiave per la cortesia. Usala all'inizio di una richiesta per renderla immediatamente più educata.
+> `Qǐng` è una parola chiave per la cortesia. Usala all'inizio di una richiesta per renderla immediatamente più educata.
 
 ---
 
@@ -413,11 +437,15 @@ Frasi essenziali per comunicare la comprensione o la mancanza della stessa.
 
 ---
 
-### 我不知道
+### 我不知道 Wǒ bù zhīdào
 
-- **Pinyin:** wǒ bù zhī dào
+- **Pinyin:** [wǒ bù zhī dào](https://www.youtube.com/watch?v=IZ_QmgddLiQ)
 - **Significato:** non lo so
-- **Esempio d’uso:** 我不知道。Wǒ bù zhīdào. (Non lo so.)
+- **Esempio d’uso:** 对不起，我不知道。Duì bu qǐ, wǒ bù zhīdào. (Mi dispiace, non lo so.)
+	- duì bu qǐ: scusa / mi dispiace
+	- wǒ: io
+	- bù: non (particella di negazione)
+	- zhīdào: sapere / essere a conoscenza
 
 **Analisi Fonetica:**
 
@@ -427,13 +455,21 @@ Frasi essenziali per comunicare la comprensione o la mancanza della stessa.
 | 不 | bù | b + u |
 | 不知道 | zhī dào | zh + i + d + a + o |
 
+> [!tip] Nota del Tutor
+> La negazione `bù` è al 4° tono discendente. Mantiene il 4° tono davanti al 1°, 2° e 3° tono (come in *bù zhīdào*), mentre muta in 2° tono ascendente (*bú*) quando precede un altro 4° tono (sandhi di *bù*).
+
 ---
 
-### 我听不懂
+### 我听不懂 Wǒ tīng bu dǒng
 
-- **Pinyin:** wǒ tīng bù dǒng
+- **Pinyin:** [wǒ tīng bù dǒng](https://www.youtube.com/shorts/hk_IivgY3yg)
 - **Significato:** non capisco
-- **Esempio d’uso:** 对不起，我听不懂。Duì bu qǐ, wǒ tīng bù dǒng. (Scusa, non capisco.)
+- **Esempio d’uso:** 对不起，我听不懂。Duì bu qǐ, wǒ tīng bu dǒng. (Mi dispiace, non capisco [a orecchio].)
+	- duì bu qǐ: mi dispiace / scusa
+	- wǒ: io
+	- tīng: ascoltare / sentire
+	- bu: particella negativa (a tono neutro leggero nel complemento potenziale)
+	- dǒng: comprendere / capire
 
 **Analisi Fonetica:**
 
@@ -444,16 +480,26 @@ Frasi essenziali per comunicare la comprensione o la mancanza della stessa.
 | 不 | bù | b + u |
 | 懂 | dǒng | d + o + n + g |
 
+> [!tip] Nota del Tutor
+> In cinese `tīng不懂` è un *complemento di potenziale negativo*: significa specificamente "non riesco a capire ascoltando". Si differenzia da `看懂` (*kàn bu dǒng*, non capire leggendo) e dal generico `不懂` (*bù dǒng*, non intendersi di qualcosa).
+
 ---
 
-### 可以
+### 可以 Kěyǐ
 
-- **Pinyin:** kě yǐ
+- **Pinyin:** [kěyǐ](https://www.youtube.com/shorts/y62UaYIpQ-I)
 - **Significato:** si può / va bene
-- **Esempio d’uso:** 可以。Kě yǐ. (Va bene / Si può.)
+- **Esempio d’uso:** 
+	- A: 可以吗？ (Kěyǐ ma?)(Si può? / Va bene?)
+	- B: 可以！(Kěyǐ!) (Sì, si può! / Certamente!)
+- kěyǐ: potere / essere possibile / andare bene (verbo modale/servile)
+- ma: particella interrogativa per domande sì/no
 
 **Analisi Fonetica:**
 
 | Carattere | Pinyin | Scomposizione |
 | :--- | :--- | :--- |
 | 可以 | kě yǐ | k + e + y + i |
+
+> [!tip] Nota del Tutor
+> Anche in `kěyǐ` ritroviamo la regola del sandhi tonale: entrambi i caratteri hanno il 3° tono originario (`kě` + `yǐ`), quindi nella parlata naturale il primo si pronuncia al 2° tono ascendente: **kéyǐ**.
