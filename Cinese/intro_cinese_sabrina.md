@@ -23,6 +23,22 @@
 | **4**      | à         | Scende bruscamente e si interrompe  | $\setminus$ | mà      |
 | **Neutro** | a         | Breve, leggero e quasi "senza tono" | $.$         | ma      |
 
+### 🔄 Il Sandhi Tonale (变调 biàndiào)
+
+Nella parlata naturale i toni non rimangono sempre rigidi: quando due o più sillabe si incontrano, alcuni toni **mutano per rendere il flusso della voce più fluido** (un fenomeno simile alla *liaison* francese o al *connected speech* inglese).
+
+Le regole fondamentali da conoscere sono due:
+
+1. **Sandhi del 3° Tono ($3° + 3° \to 2° + 3°$)**:
+   Quando due sillabe consecutive hanno entrambe il 3° tono, **la prima si pronuncia al 2° tono (ascendente)**.
+   * *Regola di scrittura del Pinyin:* il Pinyin standard scrive sempre il tono originario di dizionario (es. `nǐ hǎo`), ma nella parlata reale si pronuncia **ní hǎo**.
+   * *Tre terzi toni consecutivi (es. 我很好 wǒ hěn hǎo):* in base al raggruppamento delle parole, il secondo diventa 2° tono (*wǒ hén hǎo*), oppure nel parlato rapido entrambi i primi due passano al 2° tono (*wó hén hǎo*).
+
+2. **Sandhi della negazione 不 (*bù*) ($4° + 4° \to 2° + 4°$)**:
+   La particella negativa `bù` ha originariamente il 4° tono discendente.
+   * Davanti a un altro 4° tono discendente muta al **2° tono ascendente**: es. 不是 (*bù* + *shì* $\to$ **bú shì**).
+   * Davanti a 1°, 2° e 3° tono **mantiene il 4° tono**: es. 不知道 (*bù zhīdào*), 不懂 (*bù dǒng*).
+
 ---
 
 ## 🗣️ Classificazione delle Consonanti
@@ -129,10 +145,10 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 - **Pinyin:** nǐ hǎo
 - **Significato:** ciao / salve (tu bene)
-- **Esempio d’uso:** 王老师，你好！Wáng lǎoshī, nǐ hǎo! (Buongiorno, maestro Wang!)
-	- Wáng: Wang (cognome comune usato per salutare formalmente)
+- **Esempio d’uso:** 王老师，你好！ (Wáng lǎoshī, nǐ hǎo!) [sandhi: ní hǎo] (Buongiorno, maestro Wang!)
+	- Wáng: Wang (cognome comune)
 	- lǎoshī: insegnante / maestro
-	- nǐ hǎo: ciao / buongiorno (lett. "tu bene")
+	- nǐ hǎo: ciao / buongiorno (lett. "tu bene"; sandhi: 3°+3° ➔ pronunciato ní hǎo)
 
 **Analisi Fonetica:**
 
@@ -207,7 +223,9 @@ Questa sezione include le espressioni fondamentali per i primi incontri e la cor
 
 - **Pinyin:** [méi guān xi](https://www.youtube.com/shorts/DIq_r5B1gdU)
 - **Significato:** non importa / non fa niente
-- **Esempio d’uso:** A: 对不起！ B: 没关系。Duì bu qǐ! — Méi guān xi. (A: Scusa! — B: Non fa niente / Non importa.)
+- **Esempio d’uso:** 
+	- A: 对不起！ (Duì bu qǐ!) (Scusa! / Mi dispiace!)
+	- B: 没关系。 (Méi guān xi.) (Non fa niente. / Non importa.)
 	- duì bu qǐ: scusa / mi dispiace
 	- méi: non / non esserci (negazione)
 	- guānxi: relazione / legame (lett. "non ha importanza / nessun legame problematico")
@@ -271,12 +289,14 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 - **Pinyin:** [nǐ hǎo ma?](https://www.youtube.com/shorts/dKKziGKeDYQ)
 - **Significato:** come stai?
-- **Esempio d’uso:** 你好吗？我很好。Nǐ hǎo ma? Wǒ hěn hǎo.
-	- Nǐ hǎo: ciao / salve
-	- ma: particella tono neutro per domanda
+- **Esempio d’uso:** 
+	- A: 你好吗？ (Nǐ hǎo ma?) [sandhi: ní hǎo ma?] (Come stai?)
+	- B: 我很好。 (Wǒ hěn hǎo.) [sandhi: wǒ hén hǎo] (Sto bene.)
+	- nǐ hǎo: ciao / salve (sandhi: 3°+3° ➔ pronunciato ní hǎo)
+	- ma: particella interrogativa (tono neutro)
 	- wǒ: io / me
-	- hěn: molto
-	- hǎo: buono / bene 
+	- hěn: molto (collante grammaticale neutro; sandhi: 3°+3° ➔ pronunciato hén)
+	- hǎo: bene / buono 
 
 **Analisi Fonetica:**
 
@@ -296,9 +316,9 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 - **Pinyin:** wǒ hěn hǎo
 - **Significato:** sto bene
-- **Esempio d’uso:** 我很好，谢谢！Wǒ hěn hǎo, xièxie! (Sto bene, grazie!)
+- **Esempio d’uso:** 我很好，谢谢！ (Wǒ hěn hǎo, xièxie!) [sandhi: wǒ hén hǎo, xièxie] (Sto bene, grazie!)
 	- wǒ: io
-	- hěn: molto (qui con funzione di raccordo grammaticale neutro)
+	- hěn: molto (collante neutro; sandhi: 3°+3° ➔ hěn si pronuncia al 2° tono hén)
 	- hǎo: bene / buono
 	- xièxie: grazie
 
@@ -319,7 +339,9 @@ Questa sezione contiene le frasi base per presentarsi e interagire socialmente.
 
 - **Pinyin:** [nǐ jiào shénme míngzi?](https://www.youtube.com/shorts/EZW-9rrFGOw)
 - **Significato:** come ti chiami?
-- **Esempio d’uso:** 你叫什么名字？我叫李华。Nǐ jiào shénme míngzi? Wǒ jiào Lǐ Huá. (Come ti chiami? Mi chiamo Li Hua.)
+- **Esempio d’uso:** 
+	- A: 你叫什么名字？ (Nǐ jiào shénme míngzi?) (Come ti chiami?)
+	- B: 我叫李华。 (Wǒ jiào Lǐ Huá.) (Mi chiamo Li Hua.)
 	- nǐ: tu
 	- jiào: chiamarsi / chiamare
 	- shénme: che cosa / quale
@@ -408,7 +430,9 @@ Espressioni utili per gestire acquisti e richieste di base.
 | 这个 | zhè ge | zh + e + g + e |
 
 > [!tip] Forma di cortesia: 我想要这个 (Wǒ xiǎng yào zhège)
-> Aggiungere il verbo di desiderio `xiǎng` (*volere/desiderare*) rende la richiesta più garbata ed educata: equivale a usare il nostro condizionale di cortesia ("Vorrei questo") rispetto all'indicativo diretto *wǒ yào* ("Voglio questo / Prendo questo"). 
+> Aggiungere il verbo di desiderio `xiǎng` (*volere/desiderare*) rende la richiesta più garbata ed educata: equivale a usare il nostro condizionale di cortesia ("Vorrei questo") rispetto all'indicativo diretto *wǒ yào* ("Voglio questo / Prendo questo").
+> 
+> *Nota sul sandhi:* 我 (*wǒ*, 3°) e 想 (*xiǎng*, 3°) sono due terzi toni consecutivi, quindi nella parlata naturale si pronuncia **wó xiǎng yào zhège** ($3°+3° \to 2°+3°$). 
 
 ---
 
@@ -490,10 +514,10 @@ Frasi essenziali per comunicare la comprensione o la mancanza della stessa.
 - **Pinyin:** [kěyǐ](https://www.youtube.com/shorts/y62UaYIpQ-I)
 - **Significato:** si può / va bene
 - **Esempio d’uso:** 
-	- A: 可以吗？ (Kěyǐ ma?)(Si può? / Va bene?)
-	- B: 可以！(Kěyǐ!) (Sì, si può! / Certamente!)
-- kěyǐ: potere / essere possibile / andare bene (verbo modale/servile)
-- ma: particella interrogativa per domande sì/no
+	- A: 可以吗？ (Kěyǐ ma?) [sandhi: kéyǐ ma?] (Si può? / Va bene?)
+	- B: 可以！ (Kěyǐ!) [sandhi: kéyǐ!] (Sì, si può! / Certamente!)
+	- kěyǐ: potere / essere possibile / andare bene (verbo modale/servile; sandhi: 3°+3° ➔ pronunciato kéyǐ)
+	- ma: particella interrogativa per domande sì/no
 
 **Analisi Fonetica:**
 
